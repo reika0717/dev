@@ -1,6 +1,6 @@
 .PageNavigation {
   font-size: 14px;
-  display: block;
+  display: flex;
   width: auto;
   overflow: hidden;
 }
@@ -8,10 +8,5 @@
 .PageNavigation a {
   display: block;
   width: 100%;
-  float: left;
   margin: 1em 0;
-}
-
-.PageNavigation .next {
-  text-align: right;
 }
