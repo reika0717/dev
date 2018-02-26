@@ -1,7 +1,8 @@
 ---
-layout: blog
+layout: default
 published: true
 title: 'DBCLS server maintenance, 9-12 Mar 2018'
+category: en
 ---
 Due to the system maintenance, our services will be temporarily unavailable. We are sorry for the inconvenience.
  
