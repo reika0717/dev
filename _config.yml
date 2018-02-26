@@ -16,3 +16,29 @@ prose:
         field:
           element: "text"
           value: ""
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "サービス"
+              value: "サービス"
+            - name: "広報"
+              value: "広報"
+            - name: "イベント"
+              value: "イベント"
+            - name: "募集"
+              value: "募集"
+            - name: "その他"
+              value: "その他"
+      - name: "category"
+        field:
+          element: "multiselect"
+          label: "language"
+          placeholder: "select language"
+          options:
+            - name: "日本語"
+              value: "ja"
+            - name: "English"
+              value: "en"
