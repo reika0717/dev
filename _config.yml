@@ -4,7 +4,6 @@ url: http://dbcls.rois.ac.jp/
 baseurl: '/jekyll-demo'
 BASE_PATH : /my-first-prose
 prose:
-  //rooturl: '_posts'
   siteurl: 'http://USERNAME.github.io/my-first-prose/'
   media: 'media'
   metadata:
