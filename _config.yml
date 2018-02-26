@@ -15,7 +15,7 @@ prose:
       - name: "title"
         field:
           element: "text"
-          value: ""
+          value: "post"
       - name: "tags"
         field:
           element: "multiselect"
