@@ -42,3 +42,9 @@ prose:
               value: "ja"
             - name: "English"
               value: "en"
+    _posts/static:
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
