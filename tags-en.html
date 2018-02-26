@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Posts By Tags
-permalink: /tags
+permalink: /tags-en
 ---
 
 <ul>
-  <li>日本語</li>
   <li>
-    <a href="/jekyll-demo/tags-en.html">English</a>
+    <a href="/jekyll-demo/tags.html">日本語</a>
   </li>
+  <li>English</li>
 </ul>
 
 {% comment %}
@@ -40,9 +40,9 @@ permalink: /tags
       </h3>
       <ul>
         {% for post in site.tags[tag_name] %}
-          {% if post.category == 'ja' %}
+          {% if post.category == 'en' %}
             <li>
-              <a href="/jekyll-demo/{{ post.url }}">
+              <a href="{{ post.url | prepend: baseurl }}">
                 {{ post.title }}
               </a>
             </li>

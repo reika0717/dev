@@ -2,6 +2,9 @@
 layout: default
 title: news
 ---
+日本語
+[English](index-en.html)
+
 # news page
 以下、最近のニュースです。
 
@@ -10,6 +13,3 @@ title: news
   [{{post.title}}]({{post.url | prepend: site.baseurl}})
 {% include post_meta.html %}
 {% endfor %}
-
-日本語
-[English](index-en.html)

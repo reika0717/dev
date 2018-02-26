@@ -2,6 +2,9 @@
 layout: default
 title: news
 ---
+[日本語](index.html)
+English
+
 # news page
 This is news list.
 
@@ -10,6 +13,3 @@ This is news list.
   [{{post.title}}]({{post.url | prepend: site.baseurl}})
 {% include post_meta.html %}
 {% endfor %}
-
-[日本語](index.html)
-English
