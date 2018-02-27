@@ -38,8 +38,3 @@ prose:
               value: "ja"
             - name: "English"
               value: "en"
-      - name: "title"
-        field:
-          element: "text"
-          label: "title"
-          value: ""
