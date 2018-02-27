@@ -3,6 +3,7 @@ description: Database Center for Life Science (DBCLS) forms a base for integrati
 url: http://dbcls.rois.ac.jp/
 baseurl: '/dbcls-test'
 BASE_PATH : /my-first-prose
+paginate: 5
 prose:
   siteurl: 'http://USERNAME.github.io/my-first-prose/'
   media: 'media'
