@@ -1,0 +1,27 @@
+---
+layout: default
+title: news
+---
+
+<nav>
+	<ul>
+		<li>日本語</li>
+		<li>
+			<a href="index-en.html">English</a>
+		</li>
+	</ul>
+</nav>
+
+<h1>news page</h1>
+<p>以下、最近のニュース。</p>
+
+<ul>
+	{% for post in site.categories.ja %}
+	<li class='news__individual'>
+			{{post.date | date_to_string}}
+		<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+		<p class='news__desc-beginning'>{{post.content | slice: 0, 50 | strip_html}}…</p>
+		{% include post_meta.html %}
+	</li>
+	{% endfor %}
+</ul>

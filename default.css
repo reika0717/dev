@@ -10,3 +10,14 @@
   width: 100%;
   margin: 1em 0;
 }
+
+.news__individual {
+	margin-bottom: 25px;
+}
+
+
+.news__desc-beginning {
+	line-height: 0em;
+  font-size: 12px;
+  color: gray;
+}
