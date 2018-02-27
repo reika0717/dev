@@ -8,11 +8,6 @@ prose:
   media: 'media'
   metadata:
     _posts:
-      - name: "title"	
-         field:	
-           element: "text"
-           label: "title"
-           value: ""
       - name: "layout"
         field:
           element: "hidden"
@@ -43,3 +38,8 @@ prose:
               value: "ja"
             - name: "English"
               value: "en"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+          value: ""
