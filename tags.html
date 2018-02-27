@@ -40,7 +40,7 @@ permalink: /tags
       </h3>
       <ul>
         {% for post in site.tags[tag_name] %}
-          {% if post.category == 'ja' %}
+          {% if post.category contains 'ja' %}
             <li>
               <a href="/jekyll-demo/{{ post.url }}">
                 {{ post.title }}

@@ -40,7 +40,7 @@ permalink: /tags-en
       </h3>
       <ul>
         {% for post in site.tags[tag_name] %}
-          {% if post.category == 'en' %}
+          {% if post.category contains 'en' %}
             <li>
               <a href="{{ post.url | prepend: baseurl }}">
                 {{ post.title }}
