@@ -7,7 +7,7 @@
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
     <link>
     {{ site.url }}</link>
-    {% for post in site.categories.ja limit: 10 %}
+    {% for post in site.categories.en limit: 10 %}
       {% unless post.link %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
