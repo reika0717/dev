@@ -1,0 +1,35 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DBCLS ｜ ライフサイエンス統合データベースセンター</title>
+	<link rel="stylesheet" href="style/default.css">
+</head>
+<body>
+{% include header_en.html %}
+<div id="Languages">
+	<ul class="qtrans_language_chooser" id="qtranslate-chooser">
+	<li class="lang-en active"><a href="index-en" hreflang="en" title="English"><span>English</span></a></li>
+	<li class="lang-ja"><a href="index" hreflang="ja" title="日本語"><span>日本語</span></a></li>
+	</ul>
+	<div class="qtrans_widget_end"></div>
+</div>
+	<h1>ここはtopページです。</h1>
+	<h2>news</h2>
+	<div class="top__news-section">
+		<ul>
+			{% for post in site.categories.ja limit:5 %}
+				<li class='news__individual'>
+						{{post.date | date_to_string}}
+					<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+					<p class='news__desc-beginning'>{{post.content | slice: 0, 50 | strip_html}}…</p>
+					{% include post_meta.html %}
+				</li>
+			{% endfor %}
+		</ul>
+		<a href="news.html">more</a>
+	</div>
+</body>
+</html>
