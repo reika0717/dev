@@ -7,11 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width">
 <title>イベント ｜ DBCLS</title>
-<style type="text/css">
-	section.posts-by-tags div:first-child, section.posts-by-tags div:nth-child(3), section.posts-by-tags div:nth-child(4), section.posts-by-tags div:nth-child(5) ,section.posts-by-tags div:nth-child(6){
-		display: none;
-	} 
-</style>
 </head>
 
 <body>
@@ -48,14 +43,11 @@
 <hr>
 
 <section class="posts-by-tags">
-  {% for tag_name in tag_names %}
     <div>
-      <h3 id="{{ tag_name }}">
-        {{ tag_name | capitalize | replace: "_", " " }}
-      </h3>
+      <h3>イベント</h3>
       <ul>
-        {% for post in site.tags[tag_name] %}
-          {% if post.category contains 'ja' %}
+        {% for post in site.categories.ja %}
+          {% if post.tags contains 'イベント' %}
             <li>
               <a href="/dbcls-test/{{ post.url }}">
                 {{ post.title }}
@@ -65,7 +57,6 @@
         {% endfor %}
       </ul>
     </div>
-  {% endfor %}
 </section>
 	<a href="news_event.html">more</a>
 	<p class="margin-top2em">DBCLSでは、国内外の生命科学研究者を対象とした様々なイベントを開催しているほか、学会や研究会での広報活動も行っています。その内容は、データベース構築者向けの技術勉強会から、実験研究者向けのデータベース講習会まで、多岐にわたります。</p>
