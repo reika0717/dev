@@ -1,0 +1,29 @@
+---
+layout: default
+---
+{% include header.html %}
+<ul class="select-lang">
+	<li>
+		<a href="/dbcls-test/ja{{page.url | remove_first:'ja/'| remove_first:'en/'}}">日本語</a>
+	</li>
+	<li>
+		<a href="/dbcls-test/en{{page.url | remove_first:'ja/'| remove_first:'en/'}}">English</a>
+	</li>	
+</ul>
+
+<p>{{page.date | date_to_string}}</p>
+<h1>{{page.title}}</h1>
+<hr>
+{{content}}
+<p>Sorry, this entry is only available in <a href="/dbcls-test/ja{{page.url | remove_first:'ja/'| remove_first:'en/'}}">[日本語]</a></p>
+
+{% include post_meta.html %}
+
+<div class="PageNavigation">
+  {% if page.previous.previous.url %}
+    <a class="prev" href="{{page.previous.previous.url | prepend: site.baseurl}}">&laquo; {{page.previous.previous.title}}</a>
+  {% endif %}
+  {% if page.next.next.url %}
+    <a class="next" href="{{page.next.next.url | prepend: site.baseurl}}">{{page.next.next.title}} &raquo;</a>
+  {% endif %}
+</div>

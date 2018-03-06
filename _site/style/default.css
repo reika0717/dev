@@ -37,3 +37,7 @@
   list-style: none;
   cursor: pointer;
 }
+
+.news-assets-appearance {
+  height: 400px;
+}

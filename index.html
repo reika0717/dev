@@ -25,7 +25,7 @@
 				<li class='news__individual'>
 						{{post.date | date_to_string}}
 					<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
-					{% assign beginning =  post.content | slice: 0, 100 | strip_html%}
+					{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
 					<p class='news__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
 				  <div class="post-tags">
 						{% include post_meta.html %}
