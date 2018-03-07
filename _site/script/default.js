@@ -81,47 +81,33 @@ var initialize = {
 				})
 			})
 		}
+	},
+	'achievement': function () {
+		$.ajax({
+		  url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+		  dataType : "json",
+		  async: true,
+		  success : function(data){
+		  	var rows = "";
+		    for (i = 0; i < data.values.length; i++) {
+		        rows += '<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+		            '<td><p>' + data.values[i][1] + '</p></td>'+ 
+		            '<td><p>' + data.values[i][2] + '</p></td>' +
+		            '<td><p>' + data.values[i][3] + '<p></td>' +
+		            '<td><a href="' + data.values[i][4] + '">' + data.values[i][4] + '</a></td>' +
+		            '<td><p>' + data.values[i][5] + '</p></td>'+ 
+		            '<td><p>' + data.values[i][6] + '</p></td>' +
+		            '<td><p>' + data.values[i][7] + '</p></td>' +
+		            '<td><p>' + data.values[i][8] + '</p></td>';
+		      	rows += "</tr>";
+		    }
+		    $("#table").append(rows);
+		  }
+		});
 	}
-}
+};
 
 $(function() {
 	var pageType = document.getElementsByTagName('html')[0].dataset.pageType;
 	initialize[pageType]()
 })
-
-
-function response(btnNo){
-  if (btnNo == 1){
-    link = "scolar";
-    href = "achievement.html";
-  }else{
-    link = "論文";
-    href = "achievement-r.html";
-  }
-  location.href = href;
-};
-
-$.ajax({
-  url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
-  dataType : "json",
-  async: true,
-  success : function(data){
-    var rows = "";
-    for (i = 0; i < data.values.length; i++) {
-      rows += "<tr>";
-      for (j = 0; j < data.values[i].length; j++) {
-        rows += "<td>";
-        rows += data.values[i][j];
-        rows += "</td>";
-      }
-      rows += "</tr>";
-    }
-    $("#table").append(rows);
-    //$.each(data.values, function(i, item){
-    //  for(var i in item){
-    //    console.log(item[0, 4])
-    //    $('<a href="' + item[0, 4] + '">' + '</a>').appendTo('table tbody tr');
-    //  }
-    //})
-  }
-});

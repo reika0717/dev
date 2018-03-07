@@ -1,20 +1,25 @@
 ---
 ---
 <!DOCTYPE html>
-<html>
+<html data-page-type='achievement'>
   <head>
     <title>Google Sheets API Quickstart</title>
     <meta charset='utf-8' />
     <script type="text/javascript" charset="UTF-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="./script/default.js"></script>
+    <style>
+      .papers_citing_table tr:first-child td:nth-child(1) a, .papers_citing_table tr:first-child td:nth-child(5) a{
+        pointer-events:none;
+        text-decoration: none;
+        color:black;
+      }
+    </style>
   </head>
   <body>
   {% include header.html %}
-  <form name="test">
-    <input type="button" name="scholar" value="scholar" onClick="response(1)">
-    <input type="button" name="論文" value="論文" onClick="response(2)" id="input" class="input">
-  </form>
+  <input type="button" onclick="location.href='achievement.html'" value="scholar" />
+  <input type="button" onclick="location.href='achievement-r.html'" value="論文" />
   <div id="def" class="abo">
   <table class="papers_citing_table" id="table">
     <tbody>

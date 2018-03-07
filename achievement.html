@@ -1,7 +1,7 @@
 ---
 ---
 <!DOCTYPE html>
-<html>
+<html data-page-type='achievement'>
   <head>
     <title>Google Sheets API Quickstart</title>
     <meta charset='utf-8' />
@@ -11,11 +11,8 @@
   </head>
   <body>
   {% include header.html %}
-  <form name="test">
-    <input type="button" name="scholar" value="scholar" onClick="response(1)">
-    <input type="button" name="論文" value="論文" onClick="response(2)">
-  </form>
+  <input type="button" onclick="location.href='achievement.html'" value="scholar" />
+  <input type="button" onclick="location.href='achievement-r.html'" value="論文" />
   <p>TEST</p>
-  <div id="abc" class="abo">aa</div>
   </body>
 </html>
