@@ -90,11 +90,14 @@ var initialize = {
 		  success : function(data){
 		  	var rows = "";
 		    for (i = 0; i < data.values.length; i++) {
-		        rows += '<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+		        rows += 
+
+		        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+		        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
 		            '<td><p>' + data.values[i][1] + '</p></td>'+ 
 		            '<td><p>' + data.values[i][2] + '</p></td>' +
-		            '<td><p>' + data.values[i][3] + '<p></td>' +
-		            '<td><a href="' + data.values[i][4] + '">' + data.values[i][4] + '</a></td>' +
+		            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
+		            '<td><p>' + data.values[i][4] + '<p></td>' +
 		            '<td><p>' + data.values[i][5] + '</p></td>'+ 
 		            '<td><p>' + data.values[i][6] + '</p></td>' +
 		            '<td><p>' + data.values[i][7] + '</p></td>' +
