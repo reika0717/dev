@@ -84,7 +84,7 @@ var initialize = {
 	},
 	'achievement': function () {
 		$.ajax({
-		  url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+		  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
 		  dataType : "json",
 		  async: true,
 		  success : function(data){

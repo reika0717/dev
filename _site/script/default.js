@@ -18,10 +18,10 @@ var initialize = {
 
 		//ハッシュ値が変わった時の画面遷移
 		window.addEventListener('hashchange', function() {
-			if(location.hash == '#services'){
+			if(location.hash === '#services'){
 				$('.service__wrapper').empty()
 				displayReposList()
-			}else if(location.hash == '#service'){
+			}else if(location.hash === '#service'){
 				displayRepos(repos_name, 'README.md')
 			}
 		}, false)
@@ -84,7 +84,7 @@ var initialize = {
 	},
 	'achievement': function () {
 		$.ajax({
-		  url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+		  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
 		  dataType : "json",
 		  async: true,
 		  success : function(data){
