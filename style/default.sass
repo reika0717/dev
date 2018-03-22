@@ -40,6 +40,16 @@ body
 	&.access_btn
 		width: 63px
 		margin-top: 7px
+	&.pdf_btn
+		width: 51px
+		height: 19px
+		&:before
+			content: ""
+			display: block
+			width: 12px
+			height: 12px
+			margin-right: 3px
+			background: url(../img/icon_pdf.svg) no-repeat
 
 //post
 .post__date
@@ -170,7 +180,7 @@ footer
 	background: #E8EDED
 	margin-top: 70px
 	.footer__wrapper
-		width: 862px
+		width: 1024px
 		margin: 0 auto
 		padding-top: 22px
 		.footer__organism
@@ -192,6 +202,7 @@ footer
 					width: 431px
 		.footer__bottom-area
 			display: flex
+			justify-content: space-between
 			.footer__partners
 				width: 431px
 				margin-top: 35px
@@ -355,36 +366,20 @@ footer
 	.research__section-en:nth-of-type(5)
 		margin-top: -3px
 
-/* services */
-/*
-h2
-	font-size: 21px
-	font-weight: 800
-	line-height: 1.5
-	position: relative
-	display: inline-block
-	&:before
-		content: ""
-		position: absolute
-		left: 15px
-		bottom: 0
-		width: 30px
-		height: 3px
-		background-color: $main-color
-		-moz-transform: translateX(-50%)
-		-webkit-transform: transelateX(-50%)
-		-ms-transform: translateX(-50%)
-		transform: translateX(-50%)
-section
-	padding-top: 20px
-	line-height: 2
-	h3
-		font-size: 14px
-		font-weight: bold
-		color: $main-color
-	a 
-		display: block
-		&.repos_name
-			font-size: 12px
-			line-height: 19px
-*/
+/* about */
+.about-img
+	margin-bottom: 5px
+.about__description-wrapper
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-bottom: 1px solid $main-color
+	margin-top: 103px
+.about__description
+	font-size: 14px
+	line-height: 1.8em
+	margin-bottom: 10px
+.about__reference
+	font-size: 14px
+	line-height: 1.8em
+	margin-left: -7px

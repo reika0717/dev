@@ -21,41 +21,33 @@
 
 <body>
 {% include header.html %}
-
-<aside class="category-index three‐division">
-    <nav>
-        <p class="ruled-line">index</p>
-        <ul class="children">
-	        <li><a href="http://dbcls.rois.ac.jp/about/history">センターについて</a></li>
-			<li><a href="http://dbcls.rois.ac.jp/about/history">沿革</a></li>
-			<li><a href="http://dbcls.rois.ac.jp/about/funding">予算と財源</a></li>
-			<li><a href="http://dbcls.rois.ac.jp/about/faq">よくある質問</a></li>
-			<li><a href="http://dbcls.rois.ac.jp/about/policy">サイトポリシー</a></li>
-			<li><a href="http://dbcls.rois.ac.jp/about/logotype">ロゴについて</a></li>
-		</ul><!-- /.children -->
-    </nav>
-</aside><!-- /.category-index -->
-
-<section>
-<!--p><img style="display: block; margin: 0 auto 1em;" src="./センターについて ｜ DBCLS_files/795316b92fc766b0181f6fef074f03fa.png" alt="organization map" usemap="#map" width="695" height="348"></p-->
-<map name="map">
-<area alt="JST" coords="519,283,632,330" shape="rect" href="http://www.jst.go.jp/" target="_blank">
-<area alt="ROIS" coords="163,281,300,330" shape="rect" href="http://www.rois.ac.jp/" target="_blank">
-<area alt="NBDC" coords="578,175,91" shape="circle" href="http://biosciencedbc.jp/" target="_blank">
-<area alt="DDBJ" coords="134,175,89" shape="circle" href="http://www.ddbj.nig.ac.jp/" target="_blank">
-<area alt="NIG" coords="74,37,191,85" shape="rect" href="http://www.nig.ac.jp/" target="_blank"></map>
-<p>ライフサイエンス統合データベースセンター（Database Center for Life Science： DBCLS）は、ライフサイエンス分野におけるデータベース統合化の拠点を形成することを目的に、平成19年4月に設立されました。DBCLSは、ライフサイエンス分野のデータベースとサービスの専門機関として自らを位置づけ、国内を中心にデータベースの統合化と保全に努め、利用者の利便性を高めるための情報技術の研究開発やサービスの開発を行います。</p>
-<p>ライフサイエンス分野では、1990年代後半から、急速に進展したゲノムプロジェクトやオミクスプロジェクトにより大量のデータが産み出されるようになり、その結果、世界中で数千をこえる多様なデータベースが研究成果として公開されています。この分野の知識全体がデータベースにかたちを変えているといっても過言ではなく、データベースをうまく使いこなすことが研究の進展に不可欠になっています。</p>
-<p>しかし、利用者からは「必要なデータベースが見つからない」「使い方がよくわからない」「データを組み合わせてより高度な解析ができない」など不便を訴える意見も多く、データベースを効率よく利用するための環境整備は充分ではありません。また、研究期間が終了したデータベースはメンテナンスされなくなり消滅してしまうといった問題や、データや成果情報の権利関係が明記されず再利用が難しい問題、臨床研究における個人情報の取り扱いなど、制度上の問題も多く存在しています。そこでDBCLSでは、データベースの再利用性を高めるための情報技術の研究開発、BioHackathon、講習会など、多面的な活動を通してこれらの問題解決を目指します。</p>
-<p>【参考】<a href="http://dbcls.rois.ac.jp/wp-content/uploads/2014/06/20140602-NBDC-DBCLS.pdf">NBDC/DBCLS共同研究計画(2014/6/2 発表資料PDF)</a></p>
-</section>
-
-
-
-
-
-</div><!-- /.inner -->
-</div><!-- /#Columns -->
+	<div class="content__wrapper">
+		<div class="sub__navigation">
+			<h2 class="page-title">About</h2>
+			<ul class="sub__navigation-wrapper">
+				<li class="sub__navigation-title">沿革</li>
+				<li class="sub__navigation-title">予算と財源</li>
+				<li class="sub__navigation-title">よくある質問</li>
+				<li class="sub__navigation-title">サイトポリシー</li>
+				<li class="sub__navigation-title">ロゴについて</li>
+			</ul>
+		</div>
+		<div class="main__contents">
+			<img src="img/about.svg" alt="" class="about-img">
+			<p class="about__description">ライフサイエンス統合データベースセンター（Database Center for Life Science： DBCLS）は、ライフサイエンス分野におけるデータベース統合化の拠点を形成することを目的に、平成19年4月に設立されました。DBCLSは、ライフサイエンス分野のデータベースとサービスの専門機関として自らを位置づけ、国内を中心にデータベースの統合化と保全に努め、利用者の利便性を高めるための情報技術の研究開発やサービスの開発を行います。</p>
+			<p class="about__description">ライフサイエンス分野では、1990年代後半から、急速に進展したゲノムプロジェクトやオミクスプロジェクトにより大量のデータが産み出されるようになり、その結果、世界中で数千をこえる多様なデータベースが研究成果として公開されています。この分野の知識全体がデータベースにかたちを変えているといっても過言ではなく、データベースをうまく使いこなすことが研究の進展に不可欠になっています。</p>
+			<p class="about__description">
+			しかし、利用者からは「必要なデータベースが見つからない」「使い方がよくわからない」「データを組み合わせてより高度な解析ができない」など不便を訴える意見も多く、データベースを効率よく利用するための環境整備は充分ではありません。また、研究期間が終了したデータベースはメンテナンスされなくなり消滅してしまうといった問題や、データや成果情報の権利関係が明記されず再利用が難しい問題、臨床研究における個人情報の取り扱いなど、制度上の問題も多く存在しています。そこでDBCLSでは、データベースの再利用性を高めるための情報技術の研究開発、BioHackathon、講習会など、多面的な活動を通してこれらの問題解決を目指します。
+			</p>
+			<div class="about__description-wrapper">
+				<p class="about__reference">【参考】
+					<a href="http://dbcls.rois.ac.jp/wp-content/uploads/2014/06/20140602-NBDC-DBCLS.pdf">NBDC/DBCLS共同研究計画(2014/6/2 発表資料PDF)</a>
+				</p>
+				<a class="page_btn pdf_btn" href="http://dbcls.rois.ac.jp/wp-content/uploads/2014/06/20140602-NBDC-DBCLS.pdf">pdf</a>
+			</div>
+		</div>
+	</div>
+{% include footer.html %}
 <script src="script/default.js"></script>
 </body>
 </html>
