@@ -10,21 +10,22 @@ body
 	width: 100%
 	a
 		text-decoration: none
+	a,p,li,span,h1,h2,h3
+		color: $main-color
 .page-title
 	width: 31px
 	font-size: 21px
-	color: $main-color
 	font-weight: 800
 	padding-bottom: 3px
 	border-bottom: 3px solid $main-color
 .page_btn
 	display: flex
 	align-items: center
-	color: $main-color
 	font-size: 10px
 	padding: 3px 7px
 	border: 1px solid $main-color
 	border-radius: 10px
+	background: white
 	&:before
 		content: ""
 		display: block
@@ -34,6 +35,20 @@ body
 		background-image: url(../img/icon_more.svg)
 	&.more_btn
 		width: 56px
+	&.access_btn
+		width: 63px
+		margin-top: 7px
+//下層ページカラム設定
+.content__wrapper
+	width: 1024px
+	margin: 0 auto
+	display: flex
+	.sub__navigation
+		padding-top: 156px
+		width: 242px
+	.main__contents
+		padding-top: 156px
+		width: 782px
 
 /* header */
 .header
@@ -54,6 +69,9 @@ body
 		top: -9px
 		li
 			font-size: 14px	
+.lang-ja,
+.lang-en
+	color: $header-color
 #header__languages-ja
 	.lang-ja
 		margin-left: 15px
@@ -119,18 +137,70 @@ footer
 	background: #E8EDED
 	margin-top: 70px
 	.footer__wrapper
-		width: 1024px
+		width: 862px
 		margin: 0 auto
 		padding-top: 22px
 		.footer__organism
 			.footer__organism-sub
-				color: $main-color
 				font-size: 14px
 				font-weight: 700
 			.footer__organism-main
-				color: $main-color
 				font-size: 18px
 				font-weight: 700
+		.footer__address
+			margin-top: 35px
+			.address__list
+				display: flex
+				justify-content: space-between
+				margin-top: 19px
+				li
+					font-size: 14px
+					line-height: 1.3em
+					width: 431px
+		.footer__bottom-area
+			display: flex
+			.footer__partners
+				width: 431px
+				margin-top: 35px
+				.footer__rogo-wrapper
+					margin-top: 25px
+					display: flex
+					align-items: center
+					flex-wrap: wrap
+					.logo__jbi
+						height: 32px
+					.logo__ddbj
+						height: 42px
+						margin-left: 62px
+					.logo__nbdc
+						height: 44px
+						margin-top: 20px
+					.logo__pdbj
+						height: 41px
+						margin-left: 50px
+						margin-top: 20px
+			.footer__links
+				width: 431px
+				margin-top: 35px
+				.links__wrapper
+					margin-top: 25px
+					.individual_link
+						a
+							font-size: 14px
+							text-decoration: underline
+							line-height: 1.8em
+		.footer__lisence
+			p
+				font-size: 10px
+				display: flex
+				justify-content: center
+				padding: 40px 0 20px 0
+				&:before
+					content: ""
+					width: 81px
+					height: 16px
+					display: block
+					background: url(../img/by.svg) no-repeat
 /* top-page */
 .main-image__wrapper
 	width: 100%
@@ -152,7 +222,6 @@ footer
 			top: 335px
 			right: 0
 			font-size: 12px
-			color: $main-color
 			border: 1px solid $main-color
 			border-radius: 5px
 			background: white
@@ -166,7 +235,7 @@ footer
 				padding: 12px
 //news
 .top__news-section
-	width: 1024px
+	width: 862px
 	margin: 78px auto 0
 	.news__individual-wrapper
 		margin-bottom: 30px
@@ -176,7 +245,6 @@ footer
 				display: flex
 				align-items: center
 				.post-date
-					color: $main-color
 					font-size: 14px
 					font-weight: 800
 				.post-tags
@@ -190,9 +258,9 @@ footer
 						margin: 0 1px
 						border-radius: 7px
 		.news__title
-			color: $main-color
 			font-size: 14px
 			font-weight: 700
 		.news__desc-beginning
-			color: $main-color
 			font-size: 12px
+
+/* Events */
