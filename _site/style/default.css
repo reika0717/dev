@@ -51,6 +51,23 @@ body {
   padding-bottom: 3px;
   border-bottom: 3px solid #14274B; }
 
+.more_btn {
+  display: flex;
+  align-items: center;
+  color: #14274B;
+  font-size: 10px;
+  width: 56px;
+  padding: 3px 7px;
+  border: 1px solid #14274B;
+  border-radius: 10px; }
+  .more_btn:before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 9px;
+    margin-right: 5px;
+    background-image: url(../img/icon_more.svg); }
+
 /* header */
 .header {
   width: 100%;
@@ -131,6 +148,24 @@ body {
       color: #004098;
       opacity: 0.8; }
 
+/* footer */
+footer {
+  width: 100%;
+  background: #E8EDED;
+  margin-top: 70px; }
+  footer .footer__wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding-top: 22px; }
+    footer .footer__wrapper .footer__organism .footer__organism-sub {
+      color: #14274B;
+      font-size: 14px;
+      font-weight: 700; }
+    footer .footer__wrapper .footer__organism .footer__organism-main {
+      color: #14274B;
+      font-size: 18px;
+      font-weight: 700; }
+
 /* top-page */
 .main-image__wrapper {
   width: 100%;
@@ -169,6 +204,28 @@ body {
   width: 1024px;
   margin: 78px auto 0; }
   .top__news-section .news__individual {
-    margin-top: 30px; }
-  .top__news-section .post__sub-info {
-    display: flex; }
+    margin-top: 23px; }
+    .top__news-section .news__individual .post__sub-info {
+      display: flex;
+      align-items: center; }
+      .top__news-section .news__individual .post__sub-info .post-date {
+        color: #14274B;
+        font-size: 14px;
+        font-weight: 800; }
+      .top__news-section .news__individual .post__sub-info .post-tags {
+        display: flex;
+        margin-left: 9px; }
+        .top__news-section .news__individual .post__sub-info .post-tags a {
+          font-size: 10px;
+          color: white;
+          background-color: #14274B;
+          padding: 0px 6px;
+          margin: 0 1px;
+          border-radius: 7px; }
+    .top__news-section .news__individual .news__title {
+      color: #14274B;
+      font-size: 14px;
+      font-weight: 700; }
+    .top__news-section .news__individual .news__desc-beginning {
+      color: #14274B;
+      font-size: 12px; }

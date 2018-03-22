@@ -30,6 +30,20 @@
 		"oAP": "\/_config.yml",
 		"oF": 0
 		},
+	"\/_includes\/footer.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_includes\/footer.html",
+		"oF": 0
+		},
+	"\/_includes\/footer_en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_includes\/footer_en.html",
+		"oF": 0
+		},
 	"\/_includes\/header.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -3414,6 +3428,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_site\/img\/icon_more.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_site\/img\/icon_more.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/_site\/img\/jbi-3.png": {
 		"ft": 32768,
 		"iS": 10264,
@@ -4542,29 +4566,6 @@
 		"oAP": "\/_site\/services.html",
 		"oF": 0
 		},
-	"\/_site\/style\/default.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/default-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/_site\/style\/default.sass": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/default.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/_site\/style\/font-awesome.css": {
 		"aP": 1,
 		"bl": 0,
@@ -4778,6 +4779,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/img\/icon_more.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icon_more.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/img\/jbi-3.png": {
 		"ft": 32768,

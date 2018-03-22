@@ -25,19 +25,20 @@
 				<li class='news__individual'>
 					<div class="post__sub-info">
 						<div class="post-date">
-							{{post.date | date_to_string}}
+							{{post.date | date: '%m/%d/%Y'}}
 						</div>
 					  <div class="post-tags">
 							{% include post_meta.html %}
 						</div>
 					</div>
-					<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+					<a href="{{post.url | prepend: site.baseurl}}" class="news__title">{{post.title}}</a>
 					{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
 					<p class='news__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
 				</li>
 			{% endfor %}
 		</ul>
-		<a href="news.html">more</a>
+		<a href="news.html" class="more_btn">more</a>
 	</div>
+{% include footer.html %}
 </body>
 </html>
