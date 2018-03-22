@@ -6,59 +6,76 @@
 	<link rel="stylesheet" href="style/default.css">
 </head>
 <body>
-<nav>
-	<ul>
-		<li>
-			<a href="/dbcls-test/index.html">top</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/about.html">センターについて</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/research.html">研究開発</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/services.html">サービス</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/events.html">イベント</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/member.html">メンバー</a>
-		</li>
-		<li>
-			<a href="#">アクセス</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/achievement.html">成果一覧</a>
-		</li>
-		<li>
-			<a href="/dbcls-test/contact.html">お問い合わせ</a>
-		</li>
-	</ul>
-</nav>
+<header class='header-ja header'>
+	<nav>
+		<div id="header__languages-ja" class='header__language-wrapper'>
+			<ul class="qtrans_language_chooser" id="qtranslate-chooser">
+			<li class="lang-en active"><a href="index-en" hreflang="en" title="English"><span>en</span></a></li>
+			<li class="lang-ja"><a href="index" hreflang="ja" title="日本語"><span>jp</span></a></li>
+			</ul>
+		</div>	
+		<ul class='header__nav'>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/index.html">
+					<img src="img/logo_dbcls.svg" alt=""　class='header__logo'>
+				</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/about.html">About</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/research.html">Research</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/services.html">Services</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/events.html">Events</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/member.html">Member</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="#">Access</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/achievement.html">Achievement</a>
+			</li>
+			<li class='header__nav__contents'>
+				<a href="/dbcls-test/contact.html">Contact</a>
+			</li>
+			<li class='header__nav__sns'>
+				<span class='header__nav__sns-twitter fa fa-twitter'></span>			
+				<span class='header__nav__sns-feed fa fa-rss'></span>
+			</li>
+			<li class='header__nav__search'>
+				<input class='search__wrapper' type="text">
+				<input class='search__submit' type="submit" value=''>
+			</li>
+		</ul>
+	</nav>	
+</header>
 
-<hr>
-<div id="Languages">
-	<ul class="qtrans_language_chooser" id="qtranslate-chooser">
-	<li class="lang-en active"><a href="index-en" hreflang="en" title="English"><span>English</span></a></li>
-	<li class="lang-ja"><a href="index" hreflang="ja" title="日本語"><span>日本語</span></a></li>
-	</ul>
-	<div class="qtrans_widget_end"></div>
+<div class="main-image__wrapper">
+	<div class="main-image__contents">
+		<img src="img/dbcls-top.svg" class="main-image" alt="">
+		<dl class="main__forcused-page__description">
+			<dt class="main__forcused-page__title">All Of gene Expression</dt>
+			<dd class="main__forcused-page__text">トップジャーナルに掲載された日本人を著者とする生命科学分野の論文について、論文の著者自身の執筆による日本語のレビューを、だれでも自由に閲覧・利用できるよう、いち早く公開するサービスです。</dd>
+		</dl>
+	</div>
 </div>
-	<h1>ここはtopページです。</h1>
-
-	<h2>news</h2>
-	<div class="top__news-section">
+<div class="top__news-section">
+	<h2 class="page-title">News</h2>
 		<ul>
 			
 				<li class='news__individual'>
-						27 Feb 2018
-					<a href="/dbcls-test/ja/2018/02/27/post2.html">希少疾患診断支援システム「PubCaseFinder」がMedical Tribune誌で紹介されました</a>
-					
-					<p class='news__desc-beginning'>当センターが開発する、PubCaseFinderがこの度、Medical Tribune誌およびその…</p>
-				  <div class="post-tags">
-						
+					<div class="post__sub-info">
+						<div class="post-date">
+							27 Feb 2018
+						</div>
+					  <div class="post-tags">
+							
 
 
   
@@ -71,16 +88,20 @@
     </a>
   
 
+						</div>
 					</div>
+					<a href="/dbcls-test/ja/2018/02/27/post2.html">希少疾患診断支援システム「PubCaseFinder」がMedical Tribune誌で紹介されました</a>
+					
+					<p class='news__desc-beginning'>当センターが開発する、PubCaseFinderがこの度、Medical Tribune誌およびその…</p>
 				</li>
 			
 				<li class='news__individual'>
-						27 Feb 2018
-					<a href="/dbcls-test/ja/2018/02/27/post1.html">2018年度「統合データベース講習会:AJACS」受入れ機関の募集が開始されました。</a>
-					
-					<p class='news__desc-beginning'>DBCLSのメンバーも講習会講師として多数参加している「統合データベース講習会」の2018年度の開催…</p>
-				  <div class="post-tags">
-						
+					<div class="post__sub-info">
+						<div class="post-date">
+							27 Feb 2018
+						</div>
+					  <div class="post-tags">
+							
 
 
   
@@ -97,18 +118,44 @@
     </a>
   
 
+						</div>
 					</div>
+					<a href="/dbcls-test/ja/2018/02/27/post1.html">2018年度「統合データベース講習会:AJACS」受入れ機関の募集が開始されました。</a>
+					
+					<p class='news__desc-beginning'>DBCLSのメンバーも講習会講師として多数参加している「統合データベース講習会」の2018年度の開催…</p>
 				</li>
 			
 				<li class='news__individual'>
-						26 Feb 2018
+					<div class="post__sub-info">
+						<div class="post-date">
+							26 Feb 2018
+						</div>
+					  <div class="post-tags">
+							
+
+
+  
+    <a href="/dbcls-test/tags#サービス">
+      サービス
+    </a>
+  
+
+						</div>
+					</div>
 					<a href="/dbcls-test/ja/2018/02/26/post1.html">サービス一時停止のお知らせ ＜2018年3月9日(金) 17:00 〜 2018年3月12日(月) 9:00＞</a>
 					
 					<p class='news__desc-beginning'>DBCLSが管理しているサーバのシステムメンテナンスの影響により、
 
 2018年 3月9日(金) 1…</p>
-				  <div class="post-tags">
-						
+				</li>
+			
+				<li class='news__individual'>
+					<div class="post__sub-info">
+						<div class="post-date">
+							23 Feb 2018
+						</div>
+					  <div class="post-tags">
+							
 
 
   
@@ -116,39 +163,25 @@
       サービス
     </a>
   
+    <a href="/dbcls-test/tags#広報">
+      広報
+    </a>
+  
 
+						</div>
 					</div>
-				</li>
-			
-				<li class='news__individual'>
-						23 Feb 2018
 					<a href="/dbcls-test/ja/2018/02/23/post2.html">LODデータの活用を促進するツール 「SPARQList」 が LODチャレンジ 2017 基盤技術部門で優秀賞を受賞しました</a>
 					
 					<p class='news__desc-beginning'>当センターの片山 俊明 特任助教 および 川島 秀一 特任助教 が開発する、「SPARQList」が…</p>
-				  <div class="post-tags">
-						
-
-
-  
-    <a href="/dbcls-test/tags#サービス">
-      サービス
-    </a>
-  
-    <a href="/dbcls-test/tags#広報">
-      広報
-    </a>
-  
-
-					</div>
 				</li>
 			
 				<li class='news__individual'>
-						23 Feb 2018
-					<a href="/dbcls-test/ja/2018/02/23/post1.html">データのLOD化を加速させる 「JSON2LD Mapper」 が LODチャレンジ 2017 アイデア部門で優秀賞を受賞しました</a>
-					
-					<p class='news__desc-beginning'>当センターの山本泰智特任准教授が国立遺伝学研究所の藤澤貴智特任研究員と構想したアプリケーション開発案…</p>
-				  <div class="post-tags">
-						
+					<div class="post__sub-info">
+						<div class="post-date">
+							23 Feb 2018
+						</div>
+					  <div class="post-tags">
+							
 
 
   
@@ -161,7 +194,11 @@
     </a>
   
 
+						</div>
 					</div>
+					<a href="/dbcls-test/ja/2018/02/23/post1.html">データのLOD化を加速させる 「JSON2LD Mapper」 が LODチャレンジ 2017 アイデア部門で優秀賞を受賞しました</a>
+					
+					<p class='news__desc-beginning'>当センターの山本泰智特任准教授が国立遺伝学研究所の藤澤貴智特任研究員と構想したアプリケーション開発案…</p>
 				</li>
 			
 		</ul>

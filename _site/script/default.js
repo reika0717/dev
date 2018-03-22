@@ -18,10 +18,10 @@ var initialize = {
 
 		//ハッシュ値が変わった時の画面遷移
 		window.addEventListener('hashchange', function() {
-			if(location.hash == '#services'){
+			if(location.hash === '#services'){
 				$('.service__wrapper').empty()
 				displayReposList()
-			}else if(location.hash == '#service'){
+			}else if(location.hash === '#service'){
 				displayRepos(repos_name, 'README.md')
 			}
 		}, false)
