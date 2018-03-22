@@ -80,6 +80,14 @@ body {
   .content__wrapper .sub__navigation {
     padding-top: 156px;
     width: 242px; }
+    .content__wrapper .sub__navigation .sub__navigation-wrapper {
+      margin-top: 14px; }
+      .content__wrapper .sub__navigation .sub__navigation-wrapper .sub__navigation-title {
+        font-size: 14px;
+        font-weight: 600; }
+        .content__wrapper .sub__navigation .sub__navigation-wrapper .sub__navigation-title .sub__navigation-contents {
+          font-size: 12px;
+          font-weight: 500; }
   .content__wrapper .main__contents {
     padding-top: 156px;
     width: 782px; }
