@@ -84,17 +84,20 @@ var initialize = {
 	},
 	'achievement': function () {
 		$.ajax({
-		  url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+		  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
 		  dataType : "json",
 		  async: true,
 		  success : function(data){
 		  	var rows = "";
 		    for (i = 0; i < data.values.length; i++) {
-		        rows += '<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+		        rows += 
+
+		        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+		        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
 		            '<td><p>' + data.values[i][1] + '</p></td>'+ 
 		            '<td><p>' + data.values[i][2] + '</p></td>' +
-		            '<td><p>' + data.values[i][3] + '<p></td>' +
-		            '<td><a href="' + data.values[i][4] + '">' + data.values[i][4] + '</a></td>' +
+		            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
+		            '<td><p>' + data.values[i][4] + '<p></td>' +
 		            '<td><p>' + data.values[i][5] + '</p></td>'+ 
 		            '<td><p>' + data.values[i][6] + '</p></td>' +
 		            '<td><p>' + data.values[i][7] + '</p></td>' +
