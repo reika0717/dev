@@ -17,12 +17,11 @@ body
 	font-weight: 800
 	padding-bottom: 3px
 	border-bottom: 3px solid $main-color
-.more_btn
+.page_btn
 	display: flex
 	align-items: center
 	color: $main-color
 	font-size: 10px
-	width: 56px
 	padding: 3px 7px
 	border: 1px solid $main-color
 	border-radius: 10px
@@ -33,6 +32,8 @@ body
 		height: 9px
 		margin-right: 5px
 		background-image: url(../img/icon_more.svg)
+	&.more_btn
+		width: 56px
 
 /* header */
 .header
@@ -167,25 +168,27 @@ footer
 .top__news-section
 	width: 1024px
 	margin: 78px auto 0
-	.news__individual
-		margin-top: 23px
-		.post__sub-info
-			display: flex
-			align-items: center
-			.post-date
-				color: $main-color
-				font-size: 14px
-				font-weight: 800
-			.post-tags
+	.news__individual-wrapper
+		margin-bottom: 30px
+		.news__individual
+			margin-top: 23px
+			.post__sub-info
 				display: flex
-				margin-left: 9px
-				a
-					font-size: 10px
-					color: white
-					background-color: $main-color
-					padding: 0px 6px
-					margin: 0 1px
-					border-radius: 7px
+				align-items: center
+				.post-date
+					color: $main-color
+					font-size: 14px
+					font-weight: 800
+				.post-tags
+					display: flex
+					margin-left: 9px
+					a
+						font-size: 10px
+						color: white
+						background-color: $main-color
+						padding: 0px 6px
+						margin: 0 1px
+						border-radius: 7px
 		.news__title
 			color: $main-color
 			font-size: 14px

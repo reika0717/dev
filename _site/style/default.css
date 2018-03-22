@@ -51,22 +51,23 @@ body {
   padding-bottom: 3px;
   border-bottom: 3px solid #14274B; }
 
-.more_btn {
+.page_btn {
   display: flex;
   align-items: center;
   color: #14274B;
   font-size: 10px;
-  width: 56px;
   padding: 3px 7px;
   border: 1px solid #14274B;
   border-radius: 10px; }
-  .more_btn:before {
+  .page_btn:before {
     content: "";
     display: block;
     width: 9px;
     height: 9px;
     margin-right: 5px;
     background-image: url(../img/icon_more.svg); }
+  .page_btn.more_btn {
+    width: 56px; }
 
 /* header */
 .header {
@@ -203,29 +204,31 @@ footer {
 .top__news-section {
   width: 1024px;
   margin: 78px auto 0; }
-  .top__news-section .news__individual {
-    margin-top: 23px; }
-    .top__news-section .news__individual .post__sub-info {
-      display: flex;
-      align-items: center; }
-      .top__news-section .news__individual .post__sub-info .post-date {
-        color: #14274B;
-        font-size: 14px;
-        font-weight: 800; }
-      .top__news-section .news__individual .post__sub-info .post-tags {
+  .top__news-section .news__individual-wrapper {
+    margin-bottom: 30px; }
+    .top__news-section .news__individual-wrapper .news__individual {
+      margin-top: 23px; }
+      .top__news-section .news__individual-wrapper .news__individual .post__sub-info {
         display: flex;
-        margin-left: 9px; }
-        .top__news-section .news__individual .post__sub-info .post-tags a {
-          font-size: 10px;
-          color: white;
-          background-color: #14274B;
-          padding: 0px 6px;
-          margin: 0 1px;
-          border-radius: 7px; }
-    .top__news-section .news__individual .news__title {
+        align-items: center; }
+        .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-date {
+          color: #14274B;
+          font-size: 14px;
+          font-weight: 800; }
+        .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-tags {
+          display: flex;
+          margin-left: 9px; }
+          .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-tags a {
+            font-size: 10px;
+            color: white;
+            background-color: #14274B;
+            padding: 0px 6px;
+            margin: 0 1px;
+            border-radius: 7px; }
+    .top__news-section .news__individual-wrapper .news__title {
       color: #14274B;
       font-size: 14px;
       font-weight: 700; }
-    .top__news-section .news__individual .news__desc-beginning {
+    .top__news-section .news__individual-wrapper .news__desc-beginning {
       color: #14274B;
       font-size: 12px; }
