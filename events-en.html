@@ -2,110 +2,88 @@
 ---
 <!DOCTYPE html>
 <!-- saved from url=(0030)http://dbcls.rois.ac.jp/member -->
-<html lang="en" style=""><!--<![endif]-->
+<html lang="ja" data-page-type="events"><!--<![endif]-->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width">
 <title>イベント ｜ DBCLS</title>
 <link rel="stylesheet" href="style/default.css">
-<style type="text/css">
-	section.posts-by-tags div:first-child, section.posts-by-tags div:nth-child(3), section.posts-by-tags div:nth-child(4), section.posts-by-tags div:nth-child(5) ,section.posts-by-tags div:nth-child(6){
-		display: none;
-	} 
-</style>
 </head>
 
 <body>
 {% include header_en.html %}
-	<h1>ここはEventページです。</h1>
-
-	{% comment %}
-<!--
-- Create an empty array.
-- Obtain a tag name and push it to the array.
-- Sort the tag names.
-- List tags as a tag cloud.
--->
-{% endcomment %}
-
-{% assign tag_names = "" | split: "|"  %}
-
-{% for posts_by_tag in site.tags %}
-  {% assign tag_names = tag_names | push: posts_by_tag.first %}
-{% endfor %}
-
-{% assign tag_names = tag_names | sort %}
-
-{% include tag_cloud.html tag_names=tag_names %}
-
-<hr>
-
-<section class="posts-by-tags">
-  {% for tag_name in tag_names %}
-    <div>
-      <h3 id="{{ tag_name }}">
-        {{ tag_name | capitalize | replace: "_", " " }}
-      </h3>
-      <ul>
-        {% for post in site.tags[tag_name] %}
-          {% if post.category contains 'ja' %}
-            <li>
-              <a href="/dbcls-test/{{ post.url }}">
-                {{ post.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
+  <div class="content__wrapper">
+    <div class="sub__navigation">
+      <h2 class="page-title">Event</h2>
+      <ul class="sub__navigation-wrapper">
+        <li class="sub__navigation-title">Events</li>
+        <li class="sub__navigation-title">Public Relations</li>
       </ul>
     </div>
-  {% endfor %}
-</section>
-	<a href="news_event.html">more</a>
-	<p class="margin-top2em">DBCLS holds various events for life science researchers around the world as well as publicizes itself in meetings and workshops. Our wide variety of activities include technical workshops for database architects and training sessions for experimental researchers.</p>
-	<div class="two-columns">
-<div class="first">
-<article class="event">
-<h4>BioHackathon</h4>
-<p>Annual international conference held by DBCLS since 2008 for information technology engineers/researchers in the field of life science. Discussions on information sharing, standardization and interoperability of biological data integration take place with Hackathon style. Every year, many engineers/researchers get together from all over the world to discuss and develop intensively for all week long.
-</p>
-<ul>
-<li><a href="http://www.biohackathon.org/">BioHackathon</a></li>
-</ul>
-</article>
-<article class="event">
-<h4>Togo Symposium</h4>
-<p>Taking place annually on October 5th, the “Togo day (10-5 can be read “To-Go” in Japanese)” since 2010, Togo symposium offers sessions to share domestic research progress on database integration, and lectures and poster presentations on information integration technologies. Lecture movies, presentation slides, and posters can be viewed online after the end of the symposium.<br />
-See details on the website (in Japanese).</p>
-<ul>
-　　　　　　　　</p>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2016/">Togo Symposium 2016</a></li>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2015/">Togo Symposium 2015</a></li>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2014/">Togo Symposium 2014</a></li>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2013/">Togo Symposium 2013</a></li>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2012/">Togo Symposium 2012</a></li>
-<li><a href="http://events.biosciencedbc.jp/sympo/togo2011/">Togo Symposium 2011</a></li>
-</ul>
-</article></div>
-<div class="second">
-<article class="event">
-<h4>BioHackathon Japan</h4>
-<p>Annual hackathon event for domestic developers held since 2010, mainly focusing on technology development and information sharing on database integration. Members from DBCLS, National Bioscience Database Center (NBDC), and institutes participating in NBDC’s promotion program for data integration get together for discussion and development. Wide variety of people interested in integration and utilization of data in biomedical sciences also participate.</p>
-<ul>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH16.12">BH16.12</a></li>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH15.15">BH15.15</a></li>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH14.14">BH14.14</a></li>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH13.13">BH13.13</a></li>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH12.12">BH12.12</a></li>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH11.11">BH11.11</a></li>
-</ul>
-</article>
-<article class="event">
-<h4>SPARQLthon</h4>
-<p>Mini-Hackathon held monthly for domestic developers/researchers interested in semantic web technologies in the life science field. It is a place not only to develop projects that are initiated in annual BioHackathon and BioHackathon Japan, but also to share information on state-of-the-art technologies. It is a community that various participants with various background (e.g., academics, companies, engineers, researchers, designers) can join.<br />
-See details on the website (in Japanese).</p>
-<ul>
-<li><a href="http://wiki.lifesciencedb.jp/mw/index.php/SPARQLthon">SPARQLthon</a></li>
-</ul>
-</article></div>
-</div>
+    <div class="main__contents">
+      <div class="main__contents-event">
+        <h3 class="main__content-title">Events</h3>
+        <ul>
+          {% for post in site.categories.en limit:10 %}
+            {% if post.tags contains 'イベント' %}
+              <li class="post__individual">
+                <div class="post__date">
+                  {{post.date | date: '%m/%d/%Y'}}
+                </div>
+                <a href="/dbcls-test/{{ post.url }}" class="post__title">
+                  {{ post.title }}
+                </a>
+                {% assign beginning =  post.content | slice: 0, 150 | strip_html%}
+                <p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <a href="news_event.html" class="more_btn page_btn">more</a>
+      </div>
+      <div class="main__contents-public">
+        <h3 class="main__content-title">Public Relations</h3>
+        <div class="section-wrapper">
+          <article class="article__section event__section-en">
+            <h4>Togo Symposium</h4>
+            <p>Taking place annually on October 5th, the “Togo day (10-5 can be read “To-Go” in Japanese)” since 2010, Togo symposium offers sessions to share domestic research progress on database integration, and lectures and poster presentations on information integration technologies. Lecture movies, presentation slides, and posters can be viewed online after the end of the symposium.</p>
+            <p>See details on the website (in Japanese).</p>
+            <ul class="symposium__list">
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2016/">Togo Symposium 2016</a></li>
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2015/">Togo Symposium 2015</a></li>
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2014/">Togo Symposium 2014</a></li>
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2013/">Togo Symposium 2013</a></li>
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2012/">Togo Symposium 2012</a></li>
+            <li><a href="http://events.biosciencedbc.jp/sympo/togo2011/">Togo Symposium 2011</a></li>
+            </ul>
+          </article>
+          <article class="article__section event__section-en">
+            <h4>BioHackathon Japan</h4>
+            <p>Annual hackathon event for domestic developers held since 2010, mainly focusing on technology development and information sharing on database integration. Members from DBCLS, National Bioscience Database Center (NBDC), and institutes participating in NBDC’s promotion program for data integration get together for discussion and development. Wide variety of people interested in integration and utilization of data in biomedical sciences also participate.</p>
+            <ul class="biohackason__list">
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH16.12">BH16.12</a></li>
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH15.15">BH15.15</a></li>
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH14.14">BH14.14</a></li>
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH13.13">BH13.13</a></li>
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH12.12">BH12.12</a></li>
+            <li><a href="http://wiki.lifesciencedb.jp/mw/index.php/BH11.11">BH11.11</a></li>
+            </ul>
+          </article>
+          <article class="article__section event__section-en">
+            <h4>BioHackathon</h4>
+            <p>Annual international conference held by DBCLS since 2008 for information technology engineers/researchers in the field of life science. Discussions on information sharing, standardization and interoperability of biological data integration take place with Hackathon style. Every year, many engineers/researchers get together from all over the world to discuss and develop intensively for all week long.</p>
+            <a href="http://www.biohackathon.org/" class="page_btn access_btn">access</a>
+          </article>
+          <article class="article__section event__section-en">
+            <h4>SPARQLthon</h4>
+            <p>Mini-Hackathon held monthly for domestic developers/researchers interested in semantic web technologies in the life science field. It is a place not only to develop projects that are initiated in annual BioHackathon and BioHackathon Japan, but also to share information on state-of-the-art technologies. It is a community that various participants with various background (e.g., academics, companies, engineers, researchers, designers) can join.</p>
+            <p>See details on the website (in Japanese).</p>
+            <a href="http://wiki.lifesciencedb.jp/mw/index.php/SPARQLthon" class="page_btn access_btn">access</a>
+          </article>
+        </div>
+      </div>  
+    </div>
+  </div>
+{% include footer.html %}
+<script src="script/default.js"></script>
 </body>

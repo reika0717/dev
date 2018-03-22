@@ -1,4 +1,11 @@
+var script = document.createElement('script')
+script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
+document.head.appendChild(script)
+
 var initialize = {
+	'index': function () {},
+	'about': function () {},
+	'research': function () {},
 	'services': function () {
 		var repos_name = ''
 
@@ -82,6 +89,9 @@ var initialize = {
 			})
 		}
 	},
+	'events': function () {},
+	'member': function () {},
+	'access': function () {},
 	'achievement': function () {
 		$.ajax({
 		  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
@@ -107,10 +117,24 @@ var initialize = {
 		    $("#table").append(rows);
 		  }
 		});
-	}
+	},
+	'contact': function () {},
 };
 
-$(function() {
-	var pageType = document.getElementsByTagName('html')[0].dataset.pageType;
-	initialize[pageType]()
+script.addEventListener('load', function() {
+	$(function() {
+		var pageType = document.getElementsByTagName('html')[0].dataset.pageType;
+		console.log(pageType)
+		initialize[pageType]()
+
+		//header言語切り替え
+		$('.lang-en span').on('click', function () {
+			var link = pageType + '-en.html'
+			window.location.href = link
+		})
+		$('.lang-ja span').on('click', function () {
+			var link = pageType + '.html'
+			window.location.href = link
+		})
+	})	
 })

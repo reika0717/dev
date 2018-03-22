@@ -5,12 +5,13 @@
 /* default */
 $main-color: #14274B
 $header-color: #004098
+$section-bg: #E8EDED
 body
 	font-family: 'Muli', sans-serif
 	width: 100%
 	a
 		text-decoration: none
-	a,p,li,span,h1,h2,h3
+	a,p,li,span,h1,h2,h3,h4
 		color: $main-color
 .page-title
 	width: 31px
@@ -35,9 +36,23 @@ body
 		background-image: url(../img/icon_more.svg)
 	&.more_btn
 		width: 56px
+		margin-top: 10px
 	&.access_btn
 		width: 63px
 		margin-top: 7px
+
+//post
+.post__date
+	font-size: 14px
+	font-weight: 800
+.post__title
+	font-size: 14px
+	font-weight: 700
+.post__desc-beginning
+	font-size: 12px
+.post__individual
+	margin-top: 23px
+
 //下層ページカラム設定
 .content__wrapper
 	width: 1024px
@@ -85,8 +100,11 @@ body
 			font-size: 14px	
 .lang-ja,
 .lang-en
-	color: $header-color
+	span
+		color: $header-color
 #header__languages-ja
+	.lang-en
+		cursor: pointer
 	.lang-ja
 		margin-left: 15px
 		opacity: 0.5
@@ -94,6 +112,7 @@ body
 #header__languages-en
 	.lang-ja
 		margin-left: 15px
+		cursor: pointer
 	.lang-en
 		opacity: 0.5
 		pointer-events: none
@@ -253,28 +272,85 @@ footer
 	margin: 78px auto 0
 	.news__individual-wrapper
 		margin-bottom: 30px
-		.news__individual
-			margin-top: 23px
-			.post__sub-info
+		.post__sub-info
+			display: flex
+			align-items: center
+			.post-tags
 				display: flex
-				align-items: center
-				.post-date
-					font-size: 14px
-					font-weight: 800
-				.post-tags
-					display: flex
-					margin-left: 9px
-					a
-						font-size: 10px
-						color: white
-						background-color: $main-color
-						padding: 0px 6px
-						margin: 0 1px
-						border-radius: 7px
-		.news__title
+				margin-left: 9px
+				a
+					font-size: 10px
+					color: white
+					background-color: $main-color
+					padding: 0px 6px
+					margin: 0 1px
+					border-radius: 7px
+
+/* Events & Research article section style */
+.main__contents-public
+	margin-top: 41px
+	.public__description
+		font-size: 14px
+		margin-top: 23px
+.research__description
+	font-size: 14px
+	margin-bottom: 9px
+.section-wrapper
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.article__section
+		width: 385.5px
+		background-color: $section-bg
+		margin: 6px 0
+		align-self: self-end
+		padding: 16px 15px
+		h4
 			font-size: 14px
 			font-weight: 700
-		.news__desc-beginning
-			font-size: 12px
-
-/* Events */
+			margin-bottom: 8px
+		p
+			font-size: 14px
+			line-height: 1.7em
+		.symposium__list,
+		.biohackason__list
+			margin-top: 15px
+			li
+				display: flex
+				align-items: center
+				a
+					font-size: 14px
+				&:before
+					content: "・"
+					display: block
+					width: 14px
+					height: 25px
+			.biohackason__list
+				display: flex
+				flex-wrap: wrap
+				width: 234px
+				li:nth-of-type(2),
+				li:nth-of-type(3),
+				li:nth-of-type(5),
+				li:nth-of-type(6)
+					margin-left: 10px
+		.research__list
+			margin-top: 15px
+			li
+				font-size: 14px
+				.reference-ja
+					margin-left: -8px
+				a
+					text-decoration: underline
+					color: #004098
+	.event__section-ja:nth-of-type(3)
+		margin-top: -40px
+	.research__section-ja:nth-of-type(4)
+		margin-top: -112px
+	.research__section-ja:nth-of-type(5)
+		margin-left: 397px
+		margin-top: -89px
+	.research__section-en:nth-of-type(4)
+		margin-top: -31px
+	.research__section-en:nth-of-type(5)
+		margin-top: -3px

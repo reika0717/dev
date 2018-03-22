@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800");
 @import url(font-awesome.css);
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
@@ -42,7 +43,7 @@ body {
   width: 100%; }
   body a {
     text-decoration: none; }
-  body a, body p, body li, body span, body h1, body h2, body h3 {
+  body a, body p, body li, body span, body h1, body h2, body h3, body h4 {
     color: #14274B; }
 
 .page-title {
@@ -68,10 +69,25 @@ body {
     margin-right: 5px;
     background-image: url(../img/icon_more.svg); }
   .page_btn.more_btn {
-    width: 56px; }
+    width: 56px;
+    margin-top: 10px; }
   .page_btn.access_btn {
     width: 63px;
     margin-top: 7px; }
+
+.post__date {
+  font-size: 14px;
+  font-weight: 800; }
+
+.post__title {
+  font-size: 14px;
+  font-weight: 700; }
+
+.post__desc-beginning {
+  font-size: 12px; }
+
+.post__individual {
+  margin-top: 23px; }
 
 .content__wrapper {
   width: 1024px;
@@ -118,9 +134,12 @@ body {
     .header__language-wrapper .qtrans_language_chooser li {
       font-size: 14px; }
 
-.lang-ja,
-.lang-en {
+.lang-ja span,
+.lang-en span {
   color: #004098; }
+
+#header__languages-ja .lang-en {
+  cursor: pointer; }
 
 #header__languages-ja .lang-ja {
   margin-left: 15px;
@@ -128,7 +147,8 @@ body {
   pointer-events: none; }
 
 #header__languages-en .lang-ja {
-  margin-left: 15px; }
+  margin-left: 15px;
+  cursor: pointer; }
 
 #header__languages-en .lang-en {
   opacity: 0.5;
@@ -287,28 +307,95 @@ footer {
   margin: 78px auto 0; }
   .top__news-section .news__individual-wrapper {
     margin-bottom: 30px; }
-    .top__news-section .news__individual-wrapper .news__individual {
-      margin-top: 23px; }
-      .top__news-section .news__individual-wrapper .news__individual .post__sub-info {
+    .top__news-section .news__individual-wrapper .post__sub-info {
+      display: flex;
+      align-items: center; }
+      .top__news-section .news__individual-wrapper .post__sub-info .post-tags {
+        display: flex;
+        margin-left: 9px; }
+        .top__news-section .news__individual-wrapper .post__sub-info .post-tags a {
+          font-size: 10px;
+          color: white;
+          background-color: #14274B;
+          padding: 0px 6px;
+          margin: 0 1px;
+          border-radius: 7px; }
+
+/* Events & Research article section style */
+.main__contents-public {
+  margin-top: 41px; }
+  .main__contents-public .public__description {
+    font-size: 14px;
+    margin-top: 23px; }
+
+.research__description {
+  font-size: 14px;
+  margin-bottom: 9px; }
+
+.section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .section-wrapper .article__section {
+    width: 385.5px;
+    background-color: #E8EDED;
+    margin: 6px 0;
+    align-self: self-end;
+    padding: 16px 15px; }
+    .section-wrapper .article__section h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px; }
+    .section-wrapper .article__section p {
+      font-size: 14px;
+      line-height: 1.7em; }
+    .section-wrapper .article__section .symposium__list,
+    .section-wrapper .article__section .biohackason__list {
+      margin-top: 15px; }
+      .section-wrapper .article__section .symposium__list li,
+      .section-wrapper .article__section .biohackason__list li {
         display: flex;
         align-items: center; }
-        .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-date {
-          font-size: 14px;
-          font-weight: 800; }
-        .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-tags {
-          display: flex;
-          margin-left: 9px; }
-          .top__news-section .news__individual-wrapper .news__individual .post__sub-info .post-tags a {
-            font-size: 10px;
-            color: white;
-            background-color: #14274B;
-            padding: 0px 6px;
-            margin: 0 1px;
-            border-radius: 7px; }
-    .top__news-section .news__individual-wrapper .news__title {
-      font-size: 14px;
-      font-weight: 700; }
-    .top__news-section .news__individual-wrapper .news__desc-beginning {
-      font-size: 12px; }
-
-/* Events */
+        .section-wrapper .article__section .symposium__list li a,
+        .section-wrapper .article__section .biohackason__list li a {
+          font-size: 14px; }
+        .section-wrapper .article__section .symposium__list li:before,
+        .section-wrapper .article__section .biohackason__list li:before {
+          content: "・";
+          display: block;
+          width: 14px;
+          height: 25px; }
+      .section-wrapper .article__section .symposium__list .biohackason__list,
+      .section-wrapper .article__section .biohackason__list .biohackason__list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 234px; }
+        .section-wrapper .article__section .symposium__list .biohackason__list li:nth-of-type(2),
+        .section-wrapper .article__section .symposium__list .biohackason__list li:nth-of-type(3),
+        .section-wrapper .article__section .symposium__list .biohackason__list li:nth-of-type(5),
+        .section-wrapper .article__section .symposium__list .biohackason__list li:nth-of-type(6),
+        .section-wrapper .article__section .biohackason__list .biohackason__list li:nth-of-type(2),
+        .section-wrapper .article__section .biohackason__list .biohackason__list li:nth-of-type(3),
+        .section-wrapper .article__section .biohackason__list .biohackason__list li:nth-of-type(5),
+        .section-wrapper .article__section .biohackason__list .biohackason__list li:nth-of-type(6) {
+          margin-left: 10px; }
+    .section-wrapper .article__section .research__list {
+      margin-top: 15px; }
+      .section-wrapper .article__section .research__list li {
+        font-size: 14px; }
+        .section-wrapper .article__section .research__list li .reference-ja {
+          margin-left: -8px; }
+        .section-wrapper .article__section .research__list li a {
+          text-decoration: underline;
+          color: #004098; }
+  .section-wrapper .event__section-ja:nth-of-type(3) {
+    margin-top: -40px; }
+  .section-wrapper .research__section-ja:nth-of-type(4) {
+    margin-top: -112px; }
+  .section-wrapper .research__section-ja:nth-of-type(5) {
+    margin-left: 397px;
+    margin-top: -89px; }
+  .section-wrapper .research__section-en:nth-of-type(4) {
+    margin-top: -31px; }
+  .section-wrapper .research__section-en:nth-of-type(5) {
+    margin-top: -3px; }
