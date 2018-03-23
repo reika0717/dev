@@ -6,72 +6,163 @@
 	<meta charset="UTF-8">
 	<title>サービス ｜ DBCLS</title>
 	<link rel="stylesheet" href="style/default.css">
+	<link rel="stylesheet" href="style/default_add.css">
 	<link rel="stylesheet" href="style/github-markdown.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="script/marked.min.js"></script>
 </head>
 <body>
 {% include header.html %}
-<div class="wrapper">
-	<div class="sidebar-list">
-		<h2>Services</h2>
-		<section>
-			<h3>コンテンツ</h3>
-			<a href="#repos_name0" class="repos_name">統合TV</a>
-			<a href="#repos_name0" class="repos_name">ライフサイエンス 新着論文レビュー</a>
-			<a href="#repos_name0" class="repos_name">ライフサイエンス 領域融合レビュー</a>
-			<a href="#repos_name0" class="repos_name">BodyParts3D/Anatomograph</a>
-			<a href="#repos_name0" class="repos_name">Togo Picture Gallery</a>
-			<a href="#repos_name0" class="repos_name">ライフサイエンスQA</a>
-		</section>
-		<section>
-			<h3>塩基配列</h3>
-			<a href="#repos_name0" class="repos_name">DBCLS Galaxy</a>
-			<a href="#repos_name0" class="repos_name">DBCLS SRA</a>
-			<a href="#repos_name0" class="repos_name">CRISPRdirect</a>
-			<a href="#repos_name0" class="repos_name">統合遺伝子検索GGRNA</a>
-			<a href="#repos_name0" class="repos_name">高速塩基配列GGGnome</a>
-			<a href="#repos_name0" class="repos_name">Gendoo</a>
-		</section>
+<div class="content__wrapper">
+<div class="service__wrapper" style="display: none;"></div>
+	<div class="sub__navigation">
+		<h2 class="page-title">Services</h2>
+		<ul class="sub__navigation-wrapper">
+			<li class="sub__navigation-title sub-nav-title__services">コンテンツ
+				<ul class="sub__navigation-contents sub-nav-con__services">
+					<li><a href="services_in" class="repos_name">統合TV</a></li>
+					<li><a href="#repos_name0" class="repos_name">ライフサイエンス 新着論文レビュー</a></li>
+					<li><a href="#repos_name0" class="repos_name">ライフサイエンス 領域融合レビュー</a></li>
+					<li><a href="#repos_name0" class="repos_name">BodyParts3D/Anatomograph</a></li>
+					<li><a href="#repos_name0" class="repos_name">Togo Picture Gallery</a></li>
+					<li><a href="#repos_name0" class="repos_name">ライフサイエンスQA</a></li>
+				</ul>
+			</li>
+			<li class="sub__navigation-title sub-nav-title__services">塩基配列
+				<ul class="sub__navigation-contents sub-nav-con__services">
+					<li><a href="#repos_name0" class="repos_name">DBCLS Galaxy</a></li>
+					<li><a href="#repos_name0" class="repos_name">DBCLS SRA</a></li>
+					<li><a href="#repos_name0" class="repos_name">CRISPRdirect</a></li>
+					<li><a href="#repos_name0" class="repos_name">統合遺伝子検索GGRNA</a></li>
+					<li><a href="#repos_name0" class="repos_name">高速塩基配列GGGnome</a></li>
+					<li><a href="#repos_name0" class="repos_name">Gendoo</a></li>
+				</ul>
+			</li>
+			<li class="sub__navigation-title sub-nav-title__services">遺伝子発現
+				<ul class="sub__navigation-contents sub-nav-con__services">
+					<li><a href="#repos_name0" class="repos_name">RefEx</a></li>
+					<li><a href="#repos_name0" class="repos_name">ChIP-Atlas</a></li>
+					<li><a href="#repos_name0" class="repos_name">AOE(All Of gene Expression)</a></li>
+				</ul>
+			</li>
+			<li class="sub__navigation-title sub-nav-title__services">文献・テキストマイニング
+				<ul class="sub__navigation-contents sub-nav-con__services">
+					<li><a href="#repos_name0" class="repos_name">Allie</a></li>
+					<li><a href="#repos_name0" class="repos_name">Colil</a></li>
+					<li><a href="#repos_name0" class="repos_name">inMeXes</a></li>
+					<li><a href="#repos_name0" class="repos_name">OReFiL</a></li>
+					<li><a href="#repos_name0" class="repos_name">PubAnnotation</a></li>
+					<li><a href="#repos_name0" class="repos_name">TogoDoc Suite</a></li>
+					<li><a href="#repos_name0" class="repos_name">PubCaseFinder</a></li>
+				</ul>
+			</li>
+			<li class="sub__navigation-title sub-nav-title__services">セマンティック・ウェブ
+				<ul class="sub__navigation-contents sub-nav-con__services">
+					<li><a href="#repos_name0" class="repos_name">OntoFinder & OntoFactory</a></li>
+					<li><a href="#repos_name0" class="repos_name">TogoWS</a></li>
+					<li><a href="#repos_name0" class="repos_name">TogoDB</a></li>
+					<li><a href="#repos_name0" class="repos_name">TogoGenome</a></li>
+					<li><a href="#repos_name0" class="repos_name">TogoTable</a></li>
+					<li><a href="#repos_name0" class="repos_name">D2RQ Mapper</a></li>
+				</ul>
+			</li>
+		</ul>
 	</div>
-	<div class="contents-list">
-		<div class="contents-list__title">コンテンツ</div>
-		<div class="service-content__wrapper">
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>統合TV</p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-				<div id="repos_image0" class="repos_image"></div>
+	<div class="main__contents">
+		<div class="main__contents-servece">
+			<h3 class="main__content-title">コンテンツ</h3>
+			<div class="section-wrapper wrapper-type-box">
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">統合TV</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="services_in" class="page_btn more_btn">詳細</a>
+							<a href="http://togotv.dbcls.jp/ja/index.html" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/togotv.png" art=""></div>
+				</article>
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">ライフサイエンス新着論文レビュー</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://first.lifesciencedb.jp/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/first-authors.png" art=""></div>
+				</article>
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">ライフサイエンス領域融合レビュー</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://leading.lifesciencedb.jp/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/leading-authors.png" art=""></div>
+				</article>
 			</div>
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>ライフサイエンス 新着論文レビュー</p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-				<div id="repos_image0" class="repos_image"></div>
+			<h3 class="main__content-title">塩基配列</h3>
+			<div class="section-wrapper wrapper-type-box">
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">CRISPRdirect</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://crispr.dbcls.jp/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/CRISPRlogo_white.png" art=""></div>
+				</article>
 			</div>
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>ライフサイエンス 領域融合レビュー</p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
-				<div id="repos_image0" class="repos_image"></div>
+			<h3 class="main__content-title">遺伝子発現</h3>
+			<div class="section-wrapper wrapper-type-box">
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">RefEx</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://refex.dbcls.jp/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/RefEx.png" art=""></div>
+				</article>
 			</div>
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>BodyParts3D/Anatomograph</p></div>
-				<div id="repos_image0" class="repos_image"></div>
+			<h3 class="main__content-title">塩基配列</h3>
+			<div class="section-wrapper wrapper-type-box">
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">OReFiL</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://orefil.dbcls.jp/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/OReFiL_banner.png" art=""></div>
+				</article>
 			</div>
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>Togo Picture Gallery</p></div>
-				<div id="repos_image0" class="repos_image"></div>
-			</div>
-			<div class="repos_individual_wrapper">
-				<div id="repos_name0" class="repos_name"><p>ライフサイエンスQA</p></div>
-				<div id="repos_image0" class="repos_image"></div>
+			<h3 class="main__content-title">セマンティック・ウェブ</h3>
+			<div class="section-wrapper wrapper-type-box">
+				<article class="article__section contener-type-box">
+					<div id="repos_name0" class="repos_name">
+						<div class="name">TogoWS</div>
+						<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>
+						<div class="btn-box">
+							<a href="#" class="page_btn more_btn">詳細</a>
+							<a href="http://togows.org/" class="page_btn access_btn">アクセス</a>
+						</div>				
+					</div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/togo-ws.png" art=""></div>
+				</article>
 			</div>
 		</div>
-		<div class="contents-list__title">塩基配列</div>
-		<div class="service-content__wrapper"></div>
-		<div class="contents-list__title">遺伝子発現</div>
-		<div class="service-content__wrapper"></div>
-		<div class="contents-list__title">文献・テキストマイニング</div>
-		<div class="service-content__wrapper"></div>
-		<div class="contents-list__title">セマンティック・ウェブ</div>
-		<div class="service-content__wrapper"></div>
-		<!--div class="service__wrapper">
-		</div-->
 	</div>
 </div>
 {% include footer.html %}
