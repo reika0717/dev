@@ -3,7 +3,169 @@ script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
 document.head.appendChild(script)
 
 var initialize = {
-	'index': function () {},
+	'index': function () {
+		var services_array = [
+			'togoWS',
+			'togoTABLE',
+			'togoGENOME',
+			'togoDB',
+			'togo_picture_gallery',
+			'refEx',
+			'pub_case_finder',
+			'pub_annotation',
+			'orefil',
+			'life_science_QA',
+			'inmexes',
+			'ggrna',
+			'dbcls_sra',
+			'd2rq_mapper',
+			'crispr_direct',
+			'colil',
+			'chip_atlas',
+			'body_parts_3D',
+			'aoe',
+			'allie',
+			'togoWS',
+			'togoTABLE',
+			'togoGENOME',
+			'togoDB',
+			'togo_picture_gallery',
+			'refEx',
+			'pub_case_finder',
+			'pub_annotation',
+			'orefil',
+			'life_science_QA',
+			'inmexes',
+			'ggrna',
+			'dbcls_sra',
+			'd2rq_mapper',
+			'crispr_direct',
+			'colil',
+			'chip_atlas',
+			'body_parts_3D',
+			'aoe',
+			'allie'
+		]
+		const ROTATE_SPEED = 49000;
+		const NUMBER_OF_PANEL = 20; //パネル数
+		const APPEAR_PITCH = ROTATE_SPEED / NUMBER_OF_PANEL; //パネルが出現する間隔
+		const currentTime = 0;
+		const FPS = 30; //１秒間のコマ数
+		const RADIAN_UNIT = ((Math.PI) * .1) / 1000 * FPS;//1コマの移動距離＝速さ
+		const Y_UNIT = 0.00001; //y軸の速度
+		const UNIT = (Math.PI * 2) / NUMBER_OF_PANEL; // 弧度
+		const RADIUS = 480;　//半径
+
+		class Panel {
+			constructor () {
+				var url = ''
+			  $('.main-image__contents').append('<div class="panel">')
+				for (let i = 0; i < services_array.length; i++) {
+					url = 'img/top_assets/' + services_array[i] + '.png'
+					var panel_style = {
+						'background-image' : 'url(' + url + ')',
+					}
+				  $('.panel:nth-of-type('+ i +')').css(panel_style)		
+				}
+			  this.$ = $('.panel:last-child');
+			  this.reset()
+				$('.panel').hover(function () {
+					stopTimer ()
+					$('.main-image__veil, .main__forcused-page__description').css('display', 'block')
+					var resized_image = $(this).css('background-image').toString()
+					resized_image = resized_image.replace('.png', '_f.png')
+					var forcused_style = {
+						'width': '340px',
+						'height': '400px',
+						'position': 'absolute',
+						'top': '80px',
+						'left': '50%',
+						'pointer-events': 'none',
+						'z-index': '9999',
+						'transform': 'rotateY(0) translateX(-50%)',
+						'background-image': resized_image
+					}
+
+					var forcused_image = $(this).clone(true).removeClass('panel').addClass('forcused_panel').css(forcused_style)
+					$('body').append(forcused_image)
+
+				})
+
+				$('.panel').mouseout(function () {
+					startTimer()
+					$('.forcused_panel').remove()
+					$('.main-image__veil, .main__forcused-page__description').css('display', 'none')
+				})
+
+			}
+			  
+			step () {
+			  function radian2degree(radian) {
+			    return 180 * radian / Math.PI;
+			  }
+			  const currentRadius = RADIAN_UNIT * this.counter / 2 + UNIT
+			    this.$.css({
+			      top: (350 - (this.counter++)/2 ) + 'px',
+			      left: -Math.cos(currentRadius) * RADIUS + 430 + 'px',
+			      transform: 'translateY(' + Y_UNIT * this.counter / 10 + 'px) translateZ(' + (Math.sin(currentRadius) * RADIUS) + 'px) rotateY(' + (radian2degree(currentRadius) + 270) + 'deg)'
+			    });
+			    if (this.counter/10 > 100) {
+			      stage.shift();
+			      backStage.push(this);
+			    }
+			    let z_position = Math.sin(currentRadius) * RADIUS
+			    if(z_position < 0) {
+			    	var opacity = z_position * (-1)
+			    	opacity = ((500 - opacity)/500) * 100
+			    	opacity = Math.round(opacity)/100 + 0.2
+			    	this.$.css({'opacity': opacity, 'z-index': '-100'})
+			    } else if (z_position >= 0 ) {
+			    	this.$.css({'opacity': 1, 'z-index': '100'})
+			    }
+			  }
+
+			reset () {
+			  this.counter = 0;
+			  this.$.css({
+			    top: '100vh',
+			    left: '50vw'
+			  })
+			}
+		}
+
+		var stage = [], backStage = [];
+		var timer;
+
+		setInterval(function() {
+		  if (backStage.length === 0) {
+		    stage.push(new Panel());
+		  } else {
+		    var panel = backStage[0];
+		    backStage.shift();
+		    stage.push(panel);
+		    panel.reset(); 
+		  }
+		}, APPEAR_PITCH);
+
+
+		function animation () {
+		  for (var i = 0; i < stage.length; i++) {
+		    stage[i].step();
+		  }
+		};
+
+		function startTimer () {
+			timer = setInterval(function () {
+				animation()
+			}, FPS)
+		}
+
+		function stopTimer () {
+			clearInterval(timer)
+		}
+
+		startTimer()
+	},
 	'about': function () {},
 	'research': function () {},
 	'services': function () {
