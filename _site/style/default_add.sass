@@ -1,5 +1,5 @@
 /* default */
-$main-color: #14274B
+$main-color: #004098
 $header-color: #004098
 $section-bg: #E8EDED
 body
@@ -17,8 +17,9 @@ body
 	border-bottom: 3px solid $main-color
 .btn-box
 	position: absolute
-	right: 0
-	bottom: 20px
+	bottom: -18px
+	width: 190px
+	text-align: center
 .page_btn
 	display: inline-flex
 	align-items: center
@@ -27,6 +28,7 @@ body
 	border: 1px solid $main-color
 	border-radius: 10px
 	background: white
+	color: $main-color
 	&:before
 		content: ""
 		display: block
@@ -242,6 +244,95 @@ footer
 					display: block
 					background: url(../img/by.svg) no-repeat
 /*** Services & Member */
+.content__wrapper
+	color: $main-color
+.outline-list-category__wrapper
+	width: 200px
+	cursor: pointer
+	&:first-child
+		padding-top: 60px
+		padding-bottom: 15px
+	.outline-list-category__title
+		position: relative
+		padding: 10px 0
+		&:after
+			position: absolute
+			margin: auto
+			top: 0
+			bottom: 0
+			right: 0
+			content: ""
+			width: 7px
+			height: 7px
+			border: 2px solid
+			border-color: $main-color $main-color transparent transparent
+			transform: rotate(45deg)
+		&.off
+			&:after
+				opacity: 0.3
+		&.on, &:hover, &:after
+			opacity: 1.0
+	.tag_panel
+		border-top: dashed 0.5px #cccccc
+		padding: 10px 0
+		&:last-child
+			border-bottom: dashed 0.5px #cccccc
+		.tag_row
+			position: relative
+			.tag_element
+				cursor: pointer
+				font-size: 12px
+				&:before
+					content: ""
+					display: inline-block
+					width: 10px
+					height: 10px
+					-moz-border-radius: 10px
+					-webkit-border-radius: 10px
+					-o-border-radius: 10px
+					-ms-border-radius: 10px
+					border-radius: 10px
+				&.all
+					&:before
+						background-color: $main-color
+				&.dna
+					&:before
+						background-color: #FFA600
+				&.structures
+					&:before
+						background-color: #80B248
+				&.text-mining
+					&:before
+						background-color: #B769C2
+				&.db
+					&:before
+						background-color: #48CFBA
+				&.database
+					&:before
+						background-color: #0097CF
+				&.tool
+					&:before
+						background-color: #9791D9
+				&.download
+					&:before
+						background-color: #B769C2
+				&.submission
+					&:before
+						background-color: #F77786
+				&.off
+					opacity: 0.3
+				&.on, &:hover
+					opacity: 1.0
+			.tag_panel_header
+				font-weight: 800
+				display: block
+				font-size: 14px
+				opacity: 1 !important
+				&:before
+					content: none
+.main__contents__services
+	.main__content-title.content-title__services
+		margin-bottom: 12px
 .sub-nav-title__services
 	line-height: 2.5
 	padding-top: 20px
@@ -250,12 +341,12 @@ footer
 .wrapper-type-box
 	display: flex
 	flex-wrap: wrap
-	justify-content: space-between
+	justify-content: baseline
 	padding-bottom: 60px
 	.article__section
 		width: 385.5px
 		background-color: $section-bg
-		margin: 6px 0
+		margin: -1px
 		align-self: self-end
 		padding: 16px 15px
 		&.contener-type-box
@@ -265,7 +356,7 @@ footer
 			border: solid 0.25px #cccccc
 			.repos_image
 				position: absolute
-				height: 160px
+				height: 120px
 				width: 227px
 				left: 0
 				right: 0
@@ -277,22 +368,30 @@ footer
 				img
 					position: absolute
 					margin: auto
+					height: 119px
+					width: 227px
+					object-fit: scale-down
 					top: 0
 					bottom: 0
 					left: 0
 					right: 0
+					&.object-fit-img
+						object-fit: scale-down
+						font-family: 'object-fit: scale-down;'
 			.repos_name 
 				position: absolute
 				margin: auto
 				left: 0
 				right: 0
-				bottom: -10px
+				top: 132px
 				height: 120px
 				width: 192px
 				color: $main-color
+				cursor: pointer
 				.name
 					padding-bottom: 5px
 					font-size: 12px
+					font-weight: 800
 				.keyword
 					font-size: 10px
 		&.contener-type-box__menber
@@ -322,8 +421,11 @@ footer
 				color: $main-color
 				.name
 					font-size: 14px
+					font-weight: 800
 					&.en
 						font-size: 12px
+						font-weight: normal
+						margin-top: -6px
 				span.position
 					&:before
 						content: "/"
@@ -336,8 +438,25 @@ footer
 			font-size: 14px
 			font-weight: 700
 			margin-bottom: 8px
-.main__contents-servece
-	
+#loader-bg
+	display: none
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 1
+#leader
+	display: none
+	position: fixed
+	width: 200px
+	height: 200px
+	left: 50%
+	top: 50%
+	text-aline: center
+	z-index: 2
+.papers_citing_table
+	font-size: 12px
 /* Services ***/
 
 /*** Achivement */
