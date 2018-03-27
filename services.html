@@ -10,68 +10,79 @@
 	<link rel="stylesheet" href="style/github-markdown.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="script/marked.min.js"></script>
+	<script src="script/ofi.min.js"></script>
+	<style>
+      .papers_citing_table td a {
+        text-decoration: underline;
+      }
+      .papers_citing_table tr:first-child td:nth-child(1) a, .papers_citing_table tr:first-child td:nth-child(4) a{
+        pointer-events:none;
+        text-decoration: none;
+        color: #004098;
+      }
+    </style>
 </head>
 <body>
 {% include header.html %}
 <div class="content__wrapper">
-<div class="service__wrapper" style="display: none;"></div>
 	<div class="sub__navigation">
 		<h2 class="page-title">Services</h2>
-		<ul class="sub__navigation-wrapper">
-			<li class="sub__navigation-title sub-nav-title__services">コンテンツ
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li><a href="services_in" class="repos_name">統合TV</a></li>
-					<li><a href="#repos_name0" class="repos_name">ライフサイエンス 新着論文レビュー</a></li>
-					<li><a href="#repos_name0" class="repos_name">ライフサイエンス 領域融合レビュー</a></li>
-					<li><a href="#repos_name0" class="repos_name">BodyParts3D/Anatomograph</a></li>
-					<li><a href="#repos_name0" class="repos_name">Togo Picture Gallery</a></li>
-					<li><a href="#repos_name0" class="repos_name">ライフサイエンスQA</a></li>
-				</ul>
-			</li>
-			<li class="sub__navigation-title sub-nav-title__services">塩基配列
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li><a href="#repos_name0" class="repos_name">DBCLS Galaxy</a></li>
-					<li><a href="#repos_name0" class="repos_name">DBCLS SRA</a></li>
-					<li><a href="#repos_name0" class="repos_name">CRISPRdirect</a></li>
-					<li><a href="#repos_name0" class="repos_name">統合遺伝子検索GGRNA</a></li>
-					<li><a href="#repos_name0" class="repos_name">高速塩基配列GGGnome</a></li>
-					<li><a href="#repos_name0" class="repos_name">Gendoo</a></li>
-				</ul>
-			</li>
-			<li class="sub__navigation-title sub-nav-title__services">遺伝子発現
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li><a href="#repos_name0" class="repos_name">RefEx</a></li>
-					<li><a href="#repos_name0" class="repos_name">ChIP-Atlas</a></li>
-					<li><a href="#repos_name0" class="repos_name">AOE(All Of gene Expression)</a></li>
-				</ul>
-			</li>
-			<li class="sub__navigation-title sub-nav-title__services">文献・テキストマイニング
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li><a href="#repos_name0" class="repos_name">Allie</a></li>
-					<li><a href="#repos_name0" class="repos_name">Colil</a></li>
-					<li><a href="#repos_name0" class="repos_name">inMeXes</a></li>
-					<li><a href="#repos_name0" class="repos_name">OReFiL</a></li>
-					<li><a href="#repos_name0" class="repos_name">PubAnnotation</a></li>
-					<li><a href="#repos_name0" class="repos_name">TogoDoc Suite</a></li>
-					<li><a href="#repos_name0" class="repos_name">PubCaseFinder</a></li>
-				</ul>
-			</li>
-			<li class="sub__navigation-title sub-nav-title__services">セマンティック・ウェブ
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li><a href="#repos_name0" class="repos_name">OntoFinder & OntoFactory</a></li>
-					<li><a href="#repos_name0" class="repos_name">TogoWS</a></li>
-					<li><a href="#repos_name0" class="repos_name">TogoDB</a></li>
-					<li><a href="#repos_name0" class="repos_name">TogoGenome</a></li>
-					<li><a href="#repos_name0" class="repos_name">TogoTable</a></li>
-					<li><a href="#repos_name0" class="repos_name">D2RQ Mapper</a></li>
-				</ul>
-			</li>
-		</ul>
+		<div class="outline-list-category">
+			<div id="service-on" class="outline-list-category__wrapper">
+				<div class="outline-list-category__title">サービス一覧</div>
+				<div class="tag_panel">
+					<div class="tag_row" id="tag_panel_category">
+						<div class="tag_panel_header">カテゴリー</div>
+						<div class="tag_element all off" data-tagkey="category_all">All</div>
+						<div class="tag_element dna" data-tagkey="category_featured">DNA & RNA</div>
+						<div class="tag_element structures off" data-tagkey="category_dna">Structures & Proteins</div>
+						<div class="tag_element text-mining off" data-tagkey="category_structures">Text-mining & Contents</div>
+						<div class="tag_element db off" data-tagkey="category_textmining">DB integration</div>
+					</div>
+				</div>
+				<div class="tag_panel">
+					<div class="tag_row" id="tag_panel_category">
+						<div class="tag_panel_header">タイプ</div>
+						<div class="tag_element all off" data-tagkey="category_all">All</div>
+						<div class="tag_element database" data-tagkey="category_featured">Database</div>
+						<div class="tag_element tool off" data-tagkey="category_dna">Tool</div>
+						<div class="tag_element download off" data-tagkey="category_structures">Download</div>
+						<div class="tag_element submission off" data-tagkey="category_textmining">Submission</div>
+					</div>
+				</div>
+			</div>
+			<div class="outline-list-category__wrapper">
+				<div class="outline-list-category__title off">研究業績</div>
+			</div>
+			<div class="outline-list-category__wrapper">
+				<div class="outline-list-category__title off" id="papers_citing_dbcls_services">引用文献一覧</div>
+			</div>
+		</div>
 	</div>
-	<div class="main__contents">
+	<div class="main__contents main__contents__services">
 		<div class="main__contents-servece">
-			<h3 class="main__content-title">コンテンツ</h3>
+			<!--h3 class="main__content-title content-title__services">コンテンツ</h3-->
+			<div class="section-wrapper">
+				<div class="service__wrapper wrapper-type-box" id="service_list">
+				</div>
+
+				<div id="loader-bg">
+				  <div id="loader">
+				    <p>Now Loading...</p>
+				  </div>
+				</div>
+				<table class="papers_citing_table" id="table">
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--div class="main__contents main__contents__services">
+		<div class="main__contents-servece">
+			<h3 class="main__content-title content-title__services">コンテンツ</h3>
 			<div class="section-wrapper wrapper-type-box">
+			<div class="service__wrapper">
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
 						<div class="name">統合TV</div>
@@ -81,7 +92,7 @@
 							<a href="http://togotv.dbcls.jp/ja/index.html" class="page_btn access_btn">アクセス</a>
 						</div>				
 					</div>
-					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/togotv.png" art=""></div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/togotv.png" art="" class="object-fit-img img_services"></div>
 				</article>
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -92,7 +103,7 @@
 							<a href="http://first.lifesciencedb.jp/" class="page_btn access_btn">アクセス</a>
 						</div>				
 					</div>
-					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/first-authors.png" art=""></div>
+					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/first-authors.png" art="" class="object-fit-img"></div>
 				</article>
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -106,7 +117,7 @@
 					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/leading-authors.png" art=""></div>
 				</article>
 			</div>
-			<h3 class="main__content-title">塩基配列</h3>
+			<h3 class="main__content-title content-title__services">塩基配列</h3>
 			<div class="section-wrapper wrapper-type-box">
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -120,7 +131,7 @@
 					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/CRISPRlogo_white.png" art=""></div>
 				</article>
 			</div>
-			<h3 class="main__content-title">遺伝子発現</h3>
+			<h3 class="main__content-title content-title__services">遺伝子発現</h3>
 			<div class="section-wrapper wrapper-type-box">
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -134,7 +145,7 @@
 					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/RefEx.png" art=""></div>
 				</article>
 			</div>
-			<h3 class="main__content-title">塩基配列</h3>
+			<h3 class="main__content-title content-title__services">塩基配列</h3>
 			<div class="section-wrapper wrapper-type-box">
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -148,7 +159,7 @@
 					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/OReFiL_banner.png" art=""></div>
 				</article>
 			</div>
-			<h3 class="main__content-title">セマンティック・ウェブ</h3>
+			<h3 class="main__content-title content-title__services">セマンティック・ウェブ</h3>
 			<div class="section-wrapper wrapper-type-box">
 				<article class="article__section contener-type-box">
 					<div id="repos_name0" class="repos_name">
@@ -161,7 +172,7 @@
 					</div>
 					<div id="repos_image0" class="repos_image"><img src="./img/service_assets/togo-ws.png" art=""></div>
 				</article>
-			</div>
+			</div-->
 		</div>
 	</div>
 </div>
