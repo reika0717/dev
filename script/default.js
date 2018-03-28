@@ -177,12 +177,41 @@ var initialize = {
 			$.get('https://api.github.com/users/dbcls/repos', function (data) {
 
 				const repos_array = data.map(data => data.name);
-				console.log(data)
-				console.log(repos_array)
 	        })
 		}
 		displayReposList()
 
+		function servicesFrontDisplay() {
+			$.ajax({
+				url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/Services?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+				dataType : "json",
+				async: true,
+				success : function(data){
+				  	var element = "";
+				  	data.values.splice(0, 1)
+
+				    for (i = 0; i < data.values.length; i++) {
+
+						element += '<article class="article__section contener-type-box">' + 
+						'<div id="repos_name' + i +'" class="repos_name">'+ 
+			        	'<p class="name">' + data.values[i][0] + '</p>' + 
+			        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
+			        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
+			        	'<div class="service_type db">Database</div>' + 
+			        	'<div class="btn-box">' + '<div class="page_btn more_btn">' + '詳細' + '</div>' + 
+			        	'<a href="' + data.values[i][2] + '" class="page_btn access_btn">アクセス</a>' + 
+			        	'</div></div>' + 
+			        	'<div id="repos_image0" class="repos_image">' + 
+			        	'<img src="./img/service_assets/' + data.values[i][1] + '" art="' + data.values[i][0] +'" class="object-fit-img img_services"></div>'
+
+			        	element += '</article>'
+
+			        }
+		        	$("#service_list").append(element);    	
+				}
+			})
+		}
+		servicesFrontDisplay();
 		$('#service-on').click(function() {
 			$("#table").empty();
 			//Servicesグーグルスプレッドシート
