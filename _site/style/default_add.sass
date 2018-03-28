@@ -1,5 +1,6 @@
 /* default */
 $main-color: #004098
+$text-color: #14274B
 $header-color: #004098
 $section-bg: #E8EDED
 body
@@ -17,7 +18,7 @@ body
 	border-bottom: 3px solid $main-color
 .btn-box
 	position: absolute
-	bottom: -18px
+	bottom: -22px
 	width: 190px
 	text-align: center
 .page_btn
@@ -28,7 +29,6 @@ body
 	border: 1px solid $main-color
 	border-radius: 10px
 	background: white
-	color: $main-color
 	&:before
 		content: ""
 		display: block
@@ -82,11 +82,16 @@ body
 			font-size: 16px
 			font-weight: 700
 			padding-bottom: 2px
-			margin-bottom: 5px
+			margin-bottom: 15px
 			border-bottom: 3px solid #D0D4DB
 
 
 /* header */
+.side-nav-fixed
+	position: fixed
+	top: 0
+	left: 0
+	width: 222px
 .header
 	width: 100%
 	position: fixed
@@ -181,56 +186,69 @@ footer
 	.footer__wrapper
 		width: 862px
 		margin: 0 auto
-		padding-top: 22px
+		padding-top: 55px
 		.footer__organism
+			color: $text-color
 			.footer__organism-sub
 				font-size: 14px
 				font-weight: 700
 			.footer__organism-main
 				font-size: 18px
 				font-weight: 700
-		.footer__address
-			margin-top: 35px
+		.footer__wrapper__contents
+			display: flex
+			padding-top: 35px
+			.footer__address
+				width: 310px
+				margin-top: 0 
+			.page-title
+				font-size: 14px
 			.address__list
-				display: flex
-				justify-content: space-between
+				display: inline-block
+				//display: flex
+				//justify-content: space-between
 				margin-top: 19px
 				li
-					font-size: 14px
-					line-height: 1.3em
+					padding-bottom: 10px
+					font-size: 10px
+					line-height: 1.5em
 					width: 431px
-		.footer__bottom-area
-			display: flex
+					div
+						font-size: 12px
+						font-weight: 800
+				.access_btn
+					width: 66px
+					margin: 0
 			.footer__partners
-				width: 431px
-				margin-top: 35px
-				.footer__rogo-wrapper
-					margin-top: 25px
-					display: flex
-					align-items: center
-					flex-wrap: wrap
-					.logo__jbi
-						height: 32px
-					.logo__ddbj
-						height: 42px
-						margin-left: 62px
-					.logo__nbdc
-						height: 44px
-						margin-top: 20px
-					.logo__pdbj
-						height: 41px
-						margin-left: 50px
-						margin-top: 20px
+			.page-title
+				font-size: 14px
+			.footer__rogo-wrapper
+				margin-top: 19px
+				width: 260px
+				li
+					padding-bottom: 10px
+				.logo__jbi
+					height: 32px
+				.logo__ddbj
+					height: 42px
+					margin-left: 0
+				.logo__nbdc
+					height: 44px
+					margin-top: 0
+				.logo__pdbj
+					height: 41px
+					margin: 0
 			.footer__links
-				width: 431px
-				margin-top: 35px
-				.links__wrapper
-					margin-top: 25px
-					.individual_link
-						a
-							font-size: 14px
-							text-decoration: underline
-							line-height: 1.8em
+			.page-title
+				font-size: 14px
+			.links__wrapper
+				margin-top: 12px
+				width: 260px
+				.individual_link
+					a
+						font-size: 10px
+						text-decoration: underline
+						line-height: 1.5em
 		.footer__lisence
 			p
 				font-size: 10px
@@ -255,6 +273,7 @@ footer
 	.outline-list-category__title
 		position: relative
 		padding: 10px 0
+		font-size: 14px
 		&:after
 			position: absolute
 			margin: auto
@@ -326,7 +345,7 @@ footer
 			.tag_panel_header
 				font-weight: 800
 				display: block
-				font-size: 14px
+				font-size: 12px
 				opacity: 1 !important
 				&:before
 					content: none
@@ -335,7 +354,7 @@ footer
 		margin-bottom: 12px
 .sub-nav-title__services
 	line-height: 2.5
-	padding-top: 20px
+	padding-top: 15px
 .sub-nav-con__services
 	line-height: 19px
 .wrapper-type-box
@@ -383,21 +402,53 @@ footer
 				margin: auto
 				left: 0
 				right: 0
-				top: 132px
+				top: 130px
 				height: 120px
 				width: 192px
 				color: $main-color
-				cursor: pointer
 				.name
 					padding-bottom: 5px
 					font-size: 12px
 					font-weight: 800
 				.keyword
 					font-size: 10px
-		&.contener-type-box__menber
+					padding-bottom: 10px
+					border-bottom: dashed 0.5px #cccccc
+				.service_category
+					font-size: 10px
+					&:before
+						content: ""
+						display: inline-block
+						width: 10px
+						height: 10px
+						-moz-border-radius: 10px
+						-webkit-border-radius: 10px
+						-o-border-radius: 10px
+						-ms-border-radius: 10px
+						border-radius: 10px
+					&.dna
+						&:before
+							background-color: #FFA600
+				.service_type
+					cursor: pointer
+					font-size: 10px
+					&:before
+						content: ""
+						display: inline-block
+						width: 10px
+						height: 10px
+						-moz-border-radius: 10px
+						-webkit-border-radius: 10px
+						-o-border-radius: 10px
+						-ms-border-radius: 10px
+						border-radius: 10px
+					&.db
+						&:before
+							background-color: #48CFBA
+		&.contener-type-box__member
 			.repos_image
 				position: absolute
-				height: 140px
+				height: 120px
 				width: 227px
 				left: 0
 				right: 0
@@ -407,16 +458,17 @@ footer
 				border-right: solid 1px #ccc
 				background-color: #fff
 				img
-					width: 102px
-					height: 102px
-					border-radius: 51px
+					width: 90px
+					height: 90px
+					border-radius: 45px
+					object-fit: initial
 			.repos_name 
 				position: absolute
 				margin: auto
 				left: 0
 				right: 0
-				bottom: -10px
-				height: 141px
+				top: 132px
+				height: 147px
 				width: 192px
 				color: $main-color
 				.name
@@ -432,8 +484,10 @@ footer
 						padding: 0 5px
 						display: inline-block
 						font-size: 14px
-				.keyword
+				.keyword, .services
 					font-size: 10px
+				.btn-box
+					bottom: 5px
 		h4
 			font-size: 14px
 			font-weight: 700
@@ -457,6 +511,11 @@ footer
 	z-index: 2
 .papers_citing_table
 	font-size: 12px
+	tr
+		border-bottom: solid 0.5px #ccc
+		td
+			padding-right: 30px
+			padding-bottom: 25px
 /* Services ***/
 
 /*** Achivement */

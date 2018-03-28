@@ -177,7 +177,8 @@ var initialize = {
 			$.get('https://api.github.com/users/dbcls/repos', function (data) {
 
 				const repos_array = data.map(data => data.name);
-
+				console.log(data)
+				console.log(repos_array)
 	        })
 		}
 		displayReposList()
@@ -201,7 +202,9 @@ var initialize = {
 							'<div id="repos_name' + i +'" class="repos_name">'+ 
 				        	'<p class="name">' + data.values[i][0] + '</p>' + 
 				        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
-				        	'<div class="btn-box">' + '<div class="page_btn more_btn">詳細</div>' + 
+				        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
+				        	'<div class="service_type db">Database</div>' + 
+				        	'<div class="btn-box">' + '<div class="page_btn more_btn">' + '詳細' + '</div>' + 
 				        	'<a href="' + data.values[i][2] + '" class="page_btn access_btn">アクセス</a>' + 
 				        	'</div></div>' + 
 				        	'<div id="repos_image0" class="repos_image">' + 
@@ -220,31 +223,23 @@ var initialize = {
 		$('#papers_citing_dbcls_services').click(function() {
 			$("#service_list").empty();
 
-			/*$(function() {
-				var h = $(window).height();
-				$('#table').css('display','none');
-			  	$('#loader-bg ,#loader').height(h).css('display','block');
-			});
-			$(window).load(function () { //全ての読み込みが完了したら実行
-			  $('#loader-bg').delay(900).fadeOut(800);
-			  $('#loader').delay(600).fadeOut(300);
-			  $('#table').css('display', 'block');
-			});
-			$(function(){
-			  setTimeout('stopload()',10000);
-			});
-			 
-			function stopload(){
-			  $('#table').css('display','block');
-			  $('#loader-bg').delay(900).fadeOut(800);
-			  $('#loader').delay(600).fadeOut(300);
-			}*/
 			$.ajax({
 			  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
 			  dataType : "json",
 			  async: true,
 			  success : function(data){
+
 			  	var rows = "";
+			  	var first_col = data.values[0]
+
+		  		rows += '<thead><tr>';
+			  	for (i = 0; i < first_col.length; i++) {
+
+			  		rows += '<th>' + first_col[i] + '</th>'
+			  	}
+		  		rows += '</tr></thead>';
+
+		  		data.values.splice(0, 1);
 			    for (i = 0; i < data.values.length; i++) {
 			        rows += 
 
@@ -256,8 +251,7 @@ var initialize = {
 			            '<td><p>' + data.values[i][4] + '<p></td>' +
 			            '<td><p>' + data.values[i][5] + '</p></td>'+ 
 			            '<td><p>' + data.values[i][6] + '</p></td>' +
-			            '<td><p>' + data.values[i][7] + '</p></td>' +
-			            '<td><p>' + data.values[i][8] + '</p></td>';
+			            '<td><p>' + data.values[i][7] + '</p></td>'
 			      	rows += "</tr>";
 			    }
 			    $("#table").append(rows);
@@ -365,7 +359,11 @@ var initialize = {
 						'<div class="name">' + name + '</div>' + 
 						'<div class="name en">' + name_en + '</div>' + 
 						'<div class="keyword">' + keyword + '</div>' + 
-						'<div class="btn-box">' + '<a href="' + orcid + '" class="page_btn orcid_btn">ORCID</a>' + 
+						'<div class="services">担当サービス</div>' + 
+						'<div class="btn-box">' + 
+						'<a href="" class="page_btn scholar">Google Sholar</a>' + 
+						'<a href="" class="page_btn git">GitHub</a>' + 
+						'<a href="' + orcid + '" class="page_btn orcid_btn">ORCID</a>' + 
 						'<a href="' + mail + '" class="page_btn mail_btn">mail</a></div>' 
 
 			        	element += '</article>'
@@ -430,3 +428,34 @@ script.addEventListener('load', function() {
 		})
 	})	
 })
+
+// PC用のサイドバー固定
+/*
+function sidebarFrontDisplay() {
+
+		 var fix = $('#sidebar'); //固定したいコンテンツ
+		 var side = $('.sub__navigation'); //サイドバーのID
+		 var main = $('#main'); //固定する要素を収める範囲
+		 var sideTop = side.offset().top;
+		 var fixTop = fix.offset().top;
+		 var mainTop = main.offset().top;
+		 var w = $(window);
+
+		 var adjust = function(){
+			 fixTop = fix.css('position') === 'static' ? sideTop + fix.position().top : fixTop;
+			 var fixHeight = fix.outerHeight(true),
+			 mainHeight = main.outerHeight(),
+			 winTop = w.scrollTop();
+
+			 if(winTop + fixHeight > mainTop + mainHeight){
+				fix.removeClass('side-nav-fixed');
+			}else if(winTop >= fixTop){
+				fix.addClass('side-nav-fixed');
+			}else{
+				fix.removeClass('side-nav-fixed');
+			 }
+		 }
+
+		 w.on('scroll', adjust);
+ }
+ sidebarFrontDisplay();*/
