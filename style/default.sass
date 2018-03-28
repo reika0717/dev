@@ -138,6 +138,10 @@ body
 	justify-content: space-between
 	.header__nav__contents
 		list-style: none
+		&.active
+			border-bottom: solid 2px $main-color !important
+		/*&:hover
+			border-bottom: solid 2px $main-color*/
 		a
 			text-decoration: none
 			color: $header-color
@@ -355,7 +359,7 @@ footer
 		width: 385.5px
 		background-color: $section-bg
 		margin: 6px 0
-		align-self: self-end
+		//align-self: self-end
 		padding: 16px 15px
 		color: $text-color
 		h4
@@ -392,23 +396,23 @@ footer
 		.research__list
 			margin-top: 15px
 			li
-				font-size: 14px
+				font-size: 12px
 				.reference-ja
 					margin-left: -8px
 				a
 					text-decoration: underline
 					color: #004098
 	.event__section-ja:nth-of-type(3)
-		margin-top: -40px
+		//margin-top: -40px
 	.research__section-ja:nth-of-type(4)
-		margin-top: -112px
+		//margin-top: -112px
 	.research__section-ja:nth-of-type(5)
 		margin-left: 397px
-		margin-top: -89px
+		//margin-top: -89px
 	.research__section-en:nth-of-type(4)
-		margin-top: -31px
+		//margin-top: -31px
 	.research__section-en:nth-of-type(5)
-		margin-top: -3px
+		//margin-top: -3px
 
 /* about */
 .about-img

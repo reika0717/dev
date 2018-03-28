@@ -166,8 +166,12 @@ var initialize = {
 
 		startTimer()
 	},
-	'about': function () {},
-	'research': function () {},
+	'about': function () {
+		location.hash = 'about'
+	},
+	'research': function () {
+		location.hash = 'research'
+	},
 	'services': function () {
 		var repos_name = ''
 
@@ -212,41 +216,39 @@ var initialize = {
 			})
 		}
 		servicesFrontDisplay();
+
+		//Servicesグーグルスプレッドシート
 		$('#service-on').click(function() {
 			$("#table").empty();
-			//Servicesグーグルスプレッドシート
-			//function servicesFrontDisplay() {
-				$.ajax({
-					url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/Services?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
-					dataType : "json",
-					async: true,
-					success : function(data){
+			$.ajax({
+				url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/Services?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+				dataType : "json",
+				async: true,
+				success : function(data){
 
-					  	var element = "";
-					  	data.values.splice(0, 1)
+				  	var element = "";
+				  	data.values.splice(0, 1)
 
-					    for (i = 0; i < data.values.length; i++) {
+				    for (i = 0; i < data.values.length; i++) {
 
-							element += '<article class="article__section contener-type-box">' + 
-							'<div id="repos_name' + i +'" class="repos_name">'+ 
-				        	'<p class="name">' + data.values[i][0] + '</p>' + 
-				        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
-				        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
-				        	'<div class="service_type db">Database</div>' + 
-				        	'<div class="btn-box">' + '<div class="page_btn more_btn">' + '詳細' + '</div>' + 
-				        	'<a href="' + data.values[i][2] + '" class="page_btn access_btn">アクセス</a>' + 
-				        	'</div></div>' + 
-				        	'<div id="repos_image0" class="repos_image">' + 
-				        	'<img src="./img/service_assets/' + data.values[i][1] + '" art="' + data.values[i][0] +'" class="object-fit-img img_services"></div>'
+						element += '<article class="article__section contener-type-box">' + 
+						'<div id="repos_name' + i +'" class="repos_name">'+ 
+			        	'<p class="name">' + data.values[i][0] + '</p>' + 
+			        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
+			        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
+			        	'<div class="service_type db">Database</div>' + 
+			        	'<div class="btn-box">' + '<div class="page_btn more_btn">' + '詳細' + '</div>' + 
+			        	'<a href="' + data.values[i][2] + '" class="page_btn access_btn">アクセス</a>' + 
+			        	'</div></div>' + 
+			        	'<div id="repos_image0" class="repos_image">' + 
+			        	'<img src="./img/service_assets/' + data.values[i][1] + '" art="' + data.values[i][0] +'" class="object-fit-img img_services"></div>'
 
-				        	element += '</article>'
+			        	element += '</article>'
 
-				        }
-			        	$("#service_list").append(element);    	
-					}
-				})
-			//}
-			//servicesFrontDisplay();
+			        }
+		        	$("#service_list").append(element);    	
+				}
+			})
 		})
 		//$("#service_list").on('click', '#papers_citing_dbcls_services').css({'display':'none'});
 		$('#papers_citing_dbcls_services').click(function() {
@@ -355,11 +357,12 @@ var initialize = {
 			})
 		}
 	},
-	'events': function () {},
+	'events': function () {
+		location.hash = 'events'
+	},
 	'member': function () {
-
+		location.hash = 'member'
 		function memberFrontDisplay() {
-			location.hash = 'member'
 			$.ajax({
 				url : "https://sheets.googleapis.com/v4/spreadsheets/1RxpHqr7s2eJsp5NjDiVMhPLshQIKuIma0_V0hNCCv94/values/Member?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
 				dataType : "json",
@@ -404,40 +407,12 @@ var initialize = {
 		}
 		memberFrontDisplay();
 	},
-	'access': function () {},
-	'achievement': function () {
-		/*
-		$(document).on('click', '#papers_citing_dbcls_services', function () {
-			$("#service_list").addClass('display-none');
-		location.hash = 'service'
-			$.ajax({
-			  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
-			  dataType : "json",
-			  async: true,
-			  success : function(data){
-			  	var rows = "";
-			    for (i = 0; i < data.values.length; i++) {
-			        rows += 
-
-			        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
-			        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
-			            '<td><p>' + data.values[i][1] + '</p></td>'+ 
-			            '<td><p>' + data.values[i][2] + '</p></td>' +
-			            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
-			            '<td><p>' + data.values[i][4] + '<p></td>' +
-			            '<td><p>' + data.values[i][5] + '</p></td>'+ 
-			            '<td><p>' + data.values[i][6] + '</p></td>' +
-			            '<td><p>' + data.values[i][7] + '</p></td>' +
-			            '<td><p>' + data.values[i][8] + '</p></td>';
-			      	rows += "</tr>";
-			    }
-			    $("#table").append(rows);
-			  }
-			})
-		})
-		*/
+	'access': function () {
+		location.hash = 'access'
 	},
-	'contact': function () {},
+	'contact': function () {
+		location.hash = 'contact'
+	},
 };
 
 script.addEventListener('load', function() {
@@ -457,6 +432,30 @@ script.addEventListener('load', function() {
 		})
 	})	
 })
+
+/*
+$(document).ready(function() {
+    if(location.hash != ".html") {
+        $('#navi a[data-page-type="' + location.hash[1] + '"]').addClass('active');
+    } else $('#navi a[data-page-type="' + location.hash[0] + '"]').addClass('active');
+});
+function headerNav() {
+    // active要素を出したり消したりする
+    $('.header__nav li').on('click', function(){
+    	if(location.hash === '#about'){
+    		$(this).removeClass('active');
+			$(this).addClass('active');
+		}else if(location.hash === '#research'){
+			$(this).addClass('active');
+		}
+	},)/*
+    	if (!this.classList.contains('active')) {
+    		$(this).removeClass('active');
+    		$(this).addClass('active');
+    	}
+    })
+}
+headerNav();*/
 
 // PC用のサイドバー固定
 /*
