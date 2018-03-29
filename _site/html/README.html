@@ -1,0 +1,64 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="all-of-gene-expression-aoe-">All of gene expression (AOE)</h1>
+<p>All of gene expression (AOE) has been an index for public transcriptome database. </p>
+<p>The version 2 of AOE includes scripts to extract transcriptome sequencing records from Sequence Read Archive (SRA). 
+Data extracted from SRA will be merged with current version of AOE(AOE1).
+API for SRA data by DBCLS SRA project is fully used to generate the data.</p>
+<p>Currently transcriptome data from NCBI GEO is not included in EBI ArrayExpress (since 2017), and we are going to integrate the data from GEO into AOE utilizing DBCLS SRA API.</p>
+<h2 id="from-arrayexpress">From ArrayExpress</h2>
+<ul>
+<li><code>01AE2REI.pl</code> Generate AOE tab file from  ArrayExpress mirror at DDBJ.</li>
+</ul>
+<p>Output Example:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID</th>
+<th style="text-align:left">ProjID</th>
+<th style="text-align:left">AEID</th>
+<th style="text-align:left">Description</th>
+<th style="text-align:left">Date</th>
+<th style="text-align:left">ArrayType</th>
+<th style="text-align:left">ArrayGroup</th>
+<th style="text-align:left">Technology</th>
+<th style="text-align:left">Instrument</th>
+<th style="text-align:left">NGSGroup</th>
+<th style="text-align:left">Organisms</th>
+<th style="text-align:left">Rep_organism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">NA</td>
+<td style="text-align:left">E-DORD-69</td>
+<td style="text-align:left">Translation profiling of Arabidopsis cell cultures exposed to elevated temperature and high salinity</td>
+<td style="text-align:left">2010-07-07</td>
+<td style="text-align:left">Agilent Arabidopsis 3 Oligo Microarray 4x44K 015059 G2519F (Gene ID version)(A-DORD-1)[24]</td>
+<td style="text-align:left">Agilent</td>
+<td style="text-align:left">array assay</td>
+<td style="text-align:left">NA</td>
+<td style="text-align:left">NA</td>
+<td style="text-align:left">Arabidopsis thaliana[24]</td>
+<td style="text-align:left">Arabidopsis thaliana</td>
+</tr>
+</tbody>
+</table>
+<h2 id="from-geo-dbcls-sra-api-">From GEO (DBCLS SRA API)</h2>
+<ul>
+<li><code>00getprojsample.pl</code> Extract GEO associated SRA/BioProject/BioSample data from DBCLS SRA API.</li>
+<li><code>01GEOjson2AOE.pl</code> Make subset of AOE tab file from extracted json file(s). </li>
+<li><code>00getlistofxRX.pl</code> Get metadata from D/E/SRX (Experiment). </li>
+</ul>
+<h2 id="from-rna-seq-data-not-in-geo-and-arrayexpress-dbcls-sra-api-">From RNA-seq data not in GEO and ArrayExpress (DBCLS SRA API)</h2>
+<ul>
+<li><code>01xRX2instrument_model.pl</code> Extract Instrument_model from SRA Experiment data.</li>
+</ul>
+
+      </body>
+    </html>
