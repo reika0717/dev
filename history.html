@@ -1,559 +1,97 @@
-/* default */
-$main-color: #004098
-$text-color: #14274B
-$header-color: #004098
-$section-bg: #E8EDED
-body
-	font-family: 'Muli', sans-serif
-	width: 100%
-	a
-		text-decoration: none
-	a,p,li,span,h1,h2,h3,h4
-		color: $main-color
-.page-title
-	width: 31px
-	font-size: 21px
-	font-weight: 800
-	padding-bottom: 3px
-	border-bottom: 3px solid $main-color
-.btn-box
-	position: absolute
-	bottom: -22px
-	width: 190px
-	text-align: center
-.page_btn
-	display: inline-flex
-	align-items: center
-	font-size: 10px
-	padding: 3px 7px
-	border: 1px solid $main-color
-	border-radius: 10px
-	background: white
-	&:before
-		content: ""
-		display: block
-		width: 9px
-		height: 9px
-		margin-right: 5px
-		background: url(../img/icon_more.svg) no-repeat
-	&.more_btn
-		width: 56px
-	&.access_btn
-		width: 73px
-		margin-left: 5px
-	&.orcid_btn
-		width: 73px
-		&:before
-			content: ""
-			display: block
-			width: 12px
-			height: 11px
-			background: url(../img/icon_id.svg) no-repeat
-	&.mail_btn
-		width: 56px
-		margin-left: 5px
-		&:before
-			content: ""
-			display: block
-			width: 12px
-			height: 11px
-			background: url(../img/icon_mail.svg) no-repeat
+---
+---
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://dbcls.rois.ac.jp/member -->
+<html lang="ja" data-page-type="about_history"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>沿革 ｜ DBCLS</title>
+<link rel="stylesheet" href="style/default.css">
+<link rel="stylesheet" href="style/default_add.css">
+</head>
 
-//下層ページカラム設定
-.content__wrapper
-	width: 1024px
-	margin: 0 auto
-	display: flex
-	.sub__navigation
-		padding-top: 156px
-		width: 242px
-		.sub__navigation-wrapper
-			margin-top: 14px
-			.sub__navigation-title
-				font-size: 14px
-				font-weight: 600
-				.sub__navigation-contents
-					font-size: 12px
-					font-weight: 500
-	.main__contents
-		padding-top: 156px
-		width: 782px
-		.main__content-title
-			font-size: 16px
-			font-weight: 700
-			padding-bottom: 2px
-			margin-bottom: 15px
-			border-bottom: 3px solid #D0D4DB
-
-
-/* header */
-.side-nav-fixed
-	position: fixed
-	top: 0
-	left: 0
-	width: 222px
-.header
-	width: 100%
-	position: fixed
-	border-top: 5px solid $header-color
-	z-index: 1
-	padding-bottom: 15px
-	background-color: rgba(255,255,255,0.9)
-.header__language-wrapper
-	width: 1024px
-	margin: 0 auto
-	position: relative
-	margin-top: 17px
-	.qtrans_language_chooser
-		display: flex
-		justify-content: flex-end
-		position: absolute
-		right: 5px
-		top: -9px
-		li
-			font-size: 14px	
-.lang-ja,
-.lang-en
-	span
-		color: $header-color
-#header__languages-ja
-	.lang-en
-		cursor: pointer
-	.lang-ja
-		margin-left: 15px
-		opacity: 0.5
-		pointer-events: none
-#header__languages-en
-	.lang-ja
-		margin-left: 15px
-		cursor: pointer
-	.lang-en
-		opacity: 0.5
-		pointer-events: none
-.header__nav
-	width: 1024px
-	margin: 0 auto
-	display: flex
-	align-items: center
-	justify-content: space-between
-	.header__nav__contents
-		list-style: none
-		a
-			text-decoration: none
-			color: $header-color
-			font-weight: 700
-			font-size: 14px
-			img
-				width: 126px
-				height: 55px
-	.header__nav__sns
-		&-twitter
-			color: $header-color
-		&-feed
-			color: $header-color
-	.header__nav__search
-		position: relative
-		.search__wrapper
-			width: 217px
-			height: 22px
-			border-radius: 15px
-			border: 1px solid $header-color
-			&:focus
-				outline: none
-		.search__submit
-			border: none
-			position: absolute
-			top: 3px
-			right: 8px
-			cursor: pointer
-			&:focus
-				outline: none
-		&:after
-			font-family: fontawesome
-			content: '\f002'
-			position: absolute
-			top: 3px
-			right: 8px
-			pointer-events: none
-			color: $header-color
-			opacity: 0.8
-
-/* footer */
-footer
-	width: 100%
-	background: #E8EDED
-	margin-top: 70px
-	.footer__wrapper
-		padding-top: 55px
-		.footer__organism
-			color: $text-color
-			.footer__organism-sub
-				font-size: 14px
-				font-weight: 700
-			.footer__organism-main
-				font-size: 18px
-				font-weight: 700
-		.footer__wrapper__contents
-			display: flex
-			padding-top: 35px
-			.footer__address
-				width: 310px
-				margin-top: 0 
-			.page-title
-				font-size: 14px
-			.address__list
-				display: inline-block
-				//display: flex
-				//justify-content: space-between
-				margin-top: 19px
-				li
-					padding-bottom: 10px
-					font-size: 10px
-					line-height: 1.5em
-					width: 431px
-					div
-						font-size: 12px
-						font-weight: 800
-				.access_btn
-					width: 66px
-					margin: 0
-			.footer__partners
-			.page-title
-				font-size: 14px
-			.footer__rogo-wrapper
-				margin-top: 19px
-				width: 260px
-				li
-					padding-bottom: 10px
-				.logo__jbi
-					height: 32px
-				.logo__ddbj
-					height: 42px
-					margin-left: 0
-				.logo__nbdc
-					height: 44px
-					margin-top: 0
-				.logo__pdbj
-					height: 41px
-					margin: 0
-			.footer__links
-			.page-title
-				font-size: 14px
-			.links__wrapper
-				margin-top: 12px
-				width: 260px
-				.individual_link
-					a
-						font-size: 10px
-						text-decoration: underline
-						line-height: 1.5em
-		.footer__lisence
-			p
-				font-size: 10px
-				display: flex
-				justify-content: center
-				padding: 40px 0 20px 0
-				&:before
-					content: ""
-					width: 81px
-					height: 16px
-					display: block
-					background: url(../img/by.svg) no-repeat
-/*** Services & Member */
-.content__wrapper
-	color: $main-color
-.outline-list-category__wrapper
-	width: 200px
-	cursor: pointer
-	&:first-child
-		padding-top: 60px
-		padding-bottom: 15px
-	.outline-list-category__title
-		position: relative
-		padding: 10px 0
-		font-size: 14px
-		&:after
-			position: absolute
-			margin: auto
-			top: 0
-			bottom: 0
-			right: 0
-			content: ""
-			width: 7px
-			height: 7px
-			border: 2px solid
-			border-color: $main-color $main-color transparent transparent
-			transform: rotate(45deg)
-		&.off
-			&:after
-				opacity: 0.3
-		&.on, &:hover, &:after
-			opacity: 1.0
-	.tag_panel
-		border-top: dashed 0.5px #cccccc
-		padding: 10px 0
-		&:last-child
-			border-bottom: dashed 0.5px #cccccc
-		.tag_row
-			position: relative
-			.tag_element
-				cursor: pointer
-				font-size: 12px
-				&:before
-					content: ""
-					display: inline-block
-					width: 10px
-					height: 10px
-					-moz-border-radius: 10px
-					-webkit-border-radius: 10px
-					-o-border-radius: 10px
-					-ms-border-radius: 10px
-					border-radius: 10px
-				&.all
-					&:before
-						background-color: $main-color
-				&.dna
-					&:before
-						background-color: #FFA600
-				&.structures
-					&:before
-						background-color: #80B248
-				&.text-mining
-					&:before
-						background-color: #B769C2
-				&.db
-					&:before
-						background-color: #48CFBA
-				&.database
-					&:before
-						background-color: #0097CF
-				&.tool
-					&:before
-						background-color: #9791D9
-				&.download
-					&:before
-						background-color: #B769C2
-				&.submission
-					&:before
-						background-color: #F77786
-				&.off
-					opacity: 0.3
-				&.on, &:hover
-					opacity: 1.0
-			.tag_panel_header
-				font-weight: 800
-				display: block
-				font-size: 12px
-				opacity: 1 !important
-				&:before
-					content: none
-.main__contents__services
-	.main__content-title.content-title__services
-		margin-bottom: 12px
-.sub-nav-title__services
-	line-height: 2.5
-	padding-top: 15px
-.sub-nav-con__services
-	line-height: 19px
-.wrapper-type-box
-	display: flex
-	flex-wrap: wrap
-	justify-content: baseline
-	padding-bottom: 60px
-	.article__section
-		width: 385.5px
-		background-color: $section-bg
-		margin: -1px
-		align-self: self-end
-		padding: 16px 15px
-		&.contener-type-box
-			position: relative
-			height: 281px
-			width: 227px
-			border: solid 0.25px #cccccc
-			.repos_image
-				position: absolute
-				height: 120px
-				width: 227px
-				left: 0
-				right: 0
-				top: 0
-				border-top: solid 1px #ccc
-				border-left: solid 1px #ccc
-				border-right: solid 1px #ccc
-				background-color: #fff
-				img
-					position: absolute
-					margin: auto
-					height: 119px
-					width: 227px
-					object-fit: scale-down
-					top: 0
-					bottom: 0
-					left: 0
-					right: 0
-					&.object-fit-img
-						object-fit: scale-down
-						font-family: 'object-fit: scale-down;'
-			.repos_name 
-				position: absolute
-				margin: auto
-				left: 0
-				right: 0
-				top: 130px
-				height: 120px
-				width: 192px
-				color: $main-color
-				.name
-					padding-bottom: 5px
-					font-size: 12px
-					font-weight: 800
-				.keyword
-					font-size: 10px
-					padding-bottom: 10px
-					border-bottom: dashed 0.5px #cccccc
-				.service_category
-					font-size: 10px
-					&:before
-						content: ""
-						display: inline-block
-						width: 10px
-						height: 10px
-						-moz-border-radius: 10px
-						-webkit-border-radius: 10px
-						-o-border-radius: 10px
-						-ms-border-radius: 10px
-						border-radius: 10px
-					&.dna
-						&:before
-							background-color: #FFA600
-				.service_type
-					cursor: pointer
-					font-size: 10px
-					&:before
-						content: ""
-						display: inline-block
-						width: 10px
-						height: 10px
-						-moz-border-radius: 10px
-						-webkit-border-radius: 10px
-						-o-border-radius: 10px
-						-ms-border-radius: 10px
-						border-radius: 10px
-					&.db
-						&:before
-							background-color: #48CFBA
-		&.contener-type-box__member
-			.repos_image
-				position: absolute
-				height: 120px
-				width: 227px
-				left: 0
-				right: 0
-				top: 0
-				border-top: solid 1px #ccc
-				border-left: solid 1px #ccc
-				border-right: solid 1px #ccc
-				background-color: #fff
-				img
-					width: 90px
-					height: 90px
-					border-radius: 45px
-					object-fit: initial
-			.repos_name 
-				position: absolute
-				margin: auto
-				left: 0
-				right: 0
-				top: 132px
-				height: 147px
-				width: 192px
-				color: $main-color
-				.name
-					font-size: 14px
-					font-weight: 800
-					&.en
-						font-size: 12px
-						font-weight: normal
-						margin-top: -6px
-				span.position
-					&:before
-						content: "/"
-						padding: 0 5px
-						display: inline-block
-						font-size: 14px
-				.keyword, .services
-					font-size: 10px
-				.btn-box
-					bottom: 5px
-		h4
-			font-size: 14px
-			font-weight: 700
-			margin-bottom: 8px
-#loader-bg
-	display: none
-	position: fixed
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	z-index: 1
-#leader
-	display: none
-	position: fixed
-	width: 200px
-	height: 200px
-	left: 50%
-	top: 50%
-	text-aline: center
-	z-index: 2
-.papers_citing_table
-	font-size: 12px
-	tr
-		border-bottom: solid 0.5px #ccc
-		td
-			padding-right: 30px
-			padding-bottom: 25px
-/* Services ***/
-
-/*** Achivement */
-.main__contents-servece.achivement
-	.wrapper-type-box
-		width: calc(61% - 10px)
-.content__wrapper
-	.main__contents
-		&.tabular
-			width: auto
-			.papers_citing_table
-				font-size: 14px
-				line-height: 1.5
-				tr
-					border-bottom: solid 0.5px #cccccc
-					&:first-child
-						border-bottom: solid 1px #888
-						height: 46px
-						font-weight: 800
-						vertical-align: bottom
-					td
-						padding-right: 16px
-/* achivement ***/
-
-/*** access */
-.main__contents__accsess
-	.main__content-title.content-title__access
-		margin-bottom: 15px
-		position: relative
-		a 
-			position: absolute
-			right: 0
-			bottom: 5px
-.section-wrapper__access
-	padding-bottom: 70px
-	p 
-		font-size: 14px
-		color: $main-color
-/* access ***/
-
-/*research*/
-.research__description
-	padding: 16px 15px
+<body>
+{% include header.html %}
+	<div class="content__wrapper">
+		<div class="sub__navigation">
+			<h2 class="page-title">About</h2>
+			<ul class="sub__navigation-wrapper outline-list-category__wrapper">
+				<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/about.html">センターについて</a></li>
+				<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/history.html">沿革</a></li>
+				<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/funding.html">予算と財源</a></li>
+				<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/faq.html">よくある質問</a></li>
+				<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/policy.html">サイトポリシー</a></li>
+				<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/logotype.html">ロゴについて</a></li>
+			</ul>
+		</div>
+		<div class="main__contents">
+			<table class="history">
+<tr>
+<th><time>2006年9月</time></th>
+<td>
+<p><a href="http://lifesciencedb.mext.go.jp/" target="_blank">文部科学省ライフサイエンス分野の統合データベース整備事業</a> 開始</p>
+</td>
+</tr>
+<tr>
+<th rowspan="3"><time>2007年4月</time></th>
+<td>
+<p>ライフサイエンス統合データベースセンター 設立</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>初代センター長 高木利久 就任</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>統合データベースプロジェクトの中核機関として事業を受託（期間4年）</p>
+</td>
+</tr>
+<tr>
+<th><time>2010年10月</time></th>
+<td>
+<p>第2代センター長 米澤明憲 就任</p>
+</td>
+</tr>
+<tr>
+<th rowspan="3"><time>2011年4月</time></th>
+<td>
+<p><a href="http://biosciencedbc.jp/" target="_blank">JSTバイオサイエンスデータベースセンター</a> 設立</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>JSTライフサイエンスデータベース統合推進事業 開始</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>「基盤技術開発プログラム」開始（期間3年）</p>
+</td>
+</tr>
+<tr>
+<th rowspan="2"><time>2012年4月</time></th>
+<td>
+<p>第3代センター長 小原雄治 就任</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="http://www.rois.ac.jp/open/index06.html" target="_blank">ライフサイエンス統合データベースの推進方策について</a>（報告）を発表</p>
+</td>
+</tr>
+<tr>
+<th><time>2014年4月</time></th>
+<td>
+<p>NBDC「統合データベースにおける基盤技術開発とデータベース運用に係る共同研究」開始</p>
+</td>
+</tr>
+</table>
+		</div>
+	</div>
+{% include footer.html %}
+<script src="script/default.js"></script>
+</body>
+</html>

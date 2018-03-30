@@ -236,7 +236,11 @@ var initialize = {
 			$("#service_list").empty();
 			servicesFrontDisplay();
 		})
-
+		function pointerActive() {
+			console.log("add");
+			$('outline-list-category__title').click().addClass('on');
+		}
+		pointerActive();
 		//$("#service_list").on('click', '#papers_citing_dbcls_services').css({'display':'none'});
 		
 		//Papers citing DBCLS services
@@ -349,6 +353,12 @@ var initialize = {
 	},
 	'events': function () {
 		location.hash = 'events'
+		/*function position() {
+			$('.outline-list-category__title').click(function() {
+				console.log("hello");
+				$('#active').css({"padding-top": "96px"});
+			})
+		}position();*/
 	},
 	'member': function () {
 		location.hash = 'member'
@@ -432,4 +442,5 @@ script.addEventListener('load', function() {
 		})
 	})	
 })
+
 

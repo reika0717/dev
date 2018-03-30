@@ -9,6 +9,11 @@
 <title>イベント ｜ DBCLS</title>
 <link rel="stylesheet" href="style/default.css">
 <link rel="stylesheet" href="style/default_add.css">
+<!--style type="text/css">
+	#active {
+		padding-top: 96px;
+	}
+</style-->
 </head>
 
 <body>
@@ -16,9 +21,9 @@
 	<div class="content__wrapper">
 		<div class="sub__navigation">
 			<h2 class="page-title">Event</h2>
-			<ul class="sub__navigation-wrapper">
-				<li class="sub__navigation-title">開催イベント一覧</li>
-				<li class="sub__navigation-title">広報活動</li>
+			<ul class="sub__navigation-wrapper outline-list-category__wrapper">
+				<li class="sub__navigation-title outline-list-category__title on">開催イベント一覧</li>
+				<li class="sub__navigation-title outline-list-category__title off"><a href="#active">広報活動</a></li>
 			</ul>
 		</div>
 		<div class="main__contents">
@@ -43,7 +48,7 @@
 				<a href="news_event.html" class="more_btn page_btn">more</a>
 	    </div>
 		<div class="main__contents-public">
-      		<h3 class="main__content-title">広報活動</h3>
+      		<h3 class="main__content-title" id="active">広報活動</h3>
 			<p class="public__description">DBCLSでは、国内外の生命科学研究者を対象とした様々なイベントを開催しているほか、学会や研究会での広報活動も行っています。その内容は、データベース構築者向けの技術勉強会から、実験研究者向けのデータベース講習会まで、多岐にわたります。</p>
 			<div class="section-wrapper">
 				<article class="article__section event__section-ja">
