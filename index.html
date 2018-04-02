@@ -7,11 +7,7 @@
 	<title>DBCLS ｜ ライフサイエンス統合データベースセンター</title>
 	<link rel="stylesheet" href="style/default.css">
 	<link rel="stylesheet" href="style/default_add.css">
-	<style type="text/css">
-		.header {
-			background: none;
-		}
-	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 {% include header.html %}
@@ -28,26 +24,27 @@
 </div>
 <div class="top__news-section">
 	<h2 class="page-title">News</h2>
-		<ul class="news__individual-wrapper">
-			{% for post in site.categories.ja limit:5 %}
-				<li class='post__individual'>
-					<div class="post__sub-info">
-						<div class="post__date">
-							{{post.date | date: '%m/%d/%Y'}}
-						</div>
-					  <div class="post-tags">
-							{% include post_meta.html %}
-						</div>
+	<ul class="news__individual-wrapper">
+		{% for post in site.categories.ja limit:5 %}
+			<li class='post__individual'>
+				<div class="post__sub-info">
+					<div class="post__date">
+						{{post.date | date: '%m/%d/%Y'}}
 					</div>
-					<a href="{{post.url | prepend: site.baseurl}}" class="post__title">{{post.title}}</a>
-					{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
-					<p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
-				</li>
-			{% endfor %}
-		</ul>
-		<a href="news.html" class="more_btn page_btn">more</a>
-	</div>
+				  <div class="post-tags">
+						{% include post_meta.html %}
+					</div>
+				</div>
+				<a href="{{post.url | prepend: site.baseurl}}" class="post__title">{{post.title}}</a>
+				{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
+				<p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
+			</li>
+		{% endfor %}
+	</ul>
+	<a href="news.html" class="more_btn page_btn">more</a>
+</div>
 {% include footer.html %}
+
 <script src="script/default.js"></script>
 </body>
 </html>

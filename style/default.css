@@ -364,14 +364,14 @@ footer {
 
 .main-image__wrapper {
   width: 100vw;
-  height: 525px;
   background-color: #C0E6F2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 92px; }
   .main-image__wrapper .main-image__contents {
     position: relative;
     -webkit-perspective: 1500px;

@@ -352,13 +352,6 @@ var initialize = {
 		}
 	},
 	'events': function () {
-		location.hash = 'events'
-		/*function position() {
-			$('.outline-list-category__title').click(function() {
-				console.log("hello");
-				$('#active').css({"padding-top": "96px"});
-			})
-		}position();*/
 	},
 	'member': function () {
 		location.hash = 'member'
@@ -422,7 +415,7 @@ var initialize = {
 	},
 	'contact': function () {
 		location.hash = 'contact'
-	},
+	}
 };
 
 script.addEventListener('load', function() {
@@ -442,5 +435,3 @@ script.addEventListener('load', function() {
 		})
 	})	
 })
-
-
