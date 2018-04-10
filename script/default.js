@@ -46,11 +46,11 @@ var initialize = {
 			'aoe',
 			'allie'
 		]
-		const ROTATE_SPEED = 49000;
+		const ROTATE_SPEED = 40000;
 		const NUMBER_OF_PANEL = 20; //パネル数
 		const APPEAR_PITCH = ROTATE_SPEED / NUMBER_OF_PANEL; //パネルが出現する間隔
 		const currentTime = 0;
-		const FPS = 30; //１秒間のコマ数
+		const FPS = 50; //１秒間のコマ数
 		const RADIAN_UNIT = ((Math.PI) * .1) / 1000 * FPS;//1コマの移動距離＝速さ
 		const Y_UNIT = 0.00001; //y軸の速度
 		const UNIT = (Math.PI * 2) / NUMBER_OF_PANEL; // 弧度
@@ -61,9 +61,10 @@ var initialize = {
 				var url = ''
 			  $('.main-image__contents').append('<div class="panel">')
 				for (let i = 0; i < services_array.length; i++) {
-					url = 'img/top_assets/' + services_array[i] + '.png'
+					url = 'img/top_assets/' + services_array[i] + '_f.png'
 					var panel_style = {
 						'background-image' : 'url(' + url + ')',
+						
 					}
 				  $('.panel:nth-of-type('+ i +')').css(panel_style)		
 				}
@@ -73,7 +74,6 @@ var initialize = {
 					stopTimer ()
 					$('.main-image__veil, .main__forcused-page__description').css('display', 'block')
 					var resized_image = $(this).css('background-image').toString()
-					resized_image = resized_image.replace('.png', '_f.png')
 					var forcused_style = {
 						'width': '340px',
 						'height': '400px',
@@ -105,9 +105,9 @@ var initialize = {
 			  }
 			  const currentRadius = RADIAN_UNIT * this.counter / 2 + UNIT
 			    this.$.css({
-			      top: (350 - (this.counter++)/2 ) + 'px',
+			      top: (300 - (this.counter++)/1.2 ) + 'px',
 			      left: -Math.cos(currentRadius) * RADIUS + 430 + 'px',
-			      transform: 'translateY(' + Y_UNIT * this.counter / 10 + 'px) translateZ(' + (Math.sin(currentRadius) * RADIUS) + 'px) rotateY(' + (radian2degree(currentRadius) + 270) + 'deg)'
+			      transform: 'translateY(' + Y_UNIT * this.counter + 'px) translateZ(' + (Math.sin(currentRadius) * RADIUS)/2 + 'px) rotateY(' + (radian2degree(currentRadius) + 270) + 'deg)'
 			    });
 			    if (this.counter/10 > 100) {
 			      stage.shift();

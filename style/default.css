@@ -329,7 +329,7 @@ footer {
 
 .main-image__wrapper {
   width: 100vw;
-  height: 355px;
+  height: 447px;
   background: linear-gradient(to bottom, #00a6f5 0%, #00244e 100%);
   display: flex;
   justify-content: center;
@@ -342,9 +342,10 @@ footer {
     overflow: hidden; }
     .main-image__wrapper .main-image__contents .panel {
       position: absolute;
-      width: 160px;
-      height: 160px;
-      z-index: 50; }
+      width: 120px;
+      height: 120px;
+      z-index: 50;
+      background-size: cover; }
     .main-image__wrapper .main-image__contents .main-image {
       width: 1024px;
       height: 530px;

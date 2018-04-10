@@ -1,7 +1,18 @@
-### https://raw.github.com/github/gitignore/9da1b5d8ce4e009ff627c4fe49a4488b2a3f60d4/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/9da1b5d8ce4e009ff627c4fe49a4488b2a3f60d4/Global/CodeKit.gitignore
 
-/vendor
-/.bundle
+# General CodeKit files to ignore
+config.codekit3
+/min
+
+
+### https://raw.github.com/github/gitignore/9da1b5d8ce4e009ff627c4fe49a4488b2a3f60d4/Global/CodeKit.gitignore
+
+# General CodeKit files to ignore
+config.codekit3
+/min
+
+
+### https://raw.github.com/github/gitignore/9da1b5d8ce4e009ff627c4fe49a4488b2a3f60d4/Global/macOS.gitignore
 
 # General
 .DS_Store
@@ -32,3 +43,4 @@ Temporary Items
 .apdisk
 
 
+vendor/
