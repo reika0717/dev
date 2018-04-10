@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<header class='header-ja header'>
+<header class='header-ja header' id="header">
 	<nav>
 		<div id="header__languages-ja" class='header__language-wrapper'>
 			<ul class="qtrans_language_chooser" id="qtranslate-chooser">
@@ -47,9 +47,6 @@
 				<a href="/dbcls-test/access.html">Access</a>
 			</li>
 			<li class='header__nav__contents'>
-				<a href="/dbcls-test/achievement.html">Achievement</a>
-			</li>
-			<li class='header__nav__contents'>
 				<a href="/dbcls-test/contact.html">Contact</a>
 			</li>
 			<li class='header__nav__sns'>
@@ -61,77 +58,51 @@
 				<input class='search__submit' type="submit" value=''>
 			</li>
 		</ul>
-	</nav>	
+	</nav>
 </header>
 
 <div class="content__wrapper">
-	<div class="sub__navigation">
+<div id="subWrap">
+	<div class="sub__navigation" id="sidebar">
 		<h2 class="page-title">Member</h2>
 		<ul class="sub__navigation-wrapper">
 			<li class="sub__navigation-title sub-nav-title__services">スタッフ
-				<ul class="sub__navigation-contents sub-nav-con__services">
-					<li>小原 雄治</li>
-					<li>五斗 進</li>
-					<li>大久保 公策</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
-					<li>小原 雄治</li>
+				<ul class="sub__navigation-contents sub-nav-con__services" id="memberList">
+					<!--li>小原 雄治</li-->
 				</ul>
 			</li>
-			<li class="sub__navigation-title sub-nav-title__services">客員部門・研究協力者
+			<!--li class="sub__navigation-title sub-nav-title__services">客員部門・研究協力者
 				<ul class="sub__navigation-contents sub-nav-con__services">
 					<li>栗栖 源嗣</li>
 					<li>金城 玲</li>
 				</ul>
-			</li>
+			</li-->
 		</ul>
 	</div>
-
-<div class="main__contents">
+</div>
+<div class="main__contents" id="main">
 	<div class="main__contents-servece">
 		<h3 class="main__content-title">スタッフ</h3>
-		<div class="section-wrapper wrapper-type-box">
-			<article class="article__section contener-type-box contener-type-box__menber">
-				<div class="repos_image">
-					<img src="./img/member/kohara.jpg" alt="小原 雄治">
-				</div>
-				<div id="repos_name0" class="repos_name">
-					<div class="name">小原 雄治<span class="position">センター長</span></div>
-					<div class="name en">KOHARA Yuji</div>
-					<div class="keyword">ゲノム科学</div>
-					<div class="btn-box">
-						<a href="#" class="page_btn orcid_btn">ORCID</a>
-						<a href="#" class="page_btn mail_btn">mail</a>
+		<div class="section-wrapper">
+			<div class="wrapper-type-box" id="member-list">
+				<!--article class="article__section contener-type-box contener-type-box__member">
+					<div class="repos_image">
+						<img src="./img/member/kohara.jpg" alt="小原 雄治" class="img_member">
 					</div>
-				</div>
-			</article>
+					<div id="repos_name0" class="repos_name">
+						<div class="name">小原 雄治<span class="position">センター長</span></div>
+						<div class="name en">KOHARA Yuji<span class="position">センター長</span></div>
+						<div class="keyword">ゲノム科学</div>
+						<div class="services">統合TV</div>
+						<div class="btn-box">
+							<a href="" class="page_btn scholar">Google Sholar</a>
+							<a href="" class="page_btn git">GitHub</a>
+							<a href="#" class="page_btn orcid_btn">ORCID</a>
+							<a href="#" class="page_btn mail_btn">Mail</a>
+						</div>
+					</div>
+				</article-->
+			</div>
 		</div>
 	</div>
 </div>
@@ -144,24 +115,25 @@
 			<p class="footer__organism-sub">データサイエンス共同利用基盤施設</p>
 			<p class="footer__organism-main">ライフサイエンス統合データベースセンター</p>
 		</div>
-		<div class="footer__address">
-			<h2 class="page-title">Address</h2>
-			<ul class="address__list">
-				<li>
-					<p>〒277-0871</p>
-					<p>千葉県柏市若柴178-4-4</p>
-					<p>東京大学柏の葉キャンパス 駅前サテライト6階</p>
-					<p>TEL. 04-7135-5508（代表） FAX. 04-7135-5534（代表）</p>
-				</li>
-				<li>
-					<p>〒411-8540</p>
-					<p>静岡県三島市谷田1111</p>
-					<p>国立遺伝学研究所 生命情報研究センター W412</p>
-				</li>
-			</ul>
-			<a href="access.html" class="page_btn access_btn">access</a>
-		</div>
-		<div class="footer__bottom-area">
+		<div class="footer__wrapper__contents">
+			<div class="footer__address">
+				<h2 class="page-title">Address</h2>
+				<ul class="address__list">
+					<li>
+						<div class="">柏ラボ</div>
+						<p>〒277-0871</p>
+						<p>千葉県柏市若柴178-4-4</p>
+						<p>東京大学柏の葉キャンパス 駅前サテライト6階</p>
+						<p>TEL. 04-7135-5508（代表）<br> FAX. 04-7135-5534（代表）</p>
+					</li>
+					<li>
+						<div class="">三島ラボ</div>
+						<p>〒411-8540</p>
+						<p>静岡県三島市谷田1111</p>
+						<p>国立遺伝学研究所 生命情報研究センター W412</p>
+					</li><a href="access.html" class="page_btn access_btn">access</a>
+				</ul>
+			</div>
 			<div class="footer__partners">
 				<h2 class="page-title">Partners</h2>
 				<ul class="footer__rogo-wrapper">
@@ -211,348 +183,5 @@
 		</div>
 	</div>
 </footer>
-<!--
-<table class="member-table">
-<tbody>
-<tr>
-<td class="portrait"><img src="./img/member/kohara.jpg" alt="小原 雄治"></td>
-<td class="name-position">
-<p class="name">KOHARA Yuji<br>
-小原 雄治</p>
-<p class="position">センター長</p>
-</td>
-<td class="keyword">ゲノム科学</td>
-<td class="address"><a class="lazy-mail" data-address="director_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:director@dbcls.rois.ac.jp">director@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/goto3.jpg" alt="五斗 進"></td>
-<td class="name-position">
-<p class="name">GOTO Susumu<br>
-  五斗 進</p>
-<p class="position">教授</p>
-</td>
-<td class="keyword">データベース統合</td>
-<td class="address"><a class="lazy-mail" data-address="goto_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:goto@dbcls.rois.ac.jp">goto@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/okubo.jpg" alt="大久保 公策"></td>
-<td class="name-position">
-<p class="name">OKUBO Kousaku<br>
-大久保 公策</p>
-<p class="position">教授（兼務）</p>
-</td>
-<td class="keyword">ヒト統合、ポータル、発現統合、基盤技術</td>
-<td class="address"><a class="lazy-mail" data-address="kokubo_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:kokubo@dbcls.rois.ac.jp">kokubo@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/kawamoto.jpg" alt="川本祥子"></td>
-<td class="name-position">
-<p class="name">KAWAMOTO Shoko<br>
-川本 祥子</p>
-<p class="position">准教授(兼務)
-</p>
-</td>
-<td class="keyword">データベースと文献の検索、辞書の構築と公開、オープンアクセスなど</td>
-<td class="address"><a class="lazy-mail" data-address="shoko_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:shoko@dbcls.rois.ac.jp">shoko@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/kawano.jpg" alt="河野信"></td>
-<td class="name-position">
-<p class="name">KAWANO Shin<br>
-河野 信</p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">広報・普及</td>
-<td class="address"><a class="lazy-mail" data-address="kawano_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:kawano@dbcls.rois.ac.jp">kawano@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/kim.jpg" alt="金進東"></td>
-<td class="name-position">
-<p class="name">KIM Jin-Dong<br>
-金 進東<a href="http://dbcls.rois.ac.jp/~jdkim/" target="_blank"><img src="./img/member/homepage3.png" alt=""></a></p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">自然言語処理技術を利用したデータベースの生産性と接近性の向上</td>
-<td class="address"><a class="lazy-mail" data-address="jdkim_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:jdkim@dbcls.rois.ac.jp">jdkim@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/bono.jpg" alt="坊農秀雅"></td>
-<td class="name-position">
-<p class="name">BONO Hidemasa<br>
-坊農 秀雅<a href="http://dbcls.rois.ac.jp/~bono/" target="_blank"><img src="./img/member/homepage3.png" alt=""></a></p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">遺伝子発現データのアノテーションとそれらを使ったデータベース生物学</td>
-<td class="address"><a class="lazy-mail" data-address="bono_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:bono@dbcls.rois.ac.jp">bono@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/minowa.jpg" alt="箕輪真理"></td>
-<td class="name-position">
-<p class="name">MINOWA Mari<br>
-箕輪 真理</p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">広報＆もろもろの渉外窓口</td>
-<td class="address"><a class="lazy-mail" data-address="minowa_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:minowa@dbcls.rois.ac.jp">minowa@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/atsuko2.jpg" alt="山口敦子"></td>
-<td class="name-position">
-<p class="name">YAMAGUCHI Atsuko<br>
-山口 敦子</p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">セマンティックウェブ技術を利用したデータベースの統合へ向けた基盤技術開発</td>
-<td class="address"><a class="lazy-mail" data-address="atsuko_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:atsuko@dbcls.rois.ac.jp">atsuko@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/yamamoto.jpg" alt="山本泰智"></td>
-<td class="name-position">
-<p class="name">YAMAMOTO Yasunori<br>
-山本 泰智</p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">テキスト処理とセマンティックウェブ技術を用いたデータベース構築支援技術の開発</td>
-<td class="address"><a class="lazy-mail" data-address="yy_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:yy@dbcls.rois.ac.jp">yy@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/201701_hono.png" alt="小野浩雅"></td>
-<td class="name-position">
-<p class="name">ONO Hiromasa<br>
-小野 浩雅<a href="https://sites.google.com/dbcls.rois.ac.jp/hono/" target="_blank"><img src="./img/member/homepage3.png" alt=""></a></p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">「統合TV」編集、遺伝子発現等の大規模データ解析および可視化、活用支援</td>
-<td>ORCID：<a href="https://orcid.org/0000-0001-8675-963X">https://orcid.org/0000-0001-8675-963X</a></td>
-<td>担当サービス：<a href="">統合TV</a></td>
-<td class="address"><a class="lazy-mail" data-address="hono_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:hono@dbcls.rois.ac.jp">hono@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/katayama.jpg" alt="片山 俊明"></td>
-<td class="name-position">
-<p class="name">KATAYAMA Toshiaki<br>
-片山 俊明</p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">セマンティック・ウェブ技術によるゲノム情報の統合化、統合データのためのソフトウェア開発</td>
-<td class="address"><a class="lazy-mail" data-address="ktym_at_dbcls_dot_jp" href="mailto:ktym@dbcls.jp">ktym@dbcls.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/kawashima.jpg" alt="川島 秀一"></td>
-<td class="name-position">
-<p class="name">KAWASHIMA Shuichi<br>
-川島 秀一</p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">セマンティック・ウェブとバイオインフォマティクス技術によるライフサイエンスDB統合化およびソフトウェア開発</td>
-<td class="address"><a class="lazy-mail" data-address="kwsm_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:kwsm@dbcls.rois.ac.jp">kwsm@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/chiba.jpg" alt="千葉 啓和"></td>
-<td class="name-position">
-<p class="name">CHIBA Hirokazu<br>
-千葉 啓和</p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">データベース統合化のための技術開発、およびデータベース利用促進</td>
-<td class="address"><a class="lazy-mail" data-address="chiba_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:chiba@dbcls.rois.ac.jp">chiba@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img class="alignnone wp-image-2068 size-full" src="./img/member/y-naito.png" alt="y-naito" width="120" height="120"></td>
-<td class="name-position">
-<p class="name">NAITO Yuki<br>
-内藤 雄樹</p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">塩基配列などの大規模データを活用する技術の開発</td>
-<td class="address"><a class="lazy-mail" data-address="y-naito_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:y-naito@dbcls.rois.ac.jp">y-naito@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/nakazato.jpg" alt="仲里猛留"></td>
-<td class="name-position">
-<p class="name">NAKAZATO Takeru<br>
-仲里 猛留<a href="http://dbcls.rois.ac.jp/~nakazato/" target="_blank"><img src="./img/member/homepage3.png" alt=""></a></p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">NGSデータ利活用促進、オミックスデータの生物学的な解釈のための環境構築、サーバ管理</td>
-<td class="address"><a class="lazy-mail" data-address="nakazato_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:nakazato@dbcls.rois.ac.jp">nakazato@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/moriya.jpg" alt="守屋勇樹"></td>
-<td class="name-position">
-<p class="name">MORIYA Yuki<br>
-守屋 勇樹</p>
-<p class="position">特任助教</p>
-</td>
-<td class="keyword">基盤技術</td>
-<td class="address"><a class="lazy-mail" data-address="moriya_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:moriya@dbcls.rois.ac.jp">moriya@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/iida.jpg" alt="飯田啓介"></td>
-<td class="name-position">
-<p class="name">IIDA Keisuke<br>
-飯田 啓介</p>
-<p class="position">特任研究員</p>
-</td>
-<td class="keyword">日本語コンテンツ 編集．「新着論文レビュー」・「領域融合レビュー」編集人</td>
-<td class="address"><a class="lazy-mail" data-address="iida_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:iida@dbcls.rois.ac.jp">iida@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/nedutano.jpg" alt="大田達郎"></td>
-<td class="name-position">
-<p class="name">OHTA Tazro<br>
-大田 達郎<a href="http://g86.dbcls.jp/~iNut/" target="_blank"><img src="./img/member/homepage3.png" alt=""></a></p>
-<p class="position">特任研究員</p>
-</td>
-<td class="keyword">大規模データ解析に資するデータベース技術開発と塩基配列情報の統合</td>
-<td class="address"><a class="lazy-mail" data-address="t.ohta_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:t.ohta@dbcls.rois.ac.jp">t.ohta@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/fujiwara.jpg" alt="藤原豊史"></td>
-<td class="name-position">
-<p class="name">FUJIWARA Toyofumi<br>
-藤原 豊史</p>
-<p class="position">特任研究員</p>
-</td>
-<td class="keyword">基盤技術・テキストマイニング</td>
-<td class="address"><a class="lazy-mail" data-address="fujiwara_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:fujiwara@dbcls.rois.ac.jp">fujiwara@dbcls.rois.ac.jp</a></td>
-</tr>
-
-<tr>
-<td class="portrait"><img src="./img/member/wang.jpg" alt="王悦"></td>
-<td class="name-position">
-<p class="name">WANG Yue<br>
-王 悦</p>
-<p class="position">学術支援技術専門員</p>
-</td>
-<td class="keyword">テキストマイニング</td>
-<td class="address"><a class="lazy-mail" data-address="wang_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:wang@dbcls.rois.ac.jp">wang@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/okamoto.jpg" alt="岡本 忍"></td>
-<td class="name-position">
-<p class="name">OKAMOTO Shinobu<br>
-岡本 忍</p>
-<p class="position">特任准教授</p>
-</td>
-<td class="keyword">セマンティック・ウェブ技術による生物メタデータの標準化とアプリケーションのデザイン</td>
-<td class="address"><a class="lazy-mail" data-address="so_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:so@dbcls.rois.ac.jp">so@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/watanabe.jpg" alt="渡辺忠剛"></td>
-<td class="name-position">
-<p class="name">WATANABE Tadayoshi<br>
-渡辺 忠剛</p>
-<p class="position">
-</p></td>
-<td class="keyword">開発支援（サーバ管理）</td>
-<td class="address"><a class="lazy-mail" data-address="watanabe_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:watanabe@dbcls.rois.ac.jp">watanabe@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="道菅 紳介"></td>
-<td class="name-position">
-<p class="name">DOHKAN Shinsuke<br>
-道菅 紳介</p>
-<p class="position">
-</p></td>
-<td class="keyword">開発支援（サーバ管理）</td>
-<td class="address"><a class="lazy-mail" data-address="dohkan_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:dohkan@dbcls.rois.ac.jp">dohkan@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="根本　豊作"></td>
-<td class="name-position">
-<p class="name">NEMOTO Housaku<br>
-根本　豊作</p>
-<p class="position">事務室長</p>
-</td>
-<td class="keyword">事務</td>
-<td class="address"><a class="lazy-mail" data-address="h-nemoto_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:h-nemoto@dbcls.rois.ac.jp">h-nemoto@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="金子 尚美"></td>
-<td class="name-position">
-<p class="name">KANEKO Naomi<br>
-金子 尚美</p>
-<p class="position">事務補佐員</p>
-</td>
-<td class="keyword">事務</td>
-<td class="address"><a class="lazy-mail" data-address="kaneko_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:kaneko@dbcls.rois.ac.jp">kaneko@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="蓮尾　真弓"></td>
-<td class="name-position">
-<p class="name">MAYUMI HASUO<br>
-蓮尾　真弓</p>
-<p class="position">事務補佐員</p>
-</td>
-<td class="keyword">事務</td>
-<td class="address"><a class="lazy-mail" data-address="hasuo_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:hasuo@dbcls.rois.ac.jp">hasuo@dbcls.rois.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="森　さおり"></td>
-<td class="name-position">
-<p class="name">SAORI　MORI<br>
-森　さおり</p>
-<p class="position">事務補佐員</p>
-</td>
-<td class="keyword">事務</td>
-<td class="address"><a class="lazy-mail" data-address="mori_at_dbcls_dot_rois_dot_ac_dot_jp" href="mailto:mori@dbcls.rois.ac.jp">mori@dbcls.rois.ac.jp</a></td>
-</tr>
-</tbody>
-</table>
-<h3 class="font-size-16">客員部門・研究協力者</h3>
-<table class="member-table">
-<tbody>
-<tr>
-<td class="portrait"><img src="./img/member/noimage4.png" alt="栗栖 源嗣"></td>
-<td class="name-position">
-<p class="name">KURISU Genji<br>
-栗栖 源嗣</p>
-<p class="position">客員教授</p>
-</td>
-<td class="keyword">タンパク連携</td>
-<td class="address"><a class="lazy-mail" data-address="gkurisu_at_protein_dot_osaka-u_dot_ac_dot_jp" href="mailto:gkurisu@protein.osaka-u.ac.jp">gkurisu@protein.osaka-u.ac.jp</a></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/kinjo.jpg" alt="金城玲"></td>
-<td class="name-position">
-<p class="name">KINJO Akira<br>
-金城 玲</p>
-<p class="position">客員准教授</p>
-</td>
-<td class="keyword">タンパク連携</td>
-<td class="address"><img src="./img/member/kinjo_mail.png" alt=""></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/ogasawara.png" alt="小笠原理"></td>
-<td class="name-position">
-<p class="name">OGASAWARA Osamu<br>
-小笠原 理</p>
-<p class="position">業務参加者</p>
-</td>
-<td class="keyword">ポータル</td>
-<td class="address"><img src="./img/member/ogasawara_mail.png" alt=""></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/iwasaki.png" alt="岩崎渉"></td>
-<td class="name-position">
-<p class="name">IWASAKI Wataru<br>
-岩崎 渉</p>
-<p class="position">業務協力者</p>
-</td>
-<td class="keyword">テキストマイニング</td>
-<td class="address"><img src="./img/member/iwasaki_mail.png" alt=""></td>
-</tr>
-<tr>
-<td class="portrait"><img src="./img/member/10967817_10152738866579702_404042269_n.jpg" alt="Nicola Colic"></td>
-<td class="name-position">
-<p class="name">Nicola Colic</p>
-<p class="position">外来研究員</p>
-</td>
-<td class="keyword">テキストマイニング</td>
-<td class="address"><a class="lazy-mail" data-address="ncolic_at_access_dot_uzh_dot_ch" href="mailto:ncolic@access.uzh.ch">ncolic@access.uzh.ch</a></td>
-</tr>
-</tbody>
-</table>-->
 <script src="script/default.js"></script>
 </body></html>

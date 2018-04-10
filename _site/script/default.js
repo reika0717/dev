@@ -166,43 +166,142 @@ var initialize = {
 
 		startTimer()
 	},
-	'about': function () {},
-	'research': function () {},
+	'about': function () {
+		location.hash = 'about'
+	},
+	'research': function () {
+		location.hash = 'research'
+	},
 	'services': function () {
-		var repos_name = ''
+		var repos_name = '';
+		var repos_array  = [];
+		var tags_array
 
 		//レポジトリ一覧
 		function displayReposList () {
 			location.hash = 'services'
 			$.get('https://api.github.com/users/dbcls/repos', function (data) {
-				const repos_array = data.map(data => data.name)
-				$('div.service__wrapper').empty()
-				for(var i = 0; i < repos_array.length; i++){
-					$('div.service__wrapper').append($('<div/>').attr({'class': 'repos_individual_wrapper'}).append('<div id="repos_name'+ i +'" class="repos_name">').append('<div id="repos_image'+ i +'" class="repos_image">'))
-					$('#repos_name' + i).append('<p>' + repos_array[i] + '</p>')
-				}
-			})
+
+				repos_array = data.map(data => data.name);
+	        })
 		}
 		displayReposList()
 
+
+		//担当者サービスの連想配列つくる（まだやってない
+		var servicePerson = {};
+
+		function servicesFrontDisplay() {
+			$.ajax({
+				url : "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+				dataType : "json",
+				async: true,
+				success : function(data){
+
+					var elementArray = data.values;
+
+					//column1に"Y"のあるrowをとってくる
+					var symbolYList = elementArray.filter((YList) => {
+						return (YList[0] === "Y");
+					})
+					console.log(symbolYList);
+
+				  	var element = "";
+				  	//data.values.splice(0, 1)
+				    for (i = 0; i < symbolYList.length; i++) {
+
+						element += '<article class="article__section contener-type-box">' + 
+						'<div id="repos_name' + i +'" class="repos_name">'+ 
+			        	'<p class="name">' + symbolYList[i][2] + '</p>' + 
+			        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
+			        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
+			        	'<div class="service_type db">Database</div>' + 
+			        	'<div class="btn-box">' + 
+			        	'<a href="./md/' + symbolYList[i][2] + '-README.md" class="page_btn more_btn">' + '詳細' + '</a>' + 
+			        	'<a href="' + symbolYList[i][3] + '" class="page_btn access_btn">アクセス</a>' + 
+			        	'</div></div>' + 
+			        	'<div id="repos_image0" class="repos_image">' + 
+			        	'<img src="./img/service_assets/' + symbolYList[i][2] + '.png' + '" art="' + symbolYList[i][2] +'" class="object-fit-img img_services"></div>'
+
+			        	element += '</article>'
+
+			        }
+		        	$("#service_list").append(element);    	
+				}
+			})
+		}
+		servicesFrontDisplay();
+		$('#service-on').click(function() {
+			$("#table").empty();
+			$("#service_list").empty();
+			servicesFrontDisplay();
+		})
+		function pointerActive() {
+			console.log("add");
+			$('outline-list-category__title').click().addClass('on');
+		}
+		pointerActive();
+		//$("#service_list").on('click', '#papers_citing_dbcls_services').css({'display':'none'});
+		
+		//Papers citing DBCLS services
+		$('#papers_citing_dbcls_services').click(function() {
+			$("#service_list").empty();
+
+			$.ajax({
+			  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
+			  dataType : "json",
+			  async: true,
+			  success : function(data){
+
+			  	var rows = "";
+			  	var first_col = data.values[0]
+
+		  		rows += '<thead><tr>';
+			  	for (i = 0; i < first_col.length; i++) {
+			  		rows += '<th>' + first_col[i] + '</th>'
+			  	}
+		  		rows += '</tr></thead>';
+
+		  		data.values.splice(0, 1);
+			    for (i = 0; i < data.values.length; i++) {
+
+			        rows += 
+			        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+			        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
+			            '<td><p>' + data.values[i][1] + '</p></td>'+ 
+			            '<td><p>' + data.values[i][2] + '</p></td>' +
+			            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
+			            '<td><p>' + data.values[i][4] + '<p></td>' +
+			            '<td><p>' + data.values[i][5] + '</p></td>'+ 
+			            '<td><p>' + data.values[i][6] + '</p></td>' +
+			            '<td><p>' + data.values[i][7] + '</p></td>'
+			      	rows += "</tr>";
+
+			    }
+			    $("#table").append(rows);
+			  }
+			})
+		})
+		
 		//ハッシュ値が変わった時の画面遷移
 		window.addEventListener('hashchange', function() {
 			if(location.hash === '#services'){
 				$('.service__wrapper').empty()
 				displayReposList()
 			}else if(location.hash === '#service'){
-				displayRepos(repos_name, 'README.md')
+				displayRepos(repos_name)
 			}
 		}, false)
 
 		//デフォルトは英語版README表示
+		//.on('click', '.repos_name p, .access_btn', function ()
 		$(document).on('click', '.repos_name p', function () {
 			repos_name = $(this).html()
-			displayRepos (repos_name, 'README.md')
+			displayRepos (repos_name)
 		})
 
 		//リポジトリ個別ページ
-		function displayRepos (repos_name, file_type) {
+		function displayRepos (repos_name) {
 			location.hash = 'service'
 
 			function plot (data) {
@@ -218,8 +317,9 @@ var initialize = {
 					)
 				var markdown_body = $('.service__wrapper').append($('<div/>').attr({'class': 'markdown-body'}).html(md_data))
 			}
+			//mdファイル初期表示
 			$.get(
-				'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/' + file_type
+				'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/README.md'
 			).done(function (data) {
 				plot(data)
 			}).fail(function() {
@@ -251,36 +351,71 @@ var initialize = {
 			})
 		}
 	},
-	'events': function () {},
-	'member': function () {},
-	'access': function () {},
-	'achievement': function () {
-		$.ajax({
-		  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
-		  dataType : "json",
-		  async: true,
-		  success : function(data){
-		  	var rows = "";
-		    for (i = 0; i < data.values.length; i++) {
-		        rows += 
-
-		        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
-		        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
-		            '<td><p>' + data.values[i][1] + '</p></td>'+ 
-		            '<td><p>' + data.values[i][2] + '</p></td>' +
-		            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
-		            '<td><p>' + data.values[i][4] + '<p></td>' +
-		            '<td><p>' + data.values[i][5] + '</p></td>'+ 
-		            '<td><p>' + data.values[i][6] + '</p></td>' +
-		            '<td><p>' + data.values[i][7] + '</p></td>' +
-		            '<td><p>' + data.values[i][8] + '</p></td>';
-		      	rows += "</tr>";
-		    }
-		    $("#table").append(rows);
-		  }
-		});
+	'events': function () {
 	},
-	'contact': function () {},
+	'member': function () {
+		location.hash = 'member'
+		function memberFrontDisplay() {
+			$.ajax({
+				url : "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+				dataType : "json",
+				async: true,
+				success : function(data){
+
+				  	var element = "";
+				  	var listSubNav = "";
+				  	data.values.splice(0, 1);
+
+				  	for (j = 0; j < data.values.length; j++) {
+					  	console.log(memberList);
+
+					  	listSubNav += '<li>' + data.values[j][0] + '</li>';
+
+				  	}
+				  	$("#memberList").append(listSubNav);
+
+				    for (i = 0; i < data.values.length; i++) {
+
+				    	var name = data.values[i][0]
+				    	var image = data.values[i][1]
+				    	//var name_en = data.values[i][]
+				    	//var position = data.values[i][]
+				    	//var position_en = data.values[i][]
+				    	//var keyword = data.values[i][]
+				    	//var keyword_en = data.values[i][]
+				    	var orcid = data.values[i][4]
+				    	var googleScholar = data.values[i][6]
+				    	var github = data.values[i][7]
+				    	//var mail = data.values[i][]
+
+						element += '<article class="article__section contener-type-box contener-type-box__member">' + 
+						'<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name + '" class="img_member"></div>' + 
+						'<div id="repos_name" class="repos_name">' + 
+						'<div class="name">' + name + '<span class="position">' + 'position' + '</span></div>' + 
+						'<div class="name en">' + "name_en" + '</div>' + 
+						'<div class="keyword">' + "keyword" + '</div>' + 
+						'<div class="services">担当サービス</div>' + 
+						'<div class="btn-box">' + 
+						'<a href="' + googleScholar + '" class="page_btn scholar">Google Sholar</a>' + 
+						'<a href="https://github.com/' + github + '" class="page_btn git">GitHub</a>' + 
+						'<a href="https://orcid.org/' + orcid + '" class="page_btn orcid_btn">ORCID</a>' + 
+						'<a href="' + "mail" + '" class="page_btn mail_btn">mail</a></div>' 
+
+			        	element += '</article>'
+
+			        }
+		        	$("#member-list").append(element); 
+				}
+			})
+		}
+		memberFrontDisplay();
+	},
+	'access': function () {
+		location.hash = 'access'
+	},
+	'contact': function () {
+		location.hash = 'contact'
+	}
 };
 
 script.addEventListener('load', function() {
