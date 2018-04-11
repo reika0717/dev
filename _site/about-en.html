@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<header class="header-en header">
+<header class="header-en header" id="header">
 	<nav>
 		<div id="header__languages-en" class='header__language-wrapper'>
 			<ul class="qtrans_language_chooser" id="qtranslate-chooser">
@@ -50,7 +50,7 @@
 				<a href="/dbcls-test/events-en.html">Events</a>
 			</li>
 			<li class='header__nav__contents'>
-				<a href="/dbcls-test/member-en.html">Member</a>
+				<a href="/dbcls-test/member-en.html">Members</a>
 			</li>
 			<li class='header__nav__contents'>
 				<a href="/dbcls-test/access_en.html">Access</a>
@@ -67,19 +67,20 @@
 				<input class='search__submit' type="submit" value=''>
 			</li>
 		</ul>
-	</nav>	
+	</nav>
 </header>
 
 	<div class="content__wrapper">
 		<div id="subWrap">
 			<div class="sub__navigation">
 				<h2 class="page-title">About</h2>
-				<ul class="sub__navigation-wrapper">
-					<li class="sub__navigation-title">沿革</li>
-					<li class="sub__navigation-title">予算と財源</li>
-					<li class="sub__navigation-title">よくある質問</li>
-					<li class="sub__navigation-title">サイトポリシー</li>
-					<li class="sub__navigation-title">ロゴについて</li>
+				<ul class="sub__navigation-wrapper outline-list-category__wrapper">
+					<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/about.html">センターについて</a></li>
+					<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/history.html">沿革</a></li>
+					<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/funding.html">予算と財源</a></li>
+					<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/faq.html">よくある質問</a></li>
+					<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/policy.html">サイトポリシー</a></li>
+					<li class="sub__navigation-title outline-list-category__title off"><a href="/dbcls-test/logotype.html">ロゴについて</a></li>
 				</ul>
 			</div>
 		</div>
@@ -95,26 +96,25 @@
 <footer>
 	<div class="footer__wrapper">
 		<div class="footer__organism">
-			<p class="footer__organism-sub">大学共同利用機関法人 情報・システム研究機構</p>
-			<p class="footer__organism-sub">データサイエンス共同利用基盤施設</p>
-			<p class="footer__organism-main">ライフサイエンス統合データベースセンター</p>
+			<p class="footer__organism-sub">Database Center for Life Science</p>
+			<p class="footer__organism-sub">Joint Support-Center for Data Science Research</p>
+			<p class="footer__organism-main">Research Organization of Information and Systems</p>
 		</div>
 		<div class="footer__wrapper__contents">
 			<div class="footer__address">
 				<h2 class="page-title">Address</h2>
 				<ul class="address__list">
 					<li>
-						<div class="">柏ラボ</div>
-						<p>〒277-0871</p>
-						<p>千葉県柏市若柴178-4-4</p>
-						<p>東京大学柏の葉キャンパス 駅前サテライト6階</p>
-						<p>TEL. 04-7135-5508（代表）<br> FAX. 04-7135-5534（代表）</p>
+						<p>Kashiwa-labo</p>
+						<p>Univ. of Tokyo Kashiwa-no-ha Campus Station Satellite 6F.</p>
+						<p>178-4-4 Wakashiba, Kashiwa-shi, Chiba 277-0871, JAPAN</p>
+						<p>TEL +81-4-7135-5508</p>
+						<p>FAX +81-4-7135-5534</p>
 					</li>
 					<li>
-						<div class="">三島ラボ</div>
-						<p>〒411-8540</p>
-						<p>静岡県三島市谷田1111</p>
-						<p>国立遺伝学研究所 生命情報研究センター W412</p>
+						<p>Mishima-labo</p>
+					<p>Center for Information Biology W412, National Institute of Genetics</p>
+					<p>Yata 1111, Mishima, Shizuoka 411-8540, JAPAN</p>
 					</li><a href="access.html" class="page_btn access_btn">access</a>
 				</ul>
 			</div>
@@ -139,7 +139,7 @@
 				<h2 class="page-title">Links</h2>
 				<ul class="links__wrapper">
 					<li class="individual_link">
-						<a href="http://lifesciencedb.jp/">統合ホームページ</a>
+						<a href="http://lifesciencedb.jp/">LSDB Home Page</a>
 					</li>
 					<li class="individual_link">
 						<a href="https://youtube.com/togotv/live">DBCLS on YouTubeLive</a>
@@ -148,16 +148,16 @@
 						<a href="http://jbioinfo.jp/">Japan alliance for Bioscienece Information (JBI)</a>
 					</li>
 					<li class="individual_link">
-						<a href="https://ds.rois.ac.jp/">データサイエンス共同利用基盤施設</a>
+						<a href="https://ds.rois.ac.jp/">Joint Support-Center for Data Science Research</a>
 					</li>
 					<li class="individual_link">
-						<a href="http://www.rois.ac.jp/">情報・システム研究機構</a>
+						<a href="http://www.rois.ac.jp/">Research Organization of Information and Systems</a>
 					</li>
 					<li class="individual_link">
-						<a href="http://biosciencedbc.jp/?lng=ja">バイオサイエンスデータベースセンター</a>
+						<a href="http://biosciencedbc.jp/?lng=ja">National Bioscience Database Center</a>
 					</li>
 					<li class="individual_link">
-						<a href="http://www.mext.go.jp/">文部科学省</a>
+						<a href="http://www.mext.go.jp/">Ministry of Education, Culture, Sports, Science and Technology</a>
 					</li>
 				</ul>
 			</div>
