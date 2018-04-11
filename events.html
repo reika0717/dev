@@ -38,7 +38,7 @@
 		          {% if post.tags contains 'イベント' %}
 		            <li class="post__individual">
 									<div class="post__date">
-										{{post.date | date: '%m/%d/%Y'}}
+										{{post.date | date: '%Y. %d. %m'}}
 									</div>
 		              <a href="/dbcls-test/{{ post.url }}" class="post__title">
 		                {{ post.title }}

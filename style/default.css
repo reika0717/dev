@@ -43,8 +43,6 @@ body {
   width: 100%; }
   body a {
     text-decoration: none; }
-  body a, body p, body li, body span, body h1, body h2, body h3, body h4 {
-    color: #004098; }
 
 .page-title {
   width: 31px;
@@ -88,20 +86,20 @@ body {
 .post__date {
   font-size: 14px;
   font-weight: 800;
-  color: #14274B; }
+  color: #333333; }
 
 .post__title {
   font-size: 14px;
   font-weight: 700;
-  color: #14274B; }
+  color: #333333; }
 
 .post__desc-beginning {
   font-size: 12px;
-  color: #14274B; }
+  color: #333333; }
 
 .post__individual {
   margin-top: 23px;
-  color: #14274B; }
+  color: #333333; }
 
 .content__wrapper {
   width: 1024px;
@@ -190,7 +188,7 @@ body {
       font-weight: 700;
       font-size: 14px; }
       .header__nav .header__nav__contents a img {
-        width: 92px;
+        width: 105px;
         height: 55px; }
   .header__nav .header__nav__sns-twitter {
     color: #004098; }
@@ -226,70 +224,79 @@ body {
 
 /* footer */
 footer {
+  color: #14274B;
   width: 100%;
   background: #E8EDED;
   margin-top: 70px; }
   footer .footer__wrapper {
-    padding-top: 55px;
+    padding-top: 35px;
     width: 1024px;
     margin: 0 auto; }
-    footer .footer__wrapper .footer__organism {
-      color: #14274B; }
-      footer .footer__wrapper .footer__organism .footer__organism-sub {
-        font-size: 14px;
-        font-weight: 700; }
-      footer .footer__wrapper .footer__organism .footer__organism-main {
-        font-size: 18px;
-        font-weight: 700; }
     footer .footer__wrapper .footer__wrapper__contents {
       display: flex;
-      padding-top: 35px; }
+      justify-content: space-between; }
+      footer .footer__wrapper .footer__wrapper__contents .footer-title {
+        font-weight: 800;
+        font-size: 14px; }
       footer .footer__wrapper .footer__wrapper__contents .footer__address {
-        width: 310px;
+        width: 258px;
         margin-top: 0; }
-      footer .footer__wrapper .footer__wrapper__contents .page-title {
-        font-size: 14px; }
-      footer .footer__wrapper .footer__wrapper__contents .address__list {
-        display: inline-block;
-        margin-top: 19px; }
-        footer .footer__wrapper .footer__wrapper__contents .address__list li {
-          padding-bottom: 10px;
-          font-size: 12px;
-          line-height: 1.5em;
-          width: 431px; }
-          footer .footer__wrapper .footer__wrapper__contents .address__list li div {
+        footer .footer__wrapper .footer__wrapper__contents .footer__address .address__list {
+          display: inline-block;
+          margin-top: 15px; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__address .address__list li {
+            padding-bottom: 21px;
             font-size: 12px;
-            font-weight: 800; }
-        footer .footer__wrapper .footer__wrapper__contents .address__list .access_btn {
-          width: 66px;
-          margin: 0; }
-      footer .footer__wrapper .footer__wrapper__contents .page-title {
-        font-size: 14px; }
-      footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper {
-        margin-top: 19px;
-        width: 260px; }
-        footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper li {
-          padding-bottom: 10px; }
-        footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper .logo__jbi {
-          height: 32px; }
-        footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper .logo__ddbj {
-          height: 42px;
-          margin-left: 0; }
-        footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper .logo__nbdc {
-          height: 44px;
-          margin-top: 0; }
-        footer .footer__wrapper .footer__wrapper__contents .footer__rogo-wrapper .logo__pdbj {
-          height: 41px;
-          margin: 0; }
-      footer .footer__wrapper .footer__wrapper__contents .page-title {
-        font-size: 14px; }
-      footer .footer__wrapper .footer__wrapper__contents .links__wrapper {
+            line-height: 1.5em;
+            width: 431px; }
+            footer .footer__wrapper .footer__wrapper__contents .footer__address .address__list li p {
+              line-height: 1.8em; }
+      footer .footer__wrapper .footer__wrapper__contents .footer__links .links__wrapper {
         margin-top: 12px;
         width: 260px; }
-        footer .footer__wrapper .footer__wrapper__contents .links__wrapper .individual_link a {
+        footer .footer__wrapper .footer__wrapper__contents .footer__links .links__wrapper .individual_link a {
           font-size: 12px;
           text-decoration: underline;
-          line-height: 1.5em; }
+          line-height: 1.5em;
+          color: #14274B; }
+      footer .footer__wrapper .footer__wrapper__contents .footer__info {
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        padding-left: 40px; }
+        footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__organism .footer__logo {
+          width: 108px;
+          height: auto;
+          display: block;
+          margin: 0 auto; }
+        footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__organism .footer__organism-text {
+          margin-top: 15px;
+          margin-bottom: 20px; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__organism .footer__organism-text .footer__organism-sub {
+            font-size: 12px;
+            line-height: 1.3em;
+            text-align: center; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__organism .footer__organism-text .footer__organism-main {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px; }
+        footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper {
+          margin-top: 19px;
+          width: 290px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper li {
+            padding-bottom: 10px; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper .logo__jbi {
+            height: 32px; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper .logo__ddbj {
+            height: 42px;
+            margin-left: 0; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper .logo__nbdc {
+            height: 44px;
+            margin-top: 0; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__partners .footer__logo-wrapper .logo__pdbj {
+            height: 41px;
+            margin: 0; }
     footer .footer__wrapper .footer__lisence p {
       font-size: 10px;
       display: flex;
@@ -301,36 +308,6 @@ footer {
         height: 16px;
         display: block;
         background: url(../img/by.svg) no-repeat; }
-
-/***サイドバー*/
-.outline-list-category__wrapper {
-  width: 200px;
-  cursor: pointer; }
-  .outline-list-category__wrapper:first-child {
-    padding-top: 14px;
-    padding-bottom: 15px; }
-  .outline-list-category__wrapper .outline-list-category__title {
-    color: #004098;
-    position: relative;
-    padding: 6px 0;
-    font-size: 16px;
-    font-weight: 800; }
-    .outline-list-category__wrapper .outline-list-category__title:after {
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      content: "";
-      width: 7px;
-      height: 7px;
-      border: 2px solid;
-      border-color: #004098 #004098 transparent transparent;
-      transform: rotate(45deg); }
-    .outline-list-category__wrapper .outline-list-category__title.off:after {
-      opacity: 0.3; }
-    .outline-list-category__wrapper .outline-list-category__title.on, .outline-list-category__wrapper .outline-list-category__title:hover, .outline-list-category__wrapper .outline-list-category__title:after {
-      opacity: 1.0; }
 
 /* top-page */
 .main-image__veil {
@@ -431,7 +408,7 @@ footer {
   font-size: 14px;
   margin-bottom: 9px;
   line-height: 1.8;
-  color: #14274B; }
+  color: #333333; }
 
 .section-wrapper {
   display: flex;
@@ -442,7 +419,7 @@ footer {
     background-color: #E8EDED;
     margin: 6px 0;
     padding: 16px 15px;
-    color: #14274B; }
+    color: #333333; }
     .section-wrapper .article__section h4 {
       font-size: 14px;
       font-weight: 700;
@@ -451,7 +428,7 @@ footer {
     .section-wrapper .article__section p {
       font-size: 12px;
       line-height: 1.8em;
-      color: #14274B; }
+      color: #333333; }
     .section-wrapper .article__section .symposium__list,
     .section-wrapper .article__section .biohackason__list {
       margin-top: 15px; }
@@ -538,7 +515,7 @@ footer {
   font-size: 14px;
   line-height: 1.8em;
   margin-bottom: 10px;
-  color: #14274B; }
+  color: #333333; }
 
 .about__reference {
   font-size: 14px;
@@ -550,16 +527,16 @@ footer {
   .section-wrapper__adelement p.adelement__description {
     font-size: 14px;
     line-height: 1.8em;
-    color: #14274B; }
+    color: #333333; }
   .section-wrapper__adelement article.article__section__irregular {
     padding: 16px 15px;
     background-color: #E8EDED;
     margin: 6px 0;
-    color: #14274B; }
+    color: #333333; }
     .section-wrapper__adelement article.article__section__irregular p.adelement__description {
       font-size: 12px;
       line-height: 1.8em;
-      color: #14274B; }
+      color: #333333; }
     .section-wrapper__adelement article.article__section__irregular h4 {
       font-size: 14px;
       font-weight: 700;
@@ -568,13 +545,13 @@ footer {
       font-size: 14px;
       line-height: 1.8em;
       margin: 10px 0;
-      color: #14274B; }
+      color: #333333; }
     .section-wrapper__adelement article.article__section__irregular ol {
       padding: 0 30px; }
     .section-wrapper__adelement article.article__section__irregular li {
       font-size: 14px;
       line-height: 1.8em;
-      color: #14274B; }
+      color: #333333; }
 
 .table-history {
   margin: 12px auto; }
@@ -590,18 +567,18 @@ footer {
   .table-history td {
     border-bottom: solid 1px #ccc;
     padding-left: 10px;
-    color: #14274B; }
+    color: #333333; }
     .table-history td p {
       font-size: 14px; }
 
 /* event */
 .main__contents-event {
-  color: #14274B; }
+  color: #333333; }
   .main__contents-event .news__individual-wrapper {
     padding-bottom: 30px; }
 
 .main__contents-public .public__description {
-  color: #14274B; }
+  color: #333333; }
 
 /*** Services & Member */
 .tag_panel {
