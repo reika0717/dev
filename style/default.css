@@ -185,9 +185,6 @@ body {
       color: #004098;
       font-weight: 700;
       font-size: 14px; }
-      .header__nav .header__nav__contents a img {
-        width: 126px;
-        height: 55px; }
   .header__nav .header__nav__sns-twitter {
     color: #004098; }
   .header__nav .header__nav__sns-feed {
@@ -333,12 +330,12 @@ footer {
   background: linear-gradient(to bottom, #00a6f5 0%, #00244e 100%);
   display: flex;
   justify-content: center;
-  padding-top: 92px; }
+  padding-top: 76px; }
   .main-image__wrapper .main-image__contents {
     position: relative;
     perspective: 1500px;
     width: 1024px;
-    height: 355px;
+    height: 371px;
     overflow: hidden; }
     .main-image__wrapper .main-image__contents .panel {
       position: absolute;

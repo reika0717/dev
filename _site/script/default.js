@@ -54,7 +54,7 @@ var initialize = {
 		const RADIAN_UNIT = ((Math.PI) * .1) / 1000 * FPS;//1コマの移動距離＝速さ
 		const Y_UNIT = 0.00001; //y軸の速度
 		const UNIT = (Math.PI * 2) / NUMBER_OF_PANEL; // 弧度
-		const RADIUS = 480;　//半径
+		const RADIUS = 480; //半径
 
 		class Panel {
 			constructor () {
@@ -64,7 +64,7 @@ var initialize = {
 					url = 'img/top_assets/' + services_array[i] + '_f.png'
 					var panel_style = {
 						'background-image' : 'url(' + url + ')',
-						
+
 					}
 				  $('.panel:nth-of-type('+ i +')').css(panel_style)		
 				}
@@ -72,22 +72,22 @@ var initialize = {
 			  this.reset()
 				$('.panel').hover(function () {
 					stopTimer ()
-					$('.main-image__veil, .main__forcused-page__description').css('display', 'block')
-					var resized_image = $(this).css('background-image').toString()
-					var forcused_style = {
-						'width': '340px',
-						'height': '400px',
-						'position': 'absolute',
-						'top': '80px',
-						'left': '50%',
-						'pointer-events': 'none',
-						'z-index': '9999',
-						'transform': 'rotateY(0) translateX(-50%)',
-						'background-image': resized_image
-					}
+					// $('.main-image__veil, .main__forcused-page__description').css('display', 'block')
+					// var resized_image = $(this).css('background-image').toString()
+					// var forcused_style = {
+					// 	'width': '340px',
+					// 	'height': '400px',
+					// 	'position': 'absolute',
+					// 	'top': '80px',
+					// 	'left': '50%',
+					// 	'pointer-events': 'none',
+					// 	'z-index': '9999',
+					// 	'transform': 'rotateY(0) translateX(-50%)',
+					// 	'background-image': resized_image
+					// }
 
-					var forcused_image = $(this).clone(true).removeClass('panel').addClass('forcused_panel').css(forcused_style)
-					$('body').append(forcused_image)
+					// var forcused_image = $(this).clone(true).removeClass('panel').addClass('forcused_panel').css(forcused_style)
+					// $('body').append(forcused_image)
 
 				})
 
