@@ -1,28 +1,92 @@
 ---
 layout: default
 title: ニュース一覧
+data-type: news
 ---
 {% include header.html %}
-<nav>
-	<ul>
-		<li>日本語</li>
-		<li>
-			<a href="news-en.html">English</a>
-		</li>
-	</ul>
-</nav>
 
-<h1>news page</h1>
-<p>以下、最近のニュース。</p>
-
-<ul>
-	{% for post in site.categories.ja %}
-	<li class='news__individual'>
-			{{post.date | date_to_string}}
-		<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
-		{% assign beginning =  post.content | slice: 0, 200 | strip_html%}
-		<p class='news__desc-beginning'>{{beginning | slice: 0, 100 | strip_html}}…</p>
-		{% include post_meta.html %}
-	</li>
-	{% endfor %}
-</ul>
+<div class="content__wrapper">
+	<div class="sub__navigation">
+			<h2 class="page-title">News</h2>
+				<div class="outline-list-category">
+					<ul class="sub__navigation-wrapper outline-list-category__wrapper">
+						<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/news.html">ニュース一覧</a></li>
+						<li class="tag_panel">
+							<ul class="tag_panel_header">
+								年
+								<li class="tag_element term off" data-tagkey="category_year-all">
+									全期間
+								</li>
+								<li class="tag_element term" data-tagkey="category_year-2018">
+									2018
+								</li>
+								<li class="tag_element term off" data-tagkey="category_year-2017">
+									2017
+								</li>
+								<li class="tag_element term off" data-tagkey="category_year-2016">
+									2016
+								</li>
+							</ul>
+						</li>
+						<li class="tag_panel">
+							<ul class="tag_panel_header">
+								タグ
+								<li class="tag_element tag-all off" data-tagkey="category_all">
+									All
+								</li>
+								<li class="tag_element tag-service" data-tagkey="category_featured">
+									サービス
+								</li>
+								<li class="tag_element tag-publishment off" data-tagkey="category_dna">
+									広報
+								</li>
+								<li class="tag_element tag-event off" data-tagkey="category_structures">
+									イベント
+								</li>
+								<li class="tag_element tag-invite off" data-tagkey="category_textmining">
+									募集
+								</li>
+								<li class="tag_element tag-other off" data-tagkey="category_textmining">
+									その他
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+	</div>
+	<div class="main__contents">
+		<div class="main__content-title__wrapper">
+			<h3 class="main__content-title">ニュース一覧</h3>
+		</div>
+			<ul class="news__individual-wrapper">
+				{% for post in site.categories.ja %}
+					<li class='post__individual'>
+						<div class="post__date">
+							{{post.date | date: '%Y. %m. %d'}}
+						</div>
+						<div class="post__main post__main-news">
+							<a href="{{post.url | prepend: site.baseurl}}" class="post__title">{{post.title}}</a>
+							{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
+							<p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
+							<div class="post__sub-info">
+							  <div class="post-tags">
+									{% include post_meta.html %}
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+<!-- 		<ul>
+			{% for post in site.categories.ja %}
+			<li class='news__individual'>
+					{{post.date | date_to_string}}
+				<a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a>
+				{% assign beginning =  post.content | slice: 0, 200 | strip_html%}
+				<p class='news__desc-beginning'>{{beginning | slice: 0, 100 | strip_html}}…</p>
+				{% include post_meta.html %}
+			</li>
+			{% endfor %}
+		</ul>	 -->
+	</div>	
+</div>

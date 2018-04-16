@@ -8,18 +8,22 @@ $text-color: #333333
 $footer-text-color: #14274B
 $header-color: #004098
 $section-bg: #E8EDED
+$gray: #9E9E9E
+
 body
 	font-family: 'Muli', sans-serif
 	width: 100%
 	a
 		text-decoration: none
 .page-title
+	color: $main-color
 	width: 31px
 	font-size: 21px
 	font-weight: 800
 	padding-bottom: 3px
 	border-bottom: 3px solid $main-color
 .page_btn
+	color: $main-color
 	display: flex
 	align-items: center
 	font-size: 10px
@@ -36,7 +40,6 @@ body
 		background-image: url(../img/icon_more.svg)
 	&.more_btn
 		width: 56px
-		margin-top: 10px
 	&.access_btn
 		width: 63px
 		margin-top: 7px
@@ -50,12 +53,63 @@ body
 			height: 12px
 			margin-right: 3px
 			background: url(../img/icon_pdf.svg) no-repeat
+.sub__content-title
+	font-size: 18px
+	margin-bottom: 10px
+	&:before
+		content: "　"
+		background: no-repeat url(../img/icon_sub-title.svg)
+
+//下層ページカラム設定
+.content__wrapper
+	width: 1024px
+	margin: 0 auto
+	display: flex
+	.sub__navigation
+		padding-top: 156px
+		width: 242px
+		color: $main-color
+		.sub__navigation-wrapper
+			margin-top: 14px
+			.sub__navigation-title
+				font-size: 14px
+				font-weight: 600
+				&.on
+					a
+						color: $main-color
+				&.off
+					a
+						color: $gray
+				.sub__navigation-contents
+					font-size: 12px
+					font-weight: 500
+	.main__contents
+		padding-top: 160px
+		width: 782px
+		.main__content-title__wrapper
+			border-bottom: 1px solid $gray
+			margin-bottom: 28px
+			position: relative
+			width: 782px
+			.main__content-title
+				color: $main-color
+				font-size: 16px
+				font-weight: 700
+				padding-bottom: 3px
+				&.post__title-individual
+					color: $text-color
 
 //post
 .post__date
 	font-size: 14px
-	font-weight: 800
 	color: $text-color
+	&-individual
+		position: absolute
+		padding-top: 5px
+.post__tags-individual
+	position: absolute
+	left: 98px
+	padding-top: 5px
 .post__title
 	font-size: 14px
 	font-weight: 700
@@ -66,31 +120,30 @@ body
 .post__individual
 	margin-top: 23px
 	color: $text-color
-
-//下層ページカラム設定
-.content__wrapper
-	width: 1024px
-	margin: 0 auto
+.post__main-text
+	margin-top: 69px
+	color: $text-color
+	font-size: 15px
+	line-height: 2em
+.PageNavigation
 	display: flex
-	.sub__navigation
-		padding-top: 156px
-		width: 242px
-		.sub__navigation-wrapper
-			margin-top: 14px
-			.sub__navigation-title
-				font-size: 14px
-				font-weight: 600
-				.sub__navigation-contents
-					font-size: 12px
-					font-weight: 500
-	.main__contents
-		padding-top: 156px
-		width: 782px
-		.main__content-title
-			font-size: 16px
-			font-weight: 700
-			padding-bottom: 2px
-			border-bottom: 3px solid #D0D4DB
+	justify-content: space-between
+	font-size: 14px
+	font-weight: 700
+	margin-top: 212px
+	padding-bottom: 3px
+	border-bottom: 1px solid rgba(0, 0, 0, .3)
+	.icon_post_pagenation
+		width: 7px
+		height: 10px
+	.pre_post_title
+		a
+			color: $text-color
+			margin-left: 5px
+	.next_post_title
+		a
+			color: $text-color
+			margin-right: 5px
 
 /* header */
 .side-nav-fixed
@@ -104,6 +157,7 @@ body
 	border-top: 5px solid $header-color
 	z-index: 1
 	background-color: white
+	top: 0
 .header__language-wrapper
 	width: 1024px
 	margin: 0 auto
@@ -312,17 +366,6 @@ footer
 // 			opacity: 1.0
 
 /* top-page */
-.main-image__veil
-	position: absolute
-	top: 0
-	left: 0
-	width: 100vw
-	height: 525px
-	background: black
-	opacity: .3
-	z-index: 100
-	display: none
-	pointer-events: none
 .description__wrapper
 	width: 1024px
 	margin: 0 auto
@@ -350,11 +393,11 @@ footer
 			padding: 12px
 .main-image__wrapper
 	width: 100vw
-	height: 447px
+	height: 371px
 	background: linear-gradient(to bottom, #00a6f5 0%, #00244e 100%)
 	display: flex
 	justify-content: center
-	padding-top: 76px//追加
+	margin-top: 76px//追加
 	.main-image__contents
 		position: relative
 		perspective: 1500px
@@ -376,28 +419,36 @@ footer
 .top__news-section
 	width: 1024px
 	margin: 78px auto 0
-	.news__individual-wrapper
-		margin-bottom: 30px
-		li.news__individual
+.news__individual-wrapper
+	margin-bottom: 30px
+	li.post__individual
+		padding-bottom: 20px
+		display: flex
+		.post__date
+			width: 110px
 			font-size: 12px
-			padding-bottom: 20px
-			a 
-				font-size: 14px
-				font-weight: 800
-			.news__desc-beginning
-		.post__sub-info
-			display: flex
-			align-items: center
-			.post-tags
+		.post__main-top
+			width: 913px
+		.post__main-news
+			width: 700px
+		.post__main
+			margin-top: -4px
+			.post__sub-info
 				display: flex
-				margin-left: 9px
-				a
-					font-size: 10px
-					color: white
-					background-color: $main-color
-					padding: 0px 6px
-					margin: 0 1px
-					border-radius: 7px
+				align-items: center
+.post-tags
+	display: flex
+	align-items: center
+	.news__tag-icon
+		width: 10px
+		height: 10px
+		margin-right: 2px
+	a
+		font-size: 12px
+		font-weight: 700
+		color: rgba(0, 0, 0, .4)
+		margin-right: 5px
+
 
 /* Events & Research article section style */
 .main__contents-public
@@ -475,9 +526,9 @@ footer
 .outline-list-category__wrapper
 	width: 200px
 	cursor: pointer
-	&:first-child
-		//padding-top: 60px
-		padding-top: 14px
+	// &:first-child
+	// 	//padding-top: 60px
+	// 	padding-top: 14px
 		padding-bottom: 15px
 	.outline-list-category__title
 		color: $main-color
@@ -485,18 +536,6 @@ footer
 		padding: 6px 0
 		font-size: 16px
 		font-weight: 800
-		&:after
-			position: absolute
-			margin: auto
-			top: 0
-			bottom: 0
-			right: 0
-			content: ""
-			width: 7px
-			height: 7px
-			border: 2px solid
-			border-color: $main-color $main-color transparent transparent
-			transform: rotate(45deg)
 		&.off
 			&:after
 				opacity: 0.3
@@ -511,7 +550,7 @@ footer
 	display: flex
 	align-items: center
 	justify-content: space-between
-	border-bottom: 1px solid $main-color
+	border-bottom: 1px solid $gray
 	margin-top: 103px
 .about__description
 	font-size: 14px
@@ -524,23 +563,41 @@ footer
 	margin-left: -7px
 .section-wrapper__adelement 
 	padding-bottom: 30px
-	p.adelement__description
-		font-size: 14px
-		line-height: 1.8em
-		color: $text-color
-	article.article__section__irregular
+	article.article__section__wrapper
+		width: 782px
 		padding: 16px 15px
 		background-color: #E8EDED
-		margin: 6px 0
+		margin-top: 6px
+		margin-bottom: 6px
 		color: $text-color
-		p.adelement__description
-			font-size: 12px
-			line-height: 1.8em
-			color: $text-color
+		&:nth-of-type(1)
+			margin-top: 0
+		p
+			font-size: 14px
+			&.adelement__description
+				margin-top: 13px
+				margin-bottom: 16px
+				line-height: 1.5em
+				color: $text-color
+				&.adelement__description-faq
+					margin-bottom: 0
+				&.adelement__description-policy
+					margin-bottom: 0
+			&.funding__price
+				margin-top: 6px
 		h4
 			font-size: 14px 
 			font-weight: 700
-			margin-bottom: 8px
+			display: flex
+			&.funding__title
+				font-size: 16px
+				line-height: 1.3em
+			&.faq__title:before
+				content: "　"
+				background: no-repeat url(../img/icon_question.svg)
+				padding-right: 15px
+				padding-bottom: 2px
+				background-size: 20px 20px
 		h5
 			font-size: 14px
 			line-height: 1.8em
@@ -552,24 +609,54 @@ footer
 			font-size: 14px
 			line-height: 1.8em
 			color: $text-color
-.table-history
-	margin: 12px auto
-	tbody
-		border-top: solid 2px #000
-		border-bottom: solid 2px #000
-	tr
-		border-top: solid 1px #ccc
-		line-height: 1.8
-
-	th
-		border-bottom: solid 1px #ccc
-		font-size: 10px
-	td
-		border-bottom: solid 1px #ccc
-		padding-left: 10px
-		color: $text-color
-		p
-			font-size: 14px
+		.faq_answer_wrapper
+			display: flex
+			.icon_answer
+				width: 20px
+				height: 20px
+				margin-top: 13px
+				margin-right: 9px
+.history__wrapper
+	position: relative
+	margin-bottom: 73px
+	.history__vertival
+		width: 2px
+		position: absolute
+		left: 46px
+		z-index: -1
+		&.history__vertival-line
+			height: 401px
+			top: 10px
+			border-left: 2px solid $main-color
+		&.history__vertival-dotted
+			height: 22px
+			top: 401px
+			border-left: 2px dotted $main-color
+	.table-history
+		tbody
+		tr:nth-of-type(1)
+			td
+				padding-top: 0
+		th
+			font-size: 10px
+		td
+			color: $text-color
+			vertical-align: top
+			padding-top: 35px
+			time
+				font-size: 12px
+				color: $main-color
+				font-weight: 700
+			.history_year
+				margin-right: 13px			
+			.history_month
+				margin-left: 13px
+			p
+				font-size: 14px
+				margin-left: 53px
+		.history_node
+			width: 10px
+			height: 10px
 
 /* event */
 .main__contents-event
@@ -580,70 +667,86 @@ footer
 	.public__description
 		color: $text-color
 
-/*** Services & Member */
-
+/*** Services & Member & News */
 .tag_panel
 	color: $main-color
 	border-top: dashed 0.5px #cccccc
 	padding: 10px 0
+	position: relative
 	&:last-child
 		border-bottom: dashed 0.5px #cccccc
-	.tag_row
-		position: relative
-		.tag_element
-			cursor: pointer
-			font-size: 14px
+	.tag_element
+		cursor: pointer
+		font-size: 14px
+		&:before
+			content: ""
+			display: inline-block
+			width: 10px
+			height: 10px
+			-moz-border-radius: 10px
+			-webkit-border-radius: 10px
+			-o-border-radius: 10px
+			-ms-border-radius: 10px
+			border-radius: 10px
+		&.all
 			&:before
-				content: ""
-				display: inline-block
-				width: 10px
-				height: 10px
-				-moz-border-radius: 10px
-				-webkit-border-radius: 10px
-				-o-border-radius: 10px
-				-ms-border-radius: 10px
-				border-radius: 10px
-			&.all
-				&:before
-					background-color: $main-color
-			&.dna
-				&:before
-					background-color: #FFA600
-			&.structures
-				&:before
-					background-color: #80B248
-			&.text-mining
-				&:before
-					background-color: #B769C2
-			&.db
-				&:before
-					background-color: #48CFBA
-			&.database
-				&:before
-					background-color: #0097CF
-			&.tool
-				&:before
-					background-color: #9791D9
-			&.download
-				&:before
-					background-color: #B769C2
-			&.submission
-				&:before
-					background-color: #F77786
-			&.off
-				opacity: 0.3
-			&.on, &:hover
-				opacity: 1.0
-		.tag_panel_header
-			font-weight: 800
-			display: block
-			font-size: 14px
-			opacity: 1 !important
+				background-color: $main-color
+		&.dna
 			&:before
-				content: none
-.main__contents__services
-	.main__content-title.content-title__services
-		margin-bottom: 12px
+				background-color: #FFA600
+		&.structures
+			&:before
+				background-color: #80B248
+		&.text-mining
+			&:before
+				background-color: #B769C2
+		&.db
+			&:before
+				background-color: #48CFBA
+		&.database
+			&:before
+				background-color: #0097CF
+		&.tool
+			&:before
+				background-color: #9791D9
+		&.download
+			&:before
+				background-color: #B769C2
+		&.submission
+			&:before
+				background-color: #F77786
+		&.term
+			&:before
+				background-color: $main-color
+		&.tag-all
+			&:before
+				background-color: $main-color
+		&.tag-service
+			&:before
+				background-color: #0097CF
+		&.tag-publishment
+			&:before
+				background-color: #48CFBA
+		&.tag-event
+			&:before
+				background-color: #FFB152
+		&.tag-invite
+			&:before
+				background-color: #D4CA0D
+		&.tag-other
+			&:before
+				background-color: #9E9E9E
+		&.off
+			opacity: 0.3
+		&.on, &:hover
+			opacity: 1.0
+	.tag_panel_header
+		font-weight: 800
+		display: block
+		font-size: 14px
+		opacity: 1 !important
+		&:before
+			content: none
 .sub-nav-title__services
 	line-height: 2.5
 	//padding-top: 15px
@@ -833,14 +936,10 @@ footer
 /* achivement ***/
 
 /*** access */
-.main__contents__accsess
-	.main__content-title.content-title__access
-		margin-bottom: 15px
-		position: relative
-		a 
-			position: absolute
-			right: 0
-			bottom: 5px
+.main__content-title__access
+	display: flex
+	align-items: center
+	justify-content: space-between
 .section-wrapper__access
 	padding-bottom: 70px
 	p 

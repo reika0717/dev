@@ -10,7 +10,7 @@ Obtain time and tags that are associated with current page/post.
   {% assign tags = page.tags %}
 {% endif %}
   {% for tag in tags %}
-    <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}">
+    <a tag=" {{ tag }}">
       {{ tag }}
     </a>
   {% endfor %}
