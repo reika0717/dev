@@ -1,11 +1,11 @@
 var script = document.createElement('script')
-var tags = {
-  ' 広報': 'publish',
-  ' サービス': 'service',
-  ' イベント': 'event',
-  ' 募集': 'invite',
-  ' その他': 'other'
-}
+var tags = [
+  'publishment',
+  'service',
+  'event',
+  'invite',
+  'other'
+]
 var services_array = [
   'togoWS',
   'togoTABLE',
@@ -48,14 +48,14 @@ var services_array = [
   'aoe',
   'allie'
 ]
-var tag_array = Object.keys(tags)
+
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
 document.head.appendChild(script)
 
 var initialize = {
   'index': function() {
-    tag_array.map(function(data) {
-      $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + tags[data] + '.svg" class="news__tag-icon" alt="" >')
+    tags.map(function(data) {
+      $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
     const ROTATE_SPEED = 40000;
     const NUMBER_OF_PANEL = 20; //パネル数
@@ -179,24 +179,32 @@ var initialize = {
     startTimer()
   },
   'news': function() {
-    tag_array.map(function(data) {
-      $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + tags[data] + '.svg" class="news__tag-icon" alt="" >')
+    tags.map(function(data) {
+      $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
+    })
+    $('.post__individual').each(function() {
+      tag_className = $(this).attr('class')
+      tag_className = tag_className.match(/\[\"(.+?)\"\]/g)
+      tag_className = tag_className[0].match(/\"(.+?)\"/g)
+      tag_className = tag_className.join(' ')
+      tag_className = tag_className.replace(/"/g, '')
+      $(this).addClass(tag_className)
     })
 
-    $('.tag_element').on('click', function() {
-      var className = $(this).attr('class')
-      if (className.match(/off/)){
-        //選択された時の処理
-        $(this).removeClass('off')
-        } else {
-        //選択外された時の処理
-        $(this).addClass('off')
-        }
-    })
+    // var result  = tag_className.replace(/\[\"(.+?)\"\]/, '/1')
+    // console.log(result)
+
+    // tag_className.replace(/["(/w)"]/, '/1')
+
+    // var mixer = mixitup(containerEl, {
+    //   multifilter: {
+    //     enable: true // enable the multifilter extension for the mixer
+    //   }
+    // });
   },
   'post': function() {
-    tag_array.map(function(data) {
-      $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + tags[data] + '.svg" class="news__tag-icon" alt="" >')
+    tags.map(function(data) {
+      $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
   },
   'about': function() {
@@ -392,8 +400,8 @@ var initialize = {
     }
   },
   'events': function() {
-    tag_array.map(function(data) {
-      $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + tags[data] + '.svg" class="news__tag-icon" alt="" >')
+    tags.map(function(data) {
+      $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
   },
   'member': function() {
