@@ -182,6 +182,17 @@ var initialize = {
     tag_array.map(function(data) {
       $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + tags[data] + '.svg" class="news__tag-icon" alt="" >')
     })
+
+    $('.tag_element').on('click', function() {
+      var className = $(this).attr('class')
+      if (className.match(/off/)){
+        //選択された時の処理
+        $(this).removeClass('off')
+        } else {
+        //選択外された時の処理
+        $(this).addClass('off')
+        }
+    })
   },
   'post': function() {
     tag_array.map(function(data) {
