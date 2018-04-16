@@ -171,13 +171,48 @@ var initialize = {
 	},
 	'research': function () {
 		location.hash = 'research'
+		$('#papers_citing_dbcls_services').click(function() {
+			$(".section-wrapper__adelement").empty();
+			$.ajax({
+			  url : "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
+			  dataType : "json",
+			  async: true,
+			  success : function(data){
+
+			  	var rows = "";
+			  	var first_col = data.values[0]
+
+		  		rows += '<thead><tr>';
+			  	for (i = 0; i < first_col.length; i++) {
+			  		rows += '<th>' + first_col[i] + '</th>'
+			  	}
+		  		rows += '</tr></thead>';
+
+		  		data.values.splice(0, 1);
+			    for (i = 0; i < data.values.length; i++) {
+
+			        rows += 
+			        	//'<tr><td><a href="' + data.values[i][0] + '">' + data.values[i][0] + '</a></td>' +
+			        	'<tr><td><p>' + data.values[i][0] + '</p></td>'+
+			            '<td><p>' + data.values[i][1] + '</p></td>'+ 
+			            '<td><p>' + data.values[i][2] + '</p></td>' +
+			            '<td><a href="' + data.values[i][3] + '">' + data.values[i][3] + '</a></td>' +
+			            '<td><p>' + data.values[i][4] + '<p></td>' +
+			            '<td><p>' + data.values[i][5] + '</p></td>'+ 
+			            '<td><p>' + data.values[i][6] + '</p></td>' +
+			            '<td><p>' + data.values[i][7] + '</p></td>'
+			      	rows += "</tr>";
+
+			    }
+			    $("#table").append(rows);
+			  }
+			})
+		})
 	},
 	'services': function () {
-		var repos_name = '';
-		var repos_array  = [];
-		var tags_array
 
 		//レポジトリ一覧
+		/*var repos_array  = [];
 		function displayReposList () {
 			location.hash = 'services'
 			$.get('https://api.github.com/users/dbcls/repos', function (data) {
@@ -186,11 +221,11 @@ var initialize = {
 	        })
 		}
 		displayReposList()
-
+		*/
 
 		//担当者サービスの連想配列つくる（まだやってない
 		var servicePerson = {};
-
+		var repos_array  = [];
 		function servicesFrontDisplay() {
 			$.ajax({
 				url : "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
@@ -210,18 +245,21 @@ var initialize = {
 				  	//data.values.splice(0, 1)
 				    for (i = 0; i < symbolYList.length; i++) {
 
+				    	repos_name = symbolYList[i][2];
+				    	var homeUrl = symbolYList[i][3];
+
 						element += '<article class="article__section contener-type-box">' + 
 						'<div id="repos_name' + i +'" class="repos_name">'+ 
-			        	'<p class="name">' + symbolYList[i][2] + '</p>' + 
+			        	'<p class="name">' + repos_name + '</p>' + 
 			        	'<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + 
 			        	'<div class="service_category dna">DNA &amp; RNA</div>' + 
 			        	'<div class="service_type db">Database</div>' + 
 			        	'<div class="btn-box">' + 
-			        	'<a href="./md/' + symbolYList[i][2] + '-README.md" class="page_btn more_btn">' + '詳細' + '</a>' + 
-			        	'<a href="' + symbolYList[i][3] + '" class="page_btn access_btn">アクセス</a>' + 
+			        	'<div class="page_btn more_btn">' + repos_name + '</div>' + 
+			        	'<a href="' + homeUrl + '" class="page_btn access_btn">アクセス</a>' + 
 			        	'</div></div>' + 
 			        	'<div id="repos_image0" class="repos_image">' + 
-			        	'<img src="./img/service_assets/' + symbolYList[i][2] + '.png' + '" art="' + symbolYList[i][2] +'" class="object-fit-img img_services"></div>'
+			        	'<img src="./img/service_assets/' + repos_name + '.png' + '" art="' + repos_name +'" class="object-fit-img img_services"></div>'
 
 			        	element += '</article>'
 
@@ -236,15 +274,9 @@ var initialize = {
 			$("#service_list").empty();
 			servicesFrontDisplay();
 		})
-		function pointerActive() {
-			console.log("add");
-			$('outline-list-category__title').click().addClass('on');
-		}
-		pointerActive();
-		//$("#service_list").on('click', '#papers_citing_dbcls_services').css({'display':'none'});
-		
+
 		//Papers citing DBCLS services
-		$('#papers_citing_dbcls_services').click(function() {
+		$('#papers_citing_dbcls_services').click(function PapersCitingServices() {
 			$("#service_list").empty();
 
 			$.ajax({
@@ -286,7 +318,7 @@ var initialize = {
 		//ハッシュ値が変わった時の画面遷移
 		window.addEventListener('hashchange', function() {
 			if(location.hash === '#services'){
-				$('.service__wrapper').empty()
+				$('service_list').empty()
 				displayReposList()
 			}else if(location.hash === '#service'){
 				displayRepos(repos_name)
@@ -295,18 +327,18 @@ var initialize = {
 
 		//デフォルトは英語版README表示
 		//.on('click', '.repos_name p, .access_btn', function ()
-		$(document).on('click', '.repos_name p', function () {
+		$(document).on('click', '.more_btn', function () {
 			repos_name = $(this).html()
 			displayRepos (repos_name)
+			console.log(repos_name)
 		})
 
 		//リポジトリ個別ページ
 		function displayRepos (repos_name) {
 			location.hash = 'service'
-
+			$("#service_list").empty();
 			function plot (data) {
-				var md_data = marked(data)
-				$('.service__wrapper').empty()
+				var md_data = marked(data);
 				$('div.service__wrapper')
 					.append($('<div/>')
 						.attr({'class': 'tab_wrapper'})
@@ -318,8 +350,9 @@ var initialize = {
 				var markdown_body = $('.service__wrapper').append($('<div/>').attr({'class': 'markdown-body'}).html(md_data))
 			}
 			//mdファイル初期表示
+			console.log(repos_name)
 			$.get(
-				'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/README.md'
+				'./md/' + repos_name + '-README.md'
 			).done(function (data) {
 				plot(data)
 			}).fail(function() {
@@ -329,8 +362,10 @@ var initialize = {
 			//README英語版読み込み
 			$(document).on('click', 'li.service_en', function () {
 				location.hash = 'service'
+				$("#service_list").empty();
 				$.get(
-					'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/README.md'
+					'./md/' + repos_name + '-README.md'
+					//'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/README.md'
 				).done(function (data) {
 						plot(data)
 				}).fail(function () {
@@ -341,8 +376,10 @@ var initialize = {
 			//REAFME日本語版読み込み
 			$(document).on('click', 'li.service_ja', function () {
 				location.hash = 'service'
+				$("#service_list").empty();
 				$.get(
-					'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/READMEja.md'
+					'./md_ja/' + repos_name + '-READMEja.md'
+					//'https://raw.githubusercontent.com/dbcls/' + repos_name + '/master/READMEja.md'
 				).done(function (data) {
 						plot(data)
 				}).fail(function () {
@@ -367,7 +404,6 @@ var initialize = {
 				  	data.values.splice(0, 1);
 
 				  	for (j = 0; j < data.values.length; j++) {
-					  	console.log(memberList);
 
 					  	listSubNav += '<li>' + data.values[j][0] + '</li>';
 
@@ -435,3 +471,23 @@ script.addEventListener('load', function() {
 		})
 	})	
 })
+
+function pointerActive() {
+	/*
+	$("sub__navigation-wrapper li").on("click", function() {
+		$("#presentPoint").toggleClass("active");
+	})*/
+	$('.outline-list-category__title').click(function(){
+		if($(this).hasClass('off')){
+			$(this).addClass('on').removeClass("off");
+			console.log('a');
+		} else if($(this).hasClass('on')) {
+			$(this).addClass('off').removeClass("on");
+			console.log('b')
+		} else {
+			$(this).addClass('on')
+			console.log('c')
+		}
+	})
+}
+pointerActive();

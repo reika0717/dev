@@ -500,6 +500,12 @@ footer {
             border-radius: 10px; }
           .wrapper-type-box .article__section.contener-type-box .repos_name .service_category.dna:before {
             background-color: #FFA600; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_category.structures:before {
+            background-color: #80B248; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_category.textmining:before {
+            background-color: #B769C2; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_category.dbintegration:before {
+            background-color: #48CFBA; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .service_type {
           cursor: pointer;
           font-size: 10px; }
@@ -513,8 +519,14 @@ footer {
             -o-border-radius: 10px;
             -ms-border-radius: 10px;
             border-radius: 10px; }
-          .wrapper-type-box .article__section.contener-type-box .repos_name .service_type.db:before {
-            background-color: #48CFBA; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_type.database:before {
+            background-color: #0097CF; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_type.tool:before {
+            background-color: #9791D9; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_type.download:before {
+            background-color: #B769C2; }
+          .wrapper-type-box .article__section.contener-type-box .repos_name .service_type.submission:before {
+            background-color: #F77786; }
     .wrapper-type-box .article__section.contener-type-box__member .repos_image {
       position: absolute;
       height: 120px;
@@ -583,11 +595,14 @@ footer {
 
 .papers_citing_table {
   font-size: 12px; }
-  .papers_citing_table tr {
-    border-bottom: solid 0.5px #ccc; }
-    .papers_citing_table tr td {
-      padding-right: 30px;
-      padding-bottom: 25px; }
+  .papers_citing_table tr td {
+    padding-right: 30px;
+    padding-bottom: 25px; }
+
+#papers_citing .papers_citing_table tr {
+  background-color: #fff; }
+  #papers_citing .papers_citing_table tr:nth-child(2n+1) {
+    background-color: #eee; }
 
 /* Services ***/
 /*** Achivement */

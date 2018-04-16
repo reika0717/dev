@@ -484,6 +484,15 @@ footer
 					&.dna
 						&:before
 							background-color: #FFA600
+					&.structures
+						&:before
+							background-color: #80B248
+					&.textmining
+						&:before
+							background-color: #B769C2
+					&.dbintegration
+						&:before
+							background-color: #48CFBA
 				.service_type
 					cursor: pointer
 					font-size: 10px
@@ -497,9 +506,18 @@ footer
 						-o-border-radius: 10px
 						-ms-border-radius: 10px
 						border-radius: 10px
-					&.db
+					&.database
 						&:before
-							background-color: #48CFBA
+							background-color: #0097CF
+					&.tool
+						&:before
+							background-color: #9791D9
+					&.download
+						&:before
+							background-color: #B769C2
+					&.submission
+						&:before
+							background-color: #F77786
 		&.contener-type-box__member
 			.repos_image
 				position: absolute
@@ -567,10 +585,16 @@ footer
 .papers_citing_table
 	font-size: 12px
 	tr
-		border-bottom: solid 0.5px #ccc
 		td
 			padding-right: 30px
 			padding-bottom: 25px
+#papers_citing
+	.papers_citing_table
+		tr
+			background-color: #fff
+			&:nth-child(2n+1)
+				background-color: #eee
+
 /* Services ***/
 
 /*** Achivement */
