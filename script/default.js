@@ -504,33 +504,29 @@ var initialize = {
 
           for (i = 0; i < data.values.length; i++) {
 
-            var name = data.values[i][0]
-            var image = data.values[i][1]
-            //var name_en = data.values[i][]
-            //var position = data.values[i][]
+            var name_ja = data.values[i][0]
+            var name_en = data.values[i][1]
+            var image = data.values[i][2]
+            var position = data.values[i][3]
             //var position_en = data.values[i][]
-            //var keyword = data.values[i][]
+            var keyword = data.values[i][5]
             //var keyword_en = data.values[i][]
-            var orcid = data.values[i][4]
-            var googleScholar = data.values[i][6]
-            var github = data.values[i][7]
-            //var mail = data.values[i][]
+            var orcid = data.values[i][8]
+            var googleScholar = data.values[i][10]
+            var github = data.values[i][11]
+            var mail = data.values[i][6]
 
-            element += '<article class="article__section contener-type-box contener-type-box__member">' +
-              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name + '" class="img_member"></div>' +
-              '<div id="repos_name" class="repos_name">' +
-              '<div class="name">' + name + '<span class="position">' + 'position' + '</span></div>' +
-              '<div class="name en">' + "name_en" + '</div>' +
-              '<div class="keyword">' + "keyword" + '</div>' +
-              '<div class="services">担当サービス</div>' +
-              '<div class="btn-box">' +
-              '<a href="' + googleScholar + '" class="page_btn scholar">Google Sholar</a>' +
-              '<a href="https://github.com/' + github + '" class="page_btn git">GitHub</a>' +
-              '<a href="https://orcid.org/' + orcid + '" class="page_btn orcid_btn">ORCID</a>' +
-              '<a href="' + "mail" + '" class="page_btn mail_btn">mail</a></div>'
-
-            element += '</article>'
-
+            element += '<div class="content__member">' +
+              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' +
+              '<ul><li class="position">' + position + '</li>' +
+              '<li class="repos_name">' + name_ja + '<span>' + name_en + '</span></li>' +
+              '<li class="keyword">' + keyword + '</li>' +
+              '<li class="PIC">担当サービス：<div class="member-list__services">'+ "TogoAnnotator,TogoDoc" + '</div></li>' +
+              '<li class="links"><div class="btn-box">' + 
+              '<a href="'+ mail +'" class="btn-mail">Mail</a>' +
+              '<a href="https://github.com/'+ github +'" class="btn-github">GitHub</a>' +
+              '<a href="https://orcid.org/'+ orcid +'" class="btn-orcid">ORCID</a>' +
+              '<a href="'+ googleScholar +'" class="btn-gs">Google Scholar</a></div></li></ul></div>';
           }
           $("#member-list").append(element);
         }
