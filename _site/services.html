@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja" data-page-type="services">
+
 <head>
-	<title>サービス ｜ DBCLS</title>
-	<meta charset="UTF-8">
-	<link href="style/default.css" rel="stylesheet">
-	<link href="style/github-markdown.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
-	</script>
-	<script src="script/marked.min.js">
-	</script>
-	<script src="script/ofi.min.js">
-	</script>
-	<style>
-	        .papers_citing_table td a {
-	          text-decoration: underline;
-	        }
-	</style>
+  <title>サービス ｜ DBCLS</title>
+  <meta charset="UTF-8">
+  <link href="style/default.css" rel="stylesheet">
+  <link href="style/github-markdown.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+  <script src="script/marked.min.js">
+  </script>
+  <script src="script/ofi.min.js">
+  </script>
+  <style>
+  .papers_citing_table td a {
+    text-decoration: underline;
+  }
+  </style>
 </head>
+
 <body>
-	<header class='header-ja header' id="header">
+  <header class='header-ja header' id="header">
 	<nav>
 		<div id="header__languages-ja" class='header__language-wrapper'>
 			<ul class="qtrans_language_chooser" id="qtranslate-chooser">
@@ -69,90 +71,89 @@
 	</nav>
 </header>
 
-	<div class="content__wrapper">
-		<div id="subWrap">
-			<div class="sub__navigation">
-				<h2 class="page-title">Services</h2>
-				<div class="outline-list-category">
-					<div class="outline-list-category__wrapper" id="service-on">
-						<div class="outline-list-category__title">
-							サービス一覧
-						</div>
-						<div class="tag_panel">
-							<div class="tag_row" id="tag_panel_category">
-								<div class="tag_panel_header">
-									カテゴリー
-								</div>
-								<div class="tag_element all off" data-tagkey="category_all">
-									All
-								</div>
-								<div class="tag_element dna" data-tagkey="category_featured">
-									DNA & RNA
-								</div>
-								<div class="tag_element structures off" data-tagkey="category_dna">
-									Structures & Proteins
-								</div>
-								<div class="tag_element text-mining off" data-tagkey="category_structures">
-									Text-mining & Contents
-								</div>
-								<div class="tag_element db off" data-tagkey="category_textmining">
-									DB integration
-								</div>
-							</div>
-						</div>
-						<div class="tag_panel">
-							<div class="tag_row" id="tag_panel_category">
-								<div class="tag_panel_header">
-									タイプ
-								</div>
-								<div class="tag_element all off" data-tagkey="category_all">
-									All
-								</div>
-								<div class="tag_element database" data-tagkey="category_featured">
-									Database
-								</div>
-								<div class="tag_element tool off" data-tagkey="category_dna">
-									Tool
-								</div>
-								<div class="tag_element download off" data-tagkey="category_structures">
-									Download
-								</div>
-								<div class="tag_element submission off" data-tagkey="category_textmining">
-									Submission
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="outline-list-category__wrapper">
-						<div class="outline-list-category__title off" id="papers_citing_dbcls_services">
-							研究業績
-						</div>
-					</div>
-					<div class="outline-list-category__wrapper">
-						<div class="outline-list-category__title off">
-							引用文献一覧
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="main__contents main__contents__services">
-			<div class="main__contents-servece">
-				<!--h3 class="main__content-title content-title__services">コンテンツ</h3-->
-				<div class="section-wrapper">
-					<div class="service__wrapper wrapper-type-box" id="service_list"></div>
-					<div id="loader-bg">
-						<div id="loader">
-							<p>Now Loading...</p>
-						</div>
-					</div>
-					<table class="papers_citing_table" id="table">
-						<tbody></tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div><footer>
+  <div class="content__wrapper">
+    <div id="subWrap">
+      <div class="sub__navigation">
+        <h2 class="page-title">Services</h2>
+        <div class="outline-list-category">
+          <div class="outline-list-category__wrapper" id="service-on">
+            <ul class="sub__navigation-wrapper outline-list-category__wrapper">
+              <li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/services.html">サービス一覧</a></li>
+              <li class="tag_panel ">
+                <span class="tag_panel-category-title">カテゴリ</span>
+                <div class="tag_panel_header controls">
+                  <button type="button" class="tag_element term control" data-filter="all">
+                    All
+                  </button>
+                  <button type="button" class="tag_element omics control" data-toggle=".omics">
+                    データ解析ツール
+                  </button>
+                  <button type="button" class="tag_element text-mining control" data-toggle=".text-mining">
+                    文献知識抽出
+                  </button>
+                  <button type="button" class="tag_element contents control" data-toggle=".contents">
+                    コンテンツ
+                  </button>
+                  <button type="button" class="tag_element semantic control" data-toggle=".semantic">
+                    セマンティックウェブ
+                  </button>
+                </div>
+              </li>
+              <li class="tag_panel">
+                <span class="tag_panel-category-title">ユーザ</span>
+                <div class="tag_panel_header controls">
+                  <button type="button" class="tag_element all control" data-filter="all">
+                    すべて
+                  </button>
+                  <button type="button" class="tag_element biologist control" data-toggle=".biologist">
+                    実験系研究者・医学者
+                  </button>
+                  <button type="button" class="tag_element application control" data-toggle=".application">
+                    アプリケーション開発者
+                  </button>
+                  <button type="button" class="tag_element data-scientist control" data-toggle=".data-scientist">
+                    データサイエンティスト
+                  </button>
+                  <button type="button" class="tag_element provider control" data-toggle=".event">
+                    データ提供者
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="outline-list-category__wrapper">
+            <div class="outline-list-category__title off" id="papers_citing_dbcls_services">
+              研究業績
+            </div>
+          </div>
+          <div class="outline-list-category__wrapper">
+            <div class="outline-list-category__title off">
+              引用文献一覧
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main__contents main__contents__services">
+      <div class="main__content-title__wrapper">
+        <h3 class="main__content-title">サービス一覧</h3>
+      </div>
+      <div class="main__contents-servece">
+        <!--h3 class="main__content-title content-title__services">コンテンツ</h3-->
+        <div class="section-wrapper">
+          <div class="service__wrapper wrapper-type-box" id="service_list"></div>
+          <div id="loader-bg">
+            <div id="loader">
+              <p>Now Loading...</p>
+            </div>
+          </div>
+          <table class="papers_citing_table" id="table">
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div><footer>
 	<div class="footer__wrapper">
 <!-- 		<div class="footer__organism">
 			<p class="footer__organism-sub">大学共同利用機関法人 情報・システム研究機構</p>
@@ -235,8 +236,9 @@
 			<p>	&copy; 2014 DBCLS, Licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">Creative Commons Attribution 4.0 International license (CC-BY 4.0)</a></p>
 		</div>
 	</div>
-</footer> 
-	<script src="script/default.js">
-	</script>
+</footer>
+  <script src="script/mixitup.min.js"></script>
+  <script src="script/default.js"></script>
 </body>
+
 </html>

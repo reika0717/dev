@@ -29,8 +29,9 @@ body
 	font-size: 10px
 	padding: 3px 7px
 	border: 1px solid $main-color
-	border-radius: 10px
+	border-radius: 12px
 	background: white
+	height: 22px
 	&:before
 		content: ""
 		display: block
@@ -40,9 +41,9 @@ body
 		background-image: url(../img/icon_more.svg)
 	&.more_btn
 		width: 56px
+		cursor: pointer
 	&.access_btn
-		width: 63px
-		margin-top: 7px
+		width: 72px
 	&.pdf_btn
 		width: 51px
 		height: 19px
@@ -59,6 +60,22 @@ body
 	&:before
 		content: "　"
 		background: no-repeat url(../img/icon_sub-title.svg)
+.controls
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	.control
+		font-weight: 700
+		color: $main-color
+		cursor: pointer
+		font-size: 12px
+		opacity: 0.3
+		border: none
+		&:focus
+			outline: 0
+	.mixitup-control-active
+		opacity: 1.0
 
 //下層ページカラム設定
 .content__wrapper
@@ -465,12 +482,13 @@ footer
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
+	.markdown-body
+		width: 782px
 	.article__section
 		width: 385.5px
 		background-color: $section-bg
 		margin: 6px 0
 		//align-self: self-end
-		padding: 16px 15px
 		color: $text-color
 		h4
 			font-size: 14px
@@ -675,78 +693,74 @@ footer
 	position: relative
 	&:last-child
 		border-bottom: dashed 0.5px #cccccc
-	.tag_element
-		cursor: pointer
-		font-size: 14px
-		&:before
-			content: ""
-			display: inline-block
-			width: 10px
-			height: 10px
-			-moz-border-radius: 10px
-			-webkit-border-radius: 10px
-			-o-border-radius: 10px
-			-ms-border-radius: 10px
-			border-radius: 10px
-		&.all
-			&:before
-				background-color: $main-color
-		&.dna
-			&:before
-				background-color: #FFA600
-		&.structures
-			&:before
-				background-color: #80B248
-		&.text-mining
-			&:before
-				background-color: #B769C2
-		&.db
-			&:before
-				background-color: #48CFBA
-		&.database
-			&:before
-				background-color: #0097CF
-		&.tool
-			&:before
-				background-color: #9791D9
-		&.download
-			&:before
-				background-color: #B769C2
-		&.submission
-			&:before
-				background-color: #F77786
-		&.term
-			&:before
-				background-color: $main-color
-		&.tag-all
-			&:before
-				background-color: $main-color
-		&.tag-service
-			&:before
-				background-color: #0097CF
-		&.tag-publishment
-			&:before
-				background-color: #48CFBA
-		&.tag-event
-			&:before
-				background-color: #FFB152
-		&.tag-invite
-			&:before
-				background-color: #D4CA0D
-		&.tag-other
-			&:before
-				background-color: #9E9E9E
-		&.off
-			opacity: 0.3
-		&.on, &:hover
-			opacity: 1.0
-	.tag_panel_header
-		font-weight: 800
+	.tag_panel-category-title
 		display: block
-		font-size: 14px
-		opacity: 1 !important
+		font-size: 12px
+		font-weight: 700
+		margin-bottom: 3px
+.tag_element
+	&:before
+		content: ""
+		display: inline-block
+		width: 10px
+		height: 10px
+		-moz-border-radius: 10px
+		-webkit-border-radius: 10px
+		-o-border-radius: 10px
+		-ms-border-radius: 10px
+		border-radius: 10px
+	&.all
 		&:before
-			content: none
+			background-color: $main-color
+	&.omics
+		&:before
+			background-color: #FFA600
+	&.contents
+		&:before
+			background-color: #80B248
+	&.text-mining
+		&:before
+			background-color: #a26940
+	&.semantic
+		&:before
+			background-color: #48CFBA
+	&.biologist
+		&:before
+			background-color: #0097CF
+	&.application
+		&:before
+			background-color: #9791D9
+	&.data-scientist
+		&:before
+			background-color: #B769C2
+	&.provider
+		&:before
+			background-color: #F77786
+	&.term
+		&:before
+			background-color: $main-color
+	&.tag-all
+		&:before
+			background-color: $main-color
+	&.tag-service
+		&:before
+			background-color: #93D6E8
+	&.tag-publishment
+		&:before
+			background-color: #8BC69D
+	&.tag-event
+		&:before
+			background-color: #FFBE88
+	&.tag-invite
+		&:before
+			background-color: #BAABEF
+	&.tag-other
+		&:before
+			background-color: #9E9E9E
+	&.off
+		opacity: 0.3
+	&.on, &:hover
+		opacity: 1.0
 .sub-nav-title__services
 	line-height: 2.5
 	//padding-top: 15px
@@ -762,10 +776,9 @@ footer
 		background-color: $section-bg
 		margin: -1px
 		align-self: self-end
-		padding: 16px 15px
 		&.contener-type-box
 			position: relative
-			height: 281px
+			height: 297px
 			width: 227px
 			border: solid 0.25px #cccccc
 			.repos_image
@@ -801,6 +814,17 @@ footer
 				height: 120px
 				width: 192px
 				color: $main-color
+				.btn-box
+					display: flex
+					justify-content: center
+					align-items: center
+					margin-top: 9px
+					position: absolute
+					bottom: -36px
+					left: 50%
+					transform: translateX(-50%)
+					.access_btn
+						margin-left: 5px		
 				.name
 					padding-bottom: 5px
 					font-size: 12px
@@ -879,10 +903,8 @@ footer
 						padding: 0 5px
 						display: inline-block
 						font-size: 14px
-				.keyword, .services
+				.keyword
 					font-size: 10px
-				.btn-box
-					bottom: 5px
 		h4
 			font-size: 14px
 			font-weight: 700

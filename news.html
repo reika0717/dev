@@ -12,35 +12,41 @@ data-type: news
 					<ul class="sub__navigation-wrapper outline-list-category__wrapper">
 						<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/news.html">ニュース一覧</a></li>
 						<li class="tag_panel ">
-							<span>年</span>
+							<span class="tag_panel-category-title">年</span>
 							<div class="tag_panel_header controls">
-								<button type="button" class="tag_element term off control" data-filter=".category_year-2018">
+								<button type="button" class="tag_element term control" data-filter="all">
+									全期間
+								</button>
+								<button type="button" class="tag_element term control" data-filter=".category_year-2018">
 									2018
 								</button>
-								<button type="button" class="tag_element term off control" data-filter=".category_year-2017">
+								<button type="button" class="tag_element term control" data-filter=".category_year-2017">
 									2017
 								</button>
-								<button type="button" class="tag_element term off control" data-filter=".category_year-2016">
+								<button type="button" class="tag_element term control" data-filter=".category_year-2016">
 									2016
 								</button>									
 							</div>
 						</li>
 						<li class="tag_panel">
-							<span>タグ</span>
+							<span class="tag_panel-category-title">タグ</span>
 							<div class="tag_panel_header controls">
-									<button type="button" class="tag_element tag-service off control" data-filter=".service">
+									<button type="button" class="tag_element tag-service control" data-filter="all">
+										すべて
+									</button>
+									<button type="button" class="tag_element tag-service control" data-toggle=".service">
 										サービス
 									</button>
-									<button type="button" class="tag_element tag-publishment off control" data-filter=".publishment">
+									<button type="button" class="tag_element tag-publishment control" data-toggle=".publishment">
 										広報
 									</button>
-									<button type="button" class="tag_element tag-event off control" data-filter=".event">
+									<button type="button" class="tag_element tag-event control" data-toggle=".event">
 										イベント
 									</button>
-									<button type="button" class="tag_element tag-invite off control" data-filter=".invite">
+									<button type="button" class="tag_element tag-invite control" data-toggle=".invite">
 										募集
 									</button>
-									<button type="button" class="tag_element tag-other off control" data-filter=".other">
+									<button type="button" class="tag_element tag-other control" data-toggle=".other">
 										その他
 									</button>
 							</div>
@@ -75,7 +81,11 @@ data-type: news
 	</div>	
 </div>
 <script>
-    var containerEl = document.querySelector('.news__individual-wrapper');
+  var containerEl = document.querySelector('.news__individual-wrapper');
 
-    var mixer = mixitup(containerEl);
+  var mixer = mixitup(containerEl, {
+    controls: {
+      toggleLogic: 'and'
+    }
+  });    
 </script>
