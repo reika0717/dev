@@ -220,12 +220,109 @@ var initialize = {
     });
   },
   'research': function() {},
+  'achievement': function() {
+    $.ajax({
+      url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
+      dataType: "json",
+      async: true,
+      success: function(data) {
+
+        var elementArray = data.values;
+        var elementArray_service = []
+        for (var i = 0; i < elementArray.length; i++){
+          elementArray_service.push(elementArray[i][0])
+        }
+        elementArray_service = _.rest(elementArray_service, 2)
+        elementArray_service = _.uniq(elementArray_service)
+        
+        var filterList = {}
+        for (var i = 0; i < elementArray_service.length; i++){
+          var service_name = elementArray_service[i]
+          filterList[service_name] = elementArray.filter((list) => {
+            return list[0] === service_name
+          })
+        }
+
+        var element = "";
+
+        names = Object.keys(filterList);
+
+        element += '<table class="papers_citing_table"><tbody>';
+        for (i = 0; i < names.length; i++) {
+
+          var nameslength = names[i].length;
+
+          element +=
+            '<tr><td><div class="filName" data-category="' + names[i] + '">' + names[i] + '</div></td>' +
+            '<td class="quote_num">' + nameslength + '</td></tr>';
+        }
+        element += '</tbody></table>';
+
+        function displayList() {
+          $('.main__content-title').text('研究業績')
+          $(".achievement__wrapper").append(element);
+        }
+        displayList()
+
+        $(document).on('click', '.filName', function() {
+          names = $(this).html()
+          displayIndividual(names)
+        })
+
+        function displayIndividual(names) {
+          location.hash = names
+          arranged_name = names.replace('%20', ' ')
+          $('.main__content-title').text(arranged_name)
+          //filterListをarranged_nameのものだけにフィルタリングして新しい配列
+          $('.achievement__wrapper').empty()
+          var service_array = []
+          service_array = filterList[arranged_name]
+          var results = "";
+
+          for (var i = 0; i < service_array.length; i++) {
+            results +=
+              '<div class="achievement__column__wrapper">' +
+              '<h4 class="achievement__column__title">' + service_array[i][4] + '</h4>' +
+              '<p class="achievement__column__pubmed"><span class="achievement__column__title-small">Pubmed: </span>https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '</p>' +
+              '<p class="achievement__column__DOI"><span class="achievement__column__title-small">DOI: </span>' + service_array[i][3] + '</p>' +
+              '<div class="achievement__column__wrapper-small">' +
+              '<i class="fa fa-user" aria-hidden="true"></i>' +
+              '<p>' + service_array[i][5] + '</p>' +
+              '<i class="fa fa-clock-o" aria-hidden="true"></i>' +
+              '<p>' + service_array[i][7] + '</p>' +
+              '<i class="fa fa-book" aria-hidden="true"></i>' +
+              '<p>' + service_array[i][6] + '</p>' +
+              '<i class="fa fa-quote-right" aria-hidden="true"></i>' +
+              '<p>' + service_array[i][1] + '</p>' +
+              '</div>' +
+              '</div>'
+          }
+          $('.achievement__wrapper').append(results);
+        }
+
+        //ハッシュ値が変わった時の画面遷移
+        window.addEventListener('hashchange', function() {
+          if (location.hash === '') {
+            $('.achievement__wrapper').empty()
+            displayList()
+          } else {
+            var service__title = location.hash.slice(1)
+            displayIndividual(service__title)
+          }
+        }, false)
+        
+        if (location.hash === '') {} else {
+          var service__title = location.hash.slice(1)
+          displayIndividual(service__title)
+        }
+      }
+    })
+  },
   'services': function() {
     var repos_name = '';
     // var repos_array = [];
     var tags_array
-    if (location.hash === '') {
-    } else{
+    if (location.hash === '') {} else {
       var service__title = location.hash.slice(1)
       displayRepos(service__title)
     }
@@ -344,7 +441,7 @@ var initialize = {
       if (location.hash === '') {
         $('.service__wrapper').empty()
         servicesFrontDisplay()
-      } else{
+      } else {
         var service__title = location.hash.slice(1)
         displayRepos(service__title)
       }

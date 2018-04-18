@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800");
 @import url(font-awesome.css);
+@import url(gotham.css);
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -116,6 +117,7 @@ body {
   .content__wrapper .sub__navigation {
     padding-top: 156px;
     width: 242px;
+    height: 60vh;
     color: #004098; }
     .content__wrapper .sub__navigation .sub__navigation-wrapper {
       margin-top: 14px; }
@@ -924,35 +926,61 @@ footer {
   text-aline: center;
   z-index: 2; }
 
-.papers_citing_table {
-  font-size: 12px; }
-  .papers_citing_table tr {
-    border-bottom: solid 0.5px #ccc; }
-    .papers_citing_table tr td {
-      padding-right: 30px;
-      padding-bottom: 25px; }
-
 /* Services ***/
 /*** Achivement */
 .main__contents-servece.achivement .wrapper-type-box {
   width: calc(61% - 10px); }
 
-.content__wrapper .main__contents.tabular {
-  width: auto; }
-  .content__wrapper .main__contents.tabular .papers_citing_table {
-    font-size: 14px;
-    line-height: 1.5; }
-    .content__wrapper .main__contents.tabular .papers_citing_table tr {
-      border-bottom: solid 0.5px #cccccc; }
-      .content__wrapper .main__contents.tabular .papers_citing_table tr:first-child {
-        border-bottom: solid 1px #888;
-        height: 46px;
-        font-weight: 800;
-        vertical-align: bottom; }
-      .content__wrapper .main__contents.tabular .papers_citing_table tr td {
-        padding-right: 16px; }
+.content__wrapper {
+  /* achivement ***/ }
+  .content__wrapper .main__contents .achievement__wrapper {
+    font-family: 'GothamPro-Light'; }
+    .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper {
+      border-bottom: 1px solid #9E9E9E;
+      padding: 16px 0 16px 7px; }
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__title {
+        font-family: 'GothamPro-Bold';
+        font-size: 18px;
+        margin-bottom: 3px; }
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__pubmed,
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__DOI {
+        font-size: 12px; }
+        .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__pubmed .achievement__column__title-small,
+        .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__DOI .achievement__column__title-small {
+          font-family: 'GothamPro-Bold';
+          margin-top: 4px; }
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__wrapper-small {
+        display: flex;
+        align-items: center;
+        margin-top: 5px; }
+        .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__wrapper-small i {
+          font-size: 13px;
+          margin-right: 3px; }
+        .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__wrapper-small p {
+          font-size: 12px;
+          margin-right: 20px; }
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper:nth-of-type(1) {
+        margin-top: -29px; }
+      .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper:nth-of-type(even) {
+        background-color: #E8EDED; }
+    .content__wrapper .main__contents .achievement__wrapper .papers_citing_table {
+      margin-top: -28px;
+      width: 100%;
+      font-family: 'GothamPro-Light';
+      font-weight: 700;
+      font-size: 13px; }
+      .content__wrapper .main__contents .achievement__wrapper .papers_citing_table tbody tr {
+        border: none;
+        height: 31px; }
+        .content__wrapper .main__contents .achievement__wrapper .papers_citing_table tbody tr td .filName {
+          margin-left: 9px;
+          cursor: pointer; }
+        .content__wrapper .main__contents .achievement__wrapper .papers_citing_table tbody tr td.quote_num {
+          text-align: right;
+          padding-right: 9px; }
+        .content__wrapper .main__contents .achievement__wrapper .papers_citing_table tbody tr:nth-of-type(even) {
+          background-color: #E8EDED; }
 
-/* achivement ***/
 /*** access */
 .main__content-title__access {
   display: flex;

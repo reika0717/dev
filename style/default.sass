@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800")
 @import "font-awesome.css"
+@import "gotham.css"
 @import "minireset.min.scss"
 
 /* default */
@@ -9,6 +10,7 @@ $footer-text-color: #14274B
 $header-color: #004098
 $section-bg: #E8EDED
 $gray: #9E9E9E
+$table-bg: #E8EDED
 
 body
 	font-family: 'Muli', sans-serif
@@ -85,6 +87,7 @@ body
 	.sub__navigation
 		padding-top: 156px
 		width: 242px
+		height: 60vh //footerを固定表示させたい
 		color: $main-color
 		.sub__navigation-wrapper
 			margin-top: 14px
@@ -926,13 +929,7 @@ footer
 	top: 50%
 	text-aline: center
 	z-index: 2
-.papers_citing_table
-	font-size: 12px
-	tr
-		border-bottom: solid 0.5px #ccc
-		td
-			padding-right: 30px
-			padding-bottom: 25px
+
 /* Services ***/
 
 /*** Achivement */
@@ -941,21 +938,55 @@ footer
 		width: calc(61% - 10px)
 .content__wrapper
 	.main__contents
-		&.tabular
-			width: auto
+		.achievement__wrapper
+			font-family: 'GothamPro-Light'
+			.achievement__column__wrapper
+				border-bottom: 1px solid $gray
+				padding: 16px 0 16px 7px
+				.achievement__column__title
+					font-family: 'GothamPro-Bold'
+					font-size: 18px
+					margin-bottom: 3px
+				.achievement__column__pubmed,
+				.achievement__column__DOI
+					font-size: 12px
+					.achievement__column__title-small
+						font-family: 'GothamPro-Bold'
+						margin-top: 4px
+				.achievement__column__wrapper-small
+					display: flex
+					align-items: center
+					margin-top: 5px
+					i
+						font-size: 13px
+						margin-right: 3px
+					p
+						font-size: 12px
+						margin-right: 20px
+				&:nth-of-type(1)
+					margin-top: -29px
+				&:nth-of-type(even)
+					background-color: $table-bg
 			.papers_citing_table
-				font-size: 14px
-				line-height: 1.5
-				tr
-					border-bottom: solid 0.5px #cccccc
-					&:first-child
-						border-bottom: solid 1px #888
-						height: 46px
-						font-weight: 800
-						vertical-align: bottom
-					td
-						padding-right: 16px
-/* achivement ***/
+				margin-top: -28px
+				width: 100%
+				font-family: 'GothamPro-Light'
+				font-weight: 700
+				font-size: 13px
+				tbody
+					tr
+						border: none
+						height: 31px
+						td
+							.filName
+								margin-left: 9px
+								cursor: pointer
+						td.quote_num
+							text-align: right
+							padding-right: 9px
+						&:nth-of-type(even)
+							background-color: $table-bg
+	/* achivement ***/
 
 /*** access */
 .main__content-title__access
