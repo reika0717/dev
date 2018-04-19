@@ -1,4 +1,5 @@
 var script = document.createElement('script')
+var script_sticky = document.createElement('script')
 var tags = [
   'publishment',
   'service',
@@ -50,9 +51,9 @@ var services_array = [
 ]
 
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
+script_sticky.setAttribute('src', 'script/stickyfill.min.js')
 document.head.appendChild(script)
-
-
+document.head.appendChild(script_sticky)
 var initialize = {
   'index': function() {
     tags.map(function(data) {
@@ -549,26 +550,9 @@ script.addEventListener('load', function() {
     console.log(pageType)
     initialize[pageType]()
 
-    // position: stickyがブラウザで使えるかチェックするための関数
-    function detectSticky() {
-      const div = document.createElement('div');
-      div.style.position = 'sticky';
-      // position: stickyがブラウザで使えればtrue、使えなければfalseを返す
-      return div.style.position.indexOf('sticky') !== -1;
-    }
-
-    // .stickyが指定されている要素に対してposition: stickyを適用させる関数
-    function callStickyState() {
-      // position: stickyを適用させたい要素を引数に指定し、
-      // StickyStateをnewしてインスタンスを返す
-      return new StickyState(document.querySelectorAll('.sticky'));
-    }
-
-    // もしブラウザでposition: stickyが使えなければ、
-    // callStickyState関数を呼び出す
-    if (!detectSticky()) {
-      callStickyState();
-    }
+    //sticky IE対応
+    var elements = document.querySelectorAll('.sticky');
+    Stickyfill.add(elements);
 
     //header言語切り替え
     $('.lang-en span').on('click', function() {

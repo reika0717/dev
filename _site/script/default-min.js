@@ -5,12 +5,14 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var script = document.createElement('script');
+var script_sticky = document.createElement('script');
 var tags = ['publishment', 'service', 'event', 'invite', 'other'];
 var services_array = ['togoWS', 'togoTABLE', 'togoGENOME', 'togoDB', 'togo_picture_gallery', 'refEx', 'pub_case_finder', 'pub_annotation', 'orefil', 'life_science_QA', 'inmexes', 'ggrna', 'dbcls_sra', 'd2rq_mapper', 'crispr_direct', 'colil', 'chip_atlas', 'body_parts_3D', 'aoe', 'allie', 'togoWS', 'togoTABLE', 'togoGENOME', 'togoDB', 'togo_picture_gallery', 'refEx', 'pub_case_finder', 'pub_annotation', 'orefil', 'life_science_QA', 'inmexes', 'ggrna', 'dbcls_sra', 'd2rq_mapper', 'crispr_direct', 'colil', 'chip_atlas', 'body_parts_3D', 'aoe', 'allie'];
 
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js');
+script_sticky.setAttribute('src', 'script/stickyfill.min.js');
 document.head.appendChild(script);
-
+document.head.appendChild(script_sticky);
 var initialize = {
   'index': function index() {
     tags.map(function (data) {
@@ -472,26 +474,9 @@ script.addEventListener('load', function () {
     console.log(pageType);
     initialize[pageType]();
 
-    // position: stickyがブラウザで使えるかチェックするための関数
-    function detectSticky() {
-      var div = document.createElement('div');
-      div.style.position = 'sticky';
-      // position: stickyがブラウザで使えればtrue、使えなければfalseを返す
-      return div.style.position.indexOf('sticky') !== -1;
-    }
-
-    // .stickyが指定されている要素に対してposition: stickyを適用させる関数
-    function callStickyState() {
-      // position: stickyを適用させたい要素を引数に指定し、
-      // StickyStateをnewしてインスタンスを返す
-      return new StickyState(document.querySelectorAll('.sticky'));
-    }
-
-    // もしブラウザでposition: stickyが使えなければ、
-    // callStickyState関数を呼び出す
-    if (!detectSticky()) {
-      callStickyState();
-    }
+    //sticky IE対応
+    var elements = document.querySelectorAll('.sticky');
+    Stickyfill.add(elements);
 
     //header言語切り替え
     $('.lang-en span').on('click', function () {

@@ -8260,12 +8260,12 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/_site\/script\/sticky-state.min.js": {
+	"\/_site\/script\/stickyfill.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "\/_site\/script\/sticky-state.min-min.js",
+		"oAP": "\/_site\/script\/stickyfill.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -8293,29 +8293,6 @@
 		"oA": 0,
 		"oAP": "\/_site\/services.html",
 		"oF": 0
-		},
-	"\/_site\/style\/default.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/default-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/_site\/style\/default.sass": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/default.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"\/_site\/style\/default_add.css": {
 		"aP": 1,
@@ -8438,26 +8415,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"\/_site\/style\/sticky-state-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/sticky-state-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/_site\/style\/sticky-state.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/_site\/style\/sticky-state-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/_site\/tags-en.html": {
 		"cB": 0,
@@ -11525,12 +11482,12 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/script\/sticky-state.min.js": {
+	"\/script\/stickyfill.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "\/script\/sticky-state.min-min.js",
+		"oAP": "\/script\/stickyfill.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -11703,26 +11660,6 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
-		},
-	"\/style\/sticky-state-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style\/sticky-state-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/style\/sticky-state.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style\/sticky-state-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/tags-en.html": {
 		"cB": 0,

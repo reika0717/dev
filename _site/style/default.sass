@@ -79,7 +79,13 @@ body
 			outline: 0
 	.mixitup-control-active
 		opacity: 1.0
-
+.sticky
+	position: sticky
+	top: 0
+	&:before,
+	&:after
+		content: ''
+		display: table
 //下層ページカラム設定
 .content__wrapper
 	width: 1024px
