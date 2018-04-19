@@ -4815,6 +4815,13 @@
 		"oAP": "\/_site\/events.html",
 		"oF": 0
 		},
+	"\/_site\/faq-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/faq-en.html",
+		"oF": 0
+		},
 	"\/_site\/faq.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -4957,11 +4964,25 @@
 		"oAP": "\/_site\/fonts\/GothamPro-Light.woff",
 		"oF": 0
 		},
+	"\/_site\/funding-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/funding-en.html",
+		"oF": 0
+		},
 	"\/_site\/funding.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/_site\/funding.html",
+		"oF": 0
+		},
+	"\/_site\/history-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/history-en.html",
 		"oF": 0
 		},
 	"\/_site\/history.html": {
@@ -5079,6 +5100,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/_site\/img\/icon_answer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/_site\/img\/icon_git.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_site\/img\/icon_git.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/_site\/img\/icon_gs.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/_site\/img\/icon_gs.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -5266,6 +5307,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/_site\/img\/logo_en_c.png": {
+		"ft": 32768,
+		"iS": 10810,
+		"oA": 0,
+		"oAP": "\/_site\/img\/logo_en_c.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/_site\/img\/map-kashiwa.png": {
 		"ft": 32768,
@@ -7166,6 +7218,13 @@
 		"oAP": "\/_site\/ja\/2018\/02\/27\/post2.html",
 		"oF": 0
 		},
+	"\/_site\/logotype-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/logotype-en.html",
+		"oF": 0
+		},
 	"\/_site\/logotype.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -8126,6 +8185,13 @@
 		"oAP": "\/_site\/news_event.html",
 		"oF": 0
 		},
+	"\/_site\/policy-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/policy-en.html",
+		"oF": 0
+		},
 	"\/_site\/policy.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -8154,65 +8220,65 @@
 		"oAP": "\/_site\/research.html",
 		"oF": 0
 		},
-	"\/_site\/script\/default.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/_site\/script\/default-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"\/_site\/script\/marked.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/_site\/script\/marked.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/_site\/script\/mixitup.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/_site\/script\/mixitup.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/_site\/script\/ofi.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/_site\/script\/ofi.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/_site\/script\/service.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/_site\/script\/service-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
+		},
+	"\/_site\/script\/sticky-state.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/_site\/script\/sticky-state.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/_site\/script\/underscore-min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/_site\/script\/underscore-min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/_site\/services-en.html": {
 		"cB": 0,
@@ -8239,7 +8305,7 @@
 		"oS": 3
 		},
 	"\/_site\/style\/default.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -8262,7 +8328,7 @@
 		"oS": 3
 		},
 	"\/_site\/style\/default_add.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -8285,7 +8351,7 @@
 		"oS": 3
 		},
 	"\/_site\/style\/default_services.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -8318,7 +8384,7 @@
 		"oS": 3
 		},
 	"\/_site\/style\/footer.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -8361,7 +8427,7 @@
 		"oS": 3
 		},
 	"\/_site\/style\/minireset.min.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -8372,6 +8438,26 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/_site\/style\/sticky-state-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_site\/style\/sticky-state-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/_site\/style\/sticky-state.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_site\/style\/sticky-state-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/_site\/tags-en.html": {
 		"cB": 0,
@@ -8455,6 +8541,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/events.html",
+		"oF": 0
+		},
+	"\/faq-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/faq-en.html",
 		"oF": 0
 		},
 	"\/faq.html": {
@@ -8599,6 +8692,13 @@
 		"oAP": "\/fonts\/GothamPro-Light.woff",
 		"oF": 0
 		},
+	"\/funding-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/funding-en.html",
+		"oF": 0
+		},
 	"\/funding.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -8618,6 +8718,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/Gemfile.lock",
+		"oF": 0
+		},
+	"\/history-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/history-en.html",
 		"oF": 0
 		},
 	"\/history.html": {
@@ -8735,6 +8842,26 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/img\/icon_answer.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icon_git.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icon_git.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icon_gs.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icon_gs.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -8922,6 +9049,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/logo_en_c.png": {
+		"ft": 32768,
+		"iS": 10810,
+		"oA": 0,
+		"oAP": "\/img\/logo_en_c.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/img\/map-kashiwa.png": {
 		"ft": 32768,
@@ -10325,6 +10463,13 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
+	"\/logotype-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/logotype-en.html",
+		"oF": 0
+		},
 	"\/logotype.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -11285,6 +11430,13 @@
 		"oAP": "\/news_event.html",
 		"oF": 0
 		},
+	"\/policy-en.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/policy-en.html",
+		"oF": 0
+		},
 	"\/policy.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -11313,65 +11465,85 @@
 		"oAP": "\/research.html",
 		"oF": 0
 		},
+	"\/script\/default-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/script\/default-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/script\/default.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/default-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/script\/marked.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/marked.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/script\/mixitup.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/mixitup.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/script\/ofi.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/ofi.min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/script\/service.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/service-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
+		},
+	"\/script\/sticky-state.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/script\/sticky-state.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/script\/underscore-min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/script\/underscore-min-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/services-en.html": {
 		"cB": 0,
@@ -11398,7 +11570,7 @@
 		"oS": 3
 		},
 	"\/style\/default.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -11421,7 +11593,7 @@
 		"oS": 3
 		},
 	"\/style\/default_add.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -11444,7 +11616,7 @@
 		"oS": 3
 		},
 	"\/style\/default_services.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -11477,7 +11649,7 @@
 		"oS": 3
 		},
 	"\/style\/footer.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -11520,7 +11692,7 @@
 		"oS": 3
 		},
 	"\/style\/minireset.min.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -11531,6 +11703,26 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/style\/sticky-state-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style\/sticky-state-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/style\/sticky-state.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style\/sticky-state-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/tags-en.html": {
 		"cB": 0,
@@ -20160,12 +20352,12 @@
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/jekyll-3.7.3\/lib\/jekyll\/commands\/serve\/livereload_assets\/livereload.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/vendor\/bundle\/ruby\/2.4.0\/gems\/jekyll-3.7.3\/lib\/jekyll\/commands\/serve\/livereload_assets\/livereload-min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/jekyll-3.7.3\/lib\/jekyll\/commands\/serve\/servlet.rb": {
 		"cB": 0,
@@ -20810,7 +21002,7 @@
 		"oF": 0
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/jekyll-3.7.3\/lib\/theme_template\/example\/style.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -21040,7 +21232,7 @@
 		"oF": 0
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/kramdown-1.16.2\/doc\/_design.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -21064,7 +21256,7 @@
 		"q": 100
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/kramdown-1.16.2\/doc\/default.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31295,7 +31487,7 @@
 		"oS": 3
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/fixtures\/test_staleness_check_across_importers.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31366,7 +31558,7 @@
 		"oS": 3
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/more_templates\/_more_partial.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31379,7 +31571,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/more_templates\/more1.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31392,7 +31584,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/more_templates\/more_import.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31738,7 +31930,7 @@
 		"oF": 0
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_cached_import_option_partial.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31751,7 +31943,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_double_import_loop2.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31764,7 +31956,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_filename_fn_import.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31777,7 +31969,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_imported_charset_ibm866.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31790,7 +31982,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_imported_charset_utf8.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31803,7 +31995,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_imported_content.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31816,7 +32008,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_partial.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31829,7 +32021,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/_same_name_different_partiality.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31842,7 +32034,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/alt.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31855,7 +32047,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/basic.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31868,7 +32060,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/bork1.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31881,7 +32073,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/bork2.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31894,7 +32086,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/bork3.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31907,7 +32099,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/bork4.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31920,7 +32112,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/bork5.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31933,7 +32125,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/cached_import_option.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31946,7 +32138,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/compact.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31959,7 +32151,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/complex.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31972,7 +32164,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/compressed.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31985,7 +32177,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/double_import_loop1.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -31998,7 +32190,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/expanded.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32011,7 +32203,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/filename_fn.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32024,7 +32216,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/if.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32037,7 +32229,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/import.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32050,7 +32242,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/import_charset.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32063,7 +32255,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/import_charset_ibm866.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32076,7 +32268,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/import_content.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32106,7 +32298,7 @@
 		"sU": 0
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/importee.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32119,7 +32311,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/line_numbers.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32132,7 +32324,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/mixin_bork.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32145,7 +32337,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/mixins.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32158,7 +32350,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/multiline.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32171,7 +32363,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32184,7 +32376,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_bork1.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32197,7 +32389,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_bork2.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32210,7 +32402,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_bork3.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32223,7 +32415,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_bork4.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32236,7 +32428,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_import.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32249,7 +32441,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/nested_mixin_bork.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32262,7 +32454,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/options.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32275,7 +32467,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/parent_ref.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32288,7 +32480,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/same_name_different_ext.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32301,7 +32493,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/same_name_different_ext.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32314,7 +32506,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/same_name_different_partiality.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32327,7 +32519,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/script.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32340,7 +32532,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/scss_import.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32353,7 +32545,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/scss_importee.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32366,7 +32558,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/single_import_loop.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32379,7 +32571,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/subdir\/import_up1.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32392,7 +32584,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/subdir\/import_up2.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32405,7 +32597,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/subdir\/nested_subdir\/_nested_partial.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32418,7 +32610,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/subdir\/nested_subdir\/nested_subdir.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32431,7 +32623,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/subdir\/subdir.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32444,7 +32636,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/units.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32457,7 +32649,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/warn.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -32470,7 +32662,7 @@
 		"uL": 1
 		},
 	"\/vendor\/bundle\/ruby\/2.4.0\/gems\/sass-3.5.5\/test\/sass\/templates\/warn_imported.sass": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -34826,9 +35018,9 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 3,
-		"transpilerStyle": 0
+		"transpilerStyle": 1
 		},
 	"languageDefaultsJSON": {
 		"autoOutputAction": 1,
@@ -34929,7 +35121,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},

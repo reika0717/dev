@@ -52,6 +52,7 @@ var services_array = [
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js')
 document.head.appendChild(script)
 
+
 var initialize = {
   'index': function() {
     tags.map(function(data) {
@@ -229,14 +230,14 @@ var initialize = {
 
         var elementArray = data.values;
         var elementArray_service = []
-        for (var i = 0; i < elementArray.length; i++){
+        for (var i = 0; i < elementArray.length; i++) {
           elementArray_service.push(elementArray[i][0])
         }
         elementArray_service = _.rest(elementArray_service, 2)
         elementArray_service = _.uniq(elementArray_service)
-        
+
         var filterList = {}
-        for (var i = 0; i < elementArray_service.length; i++){
+        for (var i = 0; i < elementArray_service.length; i++) {
           var service_name = elementArray_service[i]
           filterList[service_name] = elementArray.filter((list) => {
             return list[0] === service_name
@@ -245,7 +246,7 @@ var initialize = {
 
         var element = "";
 
-        names = Object.keys(filterList);
+        var names = Object.keys(filterList);
 
         element += '<table class="papers_citing_table"><tbody>';
         for (i = 0; i < names.length; i++) {
@@ -310,7 +311,7 @@ var initialize = {
             displayIndividual(service__title)
           }
         }, false)
-        
+
         if (location.hash === '') {} else {
           var service__title = location.hash.slice(1)
           displayIndividual(service__title)
@@ -398,9 +399,9 @@ var initialize = {
             'data-scientist': 'データサイエンティスト',
             'provider': 'データ提供者'
           }
-          for (i = 0; i < symbolYList.length; i++) {
+          for (var i = 0; i < symbolYList.length; i++) {
             var tagArray = getClassName(i)
-            tagName = tagArray.join(' ')
+            var tagName = tagArray.join(' ')
 
             function addTagLine(array) {
               var categoryTag = ''
@@ -494,7 +495,7 @@ var initialize = {
           var listSubNav = "";
           data.values.splice(0, 1);
 
-          for (j = 0; j < data.values.length; j++) {
+          for (var j = 0; j < data.values.length; j++) {
             console.log(memberList);
 
             listSubNav += '<li>' + data.values[j][0] + '</li>';
@@ -502,7 +503,7 @@ var initialize = {
           }
           $("#memberList").append(listSubNav);
 
-          for (i = 0; i < data.values.length; i++) {
+          for (var i = 0; i < data.values.length; i++) {
 
             var name_ja = data.values[i][0]
             var name_en = data.values[i][1]
@@ -521,12 +522,12 @@ var initialize = {
               '<ul><li class="position">' + position + '</li>' +
               '<li class="repos_name">' + name_ja + '<span>' + name_en + '</span></li>' +
               '<li class="keyword">' + keyword + '</li>' +
-              '<li class="PIC">担当サービス：<div class="member-list__services">'+ "TogoAnnotator,TogoDoc" + '</div></li>' +
-              '<li class="links"><div class="btn-box">' + 
-              '<a href="'+ mail +'" class="btn-mail">Mail</a>' +
-              '<a href="https://github.com/'+ github +'" class="btn-github">GitHub</a>' +
-              '<a href="https://orcid.org/'+ orcid +'" class="btn-orcid">ORCID</a>' +
-              '<a href="'+ googleScholar +'" class="btn-gs">Google Scholar</a></div></li></ul></div>';
+              '<li class="PIC">担当サービス：<div class="member-list__services">' + "TogoAnnotator,TogoDoc" + '</div></li>' +
+              '<li class="links"><div class="btn-box">' +
+              '<a href="' + mail + '" class="btn-mail">Mail</a>' +
+              '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' +
+              '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' +
+              '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
           }
           $("#member-list").append(element);
         }
@@ -547,6 +548,27 @@ script.addEventListener('load', function() {
     var pageType = document.getElementsByTagName('html')[0].dataset.pageType;
     console.log(pageType)
     initialize[pageType]()
+
+    // position: stickyがブラウザで使えるかチェックするための関数
+    function detectSticky() {
+      const div = document.createElement('div');
+      div.style.position = 'sticky';
+      // position: stickyがブラウザで使えればtrue、使えなければfalseを返す
+      return div.style.position.indexOf('sticky') !== -1;
+    }
+
+    // .stickyが指定されている要素に対してposition: stickyを適用させる関数
+    function callStickyState() {
+      // position: stickyを適用させたい要素を引数に指定し、
+      // StickyStateをnewしてインスタンスを返す
+      return new StickyState(document.querySelectorAll('.sticky'));
+    }
+
+    // もしブラウザでposition: stickyが使えなければ、
+    // callStickyState関数を呼び出す
+    if (!detectSticky()) {
+      callStickyState();
+    }
 
     //header言語切り替え
     $('.lang-en span').on('click', function() {
