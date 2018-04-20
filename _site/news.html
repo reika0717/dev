@@ -6,7 +6,8 @@
   <title>ニュース一覧 | DBCLS</title>
   <link rel="stylesheet" href="style/default.css">
   <link rel="alternate" type="application/rss+xml" title="My Site RSS" href="/feed.xml" />
-   <script src="script/mixitup.min.js"></script>	
+  <script src="script/mixitup.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -88,7 +89,7 @@
 						<li class="tag_panel">
 							<span class="tag_panel-category-title">タグ</span>
 							<div class="tag_panel_header controls">
-									<button type="button" class="tag_element tag-service control" data-filter="all">
+									<button type="button" class="tag_element tag-all control" data-filter="all">
 										すべて
 									</button>
 									<button type="button" class="tag_element tag-service control" data-toggle=".service">
@@ -132,11 +133,11 @@
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -161,15 +162,15 @@
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -196,7 +197,7 @@
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -221,11 +222,11 @@
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -250,11 +251,11 @@
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -279,7 +280,7 @@
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -304,11 +305,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -333,11 +334,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -362,15 +363,15 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -395,11 +396,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -424,11 +425,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -453,11 +454,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -482,11 +483,11 @@
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -511,7 +512,7 @@
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -537,11 +538,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -566,11 +567,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -595,7 +596,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -620,11 +621,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -649,11 +650,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -678,11 +679,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="other">
+    <a tag="other" class="tag_name">
       other
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -707,11 +708,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="other">
+    <a tag="other" class="tag_name">
       other
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -736,15 +737,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -769,7 +770,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -794,11 +795,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -823,15 +824,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -856,11 +857,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -885,7 +886,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -910,15 +911,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -943,15 +944,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -976,11 +977,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1005,11 +1006,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1034,7 +1035,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1059,7 +1060,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1086,7 +1087,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -1111,11 +1112,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1140,15 +1141,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1173,7 +1174,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1198,7 +1199,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1223,7 +1224,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1248,11 +1249,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1277,11 +1278,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1306,7 +1307,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1331,7 +1332,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1356,11 +1357,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1385,11 +1386,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1414,11 +1415,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1443,7 +1444,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1468,7 +1469,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1493,11 +1494,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1522,11 +1523,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1551,15 +1552,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1584,11 +1585,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1613,11 +1614,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1642,11 +1643,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1671,11 +1672,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1700,7 +1701,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1725,11 +1726,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1754,11 +1755,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1785,7 +1786,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -1810,7 +1811,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1835,7 +1836,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1860,7 +1861,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -1885,11 +1886,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1914,7 +1915,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
@@ -1939,11 +1940,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1968,11 +1969,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -1997,15 +1998,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -2030,11 +2031,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -2061,7 +2062,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
@@ -2086,7 +2087,7 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -2111,11 +2112,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="service">
+    <a tag="service" class="tag_name">
       service
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -2140,11 +2141,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -2169,15 +2170,15 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
-    <a tag="publishment">
+    <a tag="publishment" class="tag_name">
       publishment
     </a>
   
@@ -2202,11 +2203,11 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
 
 
   
-    <a tag="event">
+    <a tag="event" class="tag_name">
       event
     </a>
   
-    <a tag="invite">
+    <a tag="invite" class="tag_name">
       invite
     </a>
   
@@ -2226,10 +2227,10 @@ PubCaseFinderは希少疾患の診断を支援するために作成…</p>
     controls: {
       toggleLogic: 'and'
     }
-  });    
+  });
+    
 </script>
-  
-<script src="script/default-min.js"></script>
+  <script src="script/default-min.js"></script>
 </body>
 
 </html>

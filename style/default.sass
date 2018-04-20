@@ -2,7 +2,6 @@
 @import "font-awesome.css"
 @import "gotham.css"
 @import "minireset.min.scss"
-@import "sticky-state.css"
 
 /* default */
 $main-color: #004098
@@ -43,7 +42,7 @@ body
 		margin-right: 5px
 		background-image: url(../img/icon_more.svg)
 	&.more_btn
-		width: 56px
+		width: 57px
 		cursor: pointer
 	&.access_btn
 		width: 72px
@@ -75,6 +74,9 @@ body
 		font-size: 12px
 		opacity: 0.3
 		border: none
+		text-align: left
+		.category-double-col
+			margin-left: 13px
 		&:focus
 			outline: 0
 	.mixitup-control-active
@@ -94,7 +96,7 @@ body
 	.sub__navigation
 		padding-top: 156px
 		width: 242px
-		height: 60vh //footerを固定表示させたい
+		height: 90vh //footerを固定表示させたい
 		color: $main-color
 		.sub__navigation-wrapper
 			margin-top: 14px
@@ -110,6 +112,11 @@ body
 				.sub__navigation-contents
 					font-size: 12px
 					font-weight: 500
+				.member-en__side
+					display: block
+					margin-top: -18px
+		&.service__side-bar
+			height: 90vh
 	.main__contents
 		padding-top: 160px
 		width: 782px
@@ -462,7 +469,9 @@ footer
 	width: 1024px
 	margin: 78px auto 0
 .news__individual-wrapper
+	display: none
 	margin-bottom: 30px
+	position: relative
 	li.post__individual
 		padding-bottom: 20px
 		display: flex
@@ -850,13 +859,13 @@ footer
 		align-self: self-end
 		&.contener-type-box
 			position: relative
-			height: 297px
-			width: 227px
+			height: 302px
+			width: 230px
 			border: solid 0.25px #cccccc
 			.repos_image
 				position: absolute
 				height: 120px
-				width: 227px
+				width: 230px
 				left: 0
 				right: 0
 				top: 0
@@ -884,15 +893,14 @@ footer
 				right: 0
 				top: 130px
 				height: 120px
-				width: 192px
+				width: 200px
 				color: $main-color
 				.btn-box
 					display: flex
 					justify-content: center
 					align-items: center
-					margin-top: 9px
 					position: absolute
-					bottom: -36px
+					bottom: -44px
 					left: 50%
 					transform: translateX(-50%)
 					.access_btn
@@ -903,10 +911,13 @@ footer
 					font-weight: 800
 				.keyword
 					font-size: 10px
-					padding-bottom: 10px
 					border-bottom: dashed 0.5px #cccccc
+					height: 62px
+					margin-bottom: 6px
 				.service_category
 					font-size: 10px
+					display: flex
+					align-items: center
 					&:before
 						content: ""
 						display: inline-block
@@ -917,6 +928,7 @@ footer
 						-o-border-radius: 10px
 						-ms-border-radius: 10px
 						border-radius: 10px
+						margin-right: 3px
 					&.dna
 						&:before
 							background-color: #FFA600
@@ -1007,7 +1019,7 @@ footer
 						font-size: 10px
 					&.repos_name
 						font-size: 15px
-						span
+						.name_en
 							font-size: 12px
 							&:before
 								content: "/"

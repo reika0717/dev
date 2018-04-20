@@ -1,13 +1,14 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 var script = document.createElement('script');
 var script_sticky = document.createElement('script');
-var tags = ['publishment', 'service', 'event', 'invite', 'other'];
-var services_array = ['togoWS', 'togoTABLE', 'togoGENOME', 'togoDB', 'togo_picture_gallery', 'refEx', 'pub_case_finder', 'pub_annotation', 'orefil', 'life_science_QA', 'inmexes', 'ggrna', 'dbcls_sra', 'd2rq_mapper', 'crispr_direct', 'colil', 'chip_atlas', 'body_parts_3D', 'aoe', 'allie', 'togoWS', 'togoTABLE', 'togoGENOME', 'togoDB', 'togo_picture_gallery', 'refEx', 'pub_case_finder', 'pub_annotation', 'orefil', 'life_science_QA', 'inmexes', 'ggrna', 'dbcls_sra', 'd2rq_mapper', 'crispr_direct', 'colil', 'chip_atlas', 'body_parts_3D', 'aoe', 'allie'];
+var tags = {
+  'publishment': '広報',
+  'service': 'サービス',
+  'event': 'イベント',
+  'invite': '募集',
+  'other': 'その他'
+};
 
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js');
 script_sticky.setAttribute('src', 'script/stickyfill.min.js');
@@ -15,141 +16,58 @@ document.head.appendChild(script);
 document.head.appendChild(script_sticky);
 var initialize = {
   'index': function index() {
-    tags.map(function (data) {
-      $('a[tag="' + data + '"]').before('<img src="img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >');
-    });
-    var ROTATE_SPEED = 40000;
-    var NUMBER_OF_PANEL = 20; //パネル数
-    var APPEAR_PITCH = ROTATE_SPEED / NUMBER_OF_PANEL; //パネルが出現する間隔
-    var currentTime = 0;
-    var FPS = 50; //１秒間のコマ数
-    var RADIAN_UNIT = Math.PI * .1 / 1000 * FPS; //1コマの移動距離＝速さ
-    var Y_UNIT = 0.00001; //y軸の速度
-    var UNIT = Math.PI * 2 / NUMBER_OF_PANEL; // 弧度
-    var RADIUS = 480; //半径
-
-    var Panel = function () {
-      function Panel() {
-        _classCallCheck(this, Panel);
-
-        var url = '';
-        $('.main-image__contents').append('<div class="panel">');
-        for (var i = 0; i < services_array.length; i++) {
-          url = 'img/top_assets/' + services_array[i] + '_f.png';
-          var panel_style = {
-            'background-image': 'url(' + url + ')'
-
-          };
-          $('.panel:nth-of-type(' + i + ')').css(panel_style);
-        }
-        this.$ = $('.panel:last-child');
-        this.reset();
-        $('.panel').hover(function () {
-          stopTimer();
-          // $('.main-image__veil, .main__forcused-page__description').css('display', 'block')
-          // var resized_image = $(this).css('background-image').toString()
-          // var forcused_style = {
-          //    'width': '340px',
-          //    'height': '400px',
-          //    'position': 'absolute',
-          //    'top': '80px',
-          //    'left': '50%',
-          //    'pointer-events': 'none',
-          //    'z-index': '9999',
-          //    'transform': 'rotateY(0) translateX(-50%)',
-          //    'background-image': resized_image
-          // }
-
-          // var forcused_image = $(this).clone(true).removeClass('panel').addClass('forcused_panel').css(forcused_style)
-          // $('body').append(forcused_image)
-        });
-
-        $('.panel').mouseout(function () {
-          startTimer();
-          $('.forcused_panel').remove();
-          $('.main-image__veil, .main__forcused-page__description').css('display', 'none');
-        });
-      }
-
-      _createClass(Panel, [{
-        key: 'step',
-        value: function step() {
-          function radian2degree(radian) {
-            return 180 * radian / Math.PI;
-          }
-          var currentRadius = RADIAN_UNIT * this.counter / 2 + UNIT;
-          this.$.css({
-            top: 300 - this.counter++ / 1.2 + 'px',
-            left: -Math.cos(currentRadius) * RADIUS + 430 + 'px',
-            transform: 'translateY(' + Y_UNIT * this.counter + 'px) translateZ(' + Math.sin(currentRadius) * RADIUS / 2 + 'px) rotateY(' + (radian2degree(currentRadius) + 270) + 'deg)'
-          });
-          if (this.counter / 10 > 100) {
-            stage.shift();
-            backStage.push(this);
-          }
-          var z_position = Math.sin(currentRadius) * RADIUS;
-          if (z_position < 0) {
-            var opacity = z_position * -1;
-            opacity = (500 - opacity) / 500 * 100;
-            opacity = Math.round(opacity) / 100 + 0.2;
-            this.$.css({ 'opacity': opacity, 'z-index': '-100' });
-          } else if (z_position >= 0) {
-            this.$.css({ 'opacity': 1, 'z-index': '100' });
-          }
-        }
-      }, {
-        key: 'reset',
-        value: function reset() {
-          this.counter = 0;
-          this.$.css({
-            top: '100vh',
-            left: '50vw'
-          });
-        }
-      }]);
-
-      return Panel;
-    }();
-
-    var stage = [],
-        backStage = [];
-    var timer;
-
-    setInterval(function () {
-      if (backStage.length === 0) {
-        stage.push(new Panel());
-      } else {
-        var panel = backStage[0];
-        backStage.shift();
-        stage.push(panel);
-        panel.reset();
-      }
-    }, APPEAR_PITCH);
-
-    function animation() {
-      for (var i = 0; i < stage.length; i++) {
-        stage[i].step();
-      }
-    };
-
-    function startTimer() {
-      timer = setInterval(function () {
-        animation();
-      }, FPS);
-    }
-
-    function stopTimer() {
-      clearInterval(timer);
-    }
-
-    startTimer();
-  },
-  'news': function news() {
-    tags.map(function (data) {
+    $('.news__individual-wrapper').css('display', 'block');
+    var url = window.location;
+    var path = url.href.split('/');
+    var file_name = path.pop();
+    var tags_key = Object.keys(tags);
+    tags_key.map(function (data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >');
     });
+    //タグ名を日本語に変換
+    if (file_name === 'index.html') {
+      $('.tag_name').each(function () {
+        var tag_en = $(this).text();
+        tag_en = $.trim(tag_en);
+        var tag_ja = tags[tag_en];
+        $(this).text(tag_ja);
+      });
+    }
+  },
+  'news': function news() {
+    var prepage = '';
+    console.log(document.referrer);
+    prepage = document.referrer;
+    prepage = prepage.slice(-11);
+    if (prepage === 'events.html' || prepage === 'nts-en.html') {
+      setTimeout(function () {
+        $('.tag-event').trigger('click');
+      }, 0);
+      setTimeout(function () {
+        $('.news__individual-wrapper').css('display', 'block');
+      }, 500);
+    } else {
+      $('.news__individual-wrapper').css('display', 'block');
+    }
+    var url = window.location;
+    var path = url.href.split('/');
+    var file_name = path.pop();
+    var tags_key = Object.keys(tags);
+    tags_key.map(function (data) {
+      $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >');
+    });
+    //タグ名を日本語に変換
+    if (file_name === 'news.html') {
+      $('.tag_name').each(function () {
+        var tag_en = $(this).text();
+        tag_en = $.trim(tag_en);
+        var tag_ja = tags[tag_en];
+        $(this).text(tag_ja);
+      });
+    }
+
     $('.post__individual').each(function () {
-      tag_className = $(this).attr('class');
+      var tag_className = $(this).attr('class');
       tag_className = tag_className.match(/\[\"(.+?)\"\]/g);
       tag_className = tag_className[0].match(/\"(.+?)\"/g);
       tag_className = tag_className.join(' ');
@@ -233,7 +151,7 @@ var initialize = {
 
         function displayIndividual(names) {
           location.hash = names;
-          arranged_name = names.replace('%20', ' ');
+          var arranged_name = names.replace('%20', ' ');
           $('.main__content-title').text(arranged_name);
           //filterListをarranged_nameのものだけにフィルタリングして新しい配列
           $('.achievement__wrapper').empty();
@@ -270,7 +188,7 @@ var initialize = {
     // var repos_array = [];
     var tags_array;
     if (location.hash === '') {} else {
-      var service__title = location.hash.slice(1);
+      var service_title = location.hash.slice(1);
       displayRepos(service__title);
     }
 
@@ -320,36 +238,57 @@ var initialize = {
             return tagName;
           }
 
-          // function getData(filepath) {
-          //   return $.ajax({
-          //     type: 'GET',
-          //     url: filepath
-          //   })
-          // }
-
-          // function fileCheck(filepath) {
-          //   getData().done(function(result){
-          //     return filepath
-          //   }).fail(function(result){
-          //     return './img/service_assets/no-image.png'
-          //   })
-          // }
-          //data.values.splice(0, 1)
           var tagMapping = {
-            'omics': 'データ解析ツール',
-            'contents': 'コンテンツ',
-            'text-mining': '文献知識抽出',
-            'semantic': 'セマンティックウェブ',
-            'biologist': '実験系研究者',
-            'application': 'アプリケーション開発者',
-            'data-scientist': 'データサイエンティスト',
-            'provider': 'データ提供者'
-          };
+            'omics': {
+              'ja': 'データ解析ツール',
+              'en': 'Omics tools'
+            },
+            'contents': {
+              'ja': 'コンテンツ',
+              'en': 'contents'
+            },
+            'text-mining': {
+              'ja': '文献知識抽出',
+              'en': 'Textmining'
+            },
+            'semantic': {
+              'ja': 'セマンティックウェブ',
+              'en': 'Semantic web'
+            },
+            'biologist': {
+              'ja': '実験系研究者',
+              'en': 'Wet biologist, Clinician'
+            },
+            'application': {
+              'ja': 'アプリケーション開発者',
+              'en': 'Database Application Developer'
+            },
+            'data-scientist': {
+              'ja': 'データサイエンティスト',
+              'en': 'Data Scientist'
+            },
+            'provider': {
+              'ja': 'データ提供者',
+              'en': 'Data Provider'
+            }
+
+            //file名の取得
+          };var url = window.location;
+          var path = url.href.split('/');
+          var file_name = path.pop();
           for (var i = 0; i < symbolYList.length; i++) {
-            var addTagLine = function addTagLine(array) {
+            var addTagLine = function addTagLine(array, lang) {
               var categoryTag = '';
-              for (var j = 0; j < array.length; j++) {
-                categoryTag += '<div class="service_category tag_element ' + array[j] + '">' + tagMapping[array[j]] + '</div>';
+              if (lang === 'ja') {
+                for (var j = 0; j < array.length; j++) {
+                  var category_name = array[j];
+                  categoryTag += '<div class="service_category tag_element ' + array[j] + '">' + tagMapping[category_name].ja + '</div>';
+                }
+              } else if (lang === 'en') {
+                for (var j = 0; j < array.length; j++) {
+                  var category_name = array[j];
+                  categoryTag += '<div class="service_category tag_element ' + array[j] + '">' + tagMapping[category_name].en + '</div>';
+                }
               }
               return categoryTag;
             };
@@ -357,7 +296,11 @@ var initialize = {
             var tagArray = getClassName(i);
             var tagName = tagArray.join(' ');
 
-            element += '<article class="article__section contener-type-box mix ' + tagName + '">' + '<div id="repos_name' + i + '" class="repos_name">' + '<p class="name">' + symbolYList[i][3] + '</p>' + '<div class="keyword">だれでも自由に閲覧・利用できるように、Web上にて無料で公開しているライフサイエンス分野の画像・イラスト集です。</div>' + addTagLine(tagArray) + '<div class="btn-box">' + '<a class="page_btn more_btn">' + '詳細' + '</a>' + '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' + '</div></div>' + '<div id="repos_image0" class="repos_image">' + '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>';
+            if (file_name === 'services.html') {
+              element += '<article class="article__section contener-type-box mix ' + tagName + '">' + '<div id="repos_name' + i + '" class="repos_name">' + '<p class="name">' + symbolYList[i][3] + '</p>' + '<div class="keyword">' + symbolYList[i][5] + '</div>' + addTagLine(tagArray, 'ja') + '<div class="btn-box">' + '<a class="page_btn more_btn">' + '詳細' + '</a>' + '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' + '</div></div>' + '<div id="repos_image0" class="repos_image">' + '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>';
+            } else if (file_name === 'services-en.html') {
+              element += '<article class="article__section contener-type-box mix ' + tagName + '">' + '<div id="repos_name' + i + '" class="repos_name">' + '<p class="name">' + symbolYList[i][3] + '</p>' + '<div class="keyword">' + symbolYList[i][6] + '</div>' + addTagLine(tagArray, 'en') + '<div class="btn-box">' + '<a class="page_btn more_btn">' + 'more' + '</a>' + '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">Access</a>' + '</div></div>' + '<div id="repos_image0" class="repos_image">' + '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>';
+            }
 
             element += '</article>';
           }
@@ -413,59 +356,163 @@ var initialize = {
     }
   },
   'events': function events() {
-    tags.map(function (data) {
+    $('.news__individual-wrapper').css('display', 'block');
+    var url = window.location;
+    var path = url.href.split('/');
+    var file_name = path.pop();
+    var tags_key = Object.keys(tags);
+    tags_key.map(function (data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >');
+    });
+    //タグ名を日本語に変換
+    if (file_name === 'events.html') {
+      $('.tag_name').each(function () {
+        var tag_en = $(this).text();
+        tag_en = $.trim(tag_en);
+        var tag_ja = tags[tag_en];
+        $(this).text(tag_ja);
+      });
+    }
+
+    $.ajax({
+      url: "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
+      dataType: "json",
+      async: true,
+      success: function success(data) {
+        var events_array = data.values;
+
+        function getOrder(target) {
+          var order = 0;
+          for (var i = 0; i < events_array.length; i++) {
+            if (events_array[0][i] === target) {
+              order = i;
+            }
+          }
+          return order;
+        }
+        var event_active_order = getOrder('Event掲載');
+        var service_name_order = getOrder('サービス名称');
+        var explanation_ja_order = getOrder('explanation_ja');
+        var explanation_en_order = getOrder('explanation_en');
+        var explanation_order = 0;
+        var url_order = getOrder('URL');
+        var url = window.location;
+        var path = url.href.split('/');
+        var file_name = path.pop();
+        var events_array = events_array.filter(function (data) {
+          return data[event_active_order] === 'Y';
+        });
+        if (file_name === 'events.html') {
+          explanation_order = explanation_ja_order;
+        } else if (file_name === 'events-en.html') {
+          explanation_order = explanation_en_order;
+        }
+
+        var elements = '';
+        for (var i = 0; i < events_array.length; i++) {
+          elements += '<article class="article__section event__section-ja">' + '<h4>' + events_array[i][service_name_order] + '</h4>' + '<p>' + events_array[i][explanation_order] + '</p>' + '<a href = "' + events_array[i][url_order] + '" class = "page_btn more_btn" > more </a>' + '</article>';
+        }
+        $('.section-wrapper').append(elements);
+      }
     });
   },
   'member': function member() {
-    location.hash = 'member';
+    $.when($.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'), $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')).done(function (data, data_services) {
+      var element = "";
+      var listSubNav = "";
+      var listSubNav_en = "";
+      data = data[0];
+      data.values.splice(0, 1);
 
-    function memberFrontDisplay() {
-      $.ajax({
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
-        dataType: "json",
-        async: true,
-        success: function success(data) {
+      //file名の取得
+      var url = window.location;
+      var path = url.href.split('/');
+      var file_name = path.pop();
 
-          var element = "";
-          var listSubNav = "";
-          data.values.splice(0, 1);
+      for (var j = 0; j < data.values.length; j++) {
+        listSubNav += '<li>' + data.values[j][0] + '</li>';
+      }
+      for (var j = 0; j < data.values.length; j++) {
+        listSubNav_en += '<li>' + data.values[j][1] + '</li>';
+      }
+      if (file_name === 'member.html') {
+        $("#memberList").append(listSubNav);
 
-          for (var j = 0; j < data.values.length; j++) {
-            console.log(memberList);
+        for (var i = 0; i < data.values.length; i++) {
 
-            listSubNav += '<li>' + data.values[j][0] + '</li>';
+          var name_ja = data.values[i][0];
+          var name_en = data.values[i][1];
+          var image = data.values[i][2];
+          var position = data.values[i][3];
+          //var position_en = data.values[i][]
+          var keyword = data.values[i][5];
+          //var keyword_en = data.values[i][]
+          var orcid = data.values[i][9];
+          var googleScholar = data.values[i][11];
+          var github = data.values[i][12];
+          var mail = data.values[i][7];
+
+          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + '<a href="' + mail + '" class="btn-mail">Mail</a>' + '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' + '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' + '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
+        }
+      } else if (file_name === 'member-en.html') {
+        $("#memberList").append(listSubNav_en);
+        for (var i = 0; i < data.values.length; i++) {
+
+          var name_ja = data.values[i][0];
+          var name_en = data.values[i][1];
+          var image = data.values[i][2];
+          var position = data.values[i][3];
+          //var position_en = data.values[i][]
+          var keyword_en = data.values[i][6];
+          //var keyword_en = data.values[i][]
+          var orcid = data.values[i][9];
+          var googleScholar = data.values[i][11];
+          var github = data.values[i][12];
+          var mail = data.values[i][7];
+
+          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + '<a href="' + mail + '" class="btn-mail">Mail</a>' + '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' + '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' + '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
+        }
+      }
+      $("#member-list").append(element);
+
+      //担当サービスの実装
+      data_services = data_services[0].values;
+      var member = [];
+      for (var i = 2; i < data_services.length; i++) {
+        member.push(data_services[i][7]);
+      }
+      member = _.rest(member, 2);
+      member = _.uniq(member);
+      member = _.compact(member);
+      var charge = {};
+      // for(key in member){
+      //   charge[key] = member[key]
+      // }
+      member.map(function (data) {
+        for (var i = 2; i < data_services.length; i++) {
+          if (data === data_services[i][7]) {
+            charge[data] += data_services[i][3] + ',';
           }
-          $("#memberList").append(listSubNav);
-
-          for (var i = 0; i < data.values.length; i++) {
-
-            var name_ja = data.values[i][0];
-            var name_en = data.values[i][1];
-            var image = data.values[i][2];
-            var position = data.values[i][3];
-            //var position_en = data.values[i][]
-            var keyword = data.values[i][5];
-            //var keyword_en = data.values[i][]
-            var orcid = data.values[i][8];
-            var googleScholar = data.values[i][10];
-            var github = data.values[i][11];
-            var mail = data.values[i][6];
-
-            element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name">' + name_ja + '<span>' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services">' + "TogoAnnotator,TogoDoc" + '</div></li>' + '<li class="links"><div class="btn-box">' + '<a href="' + mail + '" class="btn-mail">Mail</a>' + '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' + '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' + '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
-          }
-          $("#member-list").append(element);
         }
       });
-    }
-    memberFrontDisplay();
+      $('.name_ja').each(function () {
+        var name = $(this).text();
+        name = name.split(' ');
+        if (charge[name[0]]) {
+          var services = charge[name[0]];
+          services = services + '';
+          services = services.replace('undefined', '');
+          services = services.slice(0, -1);
+          var charge_tag = $(this).parent().siblings('.PIC').find('.member-list__services');
+          $(charge_tag).text(services);
+        } else {
+          console.log('未定義');
+        }
+      });
+    });
   },
-  'access': function access() {
-    location.hash = 'access';
-  },
-  'contact': function contact() {
-    location.hash = 'contact';
-  }
+  'access': function access() {},
+  'contact': function contact() {}
 };
 
 script.addEventListener('load', function () {
