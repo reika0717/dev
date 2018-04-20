@@ -17,6 +17,7 @@ body
 	font-family: 'Muli', sans-serif
 	width: 100%
 	a
+		color: $main-color
 		text-decoration: none
 .page-title
 	color: $main-color
@@ -513,6 +514,7 @@ footer
 		width: 385.5px
 		background-color: $section-bg
 		margin: 6px 0
+		padding: 16px 15px
 		color: $text-color
 		h4
 			font-size: 14px
@@ -611,48 +613,6 @@ footer
 
 		& > h4
 			padding-top: 83px
-		table.matrix
-			border: solid 0.25px #ddd
-			margin-top: 19px
-			thead
-				th
-					font-size: 13px
-					text-align: center
-					&.left-border
-						border-left: dashed 0.5px #ddd
-			tbody
-				border-top: solid 0.25px #ddd
-				tr 
-					background-color: rgba(232, 237, 237, 0.8)
-					&:nth-of-type(2n+1)
-						background-color: white
-				th
-					font-size: 13px
-					text-aline: left
-					padding-right: 22px
-					padding-left: 14px
-				td
-					padding-right: 10px
-					line-height: 1.8
-					&.left-border
-						border-left: dashed 0.5px #ddd
-						padding-left: 10px
-					a
-						vertical-align: middle
-						color: $main-color
-						font-size: 11px
-						border: solid 0.5px $main-color
-						border-radius: 10px	
-						padding: 2px 4px
-						background-color: #fff
-						&:before
-							content: ""
-							background: url(../img/icon_pdf.svg) no-repeat
-							display: inline-block
-							width: 9px
-							height: 10px
-							margin: 0 3px
-							vertical-align: middle
 	article.article__section__wrapper
 		width: 782px
 		padding: 16px 15px
@@ -747,6 +707,50 @@ footer
 		.history_node
 			width: 10px
 			height: 10px
+/**table.matrix:about&accessで使用**/
+table.matrix
+	border: solid 0.25px #ddd
+	margin-top: 19px
+	thead
+		th
+			font-size: 13px
+			text-align: center
+			&.left-border
+				border-left: dashed 0.5px #ddd
+	tbody
+		border-top: solid 0.25px #ddd
+		tr 
+			background-color: rgba(232, 237, 237, 0.8)
+			&:nth-of-type(2n+1)
+				background-color: white
+		th
+			font-size: 13px
+			text-aline: left
+			padding-right: 22px
+			padding-left: 14px
+		td
+			padding-right: 10px
+			line-height: 2.1
+			&.left-border
+				border-left: dashed 0.5px #ddd
+				padding-left: 10px
+			a
+				vertical-align: middle
+				color: $main-color
+				font-size: 11px
+				border: solid 0.5px $main-color
+				border-radius: 13px	
+				padding: 4px 6px
+				font-weight: 600
+				background-color: #fff
+				&:before
+					content: ""
+					background: url(../img/icon_pdf.svg) no-repeat
+					display: inline-block
+					width: 11px
+					height: 11px
+					margin: 0 2px 1px 0
+					vertical-align: middle
 
 /* event */
 .main__contents-event
@@ -771,6 +775,7 @@ footer
 		font-weight: 700
 		margin-bottom: 3px
 .tag_element
+	background-color: rgba(255, 255, 255, 0)
 	&:before
 		content: ""
 		display: inline-block
@@ -838,6 +843,7 @@ footer
 	//padding-top: 15px
 .sub-nav-con__services
 	line-height: 19px
+	color: $text-color
 .wrapper-type-box
 	display: flex
 	flex-wrap: wrap
@@ -936,47 +942,6 @@ footer
 					&.db
 						&:before
 							background-color: #48CFBA
-		&.contener-type-box__member
-			.repos_image
-				position: absolute
-				height: 120px
-				width: 227px
-				left: 0
-				right: 0
-				top: 0
-				border-top: solid 1px #ccc
-				border-left: solid 1px #ccc
-				border-right: solid 1px #ccc
-				background-color: #fff
-				img
-					width: 90px
-					height: 90px
-					border-radius: 45px
-					object-fit: initial
-			.repos_name
-				position: absolute
-				margin: auto
-				left: 0
-				right: 0
-				top: 132px
-				height: 147px
-				width: 192px
-				color: $main-color
-				.name
-					font-size: 14px
-					font-weight: 800
-					&.en
-						font-size: 12px
-						font-weight: normal
-						margin-top: -6px
-				span.position
-					&:before
-						content: "/"
-						padding: 0 5px
-						display: inline-block
-						font-size: 14px
-				.keyword
-					font-size: 10px
 		h4
 			font-size: 14px
 			font-weight: 700
@@ -998,15 +963,18 @@ footer
 					height: 73px
 			ul
 				//float: right
-				line-height: 1.8
+				line-height: 1.6
 				font-size: 12px
 				padding-left: 91px
 				color: $text-color
 				li
 					&.position
 						font-size: 10px
+						line-height: 0.5
 					&.repos_name
 						font-size: 15px
+						font-weight: bold
+						padding-bottom: 3px
 						span
 							font-size: 12px
 							&:before
@@ -1014,16 +982,20 @@ footer
 								font-size: 16px
 								padding: 0 3px
 					&.keyword
+						line-height: 1.4
 					&.PIC
 						.member-list__services
 							display: inline-block
 					&.links
 						.btn-box
+							padding-top: 3px
 							a
 								padding-right: 20px
 								position: relative
 								padding-left: 17px
 								color: $text-color
+								font-size: 10px
+								font-weight: 600
 								&.btn-mail
 									&:before
 										content: url(../img/icon_mail.svg)
@@ -1127,7 +1099,7 @@ footer
 							padding-right: 9px
 						&:nth-of-type(even)
 							background-color: $table-bg
-	/* achivement ***/
+/* achivement ***/
 
 /*** access */
 .main__content-title__access
@@ -1135,10 +1107,97 @@ footer
 	align-items: center
 	justify-content: space-between
 .section-wrapper__access
-	padding-bottom: 70px
+	padding-bottom: 40px
 	p 
 		font-size: 14px
-		color: $main-color
+		line-height: 1.8
+		color: $text-color
+	&.display
+		display: inline-block
+		.sub__content-title
+			font-size: 15px
+		.access-subnav__info
+			display: table
+			font-size: 12px
+			&:before
+				content: "・"
+				display: table-cell
+				padding-right: 4px
+		.access-subnav__transition
+			margin-top: -5px
+
+.align-center
+	width: 720px
+	text-align: center		
+table.terminal-info
+	width: 720px
+	border: solid 0.25px #ddd
+	margin-top: 10px
+	font-size: 12px
+	thead
+		th
+			line-height: 2
+			font-size: 13px
+			text-align: center
+			&.left-border
+				border-left: dashed 0.5px #ddd
+	tbody
+		border-top: solid 0.25px #ddd
+		tr
+			background-color: rgba(232, 237, 237, 0.8)
+			&:nth-of-type(2n+1)
+				background-color: white
+		th
+			font-size: 13px
+			text-aline: left
+			padding-right: 22px
+			padding-left: 14px
+		td, td > p
+			//padding-right: 5px//10px
+			line-height: 2.9
+			font-weight: 600
+			color: #525252
+			font-size: 12px
+			&.left-border
+				border-left: dashed 0.5px #ddd
+				//padding-left: 5px//10px
+			a
+				vertical-align: middle
+				color: $main-color
+				font-size: 11px
+				border: solid 0.5px $main-color
+				border-radius: 13px	
+				padding: 3px 6px
+				font-weight: 600
+				background-color: #fff
+				&:before
+					content: ""
+					background: url(../img/icon_pdf.svg) no-repeat
+					display: inline-block
+					width: 11px
+					height: 11px
+					margin: 0 2px 1px 0
+					vertical-align: middle
+		td
+			p
+				line-height: 1.3//柏04柏10のcellで使用
+	&.train
+		td
+			padding: 0 6px
+			width: 300px
+			text-align: center
+	&.bas
+		td
+			padding: 0 10px
+			text-align: center
+	&.fly
+		margin-bottom: 20px
+		td
+			text-align: center
+			padding: 0 6px
+			font-size: 12px
+			letter-spacing: -0.3px
+
 /* access ***/
 
 /*research*/

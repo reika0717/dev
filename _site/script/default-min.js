@@ -183,7 +183,8 @@ var initialize = {
       }, 1000);
     });
   },
-  'research': function research() {},
+  'logotype': function logotype() {},
+  'funding': function funding() {},
   'achievement': function achievement() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
@@ -221,8 +222,13 @@ var initialize = {
         element += '</tbody></table>';
 
         function displayList() {
-          $('.main__content-title').text('研究業績');
-          $(".achievement__wrapper").append(element);
+          if (document.documentElement.lang === "en") {
+            $('.main__content-title').text('Achivement');
+            $(".achievement__wrapper").append(element);
+          } else if (document.documentElement.lang === "ja") {
+            $('.main__content-title').text('研究業績');
+            $(".achievement__wrapper").append(element);
+          }
         }
         displayList();
 
