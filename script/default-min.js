@@ -101,6 +101,7 @@ var initialize = {
       }, 1000);
     });
   },
+  'research': function research() {},
   'logotype': function logotype() {},
   'funding': function funding() {},
   'achievement': function achievement() {

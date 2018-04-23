@@ -102,6 +102,7 @@ var initialize = {
       }, 1000);
     });
   },
+  'research': function() {},
   'logotype': function() {},
   'funding': function() {},
   'achievement': function() {
