@@ -1,20 +1,21 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="en" data-page-type="index">
+<html lang="ja" data-page-type="index">
 <head>
 	<meta charset="UTF-8">
-	<title>DBCLS ｜ ライフサイエンス統合データベースセンター</title>
+	<title>DBCLS ｜ Database Center for Life Science</title>
 	<link rel="stylesheet" href="style/default.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 {% include header_en.html %}
-<div class="description__wrapper">
+<!-- <div class="description__wrapper">
 	<dl class="main__forcused-page__description">
 		<dt class="main__forcused-page__title">All Of gene Expression</dt>
 		<dd class="main__forcused-page__text">トップジャーナルに掲載された日本人を著者とする生命科学分野の論文について、論文の著者自身の執筆による日本語のレビューを、だれでも自由に閲覧・利用できるよう、いち早く公開するサービスです。</dd>
 	</dl>
-</div>
+</div> -->
 <div class="main-image__wrapper">
 	<div class="main-image__contents">
 	</div>
@@ -24,23 +25,26 @@
 		<ul class="news__individual-wrapper">
 			{% for post in site.categories.en limit:5 %}
 				<li class='post__individual'>
-					<div class="post__sub-info">
-						<div class="post-date">
-							{{post.date | date: '%Y. %m. %d'}}
-						</div>
-					  <div class="post-tags">
-							{% include post_meta.html %}
+					<div class="post__date">
+						{{post.date | date: '%Y. %m. %d'}}
+					</div>
+					<div class="post__main post__main-top">
+						<a href="{{post.url | prepend: site.baseurl}}" class="post__title">{{post.title}}</a>
+						{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
+						<p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
+						<div class="post__sub-info">
+						  <div class="post-tags">
+								{% include post_meta.html %}
+							</div>
 						</div>
 					</div>
-					<a href="{{post.url | prepend: site.baseurl}}" class="post__title">{{post.title}}</a>
-					{% assign beginning =  post.content | slice: 0, 150 | strip_html%}
-					<p class='post__desc-beginning'>{{beginning | slice: 0, 50}}…</p>
 				</li>
 			{% endfor %}
 		</ul>
-		<a href="news.html" class="more_btn page_btn">more</a>
-	</div>
+	<a href="news.html" class="more_btn page_btn">more</a>
+</div>
 {% include footer_en.html %}
+
 
 <script src="script/default-min.js"></script>
 </body>

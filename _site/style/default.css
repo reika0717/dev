@@ -3,7 +3,6 @@
 @import url(font-awesome.css);
 @import url(gotham.css);
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
-@import url(sticky-state.css);
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
@@ -79,7 +78,7 @@ body {
     margin-right: 5px;
     background-image: url(../img/icon_more.svg); }
   .page_btn.more_btn {
-    width: 56px;
+    width: 57px;
     cursor: pointer; }
   .page_btn.access_btn {
     width: 72px; }
@@ -121,7 +120,10 @@ body {
     cursor: pointer;
     font-size: 12px;
     opacity: 0.3;
-    border: none; }
+    border: none;
+    text-align: left; }
+    .controls .control .category-double-col {
+      margin-left: 13px; }
     .controls .control:focus {
       outline: 0; }
   .controls .mixitup-control-active {
@@ -144,7 +146,7 @@ body {
   .content__wrapper .sub__navigation {
     padding-top: 156px;
     width: 242px;
-    height: 60vh;
+    height: 90vh;
     color: #004098; }
     .content__wrapper .sub__navigation .sub__navigation-wrapper {
       margin-top: 14px; }
@@ -158,6 +160,11 @@ body {
         .content__wrapper .sub__navigation .sub__navigation-wrapper .sub__navigation-title .sub__navigation-contents {
           font-size: 12px;
           font-weight: 500; }
+        .content__wrapper .sub__navigation .sub__navigation-wrapper .sub__navigation-title .member-en__side {
+          display: block;
+          margin-top: -18px; }
+    .content__wrapper .sub__navigation.service__side-bar {
+      height: 90vh; }
   .content__wrapper .main__contents {
     padding-top: 160px;
     width: 782px; }
@@ -522,7 +529,9 @@ footer {
   margin: 78px auto 0; }
 
 .news__individual-wrapper {
-  margin-bottom: 30px; }
+  display: none;
+  margin-bottom: 30px;
+  position: relative; }
   .news__individual-wrapper li.post__individual {
     padding-bottom: 20px;
     display: -webkit-box;
@@ -654,15 +663,13 @@ footer {
   width: 200px;
   cursor: pointer; }
   .outline-list-category__wrapper .outline-list-category__title {
-    color: #004098;
+    color: #9E9E9E;
     position: relative;
     padding: 6px 0;
     font-size: 16px;
     font-weight: 800; }
-    .outline-list-category__wrapper .outline-list-category__title.off:after {
-      opacity: 0.3; }
-    .outline-list-category__wrapper .outline-list-category__title.on, .outline-list-category__wrapper .outline-list-category__title:hover, .outline-list-category__wrapper .outline-list-category__title:after {
-      opacity: 1.0; }
+    .outline-list-category__wrapper .outline-list-category__title.active, .outline-list-category__wrapper .outline-list-category__title:hover, .outline-list-category__wrapper .outline-list-category__title:after {
+      color: #004098; }
 
 /* about */
 .about-img {
@@ -842,8 +849,6 @@ table.matrix {
 /* event */
 .main__contents-event {
   color: #333333; }
-  .main__contents-event .news__individual-wrapper {
-    padding-bottom: 30px; }
 
 .main__contents-public .public__description {
   color: #333333; }
@@ -936,13 +941,13 @@ table.matrix {
     align-self: self-end; }
     .wrapper-type-box .article__section.contener-type-box {
       position: relative;
-      height: 297px;
-      width: 227px;
+      height: 302px;
+      width: 230px;
       border: solid 0.25px #cccccc; }
       .wrapper-type-box .article__section.contener-type-box .repos_image {
         position: absolute;
         height: 120px;
-        width: 227px;
+        width: 230px;
         left: 0;
         right: 0;
         top: 0;
@@ -972,7 +977,7 @@ table.matrix {
         right: 0;
         top: 130px;
         height: 120px;
-        width: 192px;
+        width: 200px;
         color: #004098; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .btn-box {
           display: -webkit-box;
@@ -984,9 +989,8 @@ table.matrix {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
-          margin-top: 9px;
           position: absolute;
-          bottom: -36px;
+          bottom: -44px;
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
@@ -999,10 +1003,17 @@ table.matrix {
           font-weight: 800; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .keyword {
           font-size: 10px;
-          padding-bottom: 10px;
-          border-bottom: dashed 0.5px #cccccc; }
+          border-bottom: dashed 0.5px #cccccc;
+          height: 62px;
+          margin-bottom: 6px; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .service_category {
-          font-size: 10px; }
+          font-size: 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
           .wrapper-type-box .article__section.contener-type-box .repos_name .service_category:before {
             content: "";
             display: inline-block;
@@ -1012,7 +1023,8 @@ table.matrix {
             -webkit-border-radius: 10px;
             -o-border-radius: 10px;
             -ms-border-radius: 10px;
-            border-radius: 10px; }
+            border-radius: 10px;
+            margin-right: 3px; }
           .wrapper-type-box .article__section.contener-type-box .repos_name .service_category.dna:before {
             background-color: #FFA600; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .service_type {
@@ -1060,9 +1072,9 @@ table.matrix {
       font-size: 15px;
       font-weight: bold;
       padding-bottom: 3px; }
-      .wrapper-type-list .content-wrapper__member .content__member ul li.repos_name span {
+      .wrapper-type-list .content-wrapper__member .content__member ul li.repos_name span.name_en {
         font-size: 12px; }
-        .wrapper-type-list .content-wrapper__member .content__member ul li.repos_name span:before {
+        .wrapper-type-list .content-wrapper__member .content__member ul li.repos_name span.name_en:before {
           content: "/";
           font-size: 16px;
           padding: 0 3px; }
@@ -1199,19 +1211,17 @@ table.matrix {
     font-size: 14px;
     line-height: 1.8;
     color: #333333; }
-  .section-wrapper__access.display {
-    display: inline-block; }
-    .section-wrapper__access.display .sub__content-title {
-      font-size: 15px; }
-    .section-wrapper__access.display .access-subnav__info {
-      display: table;
-      font-size: 12px; }
-      .section-wrapper__access.display .access-subnav__info:before {
-        content: "・";
-        display: table-cell;
-        padding-right: 4px; }
-    .section-wrapper__access.display .access-subnav__transition {
-      margin-top: -5px; }
+  .section-wrapper__access.display .sub__content-title {
+    font-size: 15px; }
+  .section-wrapper__access.display .access-subnav__info {
+    display: table;
+    font-size: 12px; }
+    .section-wrapper__access.display .access-subnav__info:before {
+      content: "・";
+      display: table-cell;
+      padding-right: 4px; }
+  .section-wrapper__access.display .access-subnav__transition {
+    margin-top: -5px; }
 
 .align-center {
   width: 720px;
