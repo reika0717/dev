@@ -458,59 +458,104 @@ var initialize = {
   },
   'member': function member() {
     $.when($.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'), $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')).done(function (data, data_services) {
+      console.log(data);
       var element = "";
       var listSubNav = "";
       var listSubNav_en = "";
       data = data[0];
-      data.values.splice(0, 1);
-
       //file名の取得
       var url = window.location;
       var path = url.href.split('/');
       var file_name = path.pop();
 
-      for (var j = 0; j < data.values.length; j++) {
+      for (var j = 1; j < data.values.length; j++) {
         listSubNav += '<li>' + data.values[j][0] + '</li>';
       }
-      for (var j = 0; j < data.values.length; j++) {
+      for (var j = 1; j < data.values.length; j++) {
         listSubNav_en += '<li>' + data.values[j][1] + '</li>';
       }
+
+      function judgeExist(data, className, linkName) {
+        var elements = '';
+        if (data) {
+          elements = '<a href="' + data + '" class="' + className + '">' + linkName + '</a>';
+        } else {
+          elements = '';
+        }
+        return elements;
+      }
+
+      function getOrder(target) {
+        var order = 0;
+        for (var i = 1; i < data.values.length; i++) {
+          if (data.values[0][i] === target) {
+            order = i;
+          }
+        }
+        return order;
+      }
+
+      var name_ja_order = getOrder('name ja');
+      var name_en_order = getOrder('name en');
+      var image_order = getOrder('画像');
+      var position_order = getOrder('position');
+      var keyword_order = getOrder('keyword');
+      var keyword_en_order = getOrder('keyword-en');
+      var orcid_order = getOrder('ORCID');
+      var googleScholar_order = getOrder('Google Scholar');
+      var github_order = getOrder('github');
+      var mail_order = getOrder('mail');
+      var non_publish_order = getOrder('いずれのIDも掲載しない');
+      console.log(name_ja_order);
+      console.log(name_en_order);
+      console.log(keyword_order);
       if (file_name === 'member.html') {
         $("#memberList").append(listSubNav);
 
-        for (var i = 0; i < data.values.length; i++) {
-
-          var name_ja = data.values[i][0];
-          var name_en = data.values[i][1];
-          var image = data.values[i][2];
-          var position = data.values[i][3];
+        for (var i = 1; i < data.values.length; i++) {
+          var name_ja = data.values[i][name_ja_order];
+          var name_en = data.values[i][name_en_order];
+          var image = data.values[i][image_order];
+          var position = data.values[i][position_order];
           //var position_en = data.values[i][]
-          var keyword = data.values[i][5];
+          var keyword = data.values[i][keyword_order];
           //var keyword_en = data.values[i][]
-          var orcid = data.values[i][9];
-          var googleScholar = data.values[i][11];
-          var github = data.values[i][12];
-          var mail = data.values[i][7];
+          var orcid = data.values[i][orcid_order];
+          var googleScholar = data.values[i][googleScholar_order];
+          var github = data.values[i][github_order];
+          var mail = data.values[i][mail_order];
+          var non_publish = data.values[i][non_publish_order];
+          var link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
+          if (non_publish === 'Yes') {
+            link_section = '';
+            console.log('掲載しません');
+          }
 
-          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + '<a href="' + mail + '" class="btn-mail">Mail</a>' + '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' + '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' + '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
+          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
         }
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
-        for (var i = 0; i < data.values.length; i++) {
-
-          var name_ja = data.values[i][0];
-          var name_en = data.values[i][1];
-          var image = data.values[i][2];
-          var position = data.values[i][3];
+        for (var i = 1; i < data.values.length; i++) {
+          var name_ja = data.values[i][name_ja_order];
+          var name_en = data.values[i][name_en_order];
+          var image = data.values[i][image_order];
+          var position = data.values[i][position_order];
           //var position_en = data.values[i][]
-          var keyword_en = data.values[i][6];
-          //var keyword_en = data.values[i][]
-          var orcid = data.values[i][9];
-          var googleScholar = data.values[i][11];
-          var github = data.values[i][12];
-          var mail = data.values[i][7];
+          var keyword = data.values[i][keyword_order];
+          var keyword_en = data.values[i][keyword_en_order];
+          var orcid = data.values[i][orcid_order];
+          var googleScholar = data.values[i][googleScholar_order];
+          var github = data.values[i][github_order];
+          var mail = data.values[i][mail_order];
+          var non_publish = data.values[i][non_publish_order];
+          var link_section = '';
+          link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
+          if (non_publish === 'Yes') {
+            link_section = '';
+            console.log('掲載しません');
+          }
 
-          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + '<a href="' + mail + '" class="btn-mail">Mail</a>' + '<a href="https://github.com/' + github + '" class="btn-github">GitHub</a>' + '<a href="https://orcid.org/' + orcid + '" class="btn-orcid">ORCID</a>' + '<a href="' + googleScholar + '" class="btn-gs">Google Scholar</a></div></li></ul></div>';
+          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
         }
       }
       $("#member-list").append(element);
@@ -546,7 +591,8 @@ var initialize = {
           var charge_tag = $(this).parent().siblings('.PIC').find('.member-list__services');
           $(charge_tag).text(services);
         } else {
-          console.log('未定義');
+          var charge_tag = $(this).parent().siblings('.PIC');
+          $(charge_tag).remove();
         }
       });
     });
