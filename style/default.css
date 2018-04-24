@@ -371,9 +371,11 @@ footer {
           font-size: 12px;
           font-weight: bold;
           padding-bottom: 8px; }
-          footer .footer__wrapper .footer__wrapper__contents .footer__sitemap ol li ul li {
-            font-weight: normal;
-            padding: 0; }
+          footer .footer__wrapper .footer__wrapper__contents .footer__sitemap ol li ul {
+            padding-top: 3px; }
+            footer .footer__wrapper .footer__wrapper__contents .footer__sitemap ol li ul li {
+              font-weight: normal;
+              padding: 0; }
       footer .footer__wrapper .footer__wrapper__contents .footer__sitemap a {
         color: #444; }
       footer .footer__wrapper .footer__wrapper__contents .footer__links .links__wrapper .individual_link a {
@@ -390,7 +392,6 @@ footer {
           display: block;
           margin: 0 auto; }
         footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__organism .footer__organism-text {
-          color: #004098;
           text-align: center;
           margin-top: 15px;
           margin-bottom: 20px; }
@@ -420,8 +421,7 @@ footer {
             display: flex;
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-            justify-content: space-between;
-            margin-top: 15px; }
+            justify-content: space-between; }
             footer .footer__wrapper .footer__wrapper__contents .footer__info .footer__address .address__list li {
               padding-bottom: 21px;
               font-size: 12px;
