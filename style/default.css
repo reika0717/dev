@@ -1223,9 +1223,9 @@ table.matrix {
   .section-wrapper__access.display .access-subnav__transition {
     margin-top: -5px; }
 
-.align-center {
+.accessmap {
   width: 720px;
-  text-align: center; }
+  padding: 10px 0; }
 
 table.terminal-info {
   width: 720px;
