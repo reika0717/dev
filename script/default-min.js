@@ -11,7 +11,7 @@ var tags = {
 };
 
 script.setAttribute('src', 'https://code.jquery.com/jquery-3.2.1.min.js');
-script_sticky.setAttribute('src', 'script/stickyfill.min.js');
+script_sticky.setAttribute('src', '/dbcls-test/script/stickyfill.min.js');
 document.head.appendChild(script);
 document.head.appendChild(script_sticky);
 var initialize = {
@@ -87,9 +87,23 @@ var initialize = {
     // });
   },
   'post': function post() {
-    tags.map(function (data) {
+    var url = window.location;
+    var path = url.href.split('/');
+    var file_name = path.pop();
+    var tags_key = Object.keys(tags);
+    tags_key.map(function (data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >');
     });
+
+    //タグ名を日本語に変換
+    if (path.indexOf("ja") >= 0) {
+      $('.tag_name').each(function () {
+        var tag_en = $(this).text();
+        tag_en = $.trim(tag_en);
+        var tag_ja = tags[tag_en];
+        $(this).text(tag_ja);
+      });
+    }
   },
   'about': function about() {
     $('.lazy-mail').each(function () {
@@ -167,7 +181,7 @@ var initialize = {
           var results = "";
 
           for (var i = 0; i < service_array.length; i++) {
-            results += '<div class="achievement__column__wrapper">' + '<h4 class="achievement__column__title">' + service_array[i][4] + '</h4>' + '<p class="achievement__column__pubmed"><span class="achievement__column__title-small">Pubmed: </span>https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '</p>' + '<p class="achievement__column__DOI"><span class="achievement__column__title-small">DOI: </span>' + service_array[i][3] + '</p>' + '<div class="achievement__column__wrapper-small">' + '<i class="fa fa-user" aria-hidden="true"></i>' + '<p>' + service_array[i][5] + '</p>' + '<i class="fa fa-clock-o" aria-hidden="true"></i>' + '<p>' + service_array[i][7] + '</p>' + '<i class="fa fa-book" aria-hidden="true"></i>' + '<p>' + service_array[i][6] + '</p>' + '<i class="fa fa-quote-right" aria-hidden="true"></i>' + '<p>' + service_array[i][1] + '</p>' + '</div>' + '</div>';
+            results += '<div class="achievement__column__wrapper">' + '<h4 class="achievement__column__title">' + service_array[i][4] + '</h4>' + '<p class="achievement__column__pubmed"><span class="achievement__column__title-small">Pubmed: </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '">https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '</a></p>' + '<p class="achievement__column__DOI"><span class="achievement__column__title-small">DOI: </span><a href="' + service_array[i][3] + '">' + service_array[i][3] + '</a></p>' + '<div class="achievement__column__wrapper-small">' + '<i class="fa fa-user" aria-hidden="true"></i>' + '<p>' + service_array[i][5] + '</p>' + '<i class="fa fa-clock-o" aria-hidden="true"></i>' + '<p>' + service_array[i][7] + '</p>' + '<i class="fa fa-book" aria-hidden="true"></i>' + '<p>' + service_array[i][6] + '</p>' + '<i class="fa fa-quote-right" aria-hidden="true"></i>' + '<p>' + service_array[i][1] + '</p>' + '</div>' + '</div>';
           }
           $('.achievement__wrapper').append(results);
         }
@@ -398,6 +412,7 @@ var initialize = {
         var service_name_order = getOrder('サービス名称');
         var explanation_ja_order = getOrder('explanation_ja');
         var explanation_en_order = getOrder('explanation_en');
+        var event_img_order = getOrder('Event画像');
         var explanation_order = 0;
         var url_order = getOrder('URL');
         var url = window.location;
@@ -414,7 +429,8 @@ var initialize = {
 
         var elements = '';
         for (var i = 0; i < events_array.length; i++) {
-          elements += '<article class="article__section event__section-ja">' + '<h4>' + events_array[i][service_name_order] + '</h4>' + '<p>' + events_array[i][explanation_order] + '</p>' + '<a href = "' + events_array[i][url_order] + '" class = "page_btn more_btn" > more </a>' + '</article>';
+          console.log(events_array[i][event_img_order]);
+          elements += '<article class="article__section event__section-ja">' + '<img src="/dbcls-test/img/event_assets/' + events_array[i][event_img_order] + '">' + '<div class="article__section__inner">' + '<h4>' + events_array[i][service_name_order] + '</h4>' + '<p>' + events_array[i][explanation_order] + '</p>' + '<a href = "' + events_array[i][url_order] + '" class = "page_btn more_btn" > more </a>' + '</div>' + '</article>';
         }
         $('.section-wrapper').append(elements);
       }
@@ -456,7 +472,7 @@ var initialize = {
     });
     /***左サイドバーの動作ここまで***/
   },
-  'member': function member() {
+  'members': function members() {
     $.when($.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'), $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')).done(function (data, data_services) {
       console.log(data);
       var element = "";
@@ -528,7 +544,6 @@ var initialize = {
           var link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
           if (non_publish === 'Yes') {
             link_section = '';
-            console.log('掲載しません');
           }
 
           element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
@@ -552,7 +567,6 @@ var initialize = {
           link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
           if (non_publish === 'Yes') {
             link_section = '';
-            console.log('掲載しません');
           }
 
           element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
@@ -588,6 +602,7 @@ var initialize = {
           services = services + '';
           services = services.replace('undefined', '');
           services = services.slice(0, -1);
+          services = services.replace(/,/g, ', ');
           var charge_tag = $(this).parent().siblings('.PIC').find('.member-list__services');
           $(charge_tag).text(services);
         } else {
@@ -646,18 +661,33 @@ script.addEventListener('load', function () {
     console.log(pageType);
     initialize[pageType]();
 
+    var current_class_name = '.' + pageType;
+    $('.header__nav__contents' + current_class_name).find('a').css('border-bottom', '2px solid #004098');
+
     //sticky IE対応
     var elements = document.querySelectorAll('.sticky');
     Stickyfill.add(elements);
 
     //header言語切り替え
+    var url = window.location;
+    var path = url.href;
+
     $('.lang-en span').on('click', function () {
-      var link = pageType + '-en.html';
-      window.location.href = link;
+      if (path.match(/\/ja\/\d+\/\d+\/\d+\//)) {
+        window.location.href = path.replace('/ja/', '/en/');
+      } else {
+        var link = pageType + '-en.html';
+        window.location.href = link;
+      }
     });
+
     $('.lang-ja span').on('click', function () {
-      var link = pageType + '.html';
-      window.location.href = link;
+      if (path.match(/\/en\/\d+\/\d+\/\d+\//)) {
+        window.location.href = path.replace('/en/', '/ja/');
+      } else {
+        var link = pageType + '.html';
+        window.location.href = link;
+      }
     });
   });
 });

@@ -169,7 +169,7 @@ body {
     width: 782px; }
     .content__wrapper .main__contents .main__content-title__wrapper {
       border-bottom: 1px solid #9E9E9E;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
       position: relative;
       width: 782px; }
       .content__wrapper .main__contents .main__content-title__wrapper .main__content-title {
@@ -604,17 +604,17 @@ footer {
     width: 385.5px;
     background-color: #E8EDED;
     margin: 6px 0;
-    padding: 16px 15px;
     color: #333333; }
     .section-wrapper .article__section h4 {
       font-size: 14px;
       font-weight: 700;
-      margin-bottom: 8px;
-      color: #004098; }
+      margin-bottom: 8px; }
     .section-wrapper .article__section p {
       font-size: 12px;
       line-height: 1.8em;
       color: #333333; }
+    .section-wrapper .article__section .article__section__inner {
+      padding: 8px 15px 12px; }
     .section-wrapper .article__section .symposium__list,
     .section-wrapper .article__section .biohackason__list {
       margin-top: 15px; }
@@ -1072,8 +1072,10 @@ table.matrix {
           padding: 0 3px; }
     .wrapper-type-list .content-wrapper__member .content__member ul li.keyword {
       line-height: 1.4; }
-    .wrapper-type-list .content-wrapper__member .content__member ul li.PIC .member-list__services {
-      display: inline-block; }
+    .wrapper-type-list .content-wrapper__member .content__member ul li.PIC {
+      margin-top: 4px; }
+      .wrapper-type-list .content-wrapper__member .content__member ul li.PIC .member-list__services {
+        display: inline-block; }
     .wrapper-type-list .content-wrapper__member .content__member ul li.links .btn-box {
       padding-top: 3px; }
       .wrapper-type-list .content-wrapper__member .content__member ul li.links .btn-box a {
@@ -1143,7 +1145,8 @@ table.matrix {
       margin-bottom: 3px; }
     .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__pubmed,
     .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__DOI {
-      font-size: 12px; }
+      font-size: 12px;
+      color: black; }
       .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__pubmed .achievement__column__title-small,
       .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper .achievement__column__DOI .achievement__column__title-small {
         font-family: 'GothamPro-Bold';
@@ -1163,11 +1166,11 @@ table.matrix {
         font-size: 12px;
         margin-right: 20px; }
     .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper:nth-of-type(1) {
-      margin-top: -29px; }
+      margin-top: -19px; }
     .content__wrapper .main__contents .achievement__wrapper .achievement__column__wrapper:nth-of-type(even) {
       background-color: #E8EDED; }
   .content__wrapper .main__contents .achievement__wrapper .papers_citing_table {
-    margin-top: -28px;
+    margin-top: -11px;
     width: 100%;
     font-family: 'GothamPro-Light';
     font-weight: 700;
