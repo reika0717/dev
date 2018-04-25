@@ -343,7 +343,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][23] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             } else if (file_name === 'services-en.html') {
               element += '<article class="article__section contener-type-box mix ' + tagName + '">' +
                 '<div id="repos_name' + i + '" class="repos_name">' +
@@ -451,7 +451,7 @@ var initialize = {
         var service_name_order = getOrder('サービス名称')
         var explanation_ja_order = getOrder('explanation_ja')
         var explanation_en_order = getOrder('explanation_en')
-        var event_img_order = getOrder('Event画像')
+        var event_img_order = getOrder('画像')
         var explanation_order = 0
         var url_order = getOrder('URL')
         var url = window.location;
