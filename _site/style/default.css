@@ -942,44 +942,31 @@ table.matrix {
         align-self: self-end; }
     .wrapper-type-box .article__section.contener-type-box {
       position: relative;
-      height: 302px;
-      width: 230px;
+      height: 314px;
+      width: 262px;
       border: solid 0.25px #cccccc; }
       .wrapper-type-box .article__section.contener-type-box .repos_image {
-        position: absolute;
-        height: 120px;
-        width: 230px;
-        left: 0;
-        right: 0;
-        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 125px;
         border-top: solid 1px #ccc;
         border-left: solid 1px #ccc;
         border-right: solid 1px #ccc;
         background-color: #fff; }
-        .wrapper-type-box .article__section.contener-type-box .repos_image img {
-          position: absolute;
-          margin: auto;
-          height: 119px;
-          width: 227px;
-          -o-object-fit: scale-down;
-             object-fit: scale-down;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0; }
-          .wrapper-type-box .article__section.contener-type-box .repos_image img.object-fit-img {
-            -o-object-fit: scale-down;
-               object-fit: scale-down;
-            font-family: 'object-fit: scale-down;'; }
       .wrapper-type-box .article__section.contener-type-box .repos_name {
         position: absolute;
-        margin: auto;
         left: 0;
         right: 0;
         top: 130px;
         height: 120px;
-        width: 200px;
-        color: #004098; }
+        padding: 0 19px; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .btn-box {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -991,7 +978,7 @@ table.matrix {
               -ms-flex-align: center;
                   align-items: center;
           position: absolute;
-          bottom: -44px;
+          bottom: -52px;
           left: 50%;
           -webkit-transform: translateX(-50%);
                   transform: translateX(-50%); }
@@ -999,7 +986,7 @@ table.matrix {
             margin-left: 5px; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .name {
           padding-bottom: 5px;
-          font-size: 12px;
+          font-size: 15px;
           font-weight: 800; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .keyword {
           font-size: 10px;

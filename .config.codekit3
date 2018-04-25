@@ -6018,9 +6018,20 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_site\/img\/service_assets\/Allie-RDF.png": {
+		"ft": 32768,
+		"iS": 6055,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/Allie-RDF.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/_site\/img\/service_assets\/Allie.png": {
 		"ft": 32768,
-		"iS": 2629,
+		"iS": 6055,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/Allie.png",
 		"oF": 0,
@@ -6031,7 +6042,7 @@
 		},
 	"\/_site\/img\/service_assets\/AOE.png": {
 		"ft": 32768,
-		"iS": 10806,
+		"iS": 7318,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/AOE.png",
 		"oF": 0,
@@ -6062,11 +6073,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/colil.png": {
+	"\/_site\/img\/service_assets\/Colil.png": {
 		"ft": 32768,
-		"iS": 53657,
+		"iS": 4351,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/colil.png",
+		"oAP": "\/_site\/img\/service_assets\/Colil.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6075,7 +6086,7 @@
 		},
 	"\/_site\/img\/service_assets\/CRISPRdirect.png": {
 		"ft": 32768,
-		"iS": 29563,
+		"iS": 6030,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/CRISPRdirect.png",
 		"oF": 0,
@@ -6086,7 +6097,7 @@
 		},
 	"\/_site\/img\/service_assets\/D2RQ Mapper.png": {
 		"ft": 32768,
-		"iS": 2385,
+		"iS": 2299,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/D2RQ Mapper.png",
 		"oF": 0,
@@ -6097,7 +6108,7 @@
 		},
 	"\/_site\/img\/service_assets\/d3sparql.js.png": {
 		"ft": 32768,
-		"iS": 8294,
+		"iS": 4455,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/d3sparql.js.png",
 		"oF": 0,
@@ -6108,7 +6119,7 @@
 		},
 	"\/_site\/img\/service_assets\/DBCLS OpenID.png": {
 		"ft": 32768,
-		"iS": 8339,
+		"iS": 3997,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/DBCLS OpenID.png",
 		"oF": 0,
@@ -6119,7 +6130,7 @@
 		},
 	"\/_site\/img\/service_assets\/DBCLS SRA.png": {
 		"ft": 32768,
-		"iS": 2499,
+		"iS": 4935,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/DBCLS SRA.png",
 		"oF": 0,
@@ -6139,11 +6150,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/gendoo.png": {
+	"\/_site\/img\/service_assets\/Gendoo.png": {
 		"ft": 32768,
-		"iS": 7210,
+		"iS": 5568,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/gendoo.png",
+		"oAP": "\/_site\/img\/service_assets\/Gendoo.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6152,7 +6163,7 @@
 		},
 	"\/_site\/img\/service_assets\/GGGenome.png": {
 		"ft": 32768,
-		"iS": 19791,
+		"iS": 13783,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/GGGenome.png",
 		"oF": 0,
@@ -6163,7 +6174,7 @@
 		},
 	"\/_site\/img\/service_assets\/GGRNA.png": {
 		"ft": 32768,
-		"iS": 15651,
+		"iS": 15554,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/GGRNA.png",
 		"oF": 0,
@@ -6172,11 +6183,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/inmexes.png": {
+	"\/_site\/img\/service_assets\/inMeXes.png": {
 		"ft": 32768,
-		"iS": 12536,
+		"iS": 16017,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/inmexes.png",
+		"oAP": "\/_site\/img\/service_assets\/inMeXes.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6194,6 +6205,57 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_site\/img\/service_assets\/LifeScienceQA.png": {
+		"ft": 32768,
+		"iS": 3969,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/LifeScienceQA.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/LODQA.png": {
+		"ft": 32768,
+		"iS": 6674,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/LODQA.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/logo-list.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/logo-list.ai",
+		"oF": 0
+		},
+	"\/_site\/img\/service_assets\/LSD RDF Data Portal.png": {
+		"ft": 32768,
+		"iS": 1946,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/LSD RDF Data Portal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/NBDC RDF Portal.png": {
+		"ft": 32768,
+		"iS": 5621,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/NBDC RDF Portal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/_site\/img\/service_assets\/no-image.png": {
 		"ft": 32768,
 		"iS": 6027,
@@ -6205,11 +6267,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/ontofinder.png": {
+	"\/_site\/img\/service_assets\/OntoFinder.png": {
 		"ft": 32768,
-		"iS": 23957,
+		"iS": 3037,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/ontofinder.png",
+		"oAP": "\/_site\/img\/service_assets\/OntoFinder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6238,11 +6300,33 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/_site\/img\/service_assets\/PubAnnotation.png": {
+		"ft": 32768,
+		"iS": 3266,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/PubAnnotation.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/_site\/img\/service_assets\/PubCaseFinder.png": {
 		"ft": 32768,
-		"iS": 232731,
+		"iS": 3616,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/PubCaseFinder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/PubDictionaries.png": {
+		"ft": 32768,
+		"iS": 2356,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/PubDictionaries.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6259,7 +6343,7 @@
 		},
 	"\/_site\/img\/service_assets\/RefEx.png": {
 		"ft": 32768,
-		"iS": 7766,
+		"iS": 5193,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/RefEx.png",
 		"oF": 0,
@@ -6268,11 +6352,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/spang.png": {
+	"\/_site\/img\/service_assets\/SPANG.png": {
 		"ft": 32768,
-		"iS": 26928,
+		"iS": 6416,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/spang.png",
+		"oAP": "\/_site\/img\/service_assets\/SPANG.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/SPARQL Builder.png": {
+		"ft": 32768,
+		"iS": 3833,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/SPARQL Builder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6281,9 +6376,31 @@
 		},
 	"\/_site\/img\/service_assets\/SPARQL support.png": {
 		"ft": 32768,
-		"iS": 8329,
+		"iS": 5346,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/SPARQL support.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/SPARQL-proxy.png": {
+		"ft": 32768,
+		"iS": 2575,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/SPARQL-proxy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/SPARQList.png": {
+		"ft": 32768,
+		"iS": 2507,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/SPARQList.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6346,7 +6463,7 @@
 		},
 	"\/_site\/img\/service_assets\/TogoAnnotator.png": {
 		"ft": 32768,
-		"iS": 21021,
+		"iS": 4170,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/TogoAnnotator.png",
 		"oF": 0,
@@ -6355,11 +6472,33 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/togodoc.png": {
+	"\/_site\/img\/service_assets\/TogoDB.png": {
 		"ft": 32768,
-		"iS": 426241,
+		"iS": 2979,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/togodoc.png",
+		"oAP": "\/_site\/img\/service_assets\/TogoDB.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/TogoDoc.png": {
+		"ft": 32768,
+		"iS": 3795,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/TogoDoc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/TogoGenome.png": {
+		"ft": 32768,
+		"iS": 1590,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/TogoGenome.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6377,11 +6516,77 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/_site\/img\/service_assets\/Umaka-Yummy.png": {
+	"\/_site\/img\/service_assets\/TogoStanza.png": {
 		"ft": 32768,
-		"iS": 3085,
+		"iS": 1646,
 		"oA": 0,
-		"oAP": "\/_site\/img\/service_assets\/Umaka-Yummy.png",
+		"oAP": "\/_site\/img\/service_assets\/TogoStanza.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/TogoTable.png": {
+		"ft": 32768,
+		"iS": 1499,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/TogoTable.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/TogoWS.png": {
+		"ft": 32768,
+		"iS": 2742,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/TogoWS.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/Umaka-Yummy Data .png": {
+		"ft": 32768,
+		"iS": 7536,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/Umaka-Yummy Data .png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/Umaka-Yummy Data.png": {
+		"ft": 32768,
+		"iS": 7536,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/Umaka-Yummy Data.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/Umaka-Yummy Viewer.png": {
+		"ft": 32768,
+		"iS": 3988,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/Umaka-Yummy Viewer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/_site\/img\/service_assets\/アートボード 1.png": {
+		"ft": 32768,
+		"iS": 3184,
+		"oA": 0,
+		"oAP": "\/_site\/img\/service_assets\/アートボード 1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -6390,7 +6595,7 @@
 		},
 	"\/_site\/img\/service_assets\/新着論文レビュー.png": {
 		"ft": 32768,
-		"iS": 77746,
+		"iS": 6136,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/新着論文レビュー.png",
 		"oF": 0,
@@ -6401,7 +6606,7 @@
 		},
 	"\/_site\/img\/service_assets\/統合TV.png": {
 		"ft": 32768,
-		"iS": 4881,
+		"iS": 5361,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/統合TV.png",
 		"oF": 0,
@@ -6412,7 +6617,7 @@
 		},
 	"\/_site\/img\/service_assets\/領域融合レビュー.png": {
 		"ft": 32768,
-		"iS": 82574,
+		"iS": 6287,
 		"oA": 0,
 		"oAP": "\/_site\/img\/service_assets\/領域融合レビュー.png",
 		"oF": 0,
@@ -9953,9 +10158,20 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/img\/service_assets\/Allie-RDF.png": {
+		"ft": 32768,
+		"iS": 6055,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/Allie-RDF.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/Allie.png": {
 		"ft": 32768,
-		"iS": 2629,
+		"iS": 6055,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/Allie.png",
 		"oF": 0,
@@ -9966,7 +10182,7 @@
 		},
 	"\/img\/service_assets\/AOE.png": {
 		"ft": 32768,
-		"iS": 10806,
+		"iS": 7318,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/AOE.png",
 		"oF": 0,
@@ -9997,11 +10213,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/colil.png": {
+	"\/img\/service_assets\/Colil.png": {
 		"ft": 32768,
-		"iS": 53657,
+		"iS": 4351,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/colil.png",
+		"oAP": "\/img\/service_assets\/Colil.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -10010,7 +10226,7 @@
 		},
 	"\/img\/service_assets\/CRISPRdirect.png": {
 		"ft": 32768,
-		"iS": 29563,
+		"iS": 6030,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/CRISPRdirect.png",
 		"oF": 0,
@@ -10021,7 +10237,7 @@
 		},
 	"\/img\/service_assets\/D2RQ Mapper.png": {
 		"ft": 32768,
-		"iS": 2385,
+		"iS": 2299,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/D2RQ Mapper.png",
 		"oF": 0,
@@ -10032,7 +10248,7 @@
 		},
 	"\/img\/service_assets\/d3sparql.js.png": {
 		"ft": 32768,
-		"iS": 8294,
+		"iS": 4455,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/d3sparql.js.png",
 		"oF": 0,
@@ -10043,7 +10259,7 @@
 		},
 	"\/img\/service_assets\/DBCLS OpenID.png": {
 		"ft": 32768,
-		"iS": 8339,
+		"iS": 3997,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/DBCLS OpenID.png",
 		"oF": 0,
@@ -10054,7 +10270,7 @@
 		},
 	"\/img\/service_assets\/DBCLS SRA.png": {
 		"ft": 32768,
-		"iS": 2499,
+		"iS": 4935,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/DBCLS SRA.png",
 		"oF": 0,
@@ -10074,11 +10290,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/gendoo.png": {
+	"\/img\/service_assets\/Gendoo.png": {
 		"ft": 32768,
-		"iS": 7210,
+		"iS": 5568,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/gendoo.png",
+		"oAP": "\/img\/service_assets\/Gendoo.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -10087,7 +10303,7 @@
 		},
 	"\/img\/service_assets\/GGGenome.png": {
 		"ft": 32768,
-		"iS": 19791,
+		"iS": 13783,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/GGGenome.png",
 		"oF": 0,
@@ -10098,7 +10314,7 @@
 		},
 	"\/img\/service_assets\/GGRNA.png": {
 		"ft": 32768,
-		"iS": 15651,
+		"iS": 15554,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/GGRNA.png",
 		"oF": 0,
@@ -10107,11 +10323,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/inmexes.png": {
+	"\/img\/service_assets\/inMeXes.png": {
 		"ft": 32768,
-		"iS": 12536,
+		"iS": 16017,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/inmexes.png",
+		"oAP": "\/img\/service_assets\/inMeXes.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -10129,6 +10345,57 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/service_assets\/LifeScienceQA.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/LifeScienceQA.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/LODQA.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/LODQA.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/logo-list.ai": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/logo-list.ai",
+		"oF": 0
+		},
+	"\/img\/service_assets\/LSD RDF Data Portal.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/LSD RDF Data Portal.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/NBDC RDF Portal.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/NBDC RDF Portal.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/no-image.png": {
 		"ft": 32768,
 		"iS": 6027,
@@ -10140,11 +10407,11 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/ontofinder.png": {
+	"\/img\/service_assets\/OntoFinder.png": {
 		"ft": 32768,
-		"iS": 23957,
+		"iS": 3037,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/ontofinder.png",
+		"oAP": "\/img\/service_assets\/OntoFinder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -10173,14 +10440,36 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/service_assets\/PubAnnotation.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/PubAnnotation.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/PubCaseFinder.png": {
 		"ft": 32768,
-		"iS": 232731,
+		"iS": 3616,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/PubCaseFinder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/PubDictionaries.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/PubDictionaries.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -10194,7 +10483,7 @@
 		},
 	"\/img\/service_assets\/RefEx.png": {
 		"ft": 32768,
-		"iS": 7766,
+		"iS": 5193,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/RefEx.png",
 		"oF": 0,
@@ -10203,25 +10492,58 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/spang.png": {
+	"\/img\/service_assets\/SPANG.png": {
 		"ft": 32768,
-		"iS": 26928,
+		"iS": 6416,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/spang.png",
+		"oAP": "\/img\/service_assets\/SPANG.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/service_assets\/SPARQL Builder.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/SPARQL Builder.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/SPARQL support.png": {
 		"ft": 32768,
-		"iS": 8329,
+		"iS": 5346,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/SPARQL support.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/SPARQL-proxy.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/SPARQL-proxy.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/SPARQList.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/SPARQList.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -10281,7 +10603,7 @@
 		},
 	"\/img\/service_assets\/TogoAnnotator.png": {
 		"ft": 32768,
-		"iS": 21021,
+		"iS": 4170,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/TogoAnnotator.png",
 		"oF": 0,
@@ -10290,14 +10612,36 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/img\/service_assets\/togodoc.png": {
+	"\/img\/service_assets\/TogoDB.png": {
 		"ft": 32768,
-		"iS": 426241,
+		"iS": 0,
 		"oA": 0,
-		"oAP": "\/img\/service_assets\/togodoc.png",
+		"oAP": "\/img\/service_assets\/TogoDB.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/TogoDoc.png": {
+		"ft": 32768,
+		"iS": 3795,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/TogoDoc.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/TogoGenome.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/TogoGenome.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -10312,9 +10656,64 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/service_assets\/TogoStanza.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/TogoStanza.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/TogoTable.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/TogoTable.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/TogoWS.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/TogoWS.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/Umaka-Yummy Data.png": {
+		"ft": 32768,
+		"iS": 7536,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/Umaka-Yummy Data.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/service_assets\/Umaka-Yummy Viewer.png": {
+		"ft": 32768,
+		"iS": 3988,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/Umaka-Yummy Viewer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/Umaka-Yummy.png": {
 		"ft": 32768,
-		"iS": 3085,
+		"iS": 7536,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/Umaka-Yummy.png",
 		"oF": 0,
@@ -10323,9 +10722,20 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/service_assets\/アートボード 1.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/service_assets\/アートボード 1.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/service_assets\/新着論文レビュー.png": {
 		"ft": 32768,
-		"iS": 77746,
+		"iS": 6136,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/新着論文レビュー.png",
 		"oF": 0,
@@ -10336,7 +10746,7 @@
 		},
 	"\/img\/service_assets\/統合TV.png": {
 		"ft": 32768,
-		"iS": 4881,
+		"iS": 5361,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/統合TV.png",
 		"oF": 0,
@@ -10347,7 +10757,7 @@
 		},
 	"\/img\/service_assets\/領域融合レビュー.png": {
 		"ft": 32768,
-		"iS": 82574,
+		"iS": 6287,
 		"oA": 0,
 		"oAP": "\/img\/service_assets\/領域融合レビュー.png",
 		"oF": 0,
