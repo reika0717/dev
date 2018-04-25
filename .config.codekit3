@@ -8406,6 +8406,26 @@
 		"oAP": "\/_site\/research.html",
 		"oF": 0
 		},
+	"\/_site\/script\/default-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/_site\/script\/default-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/_site\/script\/default.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/_site\/script\/default-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/_site\/script\/marked.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -8479,6 +8499,36 @@
 		"oA": 0,
 		"oAP": "\/_site\/services.html",
 		"oF": 0
+		},
+	"\/_site\/style\/default.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/_site\/style\/default-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/_site\/style\/default.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/style\/default.css.map",
+		"oF": 0
+		},
+	"\/_site\/style\/default.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/_site\/style\/default.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/_site\/style\/default_add.css": {
 		"aP": 1,
