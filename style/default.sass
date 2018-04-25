@@ -6,12 +6,14 @@
 /* default */
 $main-color: #004098
 $text-color: #333333
-$footer-text-color: #14274B
+$footer-text-color: #444//#14274B
 $header-color: #004098
 $section-bg: #E8EDED
 $gray: #9E9E9E
 $table-bg: #E8EDED
 
+.margin-top10
+	margin-top: 10px
 body
 	font-family: 'Muli', sans-serif
 	width: 100%
@@ -35,6 +37,7 @@ body
 	border-radius: 12px
 	background: white
 	height: 22px
+	margin-left: auto
 	&:before
 		content: ""
 		display: block
@@ -58,7 +61,7 @@ body
 			margin-right: 3px
 			background: url(../img/icon_pdf.svg) no-repeat
 .sub__content-title
-	font-size: 18px
+	font-size: 15px
 	margin-bottom: 10px
 	&:before
 		content: "　"
@@ -97,19 +100,23 @@ body
 	.sub__navigation
 		padding-top: 156px
 		width: 242px
-		height: 90vh //footerを固定表示させたい
-		color: $main-color
+		color: $gray
 		.sub__navigation-wrapper
 			margin-top: 14px
 			.sub__navigation-title
 				font-size: 14px
 				font-weight: 600
-				&.on
+				a
+					color: $gray
+					&:hover, &:after
+						color: $main-color
+				&.active
+					color: $main-color
 					a
 						color: $main-color
-				&.off
-					a
-						color: $gray
+				//&.off
+				//	a
+				//		color: $gray
 				.sub__navigation-contents
 					font-size: 12px
 					font-weight: 500
@@ -123,17 +130,18 @@ body
 		width: 782px
 		.main__content-title__wrapper
 			border-bottom: 1px solid $gray
-			margin-bottom: 28px
+			margin-bottom: 25px
 			position: relative
 			width: 782px
 			.main__content-title
 				color: $main-color
-				font-size: 16px
+				font-size: 18px
 				font-weight: 700
 				padding-bottom: 3px
+				margin-top: -2px
+				line-height: 24px
 				&.post__title-individual
 					color: $text-color
-
 //post
 .post__date
 	font-size: 14px
@@ -244,6 +252,7 @@ body
 	.header__nav__sns
 		&-twitter
 			color: $header-color
+			padding-right: 5px
 		&-feed
 			color: $header-color
 	.header__nav__search
@@ -262,6 +271,7 @@ body
 			top: 3px
 			right: 8px
 			cursor: pointer
+			background-color: rgba(255, 255, 255, 0)
 			&:focus
 				outline: none
 		&:after
@@ -276,14 +286,13 @@ body
 
 /* footer */
 footer
-	//color: $footer-text-color
-	color: #444
+	color: $footer-text-color
 	width: 100%
 	//background: $section-bg
 	background-color: #f9f8f5
 	margin-top: 70px
 	.footer__wrapper
-		padding: 20px 0 50px
+		padding: 50px 0 10px
 		width: 1024px
 		margin: 0 auto
 		.footer__wrapper__contents
@@ -299,21 +308,23 @@ footer
 					li
 						font-size: 12px
 						font-weight: bold
-						padding-bottom: 8px
+						padding-bottom: 10px
 						ul
 							padding-top: 3px
 							li
 								font-weight: normal
-								padding: 0
+								padding: 2px 0 2px 0
+								text-decoration: underline
 				a
 					color: #444
 			.footer__links
-				.links__wrapper
-					.individual_link
+				ul.links__wrapper
+					li.individual_link
 						a
 							font-size: 12px
 							text-decoration: underline
-							line-height: 1.8em
+							padding: 2px 0 2px 0
+							font-weight: normal
 							color: $footer-text-color
 			.footer__info
 				padding-right: 75px
@@ -337,7 +348,7 @@ footer
 							font-weight: 700
 							letter-spacing: -0.5px
 				.footer__address
-					width: 258px
+					width: 357px
 					margin-top: 35px 
 					display: -wekit-box
 					display: -ms-flexbox
@@ -351,7 +362,6 @@ footer
 						display: flex 
 						justify-content: space-between
 						li
-							padding-bottom: 21px
 							font-size: 12px
 							line-height: 1.5em
 							width: 190px
@@ -393,38 +403,6 @@ footer
 					height: 16px
 					display: block
 					background: url(../img/by.svg) no-repeat
-
-// /***サイドバー*/
-// .outline-list-category__wrapper
-// 	width: 200px
-// 	cursor: pointer
-// 	&:first-child
-// 		//padding-top: 60px
-// 		padding-top: 14px
-// 		padding-bottom: 15px
-// 	.outline-list-category__title
-// 		color: $main-color
-// 		position: relative
-// 		padding: 6px 0
-// 		font-size: 16px
-// 		font-weight: 800
-// 		&:after
-// 			position: absolute
-// 			margin: auto
-// 			top: 0
-// 			bottom: 0
-// 			right: 0
-// 			content: ""
-// 			width: 7px
-// 			height: 7px
-// 			border: 2px solid
-// 			border-color: $main-color $main-color transparent transparent
-// 			transform: rotate(45deg)
-// 		&.off
-// 			&:after
-// 				opacity: 0.3
-// 		&.on, &:hover, &:after
-// 			opacity: 1.0
 
 /* top-page */
 .description__wrapper
@@ -479,13 +457,12 @@ footer
 //news
 .top__news-section
 	width: 1024px
-	margin: 78px auto 0
+	margin: 52px auto 0
 .news__individual-wrapper
 	display: none
 	margin-bottom: 30px
 	position: relative
 	li.post__individual
-		padding-bottom: 20px
 		display: flex
 		.post__date
 			width: 110px
@@ -510,20 +487,20 @@ footer
 		font-size: 12px
 		font-weight: 700
 		color: rgba(0, 0, 0, .4)
-		margin-right: 5px
+		margin-right: 9px
 
 
 /* Events & Research article section style */
-.main__contents-public
-	margin-top: 41px
+#main__contents-public
 	.public__description
 		font-size: 14px
-		margin-top: 23px
+		margin-top: -4px
 .research__description
 	font-size: 14px
 	margin-bottom: 9px
 	line-height: 1.8;
 	color: $text-color
+	margin-top: -6px
 .section-wrapper
 	display: flex
 	flex-wrap: wrap
@@ -590,16 +567,12 @@ footer
 .outline-list-category__wrapper
 	width: 200px
 	cursor: pointer
-	// &:first-child
-	// 	//padding-top: 60px
-	// 	padding-top: 14px
 		padding-bottom: 15px
 	.outline-list-category__title
-		//color: $main-color
-		color: #9E9E9E
+		color: $gray
 		position: relative
 		padding: 6px 0
-		font-size: 16px
+		font-size: 14px
 		font-weight: 800
 		&.active, &:hover, &:after
 			color: $main-color
@@ -624,12 +597,6 @@ footer
 	margin-left: -7px
 .section-wrapper__adelement 
 	padding-bottom: 30px
-	&.logotype
-		p
-			font-size: 14px
-
-		& > h4
-			padding-top: 83px
 	article.article__section__wrapper
 		width: 782px
 		padding: 16px 15px
@@ -683,6 +650,12 @@ footer
 				height: 20px
 				margin-top: 13px
 				margin-right: 9px
+.section-wrapper__adelement__logotype
+	p
+		font-size: 14px
+
+	& > h4
+		padding-top: 40px
 .history__wrapper
 	position: relative
 	margin-bottom: 73px
@@ -772,6 +745,7 @@ table.matrix
 /* event */
 .main__contents-event
 	color: $text-color
+	padding-bottom: 40px
 	.news__individual-wrapper
 		//padding-bottom: 30px
 .main__contents-public
@@ -968,6 +942,7 @@ table.matrix
 			margin-bottom: 8px
 /*memberデザイン変更につき*/
 .wrapper-type-list
+	margin-top: -12px
 	.content-wrapper__member
 		.content__member
 			display: inline-table
@@ -1218,9 +1193,46 @@ table.terminal-info
 			padding: 0 6px
 			font-size: 12px
 			letter-spacing: -0.3px
-
 /* access ***/
 
-/*research*/
-.research__description
-	padding: 16px 15px
+/* contact */
+.section-wrapper__contact
+	p 
+		font-size: 14px
+	.contents__wrapper
+		margin-top: 30px
+		box-shadow: 0.2px 0.2px 2px $gray
+		padding: 45px
+		h3
+			font-size: 16px
+			font-weight: 800
+			color: $main-color
+			padding-bottom: 15px
+		section
+			margin: 30px 10px
+		input
+			border: none
+			outline: none
+			//border-bottom: solid 0.2px $gray
+			border: solid 1px rgba($gray, 0.5)
+			&:focus
+				border: solid 1px $main-color
+		textarea
+			width: 656px
+			height: 189px
+			border: none
+			outline: none
+			border: solid 1px rgba($gray, 0.5)
+			&:focus
+				border: solid 1px $main-color
+		button
+			font-size: 16px
+			font-weight: 800
+			padding: 10px 30px
+			background-color: $main-color
+			color: #fff
+			border-style: none
+			&:hover
+				background-color: #24d
+				color: #fff
+

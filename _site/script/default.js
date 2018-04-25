@@ -467,12 +467,6 @@ var initialize = {
     //変動要素: main__contents-"event"
     //mein一つ目セクションの高さの取得
     var client_h = document.getElementById('main__contents-event').clientHeight;
-    //headerのStyle:PaddingTopを取得
-    var mainComtentClss = document.getElementById('main__contents');
-    var style = window.getComputedStyle(mainComtentClss);
-    //文字列から数値へ
-    var stylePadding = style.paddingTop;
-    stylePadding = parseInt(stylePadding);
 
     //クリックでactiveが切り替わる
     $('ul.sub__navigation-wrapper li').on('click', function() {
@@ -481,7 +475,7 @@ var initialize = {
     })
     //取得したある高さまで、移動
     $(".sub_2").on('click', function() {
-      window.scrollTo(0, client_h + stylePadding);
+      window.scrollTo(0, client_h);
       //$(".sub_2").addClass("active");
     })
     $(".sub_1").on('click', function() {
@@ -515,12 +509,12 @@ var initialize = {
       var file_name = path.pop();
 
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav += '<li>' + data.values[j][0] + '</li>';
+        listSubNav += '<li><a href="#' + data.values[j][0] + '">' + data.values[j][0] + '</a></li>';
       }
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav_en += '<li>' + data.values[j][1] + '</li>';
+        listSubNav_en += '<li><a href="#' + data.values[j][1] + '">' + data.values[j][1] + '</a></li>';
       }
-
+    
       function judgeExist(data, className, linkName) {
         var elements = ''
         if (data) {
@@ -555,6 +549,7 @@ var initialize = {
       console.log(name_ja_order)
       console.log(name_en_order)
       console.log(keyword_order)
+
       if (file_name === 'member.html') {
         $("#memberList").append(listSubNav);
 
@@ -579,8 +574,7 @@ var initialize = {
             link_section = ''
             console.log('掲載しません')
           }
-
-          element += '<div class="content__member">' +
+          element += '<div class="content__member" id="' + name_ja + '">' +
             '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' +
             '<ul><li class="position">' + position + '</li>' +
             '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
@@ -589,7 +583,7 @@ var initialize = {
             '<li class="links"><div class="btn-box">' +
             link_section +
             '</div></li></ul></div>';
-        }
+        }      
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
         for (var i = 1; i < data.values.length; i++) {
@@ -615,7 +609,7 @@ var initialize = {
             console.log('掲載しません')
           }
 
-          element += '<div class="content__member">' +
+          element += '<div class="content__member" id="' + name_en + '">' +
             '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' +
             '<ul><li class="position">' + position + '</li>' +
             '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
@@ -627,7 +621,7 @@ var initialize = {
         }
       }
       $("#member-list").append(element);
-
+     
       //担当サービスの実装
       data_services = data_services[0].values
       var member = []
@@ -663,6 +657,19 @@ var initialize = {
           $(charge_tag).remove()
         }
       })
+      //リスト名クリックで、ページ内遷移、ヘッダー分Heightを追加する
+      window.onload = function () {
+        $('a[href^=#]').click(function() {
+          //var speed = 400;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var headerHeight = 160; //固定ヘッダーの高さ
+          var position = target.offset().top - headerHeight; //ターゲットの座標からヘッダの高さ分引く
+          console.log(position);
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        })
+      }
     })
   },
   'access': function() {
@@ -671,14 +678,6 @@ var initialize = {
     //変動要素: main__contents-"event"
     //ある高さの取得
     var client_h = document.getElementById('main__contents-kashiwa').clientHeight;
-    //headerのStyle:PaddingTopを取得
-    var mainComtentClss = document.getElementById('header'); //main__contents
-    var style = window.getComputedStyle(mainComtentClss);
-    //文字列から数値へ
-    var stylePadding = style.paddingTop;
-    stylePadding = parseInt(stylePadding);
-    console.log(client_h)
-    console.log(stylePadding)
 
     //クリックでactiveが切り替わる
     $('ul.sub__navigation-wrapper li').on('click', function() {
