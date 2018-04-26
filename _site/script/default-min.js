@@ -118,7 +118,7 @@ var initialize = {
   'research': function research() {},
   'logotype': function logotype() {},
   'funding': function funding() {},
-  'achievement': function achievement() {
+  'references': function achievement() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
       dataType: "json",
@@ -440,12 +440,6 @@ var initialize = {
     //変動要素: main__contents-"event"
     //mein一つ目セクションの高さの取得
     var client_h = document.getElementById('main__contents-event').clientHeight;
-    //headerのStyle:PaddingTopを取得
-    var mainComtentClss = document.getElementById('main__contents');
-    var style = window.getComputedStyle(mainComtentClss);
-    //文字列から数値へ
-    var stylePadding = style.paddingTop;
-    stylePadding = parseInt(stylePadding);
 
     //クリックでactiveが切り替わる
     $('ul.sub__navigation-wrapper li').on('click', function () {
@@ -454,7 +448,7 @@ var initialize = {
     });
     //取得したある高さまで、移動
     $(".sub_2").on('click', function () {
-      window.scrollTo(0, client_h + stylePadding);
+      window.scrollTo(0, client_h);
       //$(".sub_2").addClass("active");
     });
     $(".sub_1").on('click', function () {
@@ -485,10 +479,10 @@ var initialize = {
       var file_name = path.pop();
 
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav += '<li>' + data.values[j][0] + '</li>';
+        listSubNav += '<li><a href="#' + data.values[j][0] + '">' + data.values[j][0] + '</a></li>';
       }
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav_en += '<li>' + data.values[j][1] + '</li>';
+        listSubNav_en += '<li><a href="#' + data.values[j][1] + '">' + data.values[j][1] + '</a></li>';
       }
 
       function judgeExist(data, className, linkName) {
@@ -525,6 +519,7 @@ var initialize = {
       console.log(name_ja_order);
       console.log(name_en_order);
       console.log(keyword_order);
+
       if (file_name === 'member.html') {
         $("#memberList").append(listSubNav);
 
@@ -545,8 +540,7 @@ var initialize = {
           if (non_publish === 'Yes') {
             link_section = '';
           }
-
-          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          element += '<div class="content__member" id="' + name_ja + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
         }
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
@@ -569,7 +563,7 @@ var initialize = {
             link_section = '';
           }
 
-          element += '<div class="content__member">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          element += '<div class="content__member" id="' + name_en + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
         }
       }
       $("#member-list").append(element);
@@ -618,14 +612,6 @@ var initialize = {
     //変動要素: main__contents-"event"
     //ある高さの取得
     var client_h = document.getElementById('main__contents-kashiwa').clientHeight;
-    //headerのStyle:PaddingTopを取得
-    var mainComtentClss = document.getElementById('header'); //main__contents
-    var style = window.getComputedStyle(mainComtentClss);
-    //文字列から数値へ
-    var stylePadding = style.paddingTop;
-    stylePadding = parseInt(stylePadding);
-    console.log(client_h);
-    console.log(stylePadding);
 
     //クリックでactiveが切り替わる
     $('ul.sub__navigation-wrapper li').on('click', function () {

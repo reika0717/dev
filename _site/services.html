@@ -13,9 +13,9 @@
   <script src="script/ofi.min.js">
   </script>
   <style>
-  .papers_citing_table td a {
-    text-decoration: underline;
-  }
+    .papers_citing_table td a {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -75,10 +75,10 @@
     <div id="subWrap">
       <div class="sub__navigation sticky service__side-bar">
         <h2 class="page-title">Services</h2>
-        <div class="outline-list-category">
-          <div class="outline-list-category__wrapper" id="service-on">
-            <ul class="sub__navigation-wrapper outline-list-category__wrapper">
-              <li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/services.html">サービス一覧</a></li>
+        <ul class="sub__navigation-wrapper outline-list-category__wrapper">
+          <li class="sub__navigation-title outline-list-category__title active">
+            <a href="">サービス一覧</a>
+            <ul>
               <li class="tag_panel ">
                 <span class="tag_panel-category-title">カテゴリ</span>
                 <div class="tag_panel_header controls">
@@ -120,18 +120,14 @@
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="outline-list-category__wrapper">
-            <div class="outline-list-category__title off" id="papers_citing_dbcls_services">
-              研究業績
-            </div>
-          </div>
-          <div class="outline-list-category__wrapper">
-            <div class="outline-list-category__title off">
-              引用文献一覧
-            </div>
-          </div>
-        </div>
+          </li>
+          <li class="sub__navigation-title outline-list-category__title">
+            <a href="">研究業績</a>
+          </li>
+          <li class="sub__navigation-title outline-list-category__title">
+            <a href="references.html">引用文献一覧</a>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="main__contents main__contents__services">
@@ -259,7 +255,7 @@
 							<p>国立遺伝学研究所<br>生命情報研究センター W412</p>
 						</li>
 					</ul>
-					<div><a href="access.html" class="page_btn access_btn">access</a></div>
+					<a href="access.html" class="page_btn access_btn">access</a>
 				</div>
 			</div>
 		</div>
@@ -269,8 +265,8 @@
 	</div>
 </footer>
   <script src="script/mixitup.min.js"></script>
-  
-<script src="script/default-min.js"></script>
+
+  <script src="script/default-min.js"></script>
 </body>
 
 </html>
