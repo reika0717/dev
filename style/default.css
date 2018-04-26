@@ -232,7 +232,7 @@ body {
   width: 100%;
   position: fixed;
   border-top: 5px solid #004098;
-  z-index: 1;
+  z-index: 11;
   background-color: white;
   top: 0; }
 
