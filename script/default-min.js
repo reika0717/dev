@@ -589,19 +589,6 @@ var initialize = {
           $(charge_tag).remove();
         }
       });
-      //リスト名クリックで、ページ内遷移、ヘッダー分Heightを追加する
-      window.onload = function () {
-        $('a[href^=#]').click(function () {
-          //var speed = 400;
-          var href = $(this).attr("href");
-          var target = $(href == "#" || href == "" ? 'html' : href);
-          var headerHeight = 160; //固定ヘッダーの高さ
-          var position = target.offset().top - headerHeight; //ターゲットの座標からヘッダの高さ分引く
-          console.log(position);
-          $('body,html').animate({ scrollTop: position }, speed, 'swing');
-          return false;
-        });
-      };
     });
   },
   'access': function access() {
