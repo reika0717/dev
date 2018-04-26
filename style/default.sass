@@ -431,28 +431,25 @@ footer
 		.main__forcused-page__text
 			padding: 12px
 .main-image__wrapper
-	width: 100vw
-	height: 371px
-	background: linear-gradient(to bottom, #00a6f5 0%, #00244e 100%)
-	display: flex
-	justify-content: center
 	margin-top: 76px//追加
 	.main-image__contents
 		position: relative
-		perspective: 1500px
-		width: 1024px
-		height: 371px
-		overflow: hidden
-		.panel
+		height: 400px
+		div
 			position: absolute
-			width: 120px
-			height: 120px
-			z-index: 50
-			background-size: cover
-		.main-image
-			width: 1024px
-			height: 530px
-			object-fit: cover
+			top: 0
+			left: 0
+			z-index: 8
+			img
+				width: 100vw
+				height: 400px
+				object-fit: cover
+				display: block		
+		.active
+			z-index: 10
+			opacity: 1.0
+		.last-active
+	    z-index: 9
 
 //news
 .top__news-section
