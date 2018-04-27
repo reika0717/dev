@@ -112,6 +112,7 @@ body
 				font-weight: 600
 				a
 					color: $gray
+					text-decoration: none
 					&:hover, &:after
 						color: $main-color
 				&.active
@@ -200,17 +201,16 @@ body
 	width: 222px
 .header
 	width: 100%
+	height: 67px
 	position: fixed
-	border-top: 5px solid $header-color
 	z-index: 11
-	background-color: white
+	background: linear-gradient(#004098, #1B2244)
 	top: 0
 .header__language-wrapper
 	width: 1024px
 	margin: 0 auto
 	position: relative
-	margin-top: 8px
-	transform: translateY(5px)
+	margin-top: 14px
 	.qtrans_language_chooser
 		display: flex
 		justify-content: flex-end
@@ -222,7 +222,7 @@ body
 .lang-ja,
 .lang-en
 	span
-		color: $header-color
+		color: white
 #header__languages-ja
 	.lang-en
 		cursor: pointer
@@ -239,7 +239,7 @@ body
 		pointer-events: none
 .header__nav
 	width: 1024px
-	margin: 0 auto 4px
+	margin: -2px auto 4px
 	display: flex
 	align-items: center
 	justify-content: space-between
@@ -247,18 +247,19 @@ body
 		list-style: none
 		a
 			text-decoration: none
-			color: $header-color
-			font-weight: 700
+			color: white
+			font-weight: 600
 			font-size: 14px
+			padding-bottom: 2px
 			img
-				width: 105px
-				height: 55px
+				width: 90px
+				height: auto
 	.header__nav__sns
 		&-twitter
-			color: $header-color
+			color: white
 			padding-right: 5px
 		&-feed
-			color: $header-color
+			color: white
 	.header__nav__search
 		position: relative
 		.search__wrapper
@@ -485,7 +486,7 @@ footer
 		.main__forcused-page__text
 			padding: 12px
 .main-image__wrapper
-	margin-top: 76px//追加
+	margin-top: 67px//追加
 	.main-image__contents
 		position: relative
 		height: 400px

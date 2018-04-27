@@ -755,7 +755,7 @@ script.addEventListener('load', function () {
     initialize[pageType]()
 
     var current_class_name = '.' + pageType
-    $('.header__nav__contents' + current_class_name).find('a').css('border-bottom', '2px solid #004098')
+    $('.header__nav__contents' + current_class_name).find('a').css('border-bottom', '2px solid white')
 
     //sticky IE対応
     var elements = document.querySelectorAll('.sticky');
