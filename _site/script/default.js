@@ -194,7 +194,7 @@ var initialize = {
             $('.main__content-title').text('Achivement')
             $(".achievement__wrapper").append(element);
           } else if (document.documentElement.lang === "ja") {
-            $('.main__content-title').text('研究業績')
+            $('.main__content-title').text('引用文献一覧')
             $(".achievement__wrapper").append(element);
           }
         }
