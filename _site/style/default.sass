@@ -14,6 +14,8 @@ $table-bg: #E8EDED
 
 .margin-top10
 	margin-top: 10px
+.padding15
+	padding: 15px
 body
 	font-family: 'Muli', sans-serif
 	width: 100%
@@ -60,6 +62,8 @@ body
 			height: 12px
 			margin-right: 3px
 			background: url(../img/icon_pdf.svg) no-repeat
+.btn-box__top
+	width: 953px
 .sub__content-title
 	font-size: 15px
 	margin-bottom: 10px
@@ -286,24 +290,29 @@ body
 
 /* footer */
 footer
-	color: $footer-text-color
-	width: 100%
 	//background: $section-bg
-	background-color: #f9f8f5
-	margin-top: 70px
+	margin-top: 100px
 	.footer__wrapper
-		padding: 50px 0 10px
+		//padding: 50px 0 10px
+		padding-top: 40px
+		padding-bottom: 18px
 		width: 1024px
 		margin: 0 auto
 		.footer__wrapper__contents
-			display: flex
-			justify-content: space-between
+			//display: flex
+			//justify-content: space-between
 			h2.footer-title
 				font-weight: 800
 				font-size: 14px
 				margin-bottom: 10px
-			.footer__sitemap
-				ol
+			.footer__sitenav
+				display: flex
+				flex-wrap: wrap
+				ul.nav__wrapper
+					width: 890px
+					padding-left: 80px
+					display: flex
+					justify-content: space-between
 					list-style: none
 					li
 						font-size: 12px
@@ -314,96 +323,141 @@ footer
 							li
 								font-weight: normal
 								padding: 2px 0 2px 0
-								text-decoration: underline
-				a
-					color: #444
-			.footer__links
-				ul.links__wrapper
-					li.individual_link
-						a
-							font-size: 12px
-							text-decoration: underline
-							padding: 2px 0 2px 0
-							font-weight: normal
-							color: $footer-text-color
-			.footer__info
-				padding-right: 75px
-				width: 400px
-				.footer__organism
-					.footer__logo
-						width: 150px
-						height: auto
-						display: block
-						margin: 0 auto
-					.footer__organism-text
-						text-align: center
-						margin-top: 15px
-						margin-bottom: 20px
-						.footer__organism-sub
-							font-size: 12px
-							line-height: 1.5em
-							text-align: center
-						.footer__organism-main
-							font-size: 15px
-							font-weight: 700
-							letter-spacing: -0.5px
-				.footer__address
-					width: 357px
-					margin-top: 35px 
-					display: -wekit-box
-					display: -ms-flexbox
-					display: flex
-					-ms-flex-wrap: wrap
-					flex-wrap: wrap
-					-webkit-box-pack: justify
-					-ms-flex-pack: justify
-					justify-content: space-between
-					.address__list
-						display: flex 
-						justify-content: space-between
-						li
-							font-size: 12px
-							line-height: 1.5em
-							width: 190px
-							p
-								line-height: 1.5em
-			.footer__partners
-				.footer__logo-wrapper
-					width: 150px
-					display: flex
-					flex-wrap: wrap
-					justify-content: space-between
-					li
-						padding-bottom: 10px
-						img
-							&.logo__jbi
-								width: 115px
-								height: auto
-							&.logo__ddbj
-								width: 115px
-								height: auto
-								margin-left: 0
-							&.logo__nbdc
-								width: 115px
-								height: auto
-								margin-top: 0
-							&.logo__pdbj
-								width: 115px
-								height: auto
-								margin: 0
-		.footer__lisence
-			p
-				font-size: 10px
-				display: flex
-				justify-content: center
-				padding: 40px 0 20px 0
-				&:before
-					content: ""
-					width: 81px
-					height: 16px
-					display: block
-					background: url(../img/by.svg) no-repeat
+								//text-decoration: underline
+						&.line-series
+							margin-top: -5px
+							ul
+								li
+									font-weight: bold
+									padding-bottom: 8px
+	a
+		text-decoration: none
+		color: #444
+		&:hover
+			color: $main-color
+			border-bottom: solid 1px $main-color
+.footer__sitemap
+	background-color: #fff
+	border-top: solid 0.5px $gray
+	color: $footer-text-color
+	width: 100%
+.footer__common
+	background-color: #f9f8f5
+	width: 100%
+	color: $footer-text-color
+	.footer__info
+		padding-right: 65px
+		//width: 400px
+		display: -wekit-box
+		display: -ms-flexbox
+		display: flex
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+		-webkit-box-pack: justify
+		-ms-flex-pack: justify
+		justify-content: space-between
+		.footer__organism
+			.footer__logo
+				width: 150px
+				height: auto
+				display: block
+				margin: 0 auto
+			.footer__organism-text
+				text-align: center
+				margin-top: 15px
+				margin-bottom: 20px
+				.footer__organism-sub
+					font-size: 12px
+					line-height: 1.5em
+					text-align: center
+				.footer__organism-main
+					font-size: 15px
+					font-weight: 700
+					letter-spacing: -0.5px
+		.footer__address
+			width: 357px
+			margin-top: 15px 
+			//display: -wekit-box
+			//display: -ms-flexbox
+			//display: flex
+			//-ms-flex-wrap: wrap
+			//flex-wrap: wrap
+			//-webkit-box-pack: justify
+			//-ms-flex-pack: justify
+			//justify-content: space-between
+			.address__list
+				display: -wekit-box
+				display: -ms-flexbox
+				display: flex 
+				-webkit-box-pack: justify
+				-ms-flex-pack: justify
+				justify-content: space-between
+				li
+					font-size: 12px
+					line-height: 1.5em
+					//width: 190px
+					p
+						line-height: 1.5em
+		.footer__links
+			padding-top: 15px
+			&.en 
+				width: 192px
+			ul.links__wrapper
+				li.individual_link
+					a
+						font-size: 12px
+						//text-decoration: underline
+						padding: 2px 0 2px 0
+						font-weight: normal
+						color: $footer-text-color
+						&:hover
+							color: $main-color
+							border-bottom: solid 1px $main-color
 
+.footer__bottom
+	background-color: #f9f8f5
+	width: 100%
+	color: $footer-text-color
+	padding-bottom: 20px
+	.footer__partners
+		.footer__logo-wrapper
+			width: 550px
+			padding-top: 30px
+			padding-bottom: 10px
+			margin: 0 auto
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			li
+				padding-bottom: 10px
+				img
+					&.logo__jbi
+						width: 115px
+						height: auto
+					&.logo__ddbj
+						width: 115px
+						height: auto
+						margin-left: 0
+					&.logo__nbdc
+						width: 115px
+						height: auto
+						margin-top: 0
+					&.logo__pdbj
+						width: 115px
+						height: auto
+						margin: 0
+.footer__lisence
+	p
+		font-size: 10px
+		display: flex
+		justify-content: center
+		//padding: 40px 0 20px 0
+		&:before
+			content: ""
+			width: 81px
+			height: 16px
+			display: block
+			background: url(../img/by.svg) no-repeat
 /* top-page */
 .description__wrapper
 	width: 1024px
@@ -1045,6 +1099,9 @@ table.matrix
 					.achievement__column__title-small
 						font-family: 'GothamPro-Bold'
 						margin-top: 4px
+					a 
+						&:hover
+							border-bottom: solid 1px $main-color
 				.achievement__column__wrapper-small
 					display: flex
 					align-items: center
@@ -1073,6 +1130,11 @@ table.matrix
 							.filName
 								margin-left: 9px
 								cursor: pointer
+								display: inline-block
+								&:hover
+									line-height: 1
+									color: $main-color
+									border-bottom: solid 1px $main-color
 						td.quote_num
 							text-align: right
 							padding-right: 9px
@@ -1104,6 +1166,14 @@ table.matrix
 				padding-right: 4px
 		.access-subnav__transition
 			margin-top: -5px
+			&.padding
+				padding-top: 5px
+			a 
+				color: $main-color
+				&:hover
+					line-height: 1
+					border-bottom: solid 1px $main-color
+					color: $main-color
 
 .accessmap
 	width: 720px
@@ -1183,6 +1253,11 @@ table.terminal-info
 .section-wrapper__contact
 	p 
 		font-size: 14px
+		a 
+			&:hover
+				line-height: 1
+				color: $main-color
+				border-bottom: solid 1px $main-color
 	.contents__wrapper
 		margin-top: 30px
 		box-shadow: 0.2px 0.2px 2px $gray
