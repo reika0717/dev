@@ -15,11 +15,7 @@ body {
   border-bottom: 3px solid #14274B; }
 
 .page_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 10px;
   padding: 3px 7px;
@@ -43,8 +39,6 @@ body {
 .content__wrapper {
   width: 1024px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
   .content__wrapper .sub__navigation {
     padding-top: 156px;
@@ -79,11 +73,7 @@ body {
   position: relative;
   margin-top: 17px; }
   .header__language-wrapper .qtrans_language_chooser {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
     position: absolute;
     right: 5px;
@@ -114,14 +104,8 @@ body {
 .header__nav {
   width: 1024px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between; }
   .header__nav .header__nav__contents {
     list-style: none; }
@@ -182,11 +166,7 @@ footer {
     footer .footer__wrapper .footer__address {
       margin-top: 35px; }
       footer .footer__wrapper .footer__address .address__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-top: 19px; }
         footer .footer__wrapper .footer__address .address__list li {
@@ -194,21 +174,14 @@ footer {
           line-height: 1.3em;
           width: 431px; }
     footer .footer__wrapper .footer__bottom-area {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex; }
       footer .footer__wrapper .footer__bottom-area .footer__partners {
         width: 431px;
         margin-top: 35px; }
         footer .footer__wrapper .footer__bottom-area .footer__partners .footer__rogo-wrapper {
           margin-top: 25px;
-          display: -webkit-box;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
           align-items: center;
-          -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
           footer .footer__wrapper .footer__bottom-area .footer__partners .footer__rogo-wrapper .logo__jbi {
             height: 32px; }
@@ -233,11 +206,7 @@ footer {
             line-height: 1.8em; }
     footer .footer__wrapper .footer__lisence p {
       font-size: 10px;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
       padding: 40px 0 20px 0; }
       footer .footer__wrapper .footer__lisence p:before {
@@ -249,19 +218,13 @@ footer {
 
 /*** Services */
 .section-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between; }
   .section-wrapper .article__section {
     width: 385.5px;
     background-color: #E8EDED;
     margin: 6px 0;
-    -ms-flex-item-align: self-end;
     align-self: self-end;
     padding: 16px 15px; }
     .section-wrapper .article__section h4 {

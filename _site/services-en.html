@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" data-page-type="services">
+
 <head>
-	<title>Services ｜ DBCLS</title>
-	<meta charset="UTF-8">
-	<link href="style/default.css" rel="stylesheet">
-	<link href="style/github-markdown.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
-	</script>
-	<script src="script/marked.min.js">
-	</script>
-	<script src="script/ofi.min.js">
-	</script>
-	<style>
-	        .papers_citing_table td a {
-	          text-decoration: underline;
-	        }
-	</style>
+  <title>Services ｜ DBCLS</title>
+  <meta charset="UTF-8">
+  <link href="style/default.css" rel="stylesheet">
+  <link href="style/github-markdown.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+  <script src="script/marked.min.js">
+  </script>
+  <script src="script/ofi.min.js">
+  </script>
+  <style>
+    .papers_citing_table td a {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-	<header class="header-en header" id="header">
+  <header class="header-en header" id="header">
 	<nav>
 		<div id="header__languages-en" class='header__language-wrapper'>
 			<ul class="qtrans_language_chooser" id="qtranslate-chooser">
@@ -33,7 +35,7 @@
 		<ul class='header__nav'>
 			<li class='header__nav__contents'>
 				<a href="/dbcls-test/index-en.html">
-					<img src="img/logo_dbcls.svg" alt=""　class='header__logo'>
+					<img src="/dbcls-test/img/logo_dbcls.svg" alt=""　class='header__logo'>
 				</a>
 			</li>
 			<li class='header__nav__contents'>
@@ -52,7 +54,7 @@
 				<a href="/dbcls-test/member-en.html">Members</a>
 			</li>
 			<li class='header__nav__contents'>
-				<a href="/dbcls-test/access_en.html">Access</a>
+				<a href="/dbcls-test/access-en.html">Access</a>
 			</li>
 			<li class='header__nav__contents'>
 				<a href="/dbcls-test/contact-en.html">Contact</a>
@@ -69,164 +71,238 @@
 	</nav>
 </header>
 
-	<div class="content__wrapper">
-		<div id="subWrap">
-			<div class="sub__navigation">
-				<h2 class="page-title">Services</h2>
-				<div class="outline-list-category">
-					<div class="outline-list-category__wrapper" id="service-on">
-						<div class="outline-list-category__title">
-							Services' list
-						</div>
-						<div class="tag_panel">
-							<div class="tag_row" id="tag_panel_category">
-								<div class="tag_panel_header">
-									Category
-								</div>
-								<div class="tag_element all off" data-tagkey="category_all">
-									All
-								</div>
-								<div class="tag_element dna" data-tagkey="category_featured">
-									DNA & RNA
-								</div>
-								<div class="tag_element structures off" data-tagkey="category_dna">
-									Structures & Proteins
-								</div>
-								<div class="tag_element text-mining off" data-tagkey="category_structures">
-									Text-mining & Contents
-								</div>
-								<div class="tag_element db off" data-tagkey="category_textmining">
-									DB integration
-								</div>
-							</div>
-						</div>
-						<div class="tag_panel">
-							<div class="tag_row" id="tag_panel_category">
-								<div class="tag_panel_header">
-									Type
-								</div>
-								<div class="tag_element all off" data-tagkey="category_all">
-									All
-								</div>
-								<div class="tag_element database" data-tagkey="category_featured">
-									Database
-								</div>
-								<div class="tag_element tool off" data-tagkey="category_dna">
-									Tool
-								</div>
-								<div class="tag_element download off" data-tagkey="category_structures">
-									Download
-								</div>
-								<div class="tag_element submission off" data-tagkey="category_textmining">
-									Submission
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="outline-list-category__wrapper">
-						<div class="outline-list-category__title off" id="papers_citing_dbcls_services">
-							Achievement
-						</div>
-					</div>
-					<div class="outline-list-category__wrapper">
-						<div class="outline-list-category__title off">
-							References
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="main__contents main__contents__services">
-			<div class="main__contents-servece">
-				<!--h3 class="main__content-title content-title__services">コンテンツ</h3-->
-				<div class="section-wrapper">
-					<div class="service__wrapper wrapper-type-box" id="service_list"></div>
-					<div id="loader-bg">
-						<div id="loader">
-							<p>Now Loading...</p>
-						</div>
-					</div>
-					<table class="papers_citing_table" id="table">
-						<tbody></tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div><footer>
+  <div class="content__wrapper">
+    <div id="subWrap">
+      <div class="sub__navigation sticky service__side-bar">
+        <h2 class="page-title">Services</h2>
+        <ul class="sub__navigation-wrapper outline-list-category__wrapper">
+          <li class="sub__navigation-title outline-list-category__title active">
+            <a href="">Services</a>
+            <ul>
+              <li class="tag_panel ">
+                <span class="tag_panel-category-title">Category</span>
+                <div class="tag_panel_header controls">
+                  <button type="button" class="tag_element term control" data-filter="all">
+                    All
+                  </button>
+                  <button type="button" class="tag_element omics control" data-toggle=".omics">
+                    Omics tools
+                  </button>
+                  <button type="button" class="tag_element text-mining control" data-toggle=".text-mining">
+                    Textmining
+                  </button>
+                  <button type="button" class="tag_element contents control" data-toggle=".contents">
+                    Contents
+                  </button>
+                  <button type="button" class="tag_element semantic control" data-toggle=".semantic">
+                    Semantic web
+                  </button>
+                </div>
+              </li>
+              <li class="tag_panel">
+                <span class="tag_panel-category-title">User</span>
+                <div class="tag_panel_header controls">
+                  <button type="button" class="tag_element all control" data-filter="all">
+                    All
+                  </button>
+                  <button type="button" class="tag_element biologist control" data-toggle=".biologist">
+                    Wet biologist, Clinician
+                  </button>
+                  <button type="button" class="tag_element application control" data-toggle=".application">
+                    Database
+                    <br>
+                    <span class="category-double-col">Application Developer</span>
+                  </button>
+                  <button type="button" class="tag_element data-scientist control" data-toggle=".data-scientist">
+                    Data Scientist
+                  </button>
+                  <button type="button" class="tag_element provider control" data-toggle=".provider">
+                    Data Provider
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="sub__navigation-title outline-list-category__title">
+            <a href="">Achivement</a>
+          </li>
+          <li class="sub__navigation-title outline-list-category__title">
+            <a href="references-en.html">References</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main__contents main__contents__services">
+      <div class="main__content-title__wrapper">
+        <h3 class="main__content-title">Services</h3>
+      </div>
+      <div class="main__contents-servece">
+        <!--h3 class="main__content-title content-title__services">コンテンツ</h3-->
+        <div class="section-wrapper">
+          <div class="service__wrapper wrapper-type-box" id="service_list"></div>
+          <div id="loader-bg">
+            <div id="loader">
+              <p>Now Loading...</p>
+            </div>
+          </div>
+          <table class="papers_citing_table" id="table">
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div><footer id="footer">
 	<div class="footer__wrapper">
-		<div class="footer__organism">
-			<p class="footer__organism-sub">Database Center for Life Science</p>
-			<p class="footer__organism-sub">Joint Support-Center for Data Science Research</p>
-			<p class="footer__organism-main">Research Organization of Information and Systems</p>
-		</div>
 		<div class="footer__wrapper__contents">
-			<div class="footer__address">
-				<h2 class="page-title">Address</h2>
-				<ul class="address__list">
-					<li>
-						<p>Kashiwa-labo</p>
-						<p>Univ. of Tokyo Kashiwa-no-ha Campus Station Satellite 6F.</p>
-						<p>178-4-4 Wakashiba, Kashiwa-shi, Chiba 277-0871, JAPAN</p>
-						<p>TEL +81-4-7135-5508</p>
-						<p>FAX +81-4-7135-5534</p>
-					</li>
-					<li>
-						<p>Mishima-labo</p>
-					<p>Center for Information Biology W412, National Institute of Genetics</p>
-					<p>Yata 1111, Mishima, Shizuoka 411-8540, JAPAN</p>
-					</li><a href="access.html" class="page_btn access_btn">access</a>
-				</ul>
+<<<<<<< HEAD
+			<div class="footer__info">
+				<div class="footer__organism">
+					<img src="/dbcls-test/img/logo_dbcls.svg" alt="" class="footer__logo">
+					<div class='footer__organism-text'>
+						<p class="footer__organism-main">Database Center for Life Science</p>
+						<p class="footer__organism-sub">Joint Support-Center for Data Science Research</p>
+						<p class="footer__organism-sub">Research Organization of Information and Systems</p>
+					</div>
+=======
+			<div class="footer__sitenav">
+				<div class="footer__sitemap">
+					<h2 class="footer-title">Site map</h2>
+					<ol>
+						<li><a href="">Research</a>
+							<ul>
+								<li><a href="">Development</a></li>
+								<li><a href="">Achivement</a></li>
+								<li><a href="">Events</a></li>
+								<li><a href="">Public Relations</a></li>
+							</ul>
+						</li>
+						<li><a href="">Content</a></li>
+						<li><a href="">Services</a>
+							<ul>
+								<li><a href="">Services</a></li>
+								<li><a href="">Achivement</a></li>
+								<li><a href="">References</a></li>
+							</ul>
+						</li>
+						<li><a href="">About us</a>
+							<ul>
+								<li><a href="">About center</a></li>
+								<li><a href="">History</a></li>
+								<li><a href="">Member</a></li>
+								<li><a href="">Funding</a></li>
+								<li><a href="">Faq</a></li>
+								<li><a href="">Policy</a></li>
+								<li><a href="">About logotype</a></li>
+							</ul>
+						</li>
+					</ol>
+>>>>>>> a980568b5021289c7a57df48cf54d38f51f1532b
+				</div>
+			</div>
+			<div class="footer__outside">
+				<div class="footer__partners">
+					<h2 class="footer-title">Partners</h2>
+					<ul class="footer__logo-wrapper">
+						<li>
+							<img class="logo__jbi" src="img/jbi-3.png" alt="">
+						</li>
+						<li>
+							<img class="logo__ddbj" src="img/ddbj.png" alt="">
+						</li>
+						<li>
+							<img class="logo__nbdc" src="img/nbdc.png" alt="">
+						</li>
+						<li>
+							<img class="logo__pdbj" src="img/pdbj.png" alt="">
+						</li>
+					</ul>
+				</div>
+<<<<<<< HEAD
 			</div>
 			<div class="footer__partners">
-				<h2 class="page-title">Partners</h2>
-				<ul class="footer__rogo-wrapper">
+				<h2 class="footer-title">Partners</h2>
+				<ul class="footer__logo-wrapper">
 					<li>
-						<img class="logo__jbi" src="img/jbi-3.png" alt="">
+						<img class="logo__jbi" src="/dbcls-test/img/jbi-3.png" alt="">
 					</li>
 					<li>
-						<img class="logo__ddbj" src="img/ddbj.png" alt="">
+						<img class="logo__ddbj" src="/dbcls-test/img/ddbj.png" alt="">
 					</li>
 					<li>
-						<img class="logo__nbdc" src="img/nbdc.png" alt="">
+						<img class="logo__nbdc" src="/dbcls-test/img/nbdc.png" alt="">
 					</li>
 					<li>
-						<img class="logo__pdbj" src="img/pdbj.png" alt="">
+						<img class="logo__pdbj" src="/dbcls-test/img/pdbj.png" alt="">
 					</li>
 				</ul>
 			</div>
 			<div class="footer__links">
-				<h2 class="page-title">Links</h2>
+=======
+				<div class="footer__links">
+>>>>>>> a980568b5021289c7a57df48cf54d38f51f1532b
+				<h2 class="footer-title">Links</h2>
 				<ul class="links__wrapper">
 					<li class="individual_link">
-						<a href="http://lifesciencedb.jp/">LSDB Home Page</a>
+						<a href="http://lifesciencedb.jp/?lng=en"" title="portal site for the Integrated Database Project funded by the MEXT of Japan." target="_blank">LSDB Home Page</a>
 					</li>
 					<li class="individual_link">
-						<a href="https://youtube.com/togotv/live">DBCLS on YouTubeLive</a>
+						<a href="https://youtube.com/togotv/live" title="TogoTV channel on YouTubeLive" target="_blank">DBCLS on YouTubeLive</a>
+					</li>
+					<!--li class="individual_link">
+						<a href="http://jbioinfo.jp/" title="Japan alliance for Bioscience Information (JBI) homepage" target="_blank">Japan alliance for Bioscienece Information (JBI)</a>
+					</li-->
+					<li class="individual_link">
+						<a href="https://ds.rois.ac.jp/" title="Joint Support-Center for Data Science Research homepage" target="_blank">Joint Support-Center for Data Science Research</a>
 					</li>
 					<li class="individual_link">
-						<a href="http://jbioinfo.jp/">Japan alliance for Bioscienece Information (JBI)</a>
+						<a href="http://www.rois.ac.jp/en/" title="ROIS homepage" target="_blank">Research Organization of Information and Systems</a>
 					</li>
+					<!--li class="individual_link">
+						<a href="https://biosciencedbc.jp/en/" title="NDBC homepage" target="_blank">National Bioscience Database Center</a>
+					</li-->
 					<li class="individual_link">
-						<a href="https://ds.rois.ac.jp/">Joint Support-Center for Data Science Research</a>
-					</li>
-					<li class="individual_link">
-						<a href="http://www.rois.ac.jp/">Research Organization of Information and Systems</a>
-					</li>
-					<li class="individual_link">
-						<a href="http://biosciencedbc.jp/?lng=ja">National Bioscience Database Center</a>
-					</li>
-					<li class="individual_link">
-						<a href="http://www.mext.go.jp/">Ministry of Education, Culture, Sports, Science and Technology</a>
+						<a href="http://www.mext.go.jp/en/" title="MEXT homepage" target="_blank">Ministry of Education, Culture, Sports, Science and Technology</a>
 					</li>
 				</ul>
+				</div>	
+			</div>
+			<div class="footer__info">
+				<div class="footer__organism">
+					<img src="img/logo_dbcls.svg" alt="" class="footer__logo">
+					<div class='footer__organism-text'>
+						<p class="footer__organism-main">Database Center for Life Science</p>
+						<p class="footer__organism-sub">Joint Support-Center for Data Science Research</p>
+						<p class="footer__organism-sub">Research Organization of Information and Systems</p>
+					</div>
+				</div>
+				<div class="footer__address">
+					<h2 class="footer-title">Address</h2>
+					<ul class="address__list">
+						<li>
+							<p>Kashiwa-labo</p>
+							<p>Univ. of Tokyo Kashiwa-no-ha Campus Station Satellite 6F.</p>
+							<p>178-4-4 Wakashiba, Kashiwa-shi, Chiba 277-0871, JAPAN</p>
+							<p>TEL +81-4-7135-5508</p>
+							<p>FAX +81-4-7135-5534</p>
+						</li>
+						<li>
+							<p>Mishima-labo</p>
+							<p>Center for Information Biology W412, <br>National Institute of Genetics</p>
+							<p>Yata 1111, Mishima, Shizuoka 411-8540, JAPAN</p>
+						</li>
+					</ul>
+					<a href="access.html" class="page_btn access_btn">access</a>
+				</div>
 			</div>
 		</div>
 		<div class="footer__lisence">
 			<p>	&copy; 2014 DBCLS, Licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.ja">Creative Commons Attribution 4.0 International license (CC-BY 4.0)</a></p>
 		</div>
 	</div>
-</footer> 
-	<script src="script/default.js">
-	</script>
+</footer>
+  <script src="script/mixitup.min.js"></script>
+
+  <script src="script/default-min.js"></script>
 </body>
+
 </html>

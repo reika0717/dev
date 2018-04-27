@@ -13,7 +13,7 @@
 <body>
   {% include header.html %}
   <div class="content__wrapper">
-    <div class="sub__navigation">
+    <div class="sub__navigation sticky" style="height: 60vh">
       <h2 class="page-title">News</h2>
       <ul class="sub__navigation-wrapper outline-list-category__wrapper">
         <li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/news.html">ニュース一覧</a></li>
@@ -30,24 +30,9 @@
       <div class="post__main-text">
         {{content}}
       </div>
-      <!-- 		<div class="PageNavigation">
-			<div class="pre_post_title">
-				<img src="/dbcls-test/img/icon_post_pre.svg" class="icon_post_pagenation" alt="">
-				{% if page.previous.previous.url %}
-				  {% assign pre_post_title =  page.previous.previous.title | slice: 0, 30 | strip_html%}
-				    <a class="prev" href="{{page.previous.previous.url | prepend: site.baseurl}}"> {{pre_post_title}}…</a>
-			  {% endif %}			
-			</div>
-			<div class="next_post_title">
-			  {% if page.next.next.url %}
-				  {% assign next_post_title =  page.next.next.title | slice: 0, 30 | strip_html%}
-				    <a class="next" href="{{page.next.next.url | prepend: site.baseurl}}">{{next_post_title}}…</a>
-			  {% endif %}
-			  <img src="/dbcls-test/img/icon_post_next.svg" class="icon_post_pagenation" alt="">
-			</div>
-		</div> -->
     </div>
   </div>
+  {% include footer.html %}
   <script src="../../../../script/default.js"></script>
 </body>
 
