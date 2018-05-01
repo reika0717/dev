@@ -507,17 +507,39 @@ var initialize = {
       var element_collaborators = "";
       var listSubNav = "";
       var listSubNav_en = "";
+      var listSubNav_collaborators = "";
+      var listSubNav_collaborators_en = "";
       data = data[0];
       //file名の取得
       var url = window.location;
       var path = url.href.split('/');
       var file_name = path.pop();
+      var name_ja_order = getOrder('name ja');
+      var name_en_order = getOrder('name en');
+      var image_order = getOrder('画像');
+      var position_order = getOrder('position');
+      var keyword_order = getOrder('keyword');
+      var keyword_en_order = getOrder('keyword-en');
+      var orcid_order = getOrder('ORCID');
+      var googleScholar_order = getOrder('Google Scholar');
+      var github_order = getOrder('github');
+      var mail_order = getOrder('mail');
+      var non_publish_order = getOrder('いずれのIDも掲載しない');
 
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav += '<li><a href="#' + data.values[j][0] + '">' + data.values[j][0] + '</a></li>';
+        console.log(data.values[j][position_order]);
+        if (data.values[j][position_order] === '客員教授' || data.values[j][position_order] === '客員准教授') {
+          listSubNav_collaborators += '<li><a href="#' + data.values[j][name_ja_order] + '">' + data.values[j][name_ja_order] + '</a></li>';
+        } else {
+          listSubNav += '<li><a href="#' + data.values[j][name_ja_order] + '">' + data.values[j][name_ja_order] + '</a></li>';
+        }
       }
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav_en += '<li><a href="#' + data.values[j][1] + '">' + data.values[j][1] + '</a></li>';
+        if (data.values[j][position_order] === '客員教授' || data.values[j][position_order] === '客員准教授') {
+          listSubNav_collaborators_en += '<li><a href="#' + data.values[j][name_en_order] + '">' + data.values[j][name_en_order] + '</a></li>';
+        } else {
+          listSubNav_en += '<li><a href="#' + data.values[j][name_en_order] + '">' + data.values[j][name_en_order] + '</a></li>';
+        }
       }
 
       function judgeExist(data, className, linkName) {
@@ -540,23 +562,9 @@ var initialize = {
         return order;
       }
 
-      var name_ja_order = getOrder('name ja');
-      var name_en_order = getOrder('name en');
-      var image_order = getOrder('画像');
-      var position_order = getOrder('position');
-      var keyword_order = getOrder('keyword');
-      var keyword_en_order = getOrder('keyword-en');
-      var orcid_order = getOrder('ORCID');
-      var googleScholar_order = getOrder('Google Scholar');
-      var github_order = getOrder('github');
-      var mail_order = getOrder('mail');
-      var non_publish_order = getOrder('いずれのIDも掲載しない');
-      console.log(name_ja_order);
-      console.log(name_en_order);
-      console.log(keyword_order);
-
       if (file_name === 'member.html') {
         $("#memberList").append(listSubNav);
+        $("#memberList-collaborators").append(listSubNav_collaborators);
 
         for (var i = 1; i < data.values.length; i++) {
           var name_ja = data.values[i][name_ja_order];
@@ -583,6 +591,8 @@ var initialize = {
         }
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
+        $("#memberList-collaborators").append(ListSubNav_collaborators_en);
+
         for (var i = 1; i < data.values.length; i++) {
           var name_ja = data.values[i][name_ja_order];
           var name_en = data.values[i][name_en_order];
