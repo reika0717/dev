@@ -148,10 +148,13 @@ var initialize = {
       }, 1000);
     });
   },
+  'history': function () {},
+  'funding': function () {},
+  'faq': function () {},
+  'policy': function () {},
+  'logotype': function () {},
   'research': function() {},
   'achievement': function() {},
-  'logotype': function() {},
-  'funding': function() {},
   'references': function() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",

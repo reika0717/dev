@@ -144,10 +144,13 @@ var initialize = {
       }, 1000);
     });
   },
+  'history': function history() {},
+  'funding': function funding() {},
+  'faq': function faq() {},
+  'policy': function policy() {},
+  'logotype': function logotype() {},
   'research': function research() {},
   'achievement': function achievement() {},
-  'logotype': function logotype() {},
-  'funding': function funding() {},
   'references': function references() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
