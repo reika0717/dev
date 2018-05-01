@@ -763,7 +763,8 @@ footer {
 
 /* about */
 .about-img {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  width: 100%; }
 
 .about__description-wrapper {
   display: -webkit-box;
