@@ -6,53 +6,55 @@ data-type: news
 {% include header_en.html %}
 
 <div class="content__wrapper">
-	<div class="sub__navigation sticky">
+	<div>
+		<div class="sub__navigation sticky">
 			<h2 class="page-title">News</h2>
-				<div class="outline-list-category">
-					<ul class="sub__navigation-wrapper outline-list-category__wrapper">
-						<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/news.html">News</a></li>
-						<li class="tag_panel ">
-							<span class="tag_panel-category-title">Year</span>
-							<div class="tag_panel_header controls">
-								<button type="button" class="tag_element term control" data-filter="all">
+			<div class="outline-list-category">
+				<ul class="sub__navigation-wrapper outline-list-category__wrapper">
+					<li class="sub__navigation-title outline-list-category__title on"><a href="/dbcls-test/news.html">News</a></li>
+					<li class="tag_panel ">
+						<span class="tag_panel-category-title">Year</span>
+						<div class="tag_panel_header controls">
+							<button type="button" class="tag_element term control" data-filter="all">
+								All
+							</button>
+							<button type="button" class="tag_element term control" data-filter=".category_year-2018">
+								2018
+							</button>
+							<button type="button" class="tag_element term control" data-filter=".category_year-2017">
+								2017
+							</button>
+							<button type="button" class="tag_element term control" data-filter=".category_year-2016">
+								2016
+							</button>									
+						</div>
+					</li>
+					<li class="tag_panel">
+						<span class="tag_panel-category-title">Tags</span>
+						<div class="tag_panel_header controls">
+								<button type="button" class="tag_element tag-all control" data-filter="all">
 									All
 								</button>
-								<button type="button" class="tag_element term control" data-filter=".category_year-2018">
-									2018
+								<button type="button" class="tag_element tag-service control" data-toggle=".service">
+									Service
 								</button>
-								<button type="button" class="tag_element term control" data-filter=".category_year-2017">
-									2017
+								<button type="button" class="tag_element tag-publishment control" data-toggle=".publishment">
+									Publishment
 								</button>
-								<button type="button" class="tag_element term control" data-filter=".category_year-2016">
-									2016
-								</button>									
-							</div>
-						</li>
-						<li class="tag_panel">
-							<span class="tag_panel-category-title">Tags</span>
-							<div class="tag_panel_header controls">
-									<button type="button" class="tag_element tag-all control" data-filter="all">
-										All
-									</button>
-									<button type="button" class="tag_element tag-service control" data-toggle=".service">
-										Service
-									</button>
-									<button type="button" class="tag_element tag-publishment control" data-toggle=".publishment">
-										Publishment
-									</button>
-									<button type="button" class="tag_element tag-event control" data-toggle=".event">
-										Event
-									</button>
-									<button type="button" class="tag_element tag-invite control" data-toggle=".invite">
-										Invitation
-									</button>
-									<button type="button" class="tag_element tag-other control" data-toggle=".other">
-										Other
-									</button>
-							</div>
-						</li>
-					</ul>
-				</div>
+								<button type="button" class="tag_element tag-event control" data-toggle=".event">
+									Event
+								</button>
+								<button type="button" class="tag_element tag-invite control" data-toggle=".invite">
+									Invitation
+								</button>
+								<button type="button" class="tag_element tag-other control" data-toggle=".other">
+									Other
+								</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>		
 	</div>
 	<div class="main__contents">
 		<div class="main__content-title__wrapper">
