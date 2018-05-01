@@ -662,7 +662,7 @@ var initialize = {
         }
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
-        $("#memberList-collaborators").append(ListSubNav_collaborators_en)
+        $("#memberList-collaborators").append(listSubNav_collaborators_en)
 
         for (var i = 1; i < data.values.length; i++) {
           var name_ja = data.values[i][name_ja_order]
