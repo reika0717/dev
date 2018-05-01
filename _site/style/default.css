@@ -680,6 +680,8 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .section-wrapper.member_staff {
+    margin-bottom: 123px; }
   .section-wrapper .markdown-body {
     width: 782px; }
   .section-wrapper .article__section {

@@ -33,14 +33,14 @@ var initialize = {
         $(this).text(tag_ja);
       });
     }
+
     function slideSwitch() {
       var $active = $('.main-image__contents DIV.active');
 
       if ($active.length == 0) $active = $('.main-image__contents DIV:last');
 
       // use this to pull the divs in the order they appear in the markup
-      var $next = $active.next().length ? $active.next() :
-        $('.main-image__contents DIV:first');
+      var $next = $active.next().length ? $active.next() : $('.main-image__contents DIV:first');
 
       // uncomment below to pull the divs randomly
       // var $sibs  = $active.siblings();
@@ -51,22 +51,17 @@ var initialize = {
       $active.addClass('last-active');
 
       $next.css({
-          opacity: 0.0
-        })
-        .addClass('active')
-        .animate({
-          opacity: 1.0
-        }, 1000, function () {
-          $active.removeClass('active last-active');
-        });
+        opacity: 0.0
+      }).addClass('active').animate({
+        opacity: 1.0
+      }, 1000, function () {
+        $active.removeClass('active last-active');
+      });
     }
 
     $(function () {
-      setInterval(function () {
-        slideSwitch()
-      }, 5000);
+      setInterval("slideSwitch()", 5000);
     });
-console.log('okです')    
   },
   'news': function news() {
     var prepage = '';
@@ -150,9 +145,10 @@ console.log('okです')
     });
   },
   'research': function research() {},
+  'achievement': function achievement() {},
   'logotype': function logotype() {},
   'funding': function funding() {},
-  'references': function achievement() {
+  'references': function references() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
       dataType: "json",
@@ -400,10 +396,14 @@ console.log('okです')
       getData().done(function (result) {
         arranged_data = marked(result);
         $('.service__wrapper').empty();
-        var markdown_body = $('.service__wrapper').append($('<div/>').attr({ 'class': 'markdown-body' }).html(arranged_data));
+        var markdown_body = $('.service__wrapper').append($('<div/>').attr({
+          'class': 'markdown-body'
+        }).html(arranged_data));
       }).fail(function (result) {
         $('.service__wrapper').empty();
-        var markdown_body = $('.service__wrapper').append($('<div/>').attr({ 'class': 'markdown-body' }).html('<p>データを取得できませんでした</p>'));
+        var markdown_body = $('.service__wrapper').append($('<div/>').attr({
+          'class': 'markdown-body'
+        }).html('<p>データを取得できませんでした</p>'));
       });
     }
   },
@@ -500,10 +500,11 @@ console.log('okです')
     });
     /***左サイドバーの動作ここまで***/
   },
-  'members': function members() {
+  'member': function member() {
     $.when($.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'), $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')).done(function (data, data_services) {
       console.log(data);
       var element = "";
+      var element_collaborators = "";
       var listSubNav = "";
       var listSubNav_en = "";
       data = data[0];
@@ -572,9 +573,13 @@ console.log('okです')
           var non_publish = data.values[i][non_publish_order];
           var link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
           if (non_publish === 'Yes') {
-            link_section = '';
+            link_section = judgeExist(mail, 'btn-mail', 'Mail');
           }
-          element += '<div class="content__member" id="' + name_ja + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          if (position === '客員教授' || position === '客員准教授') {
+            element_collaborators += '<div class="content__member" id="' + name_ja + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          } else {
+            element += '<div class="content__member" id="' + name_ja + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword + '</li>' + '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          }
         }
       } else if (file_name === 'member-en.html') {
         $("#memberList").append(listSubNav_en);
@@ -594,13 +599,17 @@ console.log('okです')
           var link_section = '';
           link_section = judgeExist(mail, 'btn-mail', 'Mail') + judgeExist(github, 'btn-github', 'GitHub') + judgeExist(orcid, 'btn-orcid', 'ORCID') + judgeExist(googleScholar, 'btn-gs', 'Google Scholar');
           if (non_publish === 'Yes') {
-            link_section = '';
+            link_section = judgeExist(mail, 'btn-mail', 'Mail');
           }
-
-          element += '<div class="content__member" id="' + name_en + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          if (position === '客員教授' || position === '客員准教授') {
+            element_collaborators += '<div class="content__member" id="' + name_en + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          } else {
+            element += '<div class="content__member" id="' + name_en + '">' + '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' + '<ul><li class="position">' + position + '</li>' + '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' + '<li class="keyword">' + keyword_en + '</li>' + '<li class="PIC">Charge：<div class="member-list__services"></div></li>' + '<li class="links"><div class="btn-box">' + link_section + '</div></li></ul></div>';
+          }
         }
       }
       $("#member-list").append(element);
+      $("#member-list-collaborators").append(element_collaborators);
 
       //担当サービスの実装
       data_services = data_services[0].values;
