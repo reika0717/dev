@@ -6,31 +6,49 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width">
-<title>お問い合わせ完了 ｜ DBCLS</title>
+<title>completion ｜ DBCLS</title>
 <link rel="stylesheet" href="style/default.css">
+<style>
+	iframe {
+		height: -webkit-fill-available;
+	}
+	ul.children {
+		display: flex;
+	}
+	ul.children li {
+		list-style:none;
+		padding-left: 20px;
+	}
+	.freebirdThemedBadge  {
+		color: red !important;
+	}
+</style>
+</style>
 </head>
+<!--削除追加いじるためののHTML-->
 <body>
-{% include header.html %}
+{% include header_en.html %}
 <div class="content__wrapper">
     <div id="subWrap">
       <div class="sub__navigation sticky">
         <h2 class="page-title">Contact</h2>
         <ul class="sub__navigation-wrapper outline-list-category__wrapper">
-          <li class="sub__navigation-title outline-list-category__title active">お問い合わせ</li>
+          <li class="sub__navigation-title outline-list-category__title active">Contact</li>
         </ul>
       </div>
     </div>
     <div class="main__contents">
       <div id="main__contents-">
     		<div class="main__content-title__wrapper">
-    			<h3 class="main__content-title">お問い合わせ</h3>
+    			<h3 class="main__content-title">Contact</h3>
   			</div>
   			<div class="section-wrapper">
-  				<p>送信完了しました！お問い合わせありがとうございます。</p>
+  				<p>Thank you for your inquiry.</p>
+          <p>Message sent successfully!</p>
   			</div>
 			</div>
 		</div>
 </div>
-{% include footer.html %}
+{% include footer_en.html %}
 </body>
 </html>
