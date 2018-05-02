@@ -535,7 +535,6 @@ var initialize = {
     //取得したある高さまで、移動
     $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
-      //$(".sub_2").addClass("active");
     })
     $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);
@@ -552,7 +551,7 @@ var initialize = {
     })
     /***左サイドバーの動作ここまで***/
   },
-  'member': function() {
+  'members': function() {
     $.when(
       $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'),
       $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')
@@ -617,7 +616,7 @@ var initialize = {
         return order
       }
 
-      if (file_name === 'member.html') {
+      if (file_name === 'members.html') {
         $("#memberList").append(listSubNav);
         $("#memberList-collaborators").append(listSubNav_collaborators)
 
@@ -663,7 +662,7 @@ var initialize = {
               '</div></li></ul></div>';
           }
         }
-      } else if (file_name === 'member-en.html') {
+      } else if (file_name === 'members-en.html') {
         $("#memberList").append(listSubNav_en);
         $("#memberList-collaborators").append(listSubNav_collaborators_en)
 
@@ -756,7 +755,6 @@ var initialize = {
 
     /***左サイドバーの動作ここから***/
     //変動要素: main__contents-"event"
-    //ある高さの取得
     var client_h = document.getElementById('main__contents-kashiwa').clientHeight;
 
     //クリックでactiveが切り替わる
@@ -767,7 +765,6 @@ var initialize = {
     //取得したある高さまで、移動
     $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
-      //$(".sub_2").addClass("active");
     })
     $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);
