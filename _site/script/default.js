@@ -60,15 +60,15 @@ var initialize = {
         });
     }
 
-    $(function() {
-      setInterval("slideSwitch()", 5000);
-    });
+    setInterval(function () {
+      slideSwitch()
+    }, 5000);
   },
   'news': function() {
     var prepage = ''
     console.log(document.referrer)
     prepage = document.referrer
-    prepage = prepage.match(".+/(.+?)([\?#;].*)?$")[1]  
+    prepage = prepage.match(".+/(.+?)([\?#;].*)?$")[1]
     if (prepage === 'events.html' || prepage === 'events-en.html') {
       setTimeout(function() {
         $('.tag-event').trigger('click')
@@ -148,11 +148,11 @@ var initialize = {
       }, 1000);
     });
   },
-  'history': function () {},
-  'funding': function () {},
-  'faq': function () {},
-  'policy': function () {},
-  'logotype': function () {},
+  'history': function() {},
+  'funding': function() {},
+  'faq': function() {},
+  'policy': function() {},
+  'logotype': function() {},
   'research': function() {},
   'achievement': function() {},
   'references': function() {

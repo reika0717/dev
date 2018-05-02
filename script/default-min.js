@@ -59,9 +59,9 @@ var initialize = {
       });
     }
 
-    $(function () {
-      setInterval("slideSwitch()", 5000);
-    });
+    setInterval(function () {
+      slideSwitch();
+    }, 5000);
   },
   'news': function news() {
     var prepage = '';
