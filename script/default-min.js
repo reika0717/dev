@@ -189,7 +189,7 @@ var initialize = {
 
         function displayList() {
           if (document.documentElement.lang === "en") {
-            $('.main__content-title').text('Achivement');
+            $('.main__content-title').text('References');
             $(".achievement__wrapper").append(element);
           } else if (document.documentElement.lang === "ja") {
             $('.main__content-title').text('引用文献一覧');
