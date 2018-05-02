@@ -68,8 +68,8 @@ var initialize = {
     var prepage = ''
     console.log(document.referrer)
     prepage = document.referrer
-    prepage = prepage.slice(-11)
-    if (prepage === 'events.html' || prepage === 'nts-en.html') {
+    prepage = prepage.match(".+/(.+?)([\?#;].*)?$")[1]  
+    if (prepage === 'events.html' || prepage === 'events-en.html') {
       setTimeout(function() {
         $('.tag-event').trigger('click')
       }, 0)
@@ -391,7 +391,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">Access</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][23] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             }
 
             element += '</article>'
