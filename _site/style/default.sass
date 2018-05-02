@@ -834,6 +834,7 @@ table.matrix
 				padding: 4px 6px
 				font-weight: 600
 				background-color: #fff
+				text-decoration: none;
 				&:before
 					content: ""
 					background: url(../img/icon_pdf.svg) no-repeat
@@ -1082,28 +1083,28 @@ table.matrix
 									&:before
 										content: url(../img/icon_mail.svg)
 										position: absolute
-										top: 0
+										top: 1px
 										left: 0
 										width: 13px
 								&.btn-github
 									&:before
 										content: url(../img/icon_git.svg)
 										position: absolute
-										top: -2px
+										top: -1px
 										left: 0
 										width: 13px
 								&.btn-orcid
 									&:before
 										content: url(../img/icon_id.svg)
 										position: absolute
-										top: -2px
+										top: 0px
 										left: 0
 										width: 13px
 								&.btn-gs
 									&:before
 										content: url(../img/icon_gs.svg)
 										position: absolute
-										top: -2px
+										top: 0px
 										left: 0
 										width: 13px
 
@@ -1303,10 +1304,7 @@ table.terminal-info
 	p 
 		font-size: 14px
 		a 
-			&:hover
-				line-height: 1
-				color: $main-color
-				border-bottom: solid 1px $main-color
+			color: $main-color
 	.contents__wrapper
 		margin-top: 30px
 		box-shadow: 0.2px 0.2px 2px $gray
