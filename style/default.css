@@ -488,7 +488,7 @@ footer {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .footer__common .footer__info .footer__organism {
-      padding-top: 15px; }
+      padding-top: 12px; }
       .footer__common .footer__info .footer__organism .footer__logo {
         width: 150px;
         height: auto;
