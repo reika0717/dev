@@ -488,7 +488,7 @@ footer {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     .footer__common .footer__info .footer__organism {
-      padding-top: 12px; }
+      padding-top: 9px; }
       .footer__common .footer__info .footer__organism .footer__logo {
         width: 150px;
         height: auto;
@@ -496,7 +496,7 @@ footer {
         margin: 0 auto; }
       .footer__common .footer__info .footer__organism .footer__organism-text {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 11px;
         margin-bottom: 20px; }
         .footer__common .footer__info .footer__organism .footer__organism-text .footer__organism-sub {
           font-size: 12px;
