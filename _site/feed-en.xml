@@ -8,34 +8,6 @@
     
       
       <item>
-        <title>(日本語) 希少疾患診断支援システム「PubCaseFinder」がMedical Tribune誌で紹介されました</title>
-        
-          <description>
-</description>
-        
-        <pubDate>Tue, 27 Feb 2018 00:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/en/2018/02/27/post2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/en/2018/02/27/post2.html</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>2018年度「統合データベース講習会:AJACS」受入れ機関の募集が開始されました。</title>
-        
-          <description>
-</description>
-        
-        <pubDate>Tue, 27 Feb 2018 00:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/en/2018/02/27/post1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/en/2018/02/27/post1.html</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>DBCLS server maintenance, 9-12 Mar 2018</title>
         
           <description>&lt;p&gt;Due to the system maintenance, our services will be temporarily unavailable. We are sorry for the inconvenience.&lt;/p&gt;
@@ -47,34 +19,6 @@
         <link>
         http://localhost:4000/en/2018/02/26/post1.html</link>
         <guid isPermaLink="true">http://localhost:4000/en/2018/02/26/post1.html</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>(日本語) LODデータの活用を促進するツール 「SPARQList」 が LODチャレンジ 2017 基盤技術部門で優秀賞を受賞しました</title>
-        
-          <description>
-</description>
-        
-        <pubDate>Fri, 23 Feb 2018 00:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/en/2018/02/23/post2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/en/2018/02/23/post2.html</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>(日本語) データのLOD化を加速させる 「JSON2LD Mapper」 が LODチャレンジ 2017 アイデア部門で優秀賞を受賞しました</title>
-        
-          <description>
-</description>
-        
-        <pubDate>Fri, 23 Feb 2018 00:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/en/2018/02/23/post1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/en/2018/02/23/post1.html</guid>
       </item>
       
     
@@ -147,15 +91,84 @@ This article describes the background of how to publish &lt;a href=&quot;https:/
     
       
       <item>
-        <title>(日本語) トーゴーの日シンポジウム2016 ～統合データベース、実りの時へ～ の講演動画を公開しました。</title>
+        <title>NBDC/DBCLS Training: AJACS Hamamatsu, 16-17 Jan. 2017</title>
         
-          <description>
+          <description>&lt;p&gt;AJACS is a training workshop by the National Bioscience Database Center (NBDC) and DBCLS.&lt;/p&gt;
+
 </description>
         
-        <pubDate>Sat, 09 Dec 2017 00:00:00 +0900</pubDate>
+        <pubDate>Wed, 08 Nov 2017 00:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/en/2017/12/09/post1.html</link>
-        <guid isPermaLink="true">http://localhost:4000/en/2017/12/09/post1.html</guid>
+        http://localhost:4000/en/2017/11/08/post1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/en/2017/11/08/post1.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>DBCLS Galaxy security maintenance</title>
+        
+          <description>&lt;p&gt;Due to the security maintenance, DBCLS Galaxy (galaxy.dbcls.jp) will be temporarily unavailable. Sorry for the inconvenience.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 24 Oct 2017 00:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/en/2017/10/24/post1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/en/2017/10/24/post1.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>PubCaseFinder has been released!</title>
+        
+          <description>&lt;p&gt;PubCaseFinder is a diagnosis assistant system for rare diseases based on phenotypic similarity.
+&lt;a href=&quot;https://pubcasefinder.dbcls.jp/&quot;&gt;https://pubcasefinder.dbcls.jp/&lt;/a&gt;&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 27 Sep 2017 00:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/en/2017/09/27/post1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/en/2017/09/27/post1.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A paper “RefEx, a reference gene expression dataset as a web tool for the functional analysis of genes” was published in Scientific Data. </title>
+        
+          <description>&lt;p&gt;A paper “RefEx, a reference gene expression dataset as a web tool for the functional analysis of genes” was published in Scientific Data.
+Dr. Hiromasa Ono and Dr. Hidemasa Bono from DBCLS have deeply contributed to this work in dry analysis.&lt;/p&gt;
+
+&lt;p&gt;The open-access full paper can be found online at:
+&lt;a href=&quot;http://dx.doi.org/10.1038/sdata.2017.105&quot;&gt;http://dx.doi.org/10.1038/sdata.2017.105&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ono H, Ogasawara O, Okubo K, Bono H
+&lt;strong&gt;&lt;em&gt;RefEx, a reference gene expression dataset as a web tool for the functional analysis of genes&lt;/em&gt;&lt;/strong&gt;
+Scientific Data, 4:170105
+DOI: 10.1038/sdata.2017.105&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 30 Aug 2017 00:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/en/2017/08/30/post1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/en/2017/08/30/post1.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>NBDC/DBCLS Training: AJACS Kawachi, 24 Aug. 2017</title>
+        
+          <description>&lt;p&gt;AJACS is a training workshop by the National Bioscience Database Center (NBDC) and DBCLS.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jul 2017 00:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/en/2017/07/27/post1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/en/2017/07/27/post1.html</guid>
       </item>
       
     

@@ -53,9 +53,23 @@
 				<span class='header__nav__sns-feed fa fa-rss'></span>
 			</li>
 			<li class='header__nav__search'>
-				<input class='search__wrapper' type="text">
-				<input class='search__submit' type="submit" value=''>
-			</li>
+        <div id='header__nav__search-inner'>
+          <script>
+          (function() {
+            var cx = '005836004391041295034:4yabfqnwmmo';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+          </script>
+          <gcse:search></gcse:search>
+        </div>
+        <!-- 				<input class='search__wrapper' type="text">
+				<input class='search__submit' type="submit" value=''> -->
+      </li>
 		</ul>
 	</nav>
 </header>
@@ -88,6 +102,10 @@
         </div>
       </div>
       <div class="post__main-text">
+        <p><a href="http://dbcls.rois.ac.jp/en/">Database Center for Life Science (DBCLS)/Joint Support-Center for Data Science Research/ROIS</a> has launched the JBI (Japan alliance for Bioscience Information) portal site in collaboration with <a href="https://biosciencedbc.jp/en/">National Bioscience Database Center (NBDC)/JST</a>, <a href="http://www.ddbj.nig.ac.jp/index-e.html">DNA Data Bank of Japan (DDBJ)/National Institute of Genetics/ROIS</a>, <a href="https://pdbj.org/">Protein Data Bank Japan (PDBj)/Institute for Protein Research/Osaka University</a>.
+This portal site provides one-stop service of databases and tools which are helpful in various scenes of the life science research.
+Visit the website (<a href="http://jbioinfo.jp/">http://jbioinfo.jp/</a>) for more detail.</p>
+
       </div>
     </div>
   </div>
@@ -112,13 +130,13 @@
 						<li><a href="/dbcls-test/research-en.html">Research</a>
 							<ul>
 								<li><a href="/dbcls-test/research-en.html">Development</a></li>
-								<li><a href="/dbcls-test/achievement-en.html">Achivement</a></li>
+								<li><a href="/dbcls-test/publications-en.html">Publications</a></li>
 							</ul>
 						</li>
 						<li><a href="/dbcls-test/services-en.html">Services</a>
 							<ul>
 								<li><a href="/dbcls-test/services-en.html">Services</a></li>
-								<li><a href="/dbcls-test/references-en.html">References</a></li>
+								<li><a href="/dbcls-test/references-en.html">Papers Citing our services</a></li>
 							</ul>
 						</li>
 						<li><a href="/dbcls-test/events-en.html">Event</a>

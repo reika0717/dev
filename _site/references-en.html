@@ -55,9 +55,23 @@
 				<span class='header__nav__sns-feed fa fa-rss'></span>
 			</li>
 			<li class='header__nav__search'>
-				<input class='search__wrapper' type="text">
-				<input class='search__submit' type="submit" value=''>
-			</li>
+        <div id='header__nav__search-inner'>
+          <script>
+          (function() {
+            var cx = '005836004391041295034:4yabfqnwmmo';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+          </script>
+          <gcse:search></gcse:search>
+        </div>
+        <!-- 				<input class='search__wrapper' type="text">
+				<input class='search__submit' type="submit" value=''> -->
+      </li>
 		</ul>
 	</nav>
 </header>
@@ -71,19 +85,19 @@
 						<a href="/dbcls-test/services-en.html">Services</a>
 					</li>
 					<li class="sub__navigation-title outline-list-category__title">
-						<a href="achievement-en.html">Achievement</a>
+						<a href="publications-en.html">publications</a>
 					</li>
 					<li class="sub__navigation-title outline-list-category__title active">
-						<a href="">References</a>
+						<a href="">Papers Citing our services</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="main__contents">
 			<div class="main__content-title__wrapper">
-				<h3 class="main__content-title">References</h3>
+				<h3 class="main__content-title">Papers Citing our services</h3>
 			</div>
-			<div class="achievement__wrapper"></div>
+			<div class="publications__wrapper"></div>
 		</div>
 	</div>
 	<footer id="footer">
@@ -107,13 +121,13 @@
 						<li><a href="/dbcls-test/research-en.html">Research</a>
 							<ul>
 								<li><a href="/dbcls-test/research-en.html">Development</a></li>
-								<li><a href="/dbcls-test/achievement-en.html">Achivement</a></li>
+								<li><a href="/dbcls-test/publications-en.html">Publications</a></li>
 							</ul>
 						</li>
 						<li><a href="/dbcls-test/services-en.html">Services</a>
 							<ul>
 								<li><a href="/dbcls-test/services-en.html">Services</a></li>
-								<li><a href="/dbcls-test/references-en.html">References</a></li>
+								<li><a href="/dbcls-test/references-en.html">Papers Citing our services</a></li>
 							</ul>
 						</li>
 						<li><a href="/dbcls-test/events-en.html">Event</a>
