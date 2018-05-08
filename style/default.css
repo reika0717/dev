@@ -1051,7 +1051,7 @@ table.matrix {
     align-self: self-end; }
     .wrapper-type-box .article__section.contener-type-box {
       position: relative;
-      height: 314px;
+      height: 322px;
       width: 262px;
       border: solid 0.25px #cccccc; }
       .wrapper-type-box .article__section.contener-type-box .repos_image {
@@ -1087,7 +1087,7 @@ table.matrix {
           -ms-flex-align: center;
           align-items: center;
           position: absolute;
-          bottom: -52px;
+          bottom: -62px;
           left: 50%;
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
