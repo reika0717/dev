@@ -635,6 +635,14 @@ footer {
     .main-image__wrapper .main-image__contents .last-active {
       z-index: 9; }
 
+@media screen and (min-width: 0px) and (max-device-width: 640px) {
+  .main-image__wrapper .main-image__contents div img {
+    width: auto; } }
+
+@media screen and (min-width: 769px) and (max-device-width: 1024px) {
+  .main-image__wrapper .main-image__contents div img {
+    width: auto; } }
+
 .top__news-section {
   width: 1024px;
   margin: 52px auto 0; }
