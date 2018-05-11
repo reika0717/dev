@@ -133,6 +133,10 @@ var initialize = {
         $(this).text(tag_ja);
       });
     }
+    //個別記事のサイト外URLにtarget="_blank"
+    $(document).ready(function () {
+      $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+    });
   },
   'about': function about() {
     $('.lazy-mail').each(function () {
