@@ -217,24 +217,29 @@ body
 	width: 222px
 .header
 	width: 100%
-	height: 67px
+	//height: 67px
+	height: 40px
 	position: fixed
 	z-index: 11
 	background: linear-gradient(#004098, #1B2244)
 	top: 0
 .header__language-wrapper
-	width: 1024px
-	margin: 0 auto
-	position: relative
-	margin-top: 14px
+	//width: 1024px
+	//margin: 0 auto
+	//position: relative
+	//margin-top: 14px
 	.qtrans_language_chooser
-		display: flex
-		justify-content: flex-end
-		position: absolute
-		right: 5px
-		top: -9px
+		display: inline-block
+		//display: flex
+		//justify-content: flex-end
+		//position: absolute
+		//right: 5px
+		//right: -25px
+		//top: -9px
+		//top: 11px
 		li
 			font-size: 14px	
+			display: inline
 .lang-ja,
 .lang-en
 	span
@@ -243,19 +248,22 @@ body
 	.lang-en
 		cursor: pointer
 	.lang-ja
-		margin-left: 15px
+		//margin-left: 15px
+		margin-left: 8px
 		opacity: 0.5
 		pointer-events: none
 #header__languages-en
 	.lang-ja
-		margin-left: 15px
+		//margin-left: 15px
+		margin-left: 8px
 		cursor: pointer
 	.lang-en
 		opacity: 0.5
 		pointer-events: none
 .header__nav
 	width: 1024px
-	margin: -2px auto 4px
+	//width: 940px
+	margin: -2px auto 1px
 	display: flex
 	align-items: center
 	justify-content: space-between
@@ -266,10 +274,11 @@ body
 			color: white
 			font-weight: 600
 			font-size: 14px
-			padding-bottom: 2px
+			//padding-bottom: 2px
 			img
-				width: 90px
+				width: 75px
 				height: auto
+				padding-top: 4px
 	.header__nav__sns
 		&-twitter
 			color: white
@@ -278,6 +287,7 @@ body
 			color: white
 	.header__nav__search
 		position: relative
+		top: 1px //追加1805
 		.search__wrapper
 			width: 217px
 			height: 22px
@@ -309,7 +319,8 @@ body
 		background-color: transparent !important
 		border: none !important
 		padding: 0
-		width: 217px
+		//width: 217px
+		width: 195px
 		.gsc-search-box
 			margin-bottom: 0
 			.gsc-input
@@ -533,7 +544,8 @@ footer
 		.main__forcused-page__text
 			padding: 12px
 .main-image__wrapper
-	margin-top: 67px//追加
+	//margin-top: 67px
+	margin-top: 40px
 	.main-image__contents
 		position: relative
 		height: 400px
