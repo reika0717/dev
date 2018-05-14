@@ -13,7 +13,7 @@
 		<ul class='header__nav'>
 			<li class='header__nav__contents'>
 				<a href="/dbcls-test/index-en.html">
-					<img src="/dbcls-test/img/logo_dbcls_white.png" alt=""　class='header__logo'>
+					<img src="/dbcls-test/img/logo_dbcls_white.svg" alt=""　class='header__logo'>
 				</a>
 			</li>
 			<li class='header__nav__contents about'>
@@ -29,7 +29,7 @@
 				<a href="/dbcls-test/events-en.html">Events</a>
 			</li>
 			<li class='header__nav__contents members'>
-				<a href="/dbcls-test/member-en.html">Members</a>
+				<a href="/dbcls-test/members-en.html">Members</a>
 			</li>
 			<li class='header__nav__contents access'>
 				<a href="/dbcls-test/access-en.html">Access</a>
@@ -42,9 +42,23 @@
 				<span class='header__nav__sns-feed fa fa-rss'></span>
 			</li>
 			<li class='header__nav__search'>
-				<input class='search__wrapper' type="text">
-				<input class='search__submit' type="submit" value=''>
-			</li>
+        <div id='header__nav__search-inner'>
+          <script>
+          (function() {
+            var cx = '005836004391041295034:4yabfqnwmmo';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+          </script>
+          <gcse:search></gcse:search>
+        </div>
+        <!-- 				<input class='search__wrapper' type="text">
+				<input class='search__submit' type="submit" value=''> -->
+      </li>
 		</ul>
 	</nav>
 </header>

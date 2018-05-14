@@ -1,0 +1,81 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>monban-README.md</title>
+      </head>
+      <body>
+        <h1 id="monban-a-rdf-lint-tool-aramashi-a-tool-for-rdf-statistics">Monban: A RDF Lint Tool &amp; Aramashi: A tool for RDF statistics</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://nodejs.org/">Node.js</a> &gt;= 8.10.0</li>
+<li><a href="https://yarnpkg.com">Yarn</a> &gt;= 1.5.1</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<pre><code>$ git clone https://github.com/dbcls/monban
+$ cd monban
+$ yarn install
+</code></pre><h2 id="monban">Monban</h2>
+<p><code>monban</code> lints the file specified.</p>
+<pre><code>$ ./bin/monban [target file (.nt, .ttl)]
+</code></pre><h3 id="options">Options</h3>
+<h4 id="-primal-classes-path-txt"><code>--primal-classes &lt;path.txt&gt;</code></h4>
+<p>Path to primal classes definition. List classes one per line.</p>
+<p>Example:</p>
+<pre><code>http://example.com/primaryClass1
+http://example.com/primaryClass2
+</code></pre><h4 id="-uri-whitelist-path-tsv"><code>--uri-whitelist &lt;path.tsv&gt;</code></h4>
+<p>Path to white list definition for <code>rdfs:seeAlso</code> test. The file should be a Tab Separated Values (TSV) file.</p>
+<ul>
+<li>1st column: label of the pattern</li>
+<li>2nd column: RegExp of the pattern</li>
+</ul>
+<p>Example:</p>
+<pre><code>Example1    ^http://example\.com/1/
+Example2    ^http://example\.com/2/
+</code></pre><h4 id="-uri-blacklist-path-tsv"><code>--uri-blacklist &lt;path.tsv&gt;</code></h4>
+<p>Path to black list definition for <code>rdfs:seeAlso</code> test. The file should be a Tab Separated Values (TSV) file.</p>
+<ul>
+<li>1st column: label of the pattern</li>
+<li>2nd column: RegExp of the pattern</li>
+</ul>
+<pre><code>Example1    ^http://example\.com/1/
+Example2    ^http://example\.com/2/
+</code></pre><h4 id="-ontology-path-ttl"><code>--ontology &lt;path.ttl&gt;</code></h4>
+<p>Path to ontology (in Turtle or N-Triples). This option can be specified multiple times.</p>
+<pre><code>Example1    ^http://example\.com/1/
+Example2    ^http://example\.com/2/
+</code></pre><h4 id="-bib-patterns-path-tsv"><code>--bib-patterns &lt;path.tsv&gt;</code></h4>
+<p>Path to bibliography resource patterns.</p>
+<p>Example (this is the default):</p>
+<pre><code>PMC    ^http://identifiers\.org/pmc/
+PubMed    ^http://identifiers\.org/pubmed/
+DOI    ^http://doi\.org/
+</code></pre><h4 id="-report-limit-number"><code>--report-limit &lt;number&gt;</code></h4>
+<p>Number of error instances to report per error. If negative specified, no limit.</p>
+<p>Default: 10</p>
+<h4 id="-output-format-format"><code>--output-format &lt;format&gt;</code></h4>
+<p>Output format. <code>json</code> and <code>markdown</code> are available.</p>
+<p>Default: <code>markdown</code></p>
+<h2 id="aramashi">Aramashi</h2>
+<p><code>aramashi</code> computes RDF statistics of the file.</p>
+<pre><code>$ ./bin/aramashi [target file (.nt, .ttl)]
+</code></pre><h3 id="option">Option</h3>
+<h4 id="-link-patterns-path-tsv"><code>--link-patterns &lt;path.tsv&gt;</code></h4>
+<p>Path to the link pattern definition. The file should be a Tab Separated Values (TSV) file.</p>
+<ul>
+<li>1st column: label of the pattern</li>
+<li>2nd column: RegExp of the pattern</li>
+</ul>
+<p>Example:</p>
+<pre><code>DDBJ    ^http://identifiers\.org/insdc/
+KERO    ^http://kero\.hgc\.jp/rdf/
+</code></pre><h2 id="aramashi-merge">Aramashi-merge</h2>
+<p><code>aramashi-merge</code> merges the outputs of <code>aramashi</code>.</p>
+<pre><code>$ ./bin/aramashi-merge [target file (.json)]
+</code></pre><p>This can be used for a large graph consists of many files; 1) use <code>aramashi</code> to compute the file-wise statistics, then 2) use <code>aramashi-merge</code> to merge the results. Example:</p>
+<pre><code>$ ./bin/aramashi file1.ttl &gt; file1.json
+$ ./bin/aramashi file2.ttl &gt; file2.json
+$ ./bin/aramashi-merge file1.json file2.json &gt; merged.json
+</code></pre>
+      </body>
+    </html>
