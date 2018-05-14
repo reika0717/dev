@@ -60,7 +60,7 @@ var initialize = {
         });
     }
 
-    setInterval(function () {
+    setInterval(function() {
       slideSwitch()
     }, 5000);
   },
@@ -412,10 +412,12 @@ var initialize = {
     //ハッシュ値が変わった時の画面遷移
     window.addEventListener('hashchange', function() {
       if (location.hash === '') {
+        $('.facet_section').toggleClass('off')
         $('.service__wrapper').empty()
         servicesFrontDisplay()
       } else {
         var service__title = location.hash.slice(1)
+        $('.facet_section').toggleClass('off')
         displayRepos(service__title)
       }
     }, false)
