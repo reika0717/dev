@@ -41,21 +41,17 @@ header, footer {
   font-family: 'Muli', sans-serif !important; }
 
 /* dbcls-common-header */
-header#dbcls-common-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 9999; }
-
 .dbcls-common-header {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 24px;
   background: -webkit-gradient(linear, left top, left bottom, from(#004098), to(#1B2244));
   background: -webkit-linear-gradient(#004098, #1B2244);
   background: -o-linear-gradient(#004098, #1B2244);
-  background: linear-gradient(#004098, #1B2244);
-  top: 0;
-  left: 0; }
+  background: linear-gradient(#004098, #1B2244); }
   .dbcls-common-header nav.gnav {
     width: 1024px;
     margin: 0 auto;
