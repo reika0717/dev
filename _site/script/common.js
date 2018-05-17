@@ -10,23 +10,34 @@ $.ajax({
     })
     console.log(symbolList);
     var element = "";
-    element += '<div class="f-services__contents">';
+    element += '<div class="f-bg"><div class="f-services__contents" id="f-services__contents">';
     for (var i = 0; i < symbolList.length; i++) {
       element +=
-	      '<a href="' + symbolList[i][4] + '" class="page_btn access_btn">' +
+	      '<a href="' + symbolList[i][4] + '">' +
         '<img src="./img/service_assets/' + symbolList[i][23] + '.png" alt="' + symbolList[i][2] + '" class="object-fit-img img_services">' + 
         '</a>'
     }
-    element += '<a href="#" class="gnav-btn">more</a>' + '</div>';
+    element += '<a href="#" class="f-services__btn">more</a>' + '</div></div>';
   
-    //Header-common gNav f-services
-		$(document).on("click",".gnav-services", function() {
+    //#featured-servicesクリックイベントHeader-common gNav f-services
+		$(document).on("click","#featured-services", function() {
 
-		   if($('.f-services__contents').length){
-		  	$(".f-services__contents").remove();
-		   }else {
-			  $("#f-services").append(element);
+		  if($('.f-bg').length){
+		  	$(".f-bg").remove();
+        $(".f-hide-box").remove();
+		  }else {
+			  $("#featured-services").append(element);
+        $('body').append('<div class="f-hide-box"></div>');
 			}
+      //内をクリックした際非表示にしない
+      $('.f-bg').click(function (event) {
+        event.stopPropagation();
+      });
+      // 外をクリックした際非表示にする
+      $('.f-hide-box').click(function () {
+        $('.f-bg').remove();
+        $(".f-hide-box").remove();
+      });
 		});
   }
 });
