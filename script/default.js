@@ -165,7 +165,6 @@ var initialize = {
       dataType: "json",
       async: true,
       success: function(data) {
-
         var elementArray = data.values;
         var elementArray_service = []
         for (var i = 0; i < elementArray.length; i++) {
@@ -183,17 +182,19 @@ var initialize = {
         }
 
         var element = "";
-
         var names = Object.keys(filterList);
-
         element += '<table class="papers_citing_table"><tbody>';
         for (i = 0; i < names.length; i++) {
-
-          var nameslength = names[i].length;
+          var indivisual_service = filterList[names[i]]
+          indivisual_service = indivisual_service.filter(data => {
+            return data[1] !== 'Original'
+          })
+          console.log(indivisual_service)
+          var nameslength = indivisual_service.length;
 
           element +=
             '<tr><td><div class="filName" data-category="' + names[i] + '">' + names[i] + '</div></td>' +
-            '<td class="quote_num">' + nameslength + '</td></tr>';
+            '<td><p class="quote_num">' + nameslength + '</p></td></tr>';
         }
         element += '</tbody></table>';
 
@@ -213,6 +214,12 @@ var initialize = {
           displayIndividual(names)
         })
 
+        $(document).on('click', '.quote_num', function() {
+          var name_div = $(this).parent().prev().find('div')
+          names = name_div.html()
+          displayIndividual(names)
+        })
+
         function displayIndividual(names) {
           location.hash = names
           var arranged_name = names.replace('%20', ' ')
@@ -221,6 +228,9 @@ var initialize = {
           $('.publications__wrapper').empty()
           var service_array = []
           service_array = filterList[arranged_name]
+          service_array = service_array.filter(data => {
+            return data[1] !== 'Original'
+          })
           var results = "";
 
           for (var i = 0; i < service_array.length; i++) {
@@ -287,28 +297,28 @@ var initialize = {
 
           function getClassName(num) {
             var tagName = []
-            if (symbolYList[num][10] === 'Y') {
+            if (symbolYList[num][14] === 'Y') {
               tagName.push('omics')
             }
-            if (symbolYList[num][11] === 'Y') {
+            if (symbolYList[num][15] === 'Y') {
               tagName.push('text-mining')
             }
-            if (symbolYList[num][12] === 'Y') {
+            if (symbolYList[num][16] === 'Y') {
               tagName.push('contents')
             }
-            if (symbolYList[num][13] === 'Y') {
+            if (symbolYList[num][17] === 'Y') {
               tagName.push('semantic')
             }
-            if (symbolYList[num][14] === 'Y') {
+            if (symbolYList[num][18] === 'Y') {
               tagName.push('biologist')
             }
-            if (symbolYList[num][15] === 'Y') {
+            if (symbolYList[num][19] === 'Y') {
               tagName.push('application')
             }
-            if (symbolYList[num][16] === 'Y') {
+            if (symbolYList[num][20] === 'Y') {
               tagName.push('data-scientist')
             }
-            if (symbolYList[num][17] === 'Y') {
+            if (symbolYList[num][21] === 'Y') {
               tagName.push('provider')
             }
             return tagName
@@ -383,7 +393,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][23] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][26] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             } else if (file_name === 'services-en.html') {
               element += '<article class="article__section contener-type-box mix ' + tagName + '">' +
                 '<div id="repos_name' + i + '" class="repos_name">' +
@@ -395,7 +405,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">Access</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][23] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][26] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             }
 
             element += '</article>'

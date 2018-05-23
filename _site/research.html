@@ -90,8 +90,8 @@
       <div class="sub__navigation sticky">
         <h2 class="page-title">Research</h2>
         <ul class="sub__navigation-wrapper outline-list-category__wrapper">
-						<li class="sub__navigation-title outline-list-category__title active"><a href="/dbcls-test/research.html">研究開発</a></li>
-						<li class="sub__navigation-title outline-list-category__title"><a href="publications.html">研究業績</a></li>
+          <li class="sub__navigation-title outline-list-category__title active"><a href="/dbcls-test/research.html">研究開発</a></li>
+          <li class="sub__navigation-title outline-list-category__title"><a href="publications.html">発表論文一覧</a></li>
         </ul>
       </div>
     </div>
@@ -104,36 +104,122 @@
       <div class="research__image"><img src="./img/direction_map.svg"></div>
       <div class="section-wrapper">
         <article class="article__section research__section-ja padding15">
-          <h4>RDF統合化のための基盤技術開発</h4>
-          <p>Resource Description Framework（RDF）は、セマンティック・ウェブにおけるリソースを記述するためのフレームワークです。この技術を生命科学分野におけるデータベースに用いることによって、単なるリンク情報だけでない、個々のデータに含まれる情報をより高い利便性で扱えるようにすることが、RDFによるデータベース統合の目的です。</p>
+          <h4>データベース統合利用のための環境構築</h4>
+          <p>統合データベースの価値を研究者に届け、日々の研究で有効に利用できるように、ウェブサービスやコンテンツの充実を図っています。特に、ゲノム情報や遺伝子発現情報を統合的に検索するためのインタフェースや自然言語で検索するためのインタフェースを持つウェブサービスを開発しています。それらを医療やゲノム編集などに応用するためのツールも開発しています。</p>
           <ul class="research__list">
             <li>
-              <span class="reference-ja">【参考１】</span>
+              <span class="reference-ja">【ゲノム・発現統合検索】</span>
               <br>
-              <a href="http://dbcls.rois.ac.jp/wp-content/uploads/2014/02/20140602-RDF-guideline.pdf">RDF化のガイドラインについて(2014/6/2 発表資料PDF)</a>
+              <ul>
+                <li>TogoGenome</li>
+                <li>DBCLS SRA</li>
+                <li>RefEx</li>
+                <li>AOE</li>
+                <li>GGRNA</li>
+                <li>GGGenome</li>
+                <li>Gendoo</li>
+              </ul>
             </li>
+          </ul>
+          <ul class="research__list">
             <li>
-              <span class="reference-ja">【参考２】</span>
+              <span class="reference-ja">【自然言語による統合検索】</span>
               <br>
-              <a href="">トーゴーの日シンポジウム2015「NBDC RDFポータル」運用開始 ～生命科学のデータを分野横断的に活用するために～</a>
+              <ul>
+                <li>LODQA</li>
+              </ul>
+            </li>
+          </ul>
+          </ul>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【応用ツール】</span>
+              <br>
+              <ul>
+                <li>PubCaseFinder</li>
+                <li>CRISPRdirect</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【コンテンツ】</span>
+              <br>
+              <ul>
+                <li>ライフサイエンス新着論文レビュー・領域融合レビュー</li>
+                <li>統合TV</li>
+                <li>BodyParts3D</li>
+                <li>ライフサイエンスQA</li>
+              </ul>
             </li>
           </ul>
         </article>
         <article class="article__section research__section-ja padding15">
-          <h4>統合化支援と分散統合データベース環境の実現</h4>
-          <p>個別のデータベースを有機的に繋ぐことにより、それぞれのデータベースの価値をさらに高めることを目的として、国内外で構築されるデータベースに対し、DBCLSで開発しているRDF技術を元にデータベース統合の支援を行っています。そのために必要な国内外のデータベースを構築する研究機関と連携を図っており、DBCLSはセマンティック・ウェブによるデータベース統合の国際標準の整備に貢献しています。</p>
+          <h4>データベースの効率的な運用と拡張</h4>
+          <p>データベースや各種のサービスを運用するにあたり、セマンティック・ウェブ技術に基づいた運用や、分散環境への対応についての調査・研究開発を行っています。研究開発の成果として公開されたデータベースを安定的に運用するため、新規技術の導入や既存のデータベース利用者への対応なども継続して行うとともに、 RDF 化されたデータを効率よく扱うための技術を開発しています。</p>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【RDF 検索支援ツール】</span>
+              <br>
+              <ul>
+                <li>LOD surfer: Umaka-Yummy / SPARQL Builder</li>
+                <li>SPARQL support</li>
+                <li>SPARQList</li>
+                <li>SPANG</li>
+                <li>SPARQL-proxy</li>
+                <li>TogoStanza</li>
+                <li>d3sparql.jp</li>
+                <li>TogoTable</li>
+                <li>TogoWS</li>
+              </ul>
+            </li>
+          </ul>
         </article>
         <article class="article__section research__section-ja padding15">
-          <h4>エンドユーザ向けデータベース統合利用環境の構築</h4>
-          <p>基盤技術開発で推進しているデータベース統合は、主にデータベース構築者やバイオインフォマティシャンの活動に大きく貢献しています。DBCLSでは、データベースを日々利用する研究者にその価値を届けるため、ウェブサービスやコンテンツの充実を図っています。</p>
+          <h4>データベース統合化のための基盤技術開発</h4>
+          <p>DBCLS ではセマンティック・ウェブ技術を用いたデータベース統合を推進しています。セマンティック・ウェブにおけるリソースを記述するためのフレームワークである Resource Description Framework (RDF) をデータベースに用いることにより、個々のデータに含まれる情報をより高い利便性で扱えるようになります。また、そのようなセマンティックを重視したデータベースの統合には、専門家や文献からの知識によるデータ間の関連の意味付けが重要となります。これらの RDF 化を支援し、データベース統合のための基盤技術を開発しています。</p>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【データベース RDF 化支援ツール】</span>
+              <br>
+              <ul>
+                <li>D2RQ Mapper</li>
+                <li>TogoDB</li>
+                <li>TogoAnnotator</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【知識の抽出および RDF 化支援ツール】</span>
+              <br>
+              <ul>
+                <li>PubAnnotation / TextAE</li>
+                <li>PubDictionaries</li>
+                <li>Allie</li>
+                <li>Colil</li>
+                <li>inMeXes</li>
+                <li>OntoFinder</li>
+              </ul>
+            </li>
+          </ul>
         </article>
         <article class="article__section research__section-ja padding15">
-          <h4>データベースと各種サービスの効率的な運用と拡張</h4>
-          <p>データベースや各種のサービスを運用するにあたり、セマンティック・ウェブ技術に基づいた運用や、分散環境への対応についての調査・研究開発を行っています。研究開発の成果として公開されたデータベースを安定的に運用するため、新規技術の導入や既存のデータベース利用者への対応なども継続して行っています。</p>
-        </article>
-        <article class="article__section research__section-ja padding15">
-          <h4>広報・教育活動</h4>
-          <p>研究開発を通して公開されたサービスやツールなどの成果を広く生命科学の研究者をはじめとしたデータベース利用者に知って・使っていただくため、全国各地での講習会の開催、また、学会へのブース出展などを積極的に行っています。インターネットで無料で閲覧できるウェブサービスやツールのチュートリアルの動画やドキュメントなどの公開も行っています。</p>
+          <h4>統合化支援と統合化のための国際標準整備</h4>
+          <p>個別のデータベースを有機的に繋ぐことにより、それぞれのデータベースの価値をさらに高めることを目的として、国内外で構築されるデータベースに対し、DBCLS で開発している RDF 技術を元にデータベース統合の支援を行っています。そのために必要な国内外のデータベースを構築する研究機関と連携を図っており、DBCLS はセマンティック・ウェブによるデータベース統合の国際標準の整備に貢献しています。</p>
+          <ul class="research__list">
+            <li>
+              <span class="reference-ja">【関連リンク】</span>
+              <br>
+              <ul>
+                <li><a href="http://wiki.lifesciencedb.jp/mw/RDFizingDatabaseGuideline" title="">RDF化ガイドライン</a></li>
+                <li><a href="http://wiki.lifesciencedb.jp/mw/SPARQLthon" title="">SPARQLthon</a></li>
+                <li><a href="https://integbio.jp/rdf/" title="">NBDC RDF ポータル</a></li>
+                <li><a href="http://lsd.dbcls.jp/portal/" title="">LSD RDF Data Portal</a></li>
+                <li><a href="" title="">ハッカソン（広報・教育）</a></li>
+              </ul>
+            </li>
+          </ul>
         </article>
       </div>
     </div>
@@ -153,13 +239,13 @@
 								<li><a href="/dbcls-test/funding.html">予算と財源</a></li>
 								<li><a href="/dbcls-test/faq.html">よくある質問</a></li>
 								<li><a href="/dbcls-test/policy.html">サイトポリシー</a></li>
-								<li><a href="/dbcls-test/logotype.html">ロゴについて</a></li>
+								<li><a href="/dbcls-test/logotype.html">ロゴとリボンについて</a></li>
 								</ul>
 						</li>
 						<li><a href="/dbcls-test/research.html">Research</a>
 							<ul>
 								<li><a href="/dbcls-test/research.html">研究開発</a></li>
-								<li><a href="/dbcls-test/publications.html">研究業績</a></li>
+								<li><a href="/dbcls-test/publications.html">発表論文一覧</a></li>
 							</ul>
 						</li>
 						<li><a href="/dbcls-test/services.html">Services</a>
@@ -273,8 +359,7 @@
 	</div>
 	</div>
 </footer>
-  
-<script src="script/default-min.js"></script>
+  <script src="script/default-min.js"></script>
 </body>
 
 </html>
