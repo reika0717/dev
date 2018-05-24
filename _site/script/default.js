@@ -467,6 +467,7 @@ var initialize = {
     //デフォルトは英語版README表示
     $(document).on('click', '.more_btn', function() {
       var service_name = $(this).parent().siblings('.name').html()
+      service_name = service_name.replace(' ', '_')
       displayRepos(service_name)
     })
 
@@ -478,7 +479,7 @@ var initialize = {
       function getData() {
         return $.ajax({
           type: 'GET',
-          url: './md/' + repos_name + '-README.md'
+          url: './md/' + repos_name + '_jp.md'
         })
       }
       var arranged_data = ''
