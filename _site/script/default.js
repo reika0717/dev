@@ -13,18 +13,18 @@ script_sticky.setAttribute('src', '/dbcls-test/script/stickyfill.min.js')
 document.head.appendChild(script)
 document.head.appendChild(script_sticky)
 var initialize = {
-  'index': function () {
+  'index': function() {
     $('.news__individual-wrapper').css('display', 'block')
     var url = window.location;
     var path = url.href.split('/');
     var file_name = path.pop();
     var tags_key = Object.keys(tags)
-    tags_key.map(function (data) {
+    tags_key.map(function(data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
     //タグ名を日本語に変換
     if (file_name === 'index.html') {
-      $('.tag_name').each(function () {
+      $('.tag_name').each(function() {
         var tag_en = $(this).text()
         tag_en = $.trim(tag_en)
         var tag_ja = tags[tag_en]
@@ -55,26 +55,26 @@ var initialize = {
         .addClass('active')
         .animate({
           opacity: 1.0
-        }, 1000, function () {
+        }, 1000, function() {
           $active.removeClass('active last-active');
         });
     }
 
-    $(function () {
+    $(function() {
       setInterval("slideSwitch()", 5000);
     });
   },
-  'news': function () {
+  'news': function() {
     var prepage = ''
     console.log(document.referrer)
     prepage = document.referrer
     prepage = prepage.slice(-11)
     if (prepage === 'events.html' || prepage === 'nts-en.html') {
-      setTimeout(function () {
+      setTimeout(function() {
         $('.tag-event').trigger('click')
       }, 0)
       setTimeout(
-        function () {
+        function() {
           $('.news__individual-wrapper').css('display', 'block')
         }, 500)
     } else {
@@ -84,12 +84,12 @@ var initialize = {
     var path = url.href.split('/');
     var file_name = path.pop();
     var tags_key = Object.keys(tags)
-    tags_key.map(function (data) {
+    tags_key.map(function(data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
     //タグ名を日本語に変換
     if (file_name === 'news.html') {
-      $('.tag_name').each(function () {
+      $('.tag_name').each(function() {
         var tag_en = $(this).text()
         tag_en = $.trim(tag_en)
         var tag_ja = tags[tag_en]
@@ -97,7 +97,7 @@ var initialize = {
       })
     }
 
-    $('.post__individual').each(function () {
+    $('.post__individual').each(function() {
       var tag_className = $(this).attr('class')
       tag_className = tag_className.match(/\[\"(.+?)\"\]/g)
       tag_className = tag_className[0].match(/\"(.+?)\"/g)
@@ -117,18 +117,18 @@ var initialize = {
     //   }
     // });
   },
-  'post': function () {
+  'post': function() {
     var url = window.location;
     var path = url.href.split('/');
     var file_name = path.pop();
     var tags_key = Object.keys(tags)
-    tags_key.map(function (data) {
+    tags_key.map(function(data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
 
     //タグ名を日本語に変換
     if (path.indexOf("ja") >= 0) {
-      $('.tag_name').each(function () {
+      $('.tag_name').each(function() {
         var tag_en = $(this).text()
         tag_en = $.trim(tag_en)
         var tag_ja = tags[tag_en]
@@ -136,10 +136,10 @@ var initialize = {
       })
     }
   },
-  'about': function () {
-    $('.lazy-mail').each(function () {
+  'about': function() {
+    $('.lazy-mail').each(function() {
       var self = this;
-      setTimeout(function () {
+      setTimeout(function() {
         var $target = jQuery(self);
         var address = $target.data("address").split("_at_").join("@").split("_dot_").join(".");
         $target
@@ -148,15 +148,15 @@ var initialize = {
       }, 1000);
     });
   },
-  'research': function () {},
-  'logotype': function () {},
-  'funding': function () {},
-  'references': function () {
+  'research': function() {},
+  'logotype': function() {},
+  'funding': function() {},
+  'references': function() {
     $.ajax({
       url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
       dataType: "json",
       async: true,
-      success: function (data) {
+      success: function(data) {
 
         var elementArray = data.values;
         var elementArray_service = []
@@ -200,7 +200,7 @@ var initialize = {
         }
         displayList()
 
-        $(document).on('click', '.filName', function () {
+        $(document).on('click', '.filName', function() {
           names = $(this).html()
           displayIndividual(names)
         })
@@ -237,7 +237,7 @@ var initialize = {
         }
 
         //ハッシュ値が変わった時の画面遷移
-        window.addEventListener('hashchange', function () {
+        window.addEventListener('hashchange', function() {
           if (location.hash === '') {
             $('.achievement__wrapper').empty()
             displayList()
@@ -254,7 +254,7 @@ var initialize = {
       }
     })
   },
-  'services': function () {
+  'services': function() {
     var repos_name = '';
     // var repos_array = [];
     var tags_array
@@ -268,7 +268,7 @@ var initialize = {
         url: "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
         dataType: "json",
         async: true,
-        success: function (data) {
+        success: function(data) {
 
           var elementArray = data.values;
           //column1に"Y"のあるrowをとってくる
@@ -277,30 +277,58 @@ var initialize = {
           })
           var element = "";
 
+          function getOrder(type, target) {
+            var order = 0
+            if (type === 'category') {
+              for (var i = 0; i < elementArray.length; i++) {
+                if (elementArray[1][i] === target) {
+                  order = i
+                }
+              }
+            } else if (type === 'other') {
+              for (var i = 0; i < elementArray.length; i++) {
+                if (elementArray[0][i] === target) {
+                  order = i
+                }
+              }
+            }
+            return order
+          }
+
+          var omics_order = getOrder('category', 'Omics tools/データ解析ツール')
+          var text_mining_order = getOrder('category', 'Textmining/文献知識抽出')
+          var contents_order = getOrder('category', 'Contents/コンテンツ')
+          var semantic_order = getOrder('category', 'Semantic web/セマンティックウェブ')
+          var biologist_order = getOrder('category', 'Wet biologist, Clinician/実験系研究者・医学者')
+          var application_order = getOrder('category', 'Database Application Developer/アプリケーション開発者')
+          var data_scientist_order = getOrder('category', 'Data Scientist/データサイエンティスト')
+          var provider_order = getOrder('category', 'Data Provider/データ提供者')
+          var image_order = getOrder('other', '画像')
+
           function getClassName(num) {
             var tagName = []
-            if (symbolYList[num][10] === 'Y') {
+            if (symbolYList[num][omics_order] === 'Y') {
               tagName.push('omics')
             }
-            if (symbolYList[num][11] === 'Y') {
+            if (symbolYList[num][text_mining_order] === 'Y') {
               tagName.push('text-mining')
             }
-            if (symbolYList[num][12] === 'Y') {
+            if (symbolYList[num][contents_order] === 'Y') {
               tagName.push('contents')
             }
-            if (symbolYList[num][13] === 'Y') {
+            if (symbolYList[num][semantic_order] === 'Y') {
               tagName.push('semantic')
             }
-            if (symbolYList[num][14] === 'Y') {
+            if (symbolYList[num][biologist_order] === 'Y') {
               tagName.push('biologist')
             }
-            if (symbolYList[num][15] === 'Y') {
+            if (symbolYList[num][application_order] === 'Y') {
               tagName.push('application')
             }
-            if (symbolYList[num][16] === 'Y') {
+            if (symbolYList[num][data_scientist_order] === 'Y') {
               tagName.push('data-scientist')
             }
-            if (symbolYList[num][17] === 'Y') {
+            if (symbolYList[num][provider_order] === 'Y') {
               tagName.push('provider')
             }
             return tagName
@@ -375,7 +403,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][23] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][image_order] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             } else if (file_name === 'services-en.html') {
               element += '<article class="article__section contener-type-box mix ' + tagName + '">' +
                 '<div id="repos_name' + i + '" class="repos_name">' +
@@ -387,7 +415,7 @@ var initialize = {
                 '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">Access</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
-                '<img src="./img/service_assets/' + symbolYList[i][3] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
+                '<img src="./img/service_assets/' + symbolYList[i][image_order] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
             }
 
             element += '</article>'
@@ -406,7 +434,7 @@ var initialize = {
     servicesFrontDisplay();
 
     //ハッシュ値が変わった時の画面遷移
-    window.addEventListener('hashchange', function () {
+    window.addEventListener('hashchange', function() {
       if (location.hash === '') {
         $('.service__wrapper').empty()
         servicesFrontDisplay()
@@ -417,7 +445,7 @@ var initialize = {
     }, false)
 
     //デフォルトは英語版README表示
-    $(document).on('click', '.more_btn', function () {
+    $(document).on('click', '.more_btn', function() {
       var service_name = $(this).parent().siblings('.name').html()
       displayRepos(service_name)
     })
@@ -434,13 +462,13 @@ var initialize = {
         })
       }
       var arranged_data = ''
-      getData().done(function (result) {
+      getData().done(function(result) {
         arranged_data = marked(result)
         $('.service__wrapper').empty()
         var markdown_body = $('.service__wrapper').append($('<div/>').attr({
           'class': 'markdown-body'
         }).html(arranged_data))
-      }).fail(function (result) {
+      }).fail(function(result) {
         $('.service__wrapper').empty()
         var markdown_body = $('.service__wrapper').append($('<div/>').attr({
           'class': 'markdown-body'
@@ -448,18 +476,18 @@ var initialize = {
       })
     }
   },
-  'events': function () {
+  'events': function() {
     $('.news__individual-wrapper').css('display', 'block')
     var url = window.location;
     var path = url.href.split('/');
     var file_name = path.pop();
     var tags_key = Object.keys(tags)
-    tags_key.map(function (data) {
+    tags_key.map(function(data) {
       $('a[tag="' + data + '"]').before('<img src="/dbcls-test/img/icon_tag_' + data + '.svg" class="news__tag-icon" alt="" >')
     })
     //タグ名を日本語に変換
     if (file_name === 'events.html') {
-      $('.tag_name').each(function () {
+      $('.tag_name').each(function() {
         var tag_en = $(this).text()
         tag_en = $.trim(tag_en)
         var tag_ja = tags[tag_en]
@@ -471,7 +499,7 @@ var initialize = {
       url: "https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4",
       dataType: "json",
       async: true,
-      success: function (data) {
+      success: function(data) {
         var events_array = data.values
 
         function getOrder(target) {
@@ -524,20 +552,20 @@ var initialize = {
     var client_h = document.getElementById('main__contents-event').clientHeight;
 
     //クリックでactiveが切り替わる
-    $('ul.sub__navigation-wrapper li').on('click', function () {
+    $('ul.sub__navigation-wrapper li').on('click', function() {
       $('ul.sub__navigation-wrapper li').removeClass('active');
       $(this).addClass('active');
     })
     //取得したある高さまで、移動
-    $(".sub_2").on('click', function () {
+    $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
       //$(".sub_2").addClass("active");
     })
-    $(".sub_1").on('click', function () {
+    $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);
     })
     //==>スクロールでactiveが切り替わる
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       if ($(this).scrollTop() > client_h) {
         $('ul.sub__navigation-wrapper li.sub_1').removeClass('active');
         $('ul.sub__navigation-wrapper li.sub_2').addClass('active');
@@ -548,11 +576,11 @@ var initialize = {
     })
     /***左サイドバーの動作ここまで***/
   },
-  'members': function () {
+  'members': function() {
     $.when(
       $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E7%A0%94%E7%A9%B6%E8%80%85ID?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4'),
       $.getJSON('https://sheets.googleapis.com/v4/spreadsheets/1bSnbUztPDl3nhjQFbScjtTXpQtXOkqZE83NMilziHQs/values/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E4%B8%80%E8%A6%A7?key=AIzaSyAIstRfTWKWRqNKpkMk-uGYAQJw0myzMh4')
-    ).done(function (data, data_services) {
+    ).done(function(data, data_services) {
       console.log(data)
       var element = "";
       var listSubNav = "";
@@ -688,14 +716,14 @@ var initialize = {
       // for(key in member){
       //   charge[key] = member[key]
       // }
-      member.map(function (data) {
+      member.map(function(data) {
         for (var i = 2; i < data_services.length; i++) {
           if (data === data_services[i][7]) {
             charge[data] += data_services[i][3] + ','
           }
         }
       })
-      $('.name_ja').each(function () {
+      $('.name_ja').each(function() {
         var name = $(this).text()
         name = name.split(' ')
         if (charge[name[0]]) {
@@ -713,7 +741,7 @@ var initialize = {
       })
     })
   },
-  'access': function () {
+  'access': function() {
 
     /***左サイドバーの動作ここから***/
     //変動要素: main__contents-"event"
@@ -721,20 +749,20 @@ var initialize = {
     var client_h = document.getElementById('main__contents-kashiwa').clientHeight;
 
     //クリックでactiveが切り替わる
-    $('ul.sub__navigation-wrapper li').on('click', function () {
+    $('ul.sub__navigation-wrapper li').on('click', function() {
       $('ul.sub__navigation-wrapper li').removeClass('active');
       $(this).addClass('active');
     })
     //取得したある高さまで、移動
-    $(".sub_2").on('click', function () {
+    $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
       //$(".sub_2").addClass("active");
     })
-    $(".sub_1").on('click', function () {
+    $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);
     })
     //スクロールでactiveが切り替わる
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       if ($(this).scrollTop() > client_h) {
         $('ul.sub__navigation-wrapper li.sub_1').removeClass('active');
         $('ul.sub__navigation-wrapper li.sub_2').addClass('active');
@@ -745,11 +773,11 @@ var initialize = {
     })
     /***左サイドバーの動作ここまで***/
   },
-  'contact': function () {}
+  'contact': function() {}
 };
 
-script.addEventListener('load', function () {
-  $(function () {
+script.addEventListener('load', function() {
+  $(function() {
     var pageType = document.getElementsByTagName('html')[0].dataset.pageType;
     console.log(pageType)
     initialize[pageType]()
@@ -765,7 +793,7 @@ script.addEventListener('load', function () {
     var url = window.location;
     var path = url.href;
 
-    $('.lang-en span').on('click', function () {
+    $('.lang-en span').on('click', function() {
       if (path.match(/\/ja\/\d+\/\d+\/\d+\//)) {
         window.location.href = path.replace('/ja/', '/en/')
       } else {
@@ -774,7 +802,7 @@ script.addEventListener('load', function () {
       }
     })
 
-    $('.lang-ja span').on('click', function () {
+    $('.lang-ja span').on('click', function() {
       if (path.match(/\/en\/\d+\/\d+\/\d+\//)) {
         window.location.href = path.replace('/en/', '/ja/')
       } else {
