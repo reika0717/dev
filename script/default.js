@@ -60,16 +60,16 @@ var initialize = {
         });
     }
 
-    $(function() {
-      setInterval("slideSwitch()", 5000);
-    });
+    setInterval(function() {
+      slideSwitch()
+    }, 5000);
   },
   'news': function() {
     var prepage = ''
     console.log(document.referrer)
     prepage = document.referrer
-    prepage = prepage.slice(-11)
-    if (prepage === 'events.html' || prepage === 'nts-en.html') {
+    prepage = prepage.match(".+/(.+?)([\?#;].*)?$")[1]
+    if (prepage === 'events.html' || prepage === 'events-en.html') {
       setTimeout(function() {
         $('.tag-event').trigger('click')
       }, 0)
@@ -135,6 +135,10 @@ var initialize = {
         $(this).text(tag_ja)
       })
     }
+    //個別記事のサイト外URLにtarget="_blank"
+    $(document).ready(function() {
+      $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+    })
   },
   'about': function() {
     $('.lazy-mail').each(function() {
@@ -148,16 +152,19 @@ var initialize = {
       }, 1000);
     });
   },
-  'research': function() {},
-  'logotype': function() {},
+  'history': function() {},
   'funding': function() {},
+  'faq': function() {},
+  'policy': function() {},
+  'logotype': function() {},
+  'research': function() {},
+  'publications': function() {},
   'references': function() {
     $.ajax({
-      url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/References?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
+      url: "https://sheets.googleapis.com/v4/spreadsheets/1JGvXRqvu5A5IhaYfz40yTblNP7bZZL6GaPGaZl7knHM/values/references?key=AIzaSyCKBRLAEd_o7WAeBN5m0NZZ1Eusco7VtHw",
       dataType: "json",
       async: true,
       success: function(data) {
-
         var elementArray = data.values;
         var elementArray_service = []
         for (var i = 0; i < elementArray.length; i++) {
@@ -175,27 +182,29 @@ var initialize = {
         }
 
         var element = "";
-
         var names = Object.keys(filterList);
-
         element += '<table class="papers_citing_table"><tbody>';
         for (i = 0; i < names.length; i++) {
-
-          var nameslength = names[i].length;
+          var indivisual_service = filterList[names[i]]
+          indivisual_service = indivisual_service.filter(data => {
+            return data[1] !== 'Original'
+          })
+          console.log(indivisual_service)
+          var nameslength = indivisual_service.length;
 
           element +=
             '<tr><td><div class="filName" data-category="' + names[i] + '">' + names[i] + '</div></td>' +
-            '<td class="quote_num">' + nameslength + '</td></tr>';
+            '<td><p class="quote_num">' + nameslength + '</p></td></tr>';
         }
         element += '</tbody></table>';
 
         function displayList() {
           if (document.documentElement.lang === "en") {
-            $('.main__content-title').text('Achivement')
-            $(".achievement__wrapper").append(element);
+            $('.main__content-title').text('Papers Citing our services')
+            $(".publications__wrapper").append(element);
           } else if (document.documentElement.lang === "ja") {
             $('.main__content-title').text('引用文献一覧')
-            $(".achievement__wrapper").append(element);
+            $(".publications__wrapper").append(element);
           }
         }
         displayList()
@@ -205,23 +214,32 @@ var initialize = {
           displayIndividual(names)
         })
 
+        $(document).on('click', '.quote_num', function() {
+          var name_div = $(this).parent().prev().find('div')
+          names = name_div.html()
+          displayIndividual(names)
+        })
+
         function displayIndividual(names) {
           location.hash = names
           var arranged_name = names.replace('%20', ' ')
           $('.main__content-title').text(arranged_name)
           //filterListをarranged_nameのものだけにフィルタリングして新しい配列
-          $('.achievement__wrapper').empty()
+          $('.publications__wrapper').empty()
           var service_array = []
           service_array = filterList[arranged_name]
+          service_array = service_array.filter(data => {
+            return data[1] !== 'Original'
+          })
           var results = "";
 
           for (var i = 0; i < service_array.length; i++) {
             results +=
-              '<div class="achievement__column__wrapper">' +
-              '<h4 class="achievement__column__title">' + service_array[i][4] + '</h4>' +
-              '<p class="achievement__column__pubmed"><span class="achievement__column__title-small">Pubmed: </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '">https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '</a></p>' +
-              '<p class="achievement__column__DOI"><span class="achievement__column__title-small">DOI: </span><a href="' + service_array[i][3] + '">' + service_array[i][3] + '</a></p>' +
-              '<div class="achievement__column__wrapper-small">' +
+              '<div class="publications__column__wrapper">' +
+              '<h4 class="publications__column__title">' + service_array[i][4] + '</h4>' +
+              '<p class="publications__column__pubmed"><span class="publications__column__title-small">Pubmed: </span><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '">https://www.ncbi.nlm.nih.gov/pubmed/?term=' + service_array[i][2] + '</a></p>' +
+              '<p class="publications__column__DOI"><span class="publications__column__title-small">DOI: </span><a href="' + service_array[i][3] + '">' + service_array[i][3] + '</a></p>' +
+              '<div class="publications__column__wrapper-small">' +
               '<i class="fa fa-user" aria-hidden="true"></i>' +
               '<p>' + service_array[i][5] + '</p>' +
               '<i class="fa fa-clock-o" aria-hidden="true"></i>' +
@@ -233,13 +251,13 @@ var initialize = {
               '</div>' +
               '</div>'
           }
-          $('.achievement__wrapper').append(results);
+          $('.publications__wrapper').append(results);
         }
 
         //ハッシュ値が変わった時の画面遷移
         window.addEventListener('hashchange', function() {
           if (location.hash === '') {
-            $('.achievement__wrapper').empty()
+            $('.publications__wrapper').empty()
             displayList()
           } else {
             var service__title = location.hash.slice(1)
@@ -425,7 +443,7 @@ var initialize = {
           var containerEl = document.querySelector('.service__wrapper');
           var mixer = mixitup(containerEl, {
             controls: {
-              toggleLogic: 'and'
+              toggleLogic: 'or'
             }
           });
         }
@@ -436,10 +454,12 @@ var initialize = {
     //ハッシュ値が変わった時の画面遷移
     window.addEventListener('hashchange', function() {
       if (location.hash === '') {
+        $('.facet_section').toggleClass('off')
         $('.service__wrapper').empty()
         servicesFrontDisplay()
       } else {
         var service__title = location.hash.slice(1)
+        $('.facet_section').toggleClass('off')
         displayRepos(service__title)
       }
     }, false)
@@ -559,7 +579,6 @@ var initialize = {
     //取得したある高さまで、移動
     $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
-      //$(".sub_2").addClass("active");
     })
     $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);
@@ -583,19 +602,42 @@ var initialize = {
     ).done(function(data, data_services) {
       console.log(data)
       var element = "";
+      var element_collaborators = ""
       var listSubNav = "";
       var listSubNav_en = ""
+      var listSubNav_collaborators = ""
+      var listSubNav_collaborators_en = ""
       data = data[0]
       //file名の取得
       var url = window.location;
       var path = url.href.split('/');
       var file_name = path.pop();
+      var name_ja_order = getOrder('name ja')
+      var name_en_order = getOrder('name en')
+      var image_order = getOrder('画像')
+      var position_order = getOrder('position')
+      var keyword_order = getOrder('keyword')
+      var keyword_en_order = getOrder('keyword-en')
+      var orcid_order = getOrder('ORCID')
+      var googleScholar_order = getOrder('Google Scholar')
+      var github_order = getOrder('github')
+      var mail_order = getOrder('mail')
+      var non_publish_order = getOrder('いずれのIDも掲載しない')
 
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav += '<li><a href="#' + data.values[j][0] + '">' + data.values[j][0] + '</a></li>';
+        console.log(data.values[j][position_order])
+        if (data.values[j][position_order] === '客員教授' || data.values[j][position_order] === '客員准教授') {
+          listSubNav_collaborators += '<li><a href="#' + data.values[j][name_ja_order] + '">' + data.values[j][name_ja_order] + '</a></li>';
+        } else {
+          listSubNav += '<li><a href="#' + data.values[j][name_ja_order] + '">' + data.values[j][name_ja_order] + '</a></li>';
+        }
       }
       for (var j = 1; j < data.values.length; j++) {
-        listSubNav_en += '<li><a href="#' + data.values[j][1] + '">' + data.values[j][1] + '</a></li>';
+        if (data.values[j][position_order] === '客員教授' || data.values[j][position_order] === '客員准教授') {
+          listSubNav_collaborators_en += '<li><a href="#' + data.values[j][name_en_order] + '">' + data.values[j][name_en_order] + '</a></li>';
+        } else {
+          listSubNav_en += '<li><a href="#' + data.values[j][name_en_order] + '">' + data.values[j][name_en_order] + '</a></li>';
+        }
       }
 
       function judgeExist(data, className, linkName) {
@@ -618,23 +660,9 @@ var initialize = {
         return order
       }
 
-      var name_ja_order = getOrder('name ja')
-      var name_en_order = getOrder('name en')
-      var image_order = getOrder('画像')
-      var position_order = getOrder('position')
-      var keyword_order = getOrder('keyword')
-      var keyword_en_order = getOrder('keyword-en')
-      var orcid_order = getOrder('ORCID')
-      var googleScholar_order = getOrder('Google Scholar')
-      var github_order = getOrder('github')
-      var mail_order = getOrder('mail')
-      var non_publish_order = getOrder('いずれのIDも掲載しない')
-      console.log(name_ja_order)
-      console.log(name_en_order)
-      console.log(keyword_order)
-
-      if (file_name === 'member.html') {
+      if (file_name === 'members.html') {
         $("#memberList").append(listSubNav);
+        $("#memberList-collaborators").append(listSubNav_collaborators)
 
         for (var i = 1; i < data.values.length; i++) {
           var name_ja = data.values[i][name_ja_order]
@@ -654,20 +682,34 @@ var initialize = {
             judgeExist(orcid, 'btn-orcid', 'ORCID') +
             judgeExist(googleScholar, 'btn-gs', 'Google Scholar')
           if (non_publish === 'Yes') {
-            link_section = ''
+            link_section = judgeExist(mail, 'btn-mail', 'Mail')
           }
-          element += '<div class="content__member" id="' + name_ja + '">' +
-            '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' +
-            '<ul><li class="position">' + position + '</li>' +
-            '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
-            '<li class="keyword">' + keyword + '</li>' +
-            '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' +
-            '<li class="links"><div class="btn-box">' +
-            link_section +
-            '</div></li></ul></div>';
+          if (position === '客員教授' || position === '客員准教授') {
+            element_collaborators += '<div class="content__member" id="' + name_ja + '">' +
+              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' +
+              '<ul><li class="position">' + position + '</li>' +
+              '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
+              '<li class="keyword">' + keyword + '</li>' +
+              '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' +
+              '<li class="links"><div class="btn-box">' +
+              link_section +
+              '</div></li></ul></div>';
+          } else {
+            element += '<div class="content__member" id="' + name_ja + '">' +
+              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_ja + '" class="img_member"></div>' +
+              '<ul><li class="position">' + position + '</li>' +
+              '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
+              '<li class="keyword">' + keyword + '</li>' +
+              '<li class="PIC">担当サービス：<div class="member-list__services"></div></li>' +
+              '<li class="links"><div class="btn-box">' +
+              link_section +
+              '</div></li></ul></div>';
+          }
         }
-      } else if (file_name === 'member-en.html') {
+      } else if (file_name === 'members-en.html') {
         $("#memberList").append(listSubNav_en);
+        $("#memberList-collaborators").append(listSubNav_collaborators_en)
+
         for (var i = 1; i < data.values.length; i++) {
           var name_ja = data.values[i][name_ja_order]
           var name_en = data.values[i][name_en_order]
@@ -687,21 +729,33 @@ var initialize = {
             judgeExist(orcid, 'btn-orcid', 'ORCID') +
             judgeExist(googleScholar, 'btn-gs', 'Google Scholar')
           if (non_publish === 'Yes') {
-            link_section = ''
+            link_section = judgeExist(mail, 'btn-mail', 'Mail')
           }
-
-          element += '<div class="content__member" id="' + name_en + '">' +
-            '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' +
-            '<ul><li class="position">' + position + '</li>' +
-            '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
-            '<li class="keyword">' + keyword_en + '</li>' +
-            '<li class="PIC">Charge：<div class="member-list__services"></div></li>' +
-            '<li class="links"><div class="btn-box">' +
-            link_section +
-            '</div></li></ul></div>';
+          if (position === '客員教授' || position === '客員准教授') {
+            element_collaborators += '<div class="content__member" id="' + name_en + '">' +
+              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' +
+              '<ul><li class="position">' + position + '</li>' +
+              '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
+              '<li class="keyword">' + keyword_en + '</li>' +
+              '<li class="PIC">Charge：<div class="member-list__services"></div></li>' +
+              '<li class="links"><div class="btn-box">' +
+              link_section +
+              '</div></li></ul></div>';
+          } else {
+            element += '<div class="content__member" id="' + name_en + '">' +
+              '<div class="repos_image">' + '<img src="./img/member/' + image + '" alt="' + name_en + '" class="img_member"></div>' +
+              '<ul><li class="position">' + position + '</li>' +
+              '<li class="repos_name"><span class="name_ja">' + name_ja + '</span><span class="name_en">' + name_en + '</span></li>' +
+              '<li class="keyword">' + keyword_en + '</li>' +
+              '<li class="PIC">Charge：<div class="member-list__services"></div></li>' +
+              '<li class="links"><div class="btn-box">' +
+              link_section +
+              '</div></li></ul></div>';
+          }
         }
       }
       $("#member-list").append(element);
+      $("#member-list-collaborators").append(element_collaborators);
 
       //担当サービスの実装
       data_services = data_services[0].values
@@ -745,7 +799,6 @@ var initialize = {
 
     /***左サイドバーの動作ここから***/
     //変動要素: main__contents-"event"
-    //ある高さの取得
     var client_h = document.getElementById('main__contents-kashiwa').clientHeight;
 
     //クリックでactiveが切り替わる
@@ -756,7 +809,6 @@ var initialize = {
     //取得したある高さまで、移動
     $(".sub_2").on('click', function() {
       window.scrollTo(0, client_h);
-      //$(".sub_2").addClass("active");
     })
     $(".sub_1").on('click', function() {
       window.scrollTo(0, 0);

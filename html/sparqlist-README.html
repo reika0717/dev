@@ -1,0 +1,52 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>sparqlist-README.md</title>
+      </head>
+      <body>
+        <h1 id="sparqlist">SPARQList</h1>
+<h2 id="docker">Docker</h2>
+<pre><code>$ docker run dbcls/sparqlist
+</code></pre><h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://nodejs.org/">Node.js</a> v8.10.0</li>
+<li><a href="https://yarnpkg.com/">yarn</a> v1.5.1</li>
+</ul>
+<h2 id="install">Install</h2>
+<pre><code>$ git clone git@github.com:dbcls/sparqlist.git
+$ cd sparqlist
+$ yarn install
+</code></pre><p>If you want to deploy SPARQList under a subdirectory, pass the directory via <code>ROOT_PATH</code>:</p>
+<pre><code>$ ROOT_PATH=/foo/ yarn install
+</code></pre><p>(Note that <code>ROOT_PATH</code> must end with <code>/</code>.)</p>
+<h2 id="run">Run</h2>
+<pre><code>$ PORT=3000 ADMIN_PASSWORD=changeme yarn start
+</code></pre><p>If you want to deploy SPARQList under a subdirectory, pass the directory via <code>ROOT_PATH</code>:</p>
+<pre><code>$ ROOT_PATH=/foo/ PORT=3000 ADMIN_PASSWORD=changeme yarn start
+</code></pre><h2 id="configuration">Configuration</h2>
+<p>All configurations are done with environment variables.</p>
+<h3 id="port"><code>PORT</code></h3>
+<p>(default: <code>3000</code>)</p>
+<p>Port to listen on.</p>
+<h3 id="repository_path"><code>REPOSITORY_PATH</code></h3>
+<p>(default: <code>./repository</code>)</p>
+<p>Path to SPARQLet repository.</p>
+<h3 id="admin_password"><code>ADMIN_PASSWORD</code></h3>
+<p>(default: empty)</p>
+<p>Admin password. If left empty, all administrative features are disabled.</p>
+<h3 id="root_path"><code>ROOT_PATH</code></h3>
+<p>(default: <code>/</code>)</p>
+<p>Path of root. If you want to deploy SPARQList under a subdirectory, specify the directory. Note that <code>ROOT_PATH</code> must end with <code>/</code>.</p>
+<h2 id="development">Development</h2>
+<h3 id="backend">Backend</h3>
+<pre><code>$ cd sparqlist
+$ yarn watch
+</code></pre><p>Open <a href="http://localhost:3000">http://localhost:3000</a> in your browser for backend development.</p>
+<h3 id="frontend">Frontend</h3>
+<pre><code>$ cd sparqlist/frontend
+$ yarn start --proxy http://localhost:3000
+</code></pre><p>Open <a href="http://localhost:4200">http://localhost:4200</a> on your browser for frontend development.</p>
+<p>Note that some requests, such as <code>/api</code>, can&#39;t be processed on <a href="http://localhost:4200">http://localhost:4200</a> because the <code>--proxy</code> option does not work for these paths. Try them on <a href="http://localhost:3000">http://localhost:3000</a>.</p>
+
+      </body>
+    </html>

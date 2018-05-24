@@ -62,6 +62,16 @@ body
 			height: 12px
 			margin-right: 3px
 			background: url(../img/icon_pdf.svg) no-repeat
+	&.img_btn
+		width: 51px
+		height: 19px
+		&:before
+			content: ""
+			display: block
+			width: 12px
+			height: 12px
+			margin-right: 3px
+			background: url(../img/icon_img.svg) no-repeat
 .btn-box__top
 	width: 953px
 .sub__content-title
@@ -96,6 +106,22 @@ body
 	&:after
 		content: ''
 		display: table
+//@media
+@media screen and (min-width: 480px)
+	body
+		min-width: 1070px
+	.content__wrapper
+		padding-left: 20px
+@media screen and (min-width: 768px)
+	body
+		min-width: 1070px
+ .content__wrapper
+		padding-left: 20px
+@media screen and (max-width: 800px)
+	body
+		min-width: 1070px
+	.content__wrapper
+		padding-left: 20px
 //下層ページカラム設定
 .content__wrapper
 	width: 1024px
@@ -201,24 +227,29 @@ body
 	width: 222px
 .header
 	width: 100%
-	height: 67px
+	//height: 67px
+	height: 40px
 	position: fixed
 	z-index: 11
 	background: linear-gradient(#004098, #1B2244)
 	top: 0
 .header__language-wrapper
-	width: 1024px
-	margin: 0 auto
-	position: relative
-	margin-top: 14px
+	//width: 1024px
+	//margin: 0 auto
+	//position: relative
+	//margin-top: 14px
 	.qtrans_language_chooser
-		display: flex
-		justify-content: flex-end
-		position: absolute
-		right: 5px
-		top: -9px
+		display: inline-block
+		//display: flex
+		//justify-content: flex-end
+		//position: absolute
+		//right: 5px
+		//right: -25px
+		//top: -9px
+		//top: 11px
 		li
 			font-size: 14px	
+			display: inline
 .lang-ja,
 .lang-en
 	span
@@ -227,19 +258,22 @@ body
 	.lang-en
 		cursor: pointer
 	.lang-ja
-		margin-left: 15px
+		//margin-left: 15px
+		margin-left: 8px
 		opacity: 0.5
 		pointer-events: none
 #header__languages-en
 	.lang-ja
-		margin-left: 15px
+		//margin-left: 15px
+		margin-left: 8px
 		cursor: pointer
 	.lang-en
 		opacity: 0.5
 		pointer-events: none
 .header__nav
 	width: 1024px
-	margin: -2px auto 4px
+	//width: 940px
+	margin: -2px auto 1px
 	display: flex
 	align-items: center
 	justify-content: space-between
@@ -250,10 +284,11 @@ body
 			color: white
 			font-weight: 600
 			font-size: 14px
-			padding-bottom: 2px
+			//padding-bottom: 2px
 			img
-				width: 90px
+				width: 75px
 				height: auto
+				padding-top: 4px
 	.header__nav__sns
 		&-twitter
 			color: white
@@ -262,6 +297,7 @@ body
 			color: white
 	.header__nav__search
 		position: relative
+		top: 1px //追加1805
 		.search__wrapper
 			width: 217px
 			height: 22px
@@ -279,15 +315,56 @@ body
 			background-color: rgba(255, 255, 255, 0)
 			&:focus
 				outline: none
-		&:after
-			font-family: fontawesome
-			content: '\f002'
-			position: absolute
-			top: 3px
-			right: 8px
-			pointer-events: none
-			color: $header-color
-			opacity: 0.8
+		// &:after
+		// 	font-family: fontawesome
+		// 	content: '\f002'
+		// 	position: absolute
+		// 	top: 3px
+		// 	right: 8px
+		// 	pointer-events: none
+		// 	color: $header-color
+		// 	opacity: 0.8
+#header__nav__search-inner
+	.gsc-control-cse
+		background-color: transparent !important
+		border: none !important
+		padding: 0
+		//width: 217px
+		width: 195px
+		.gsc-search-box
+			margin-bottom: 0
+			.gsc-input
+				padding-right: 0
+				.gsc-input-box 
+					border-radius: 12px
+					height: 22px
+					.gsib_a
+						height: 22px
+						padding: 0 8px 0
+						input
+							margin: 0
+							height: 22px
+							background: none !important
+							font-size: 13px
+							text-indent: 53px
+							&::placeholder
+								color: transparent
+
+					.gsib_b
+						display: none
+			.gsc-search-button
+				margin: 0
+				padding: 0
+				border-color: transparent
+				background-color: transparent
+				background-image: none
+				position: absolute
+				top: 2px
+				right: 3px
+				svg
+					fill: $main-color
+				&:focus
+					outline: 0
 
 /* footer */
 footer
@@ -358,6 +435,7 @@ footer
 		-ms-flex-pack: justify
 		justify-content: space-between
 		.footer__organism
+			padding-top: 9px
 			.footer__logo
 				width: 150px
 				height: auto
@@ -365,7 +443,7 @@ footer
 				margin: 0 auto
 			.footer__organism-text
 				text-align: center
-				margin-top: 15px
+				margin-top: 11px
 				margin-bottom: 20px
 				.footer__organism-sub
 					font-size: 12px
@@ -378,14 +456,6 @@ footer
 		.footer__address
 			width: 357px
 			margin-top: 15px 
-			//display: -wekit-box
-			//display: -ms-flexbox
-			//display: flex
-			//-ms-flex-wrap: wrap
-			//flex-wrap: wrap
-			//-webkit-box-pack: justify
-			//-ms-flex-pack: justify
-			//justify-content: space-between
 			.address__list
 				display: -wekit-box
 				display: -ms-flexbox
@@ -407,14 +477,12 @@ footer
 				li.individual_link
 					a
 						font-size: 12px
-						//text-decoration: underline
 						padding: 2px 0 2px 0
 						font-weight: normal
 						color: $footer-text-color
 						&:hover
 							color: $main-color
 							border-bottom: solid 1px $main-color
-
 .footer__bottom
 	background-color: #f9f8f5
 	width: 100%
@@ -486,7 +554,8 @@ footer
 		.main__forcused-page__text
 			padding: 12px
 .main-image__wrapper
-	margin-top: 67px//追加
+	//margin-top: 67px
+	margin-top: 40px
 	.main-image__contents
 		position: relative
 		height: 400px
@@ -505,6 +574,24 @@ footer
 			opacity: 1.0
 		.last-active
 	    z-index: 9
+//@media about.html図
+@media screen and (min-width: 0px) and (max-device-width: 640px)
+	.main-image__wrapper
+		.main-image__contents
+			div
+				img
+					width: auto
+@media screen and (min-width: 641px) and (max-device-width: 768px)
+	.main-image__wrapper
+		.main-image__contents
+			div
+				img
+@media screen and (min-width: 769px) and (max-device-width: 1024px)
+	.main-image__wrapper
+		.main-image__contents
+			div
+				img
+					width: auto
 
 //news
 .top__news-section
@@ -557,6 +644,8 @@ footer
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
+	&.member_staff
+		margin-bottom: 123px
 	.markdown-body
 		width: 782px
 	.article__section
@@ -602,6 +691,11 @@ footer
 				font-size: 12px
 				.reference-ja
 					margin-left: -8px
+					margin-bottom: 3px
+					display: inline-block
+			ul
+				li
+					line-height: 1.5em
 				a
 					text-decoration: underline
 					color: #004098
@@ -626,12 +720,16 @@ footer
 		padding: 6px 0
 		font-size: 14px
 		font-weight: 800
-		&.active, &:hover, &:after
+		&.active, &:hover
 			color: $main-color
+	.facet_section
+		&.off
+			display: none
 
 /* about */
 .about-img
 	margin-bottom: 5px
+	width: 100%
 .about__description-wrapper
 	display: flex
 	align-items: center
@@ -705,6 +803,8 @@ footer
 .section-wrapper__adelement__logotype
 	p
 		font-size: 14px
+	.ribbon_section
+		margin-top: 19px
 
 	& > h4
 		padding-top: 40px
@@ -717,12 +817,12 @@ footer
 		left: 46px
 		z-index: -1
 		&.history__vertival-line
-			height: 401px
+			height: 731px
 			top: 10px
 			border-left: 2px solid $main-color
 		&.history__vertival-dotted
-			height: 22px
-			top: 401px
+			height: 213px
+			top: 541px
 			border-left: 2px dotted $main-color
 	.table-history
 		tbody
@@ -785,6 +885,7 @@ table.matrix
 				padding: 4px 6px
 				font-weight: 600
 				background-color: #fff
+				text-decoration: none;
 				&:before
 					content: ""
 					background: url(../img/icon_pdf.svg) no-repeat
@@ -879,14 +980,8 @@ table.matrix
 			background-color: #9E9E9E
 	&.off
 		opacity: 0.3
-	&.on, &:hover
+	&.on
 		opacity: 1.0
-.sub-nav-title__services
-	line-height: 2.5
-	//padding-top: 15px
-.sub-nav-con__services
-	line-height: 19px
-	color: $text-color
 .wrapper-type-box
 	display: flex
 	flex-wrap: wrap
@@ -899,7 +994,7 @@ table.matrix
 		align-self: self-end
 		&.contener-type-box
 			position: relative
-			height: 314px
+			height: 322px
 			width: 262px
 			border: solid 0.25px #cccccc
 			.repos_image
@@ -923,7 +1018,7 @@ table.matrix
 					justify-content: center
 					align-items: center
 					position: absolute
-					bottom: -52px
+					bottom: -62px
 					left: 50%
 					transform: translateX(-50%)
 					.access_btn
@@ -976,25 +1071,33 @@ table.matrix
 			font-weight: 700
 			margin-bottom: 8px
 /*memberデザイン変更につき*/
+.sub-nav-title__member
+	line-height: 2.5
+.sub-nav-con__member
+	line-height: 19px
+	li
+		a 
+			color: $text-color !important
+			&:hover
+				color: $main-color !important
+				line-height: 1
+				border-bottom: solid 1px $main-color
 .wrapper-type-list
 	margin-top: -12px
 	.content-wrapper__member
 		.content__member
 			padding-top: 169px
 			margin-top: -160px
-			display: inline-table
+			display: inline-block
 			width: 782px
-			padding-bottom: 5px//18px
+			padding-bottom: 5px
 			border-bottom: solid 1px #9e9e9e
-			//&:nth-child(n + 2)
-			//	padding-top: 23px
 			.repos_image
 				float: left
 				img
 					width: 73px
 					height: 73px
 			ul
-				//float: right
 				font-size: 12px
 				padding-left: 91px
 				color: $text-color
@@ -1031,28 +1134,28 @@ table.matrix
 									&:before
 										content: url(../img/icon_mail.svg)
 										position: absolute
-										top: 0
+										top: 1px
 										left: 0
 										width: 13px
 								&.btn-github
 									&:before
 										content: url(../img/icon_git.svg)
 										position: absolute
-										top: -2px
+										top: -1px
 										left: 0
 										width: 13px
 								&.btn-orcid
 									&:before
 										content: url(../img/icon_id.svg)
 										position: absolute
-										top: -2px
+										top: 0px
 										left: 0
 										width: 13px
 								&.btn-gs
 									&:before
 										content: url(../img/icon_gs.svg)
 										position: absolute
-										top: -2px
+										top: 0px
 										left: 0
 										width: 13px
 
@@ -1073,35 +1176,34 @@ table.matrix
 	top: 50%
 	text-aline: center
 	z-index: 2
-
 /* Services ***/
 
-/*** Achivement */
-.main__contents-servece.achivement
+/*** Publications */
+.main__contents-servece.Publications
 	.wrapper-type-box
 		width: calc(61% - 10px)
 .content__wrapper
 	.main__contents
-		.achievement__wrapper
+		.publications__wrapper
 			font-family: 'GothamPro-Light'
-			.achievement__column__wrapper
+			.publications__column__wrapper
 				border-bottom: 1px solid $gray
 				padding: 16px 0 16px 7px
-				.achievement__column__title
+				.publications__column__title
 					font-family: 'GothamPro-Bold'
 					font-size: 18px
 					margin-bottom: 3px
-				.achievement__column__pubmed,
-				.achievement__column__DOI
+				.publications__column__pubmed,
+				.publications__column__DOI
 					font-size: 12px
 					color: black
-					.achievement__column__title-small
+					.publications__column__title-small
 						font-family: 'GothamPro-Bold'
 						margin-top: 4px
 					a 
 						&:hover
 							border-bottom: solid 1px $main-color
-				.achievement__column__wrapper-small
+				.publications__column__wrapper-small
 					display: flex
 					align-items: center
 					margin-top: 5px
@@ -1134,12 +1236,19 @@ table.matrix
 									line-height: 1
 									color: $main-color
 									border-bottom: solid 1px $main-color
-						td.quote_num
-							text-align: right
-							padding-right: 9px
+							p.quote_num
+								text-align: right
+								padding-right: 9px
+								cursor: pointer
+								display: inline-block
+								&:hover
+									color: $main-color
+									text-decoration: underline
+							&:nth-of-type(even)
+								text-align: right
 						&:nth-of-type(even)
 							background-color: $table-bg
-/* achivement ***/
+/* Publications ***/
 
 /*** access */
 .main__content-title__access
@@ -1253,10 +1362,7 @@ table.terminal-info
 	p 
 		font-size: 14px
 		a 
-			&:hover
-				line-height: 1
-				color: $main-color
-				border-bottom: solid 1px $main-color
+			color: $main-color
 	.contents__wrapper
 		margin-top: 30px
 		box-shadow: 0.2px 0.2px 2px $gray

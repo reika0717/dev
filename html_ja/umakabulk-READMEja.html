@@ -1,0 +1,51 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>umakabulk-READMEja.md</title>
+      </head>
+      <body>
+        <h1 id="compile-instructions-">Compile instructions:</h1>
+<ol>
+<li><p>Install jdk 1.8.*</p>
+</li>
+<li><p>Install sbt:
+<a href="http://www.scala-sbt.org">www.scala-sbt.org</a></p>
+</li>
+<li><p>Run:
+sbt compile</p>
+</li>
+</ol>
+<p>To compile</p>
+<h2 id="optional">Optional</h2>
+<ol>
+<li><p>Install scala-ide: <a href="http://www.scala-ide.org">www.scala-ide.org</a>
+(This is a modified version of eclipse)</p>
+</li>
+<li><p>Run:
+sbt eclipse</p>
+</li>
+</ol>
+<p>To generate an Eclipse project (can be imported into Eclipse later, with File/Import... Existing projects into workspace)</p>
+<h1 id="how-to-use">How to use</h1>
+<h2 id="configuration">Configuration</h2>
+<p>Define environment variables in script/config.sh.
+We have to define at least 2 variables:</p>
+<ul>
+<li><p>CSV_FILE_PATH: A path of csv which contains endpoints&#39; information. This csv consists of 4 columns, endpoint_id, name, url, download_url as same as <a href="https://github.com/dbcls/umakadata/blob/master/web/data/endpoints.csv">https://github.com/dbcls/umakadata/blob/master/web/data/endpoints.csv</a>.</p>
+</li>
+<li><p>BULKDOWNLOADS_DIR: Work directory. This tool download, extract RDF in it.</p>
+</li>
+</ul>
+<h2 id="retrieve-bulk-download-data">Retrieve Bulk-Download data</h2>
+<pre><code>./script/download.sh [ENDPOINT]
+</code></pre><p>This command download data in the directory under the ${BULKDOWNLOADS_DIR}/[ENDPOINT]. If you do not specify ENDPOINT, this tool download all endpoints&#39; data according to CSV_FILE_PATH.</p>
+<h2 id="extract-rdf-file">Extract RDF file</h2>
+<pre><code>./script/extract.sh [ENDPOINT]
+</code></pre><p>This command extract RDF in the directory under the ${BULKDOWNLOADS_DIR}/[ENDPOINT]/extractions. If you do not specify ENDPOINT, this tool extract all endpoints&#39; data according to CSV_FILE_PATH.</p>
+<p>NOTE: The following process detect RDF file by file extension. You have to modify file names if the file extension of extracted files is not none of &quot;rdf&quot;, &quot;rdfs&quot;, &quot;owl&quot;, &quot;xml&quot;, &quot;nt&quot;, &quot;ttl&quot;, &quot;n3&quot;, &quot;xml&quot;, &quot;trix&quot;, &quot;trig&quot;, &quot;brf&quot;, &quot;nq&quot;, &quot;jsonld&quot;, &quot;rj&quot;, &quot;xhtml&quot; and &quot;html&quot;.</p>
+<h2 id="extract-candidates-of-prefixes">Extract Candidates of Prefixes</h2>
+<pre><code>./script/create_prefix.sh [ENDPOINT]
+</code></pre><p>This command read RDFs, extract candidates of prefixes and output to ${BULKDOWNLOADS_DIR}/[ENDPOINT]_prefixes.csv. If you do not specify ENDPOINT, this tool create prefix file of all endpoints according to CSV_FILE_PATH.</p>
+
+      </body>
+    </html>
