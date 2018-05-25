@@ -314,13 +314,13 @@ var initialize = {
           }
 
           var omics_order = getOrder('category', 'Omics tools/データ解析ツール')
-          var text_mining_order = getOrder('category', 'Textmining/文献知識抽出')
+          var text_mining_order = getOrder('category', 'Text mining/文献知識抽出')
           var contents_order = getOrder('category', 'Contents/コンテンツ')
           var semantic_order = getOrder('category', 'Semantic web/セマンティックウェブ')
-          var biologist_order = getOrder('category', 'Wet biologist, Clinician/実験系研究者・医学者')
-          var application_order = getOrder('category', 'Database Application Developer/アプリケーション開発者')
-          var data_scientist_order = getOrder('category', 'Data Scientist/データサイエンティスト')
-          var provider_order = getOrder('category', 'Data Provider/データ提供者')
+          var biologist_order = getOrder('category', 'Database user/データベース利用者')
+          var application_order = getOrder('category', 'Database application developer/アプリケーション開発者')
+          var data_scientist_order = getOrder('category', 'Data scientist/大規模データ解析者')
+          var provider_order = getOrder('category', 'Data provider/データ所有者')
           var image_order = getOrder('other', '画像')
 
           function getClassName(num) {
@@ -363,27 +363,27 @@ var initialize = {
             },
             'text-mining': {
               'ja': '文献知識抽出',
-              'en': 'Textmining'
+              'en': 'Text mining'
             },
             'semantic': {
               'ja': 'セマンティックウェブ',
               'en': 'Semantic web'
             },
             'biologist': {
-              'ja': '実験系研究者',
-              'en': 'Wet biologist, Clinician'
+              'ja': 'データベース利用者',
+              'en': 'Database user'
             },
             'application': {
               'ja': 'アプリケーション開発者',
-              'en': 'Database Application Developer'
+              'en': 'Database application developer'
             },
             'data-scientist': {
-              'ja': 'データサイエンティスト',
-              'en': 'Data Scientist'
+              'ja': '大規模データ解析者',
+              'en': 'Data scientist'
             },
             'provider': {
-              'ja': 'データ提供者',
-              'en': 'Data Provider'
+              'ja': ' データ所有者',
+              'en': 'Data provider'
             }
           }
 
@@ -418,7 +418,7 @@ var initialize = {
                 addTagLine(tagArray, 'ja') +
                 '<div class="btn-box">' +
                 '<a class="page_btn more_btn">' + '詳細' + '</a>' +
-                '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">アクセス</a>' +
+                '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn" target="_blank">アクセス</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
                 '<img src="./img/service_assets/' + symbolYList[i][image_order] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
@@ -430,7 +430,7 @@ var initialize = {
                 addTagLine(tagArray, 'en') +
                 '<div class="btn-box">' +
                 '<a class="page_btn more_btn">' + 'more' + '</a>' +
-                '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn">Access</a>' +
+                '<a href="' + symbolYList[i][4] + '" class="page_btn access_btn" target="_blank">Access</a>' +
                 '</div></div>' +
                 '<div id="repos_image0" class="repos_image">' +
                 '<img src="./img/service_assets/' + symbolYList[i][image_order] + '.png" alt="' + symbolYList[i][2] + '" class="object-fit-img img_services"></div>'
@@ -644,7 +644,14 @@ var initialize = {
       function judgeExist(data, className, linkName) {
         var elements = ''
         if (data) {
-          elements = '<a href="' + data + '" class="' + className + '">' + linkName + '</a>'
+          if (linkName === 'Mail') {
+            data = 'mailto:' + data
+          } else if (linkName === 'GitHub') {
+            data = 'https://github.com/' + data
+          } else if (linkName === 'ORCID') {
+            data = 'https://orcid.org/' + data
+          }
+          elements = '<a href="' + data + '" class="' + className + '" target="_blank">' + linkName + '</a>'
         } else {
           elements = ''
         }

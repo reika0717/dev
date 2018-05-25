@@ -282,19 +282,19 @@ body {
   color: white; }
 
 #header__languages-ja .lang-en {
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.5; }
 
 #header__languages-ja .lang-ja {
   margin-left: 8px;
-  opacity: 0.5;
   pointer-events: none; }
 
 #header__languages-en .lang-ja {
   margin-left: 8px;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.5; }
 
 #header__languages-en .lang-en {
-  opacity: 0.5;
   pointer-events: none; }
 
 .header__nav {
@@ -640,6 +640,8 @@ footer {
   justify-content: space-between; }
   .section-wrapper.member_staff {
     margin-bottom: 123px; }
+  .section-wrapper.research_explanation {
+    margin-top: 25px; }
   .section-wrapper .markdown-body {
     width: 782px; }
   .section-wrapper .article__section {
@@ -973,7 +975,7 @@ table.matrix {
     align-self: self-end; }
     .wrapper-type-box .article__section.contener-type-box {
       position: relative;
-      height: 322px;
+      height: 335px;
       width: 262px;
       border: solid 0.25px #cccccc; }
       .wrapper-type-box .article__section.contener-type-box .repos_image {
@@ -997,7 +999,7 @@ table.matrix {
           justify-content: center;
           align-items: center;
           position: absolute;
-          bottom: -62px;
+          bottom: -76px;
           left: 50%;
           transform: translateX(-50%); }
           .wrapper-type-box .article__section.contener-type-box .repos_name .btn-box .access_btn {
@@ -1007,12 +1009,12 @@ table.matrix {
           font-size: 15px;
           font-weight: 800; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .keyword {
-          font-size: 10px;
+          font-size: 12px;
           border-bottom: dashed 0.5px #cccccc;
-          height: 62px;
+          height: 78px;
           margin-bottom: 6px; }
         .wrapper-type-box .article__section.contener-type-box .repos_name .service_category {
-          font-size: 10px;
+          font-size: 12px;
           display: flex;
           align-items: center; }
           .wrapper-type-box .article__section.contener-type-box .repos_name .service_category:before {
