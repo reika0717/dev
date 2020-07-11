@@ -7,7 +7,7 @@ permalink: /tags
 <ul>
   <li>日本語</li>
   <li>
-    <a href="/dbcls-test/tags-en.html">English</a>
+    <a href="/jekyll-test/tags-en.html">English</a>
   </li>
 </ul>
 
@@ -42,7 +42,7 @@ permalink: /tags
         {% for post in site.tags[tag_name] %}
           {% if post.category contains 'ja' %}
             <li>
-              <a href="/dbcls-test/{{ post.url }}">
+              <a href="/jekyll-test/{{ post.url }}">
                 {{ post.title }}
               </a>
             </li>
