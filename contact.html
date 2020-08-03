@@ -58,13 +58,12 @@
                 data-sitekey="6LfyebgZAAAAAM29lOrMlYD6tpYTgWu7Q330sQG7"
                 data-callback="onSubmit"
                 data-action="submit"
-                id="demo-form"
                 type="submit"
                 name=""
                 value="send"
+                id="demo-form"
                 >送信</button>
               </div>
-
             </form>
           </div>
         </div>
@@ -77,6 +76,7 @@
 <script src="script/default-min.js"></script>
 <script>
   function onSubmit(token) {
+    console.log('submit', token)
     document.getElementById("demo-form").submit();
   }
 </script>
