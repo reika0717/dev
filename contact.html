@@ -32,7 +32,7 @@
           <div class="contents__wrapper">
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="onSubmit(submitted)"></iframe>
             <!--form action="https://docs.google.com/forms/d/e/1FAIpQLScRjapXpoqmtkK9Mm4JlKlvMuwWE2Msg8Se_3L5P2stllFD7A/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true"-->
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfc-NJM8oSraAV705s9n3OXMEgN8XVJh6JeK8a_4Z7eHueiYQ/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfc-NJM8oSraAV705s9n3OXMEgN8XVJh6JeK8a_4Z7eHueiYQ/formResponse" method="POST" id="demo-form" target="hidden_iframe" onsubmit="submitted=true">
               <section>
                 <h3>メールアドレス</h3>
                 <input type="email" name="emailAddress" required/>
@@ -53,16 +53,10 @@
                 <input type="" name="entry.1419418193" required/>
               </section>
               <div class="btn_submit">
-                <button
-                class="g-recaptcha"
-                data-sitekey="6LfyebgZAAAAAM29lOrMlYD6tpYTgWu7Q330sQG7"
-                data-callback="onSubmit"
-                data-action="submit"
-                type="submit"
-                name=""
-                value="send"
-                id="demo-form"
-                >送信</button>
+                <button class="g-recaptcha" 
+                data-sitekey="reCAPTCHA_site_key" 
+                data-callback='onSubmit' 
+                data-action='submit'>送信</button>
               </div>
             </form>
           </div>
@@ -77,7 +71,6 @@
 <script>
   function onSubmit(submitted) {
     document.getElementById("demo-form").submit();
-    if(submitted){window.location='completion.html'}
   }
 </script>
 </html>
